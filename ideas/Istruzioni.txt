@@ -1,0 +1,11 @@
+1) parlare del nome del gruppo : CPS-NBA
+1b) choice del dataset/s : NBA
+2) modello da fare -> next week -> FARE L'ONTOLOGY
+3) decidere cosa fare se limitarci a robe semplici QUERY E ROBE, WEBAPP FORSE MA SEMPLICE
+4) webapp? se si, quale framework frontend e backend? PYTHON / FLASK/DJANGO / SPRING
+5) docker per ambiente di sviluppo? SE WEBAPP VIRTUOSO => CONTROLLARE API? 
+
+6) DOCKER + FRAMEWORK 
+
+
+
