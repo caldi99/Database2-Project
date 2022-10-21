@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- This xml file is used to configure the various paths to the datasets to be used for data ingestion purposes -->
+<configuration>
+
+    <!-- The path to the games dataset -->
+    <path name="games" value="THE PATH TO THE DATASET"/>
+
+    <!-- The path to the detailed games dataset -->
+    <path name="games_details" value="THE PATH TO THE DATASET"/>
+
+    <!-- The path to the players dataset containing only their names -->
+    <path name="players" value="THE PATH TO THE DATASET"/>
+
+    <!-- The path to the players dataset containing other info over the years -->
+    <path name="players_details" value="THE PATH TO THE DATASET"/>
+
+    <!-- The path to the teams dataset -->
+    <path name="teams" value="THE PATH TO THE DATASET"/>
+
+</configuration>
