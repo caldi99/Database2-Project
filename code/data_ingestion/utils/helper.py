@@ -6,6 +6,8 @@ import pandas as pd
 from rdflib import Graph
 from xml.etree import ElementTree
 
+import os
+
 class Helper:
     """
         This is a helper class for doing all the dirty jobs.
@@ -29,8 +31,8 @@ class Helper:
             output_path : str
                         The output path where to serialize the graph
         """
-        with open(output_path) as file:
-            file.write(graph.serialize(format = self.SERIALIZATION_TYPE).decode(self.CODEC))        
+        with open(output_path,'w') as file:
+            file.write(graph.serialize(format = self.SERIALIZATION_TYPE))        
 
     def read_csv(self, path_csv: str, sep: str, index_col: str = None) -> pd.DataFrame:
         """

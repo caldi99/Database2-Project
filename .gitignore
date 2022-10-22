@@ -1,1 +1,6 @@
+#Directories
 /datasets
+
+#Python
+.ipynb_checkpoints/
+__pycache__
