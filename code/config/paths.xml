@@ -5,6 +5,9 @@
 
     <!-- The path to the games dataset -->
     <path name="games" value="../../dataset/games.csv"/>
+    <!-- The path to the teams dataset -->
+    <path name="clubs" value="../../dataset/teams.csv"/>
+
 
     <!-- The path to the detailed games dataset -->
     <path name="games_details" value="../../dataset/game_details.csv"/>
@@ -15,7 +18,6 @@
     <!-- The path to the players dataset containing other info over the years -->
     <path name="players_details" value="../../dataset/players_details.csv"/>
 
-    <!-- The path to the teams dataset -->
-    <path name="teams" value="../../dataset/teams.csv"/>
+    
 
 </configuration>

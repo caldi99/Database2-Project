@@ -2,7 +2,6 @@
     Author : Francesco Caldivezzi
 """
 
-import string
 from utils.helper import Helper
 from rdflib import Namespace
 from rdflib import Graph
@@ -10,7 +9,6 @@ from rdflib import URIRef
 from rdflib import RDF
 from rdflib import Literal
 from rdflib.namespace import XSD
-import datetime
 
 helper = Helper()
 
@@ -31,7 +29,7 @@ games_dataframe = games_dataframe.dropna()
 # --------------------------------------------------------------------------
 # Convert Cols to corret type
 # --------------------------------------------------------------------------
-print("CONVERT COLS TO CORRENT TYPE ..")
+print("CONVERT COLS TO CORRECT TYPE ..")
 games_dataframe['PTS_home'] = games_dataframe['PTS_home'].astype(int)
 games_dataframe['PTS_away'] = games_dataframe['PTS_away'].astype(int)
 games_dataframe['AST_home'] = games_dataframe['AST_home'].astype(int)
@@ -41,7 +39,7 @@ games_dataframe['REB_away'] = games_dataframe['REB_away'].astype(int)
 
 print(games_dataframe.info())
 # --------------------------------------------------------------------------
-# Contruct Game Ontology Namespace
+# Construct Game Ontology Namespace
 # --------------------------------------------------------------------------
 print("CREATING NAMESPACES OF THE ONTOLOGY ..")
 GAME = Namespace("htpps://www.dei.unipd.it/Database2/CPS-NBA/Game#")
@@ -63,7 +61,7 @@ graph.bind("game",GAME)
 # --------------------------------------------------------------------------
 print("POPULATING THE GRAPH ..")
 for index, row in games_dataframe.iterrows():
-    gameSubjectURI = URIRef(GAME[index])    
+    gameSubjectURI = URIRef(GAME + str(index))    
     graph.add((gameSubjectURI, RDF.type, GAME.Game))
     
     #Date
