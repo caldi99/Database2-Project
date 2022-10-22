@@ -8,9 +8,7 @@ helper = Helper()
 
 
 # --------------------------------------------------------------------------
-# Read games_details.csv file
+# Read teams.csv file
 # --------------------------------------------------------------------------
 
-games = helper.read_csv(helper.get_csv_path("games_details"))
-
-
+games = helper.read_csv(helper.get_csv_path("teams"), "," , )

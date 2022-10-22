@@ -32,16 +32,20 @@ class Helper:
         with open(output_path) as file:
             file.write(graph.serialize(format = self.SERIALIZATION_TYPE).decode(self.CODEC))        
 
-    def read_csv(self, path_csv: str) -> pd.DataFrame:
+    def read_csv(self, path_csv: str, sep: str, index_col: str = None) -> pd.DataFrame:
         """
             Read the csv file
             Paramters :
                 path_csv : str
                     The path where the csv is located
+                sep : str
+                    The separator of elements inside the csv file
+                index_col : str
+                    The column to consider as a key of the produced table
             Returns :
                 The dataframe with the elements of the csv inside
         """
-        return pd.read_csv(path_csv)
+        return pd.read_csv(path_csv, sep = sep, index_col = index_col)
 
     
     def get_csv_path(self, name_file: str) -> str:
