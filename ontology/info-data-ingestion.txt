@@ -3,18 +3,18 @@
 uri : htpps://www.dei.unipd.it/Database2/CPS-NBA/Game#id
 
 matchDate = GAME_DATE_EST
-ptsHome = PTS_home
-fgptcHome = FG_PCT_home
-ftpctHome = FT_PCT_home
-fg3pctHome = FG3_PCT_home
-astHome = AST_home
-rebHome = REB_home
-ptsAway = PTS_away
-fgptcAway = FG_PCT_away
-ftpctAway = FT_PCT_away
-fg3pctAway = FG3_PCT_away
-astAway = AST_away
-rebAway = REB_away
+ptsHome = PTS_home (int32)
+fgptcHome = FG_PCT_home (float)
+ftpctHome = FT_PCT_home (float)
+fg3pctHome = FG3_PCT_home (float)
+astHome = AST_home (int32)
+rebHome = REB_home (int32)
+ptsAway = PTS_away (int32)
+fgptcAway = FG_PCT_away (float)
+ftpctAway = FT_PCT_away (float)
+fg3pctAway = FG3_PCT_away (float)
+astAway = AST_away (int32)
+rebAway = REB_away (int32)
 
 "CLUB CLASS" DATA PROPRIETIES : values can be taken from teams.csv
 
