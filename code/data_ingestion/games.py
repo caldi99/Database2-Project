@@ -42,7 +42,7 @@ print(games_dataframe.info())
 # Construct Game Ontology Namespace
 # --------------------------------------------------------------------------
 print("CREATING NAMESPACES OF THE ONTOLOGY ..")
-GAME = Namespace("htpps://www.dei.unipd.it/Database2/CPS-NBA/Game#")
+GAME = Namespace("https://www.dei.unipd.it/Database2/CPS-NBA/Game#")
 
 # --------------------------------------------------------------------------
 # Create the graph

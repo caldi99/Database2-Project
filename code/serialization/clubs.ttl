@@ -1,4 +1,4 @@
-@prefix club: <htpps://www.dei.unipd.it/Database2/CPS-NBA/Club#> .
+@prefix club: <https://www.dei.unipd.it/Database2/CPS-NBA/Club#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 club:0 a club:Club ;

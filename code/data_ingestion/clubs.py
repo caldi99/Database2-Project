@@ -30,7 +30,7 @@ print(clubs_dataframe.info())
 # Construct Club Ontology Namespace
 # --------------------------------------------------------------------------
 print("CREATING NAMESPACES OF THE ONTOLOGY ..")
-CLUB = Namespace("htpps://www.dei.unipd.it/Database2/CPS-NBA/Club#")
+CLUB = Namespace("https://www.dei.unipd.it/Database2/CPS-NBA/Club#")
 
 # --------------------------------------------------------------------------
 # Create the graph
