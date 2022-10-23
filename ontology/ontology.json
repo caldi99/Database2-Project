@@ -60,9 +60,6 @@
         "y": -617.7170922637241
       },
       "caption": "Player",
-      "style": {
-        "node-color": "#73d8ff"
-      },
       "labels": [],
       "properties": {
         "playerName": "",
@@ -70,6 +67,9 @@
         "heigth": "",
         "weigth": "",
         "draftYear": ""
+      },
+      "style": {
+        "node-color": "#73d8ff"
       }
     },
     {
@@ -206,83 +206,83 @@
   "relationships": [
     {
       "id": "n0",
+      "fromId": "n0",
+      "toId": "n1",
       "type": "",
-      "style": {},
       "properties": {
         "": "nationality"
       },
-      "fromId": "n0",
-      "toId": "n1"
+      "style": {}
     },
     {
       "id": "n1",
+      "fromId": "n0",
+      "toId": "n3",
       "type": "",
-      "style": {},
       "properties": {
         "appearIn": ""
       },
-      "fromId": "n0",
-      "toId": "n3"
+      "style": {}
     },
     {
       "id": "n2",
+      "fromId": "n3",
+      "toId": "n6",
       "type": "",
-      "style": {},
       "properties": {
         "playIn": ""
       },
-      "fromId": "n3",
-      "toId": "n6"
+      "style": {}
     },
     {
       "id": "n3",
+      "fromId": "n0",
+      "toId": "n5",
       "type": "",
-      "style": {},
       "properties": {
         "playFor": ""
       },
-      "fromId": "n0",
-      "toId": "n5"
+      "style": {}
     },
     {
       "id": "n4",
+      "fromId": "n6",
+      "toId": "n4",
       "type": "",
-      "style": {},
       "properties": {
         "awayClub": ""
       },
-      "fromId": "n6",
-      "toId": "n4"
+      "style": {}
     },
     {
       "id": "n5",
+      "fromId": "n6",
+      "toId": "n4",
       "type": "",
-      "style": {},
       "properties": {
         "homeClib": ""
       },
-      "fromId": "n6",
-      "toId": "n4"
+      "style": {}
     },
     {
       "id": "n6",
-      "type": "",
-      "style": {},
-      "properties": {
-        "playInside": ""
-      },
       "fromId": "n4",
-      "toId": "n2"
+      "toId": "n2",
+      "type": "",
+      "properties": {
+        "playInThe": ""
+      },
+      "style": {}
     },
     {
       "id": "n7",
+      "fromId": "n5",
+      "toId": "n4",
       "type": "",
-      "style": {},
       "properties": {
         "playInside": ""
       },
-      "fromId": "n5",
-      "toId": "n4"
+      "style": {}
     }
   ]
 }
