@@ -50,7 +50,7 @@ graph.bind("club",CLUB)
 print("POPULATING THE GRAPH ..")
 for index, row in clubs_dataframe.iterrows():
 
-    clubSubjectURI = URIRef(CLUB + str(index))    
+    clubSubjectURI = URIRef(CLUB + str(row['TEAM_ID']))    
     graph.add((clubSubjectURI, RDF.type, CLUB.Club))
             
     #Nickname

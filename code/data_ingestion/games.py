@@ -61,7 +61,7 @@ graph.bind("game",GAME)
 # --------------------------------------------------------------------------
 print("POPULATING THE GRAPH ..")
 for index, row in games_dataframe.iterrows():
-    gameSubjectURI = URIRef(GAME + str(index))    
+    gameSubjectURI = URIRef(GAME + str(row['GAME_ID']))    
     graph.add((gameSubjectURI, RDF.type, GAME.Game))
     
     #Date

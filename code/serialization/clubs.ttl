@@ -1,183 +1,183 @@
 @prefix club: <https://www.dei.unipd.it/Database2/CPS-NBA/Club#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-club:0 a club:Club ;
+club:1610612737 a club:Club ;
     club:abbreviation "ATL"^^xsd:string ;
     club:city "Atlanta"^^xsd:string ;
     club:firstYear "1949"^^xsd:gYear ;
     club:name "Hawks"^^xsd:string .
 
-club:1 a club:Club ;
+club:1610612738 a club:Club ;
     club:abbreviation "BOS"^^xsd:string ;
     club:city "Boston"^^xsd:string ;
     club:firstYear "1946"^^xsd:gYear ;
     club:name "Celtics"^^xsd:string .
 
-club:10 a club:Club ;
-    club:abbreviation "MIL"^^xsd:string ;
-    club:city "Milwaukee"^^xsd:string ;
-    club:firstYear "1968"^^xsd:gYear ;
-    club:name "Bucks"^^xsd:string .
-
-club:11 a club:Club ;
-    club:abbreviation "MIN"^^xsd:string ;
-    club:city "Minnesota"^^xsd:string ;
-    club:firstYear "1989"^^xsd:gYear ;
-    club:name "Timberwolves"^^xsd:string .
-
-club:12 a club:Club ;
-    club:abbreviation "BKN"^^xsd:string ;
-    club:city "Brooklyn"^^xsd:string ;
-    club:firstYear "1976"^^xsd:gYear ;
-    club:name "Nets"^^xsd:string .
-
-club:13 a club:Club ;
-    club:abbreviation "NYK"^^xsd:string ;
-    club:city "New York"^^xsd:string ;
-    club:firstYear "1946"^^xsd:gYear ;
-    club:name "Knicks"^^xsd:string .
-
-club:14 a club:Club ;
-    club:abbreviation "ORL"^^xsd:string ;
-    club:city "Orlando"^^xsd:string ;
-    club:firstYear "1989"^^xsd:gYear ;
-    club:name "Magic"^^xsd:string .
-
-club:15 a club:Club ;
-    club:abbreviation "IND"^^xsd:string ;
-    club:city "Indiana"^^xsd:string ;
-    club:firstYear "1976"^^xsd:gYear ;
-    club:name "Pacers"^^xsd:string .
-
-club:16 a club:Club ;
-    club:abbreviation "PHI"^^xsd:string ;
-    club:city "Philadelphia"^^xsd:string ;
-    club:firstYear "1949"^^xsd:gYear ;
-    club:name "76ers"^^xsd:string .
-
-club:17 a club:Club ;
-    club:abbreviation "PHX"^^xsd:string ;
-    club:city "Phoenix"^^xsd:string ;
-    club:firstYear "1968"^^xsd:gYear ;
-    club:name "Suns"^^xsd:string .
-
-club:18 a club:Club ;
-    club:abbreviation "POR"^^xsd:string ;
-    club:city "Portland"^^xsd:string ;
-    club:firstYear "1970"^^xsd:gYear ;
-    club:name "Trail Blazers"^^xsd:string .
-
-club:19 a club:Club ;
-    club:abbreviation "SAC"^^xsd:string ;
-    club:city "Sacramento"^^xsd:string ;
-    club:firstYear "1948"^^xsd:gYear ;
-    club:name "Kings"^^xsd:string .
-
-club:2 a club:Club ;
-    club:abbreviation "NOP"^^xsd:string ;
-    club:city "New Orleans"^^xsd:string ;
-    club:firstYear "2002"^^xsd:gYear ;
-    club:name "Pelicans"^^xsd:string .
-
-club:20 a club:Club ;
-    club:abbreviation "SAS"^^xsd:string ;
-    club:city "San Antonio"^^xsd:string ;
-    club:firstYear "1976"^^xsd:gYear ;
-    club:name "Spurs"^^xsd:string .
-
-club:21 a club:Club ;
-    club:abbreviation "OKC"^^xsd:string ;
-    club:city "Oklahoma City"^^xsd:string ;
-    club:firstYear "1967"^^xsd:gYear ;
-    club:name "Thunder"^^xsd:string .
-
-club:22 a club:Club ;
-    club:abbreviation "TOR"^^xsd:string ;
-    club:city "Toronto"^^xsd:string ;
-    club:firstYear "1995"^^xsd:gYear ;
-    club:name "Raptors"^^xsd:string .
-
-club:23 a club:Club ;
-    club:abbreviation "UTA"^^xsd:string ;
-    club:city "Utah"^^xsd:string ;
-    club:firstYear "1974"^^xsd:gYear ;
-    club:name "Jazz"^^xsd:string .
-
-club:24 a club:Club ;
-    club:abbreviation "MEM"^^xsd:string ;
-    club:city "Memphis"^^xsd:string ;
-    club:firstYear "1995"^^xsd:gYear ;
-    club:name "Grizzlies"^^xsd:string .
-
-club:25 a club:Club ;
-    club:abbreviation "WAS"^^xsd:string ;
-    club:city "Washington"^^xsd:string ;
-    club:firstYear "1961"^^xsd:gYear ;
-    club:name "Wizards"^^xsd:string .
-
-club:26 a club:Club ;
-    club:abbreviation "DET"^^xsd:string ;
-    club:city "Detroit"^^xsd:string ;
-    club:firstYear "1948"^^xsd:gYear ;
-    club:name "Pistons"^^xsd:string .
-
-club:27 a club:Club ;
-    club:abbreviation "CHA"^^xsd:string ;
-    club:city "Charlotte"^^xsd:string ;
-    club:firstYear "1988"^^xsd:gYear ;
-    club:name "Hornets"^^xsd:string .
-
-club:28 a club:Club ;
+club:1610612739 a club:Club ;
     club:abbreviation "CLE"^^xsd:string ;
     club:city "Cleveland"^^xsd:string ;
     club:firstYear "1970"^^xsd:gYear ;
     club:name "Cavaliers"^^xsd:string .
 
-club:29 a club:Club ;
-    club:abbreviation "GSW"^^xsd:string ;
-    club:city "Golden State"^^xsd:string ;
-    club:firstYear "1946"^^xsd:gYear ;
-    club:name "Warriors"^^xsd:string .
+club:1610612740 a club:Club ;
+    club:abbreviation "NOP"^^xsd:string ;
+    club:city "New Orleans"^^xsd:string ;
+    club:firstYear "2002"^^xsd:gYear ;
+    club:name "Pelicans"^^xsd:string .
 
-club:3 a club:Club ;
+club:1610612741 a club:Club ;
     club:abbreviation "CHI"^^xsd:string ;
     club:city "Chicago"^^xsd:string ;
     club:firstYear "1966"^^xsd:gYear ;
     club:name "Bulls"^^xsd:string .
 
-club:4 a club:Club ;
+club:1610612742 a club:Club ;
     club:abbreviation "DAL"^^xsd:string ;
     club:city "Dallas"^^xsd:string ;
     club:firstYear "1980"^^xsd:gYear ;
     club:name "Mavericks"^^xsd:string .
 
-club:5 a club:Club ;
+club:1610612743 a club:Club ;
     club:abbreviation "DEN"^^xsd:string ;
     club:city "Denver"^^xsd:string ;
     club:firstYear "1976"^^xsd:gYear ;
     club:name "Nuggets"^^xsd:string .
 
-club:6 a club:Club ;
+club:1610612744 a club:Club ;
+    club:abbreviation "GSW"^^xsd:string ;
+    club:city "Golden State"^^xsd:string ;
+    club:firstYear "1946"^^xsd:gYear ;
+    club:name "Warriors"^^xsd:string .
+
+club:1610612745 a club:Club ;
     club:abbreviation "HOU"^^xsd:string ;
     club:city "Houston"^^xsd:string ;
     club:firstYear "1967"^^xsd:gYear ;
     club:name "Rockets"^^xsd:string .
 
-club:7 a club:Club ;
+club:1610612746 a club:Club ;
     club:abbreviation "LAC"^^xsd:string ;
     club:city "Los Angeles"^^xsd:string ;
     club:firstYear "1970"^^xsd:gYear ;
     club:name "Clippers"^^xsd:string .
 
-club:8 a club:Club ;
+club:1610612747 a club:Club ;
     club:abbreviation "LAL"^^xsd:string ;
     club:city "Los Angeles"^^xsd:string ;
     club:firstYear "1948"^^xsd:gYear ;
     club:name "Lakers"^^xsd:string .
 
-club:9 a club:Club ;
+club:1610612748 a club:Club ;
     club:abbreviation "MIA"^^xsd:string ;
     club:city "Miami"^^xsd:string ;
     club:firstYear "1988"^^xsd:gYear ;
     club:name "Heat"^^xsd:string .
+
+club:1610612749 a club:Club ;
+    club:abbreviation "MIL"^^xsd:string ;
+    club:city "Milwaukee"^^xsd:string ;
+    club:firstYear "1968"^^xsd:gYear ;
+    club:name "Bucks"^^xsd:string .
+
+club:1610612750 a club:Club ;
+    club:abbreviation "MIN"^^xsd:string ;
+    club:city "Minnesota"^^xsd:string ;
+    club:firstYear "1989"^^xsd:gYear ;
+    club:name "Timberwolves"^^xsd:string .
+
+club:1610612751 a club:Club ;
+    club:abbreviation "BKN"^^xsd:string ;
+    club:city "Brooklyn"^^xsd:string ;
+    club:firstYear "1976"^^xsd:gYear ;
+    club:name "Nets"^^xsd:string .
+
+club:1610612752 a club:Club ;
+    club:abbreviation "NYK"^^xsd:string ;
+    club:city "New York"^^xsd:string ;
+    club:firstYear "1946"^^xsd:gYear ;
+    club:name "Knicks"^^xsd:string .
+
+club:1610612753 a club:Club ;
+    club:abbreviation "ORL"^^xsd:string ;
+    club:city "Orlando"^^xsd:string ;
+    club:firstYear "1989"^^xsd:gYear ;
+    club:name "Magic"^^xsd:string .
+
+club:1610612754 a club:Club ;
+    club:abbreviation "IND"^^xsd:string ;
+    club:city "Indiana"^^xsd:string ;
+    club:firstYear "1976"^^xsd:gYear ;
+    club:name "Pacers"^^xsd:string .
+
+club:1610612755 a club:Club ;
+    club:abbreviation "PHI"^^xsd:string ;
+    club:city "Philadelphia"^^xsd:string ;
+    club:firstYear "1949"^^xsd:gYear ;
+    club:name "76ers"^^xsd:string .
+
+club:1610612756 a club:Club ;
+    club:abbreviation "PHX"^^xsd:string ;
+    club:city "Phoenix"^^xsd:string ;
+    club:firstYear "1968"^^xsd:gYear ;
+    club:name "Suns"^^xsd:string .
+
+club:1610612757 a club:Club ;
+    club:abbreviation "POR"^^xsd:string ;
+    club:city "Portland"^^xsd:string ;
+    club:firstYear "1970"^^xsd:gYear ;
+    club:name "Trail Blazers"^^xsd:string .
+
+club:1610612758 a club:Club ;
+    club:abbreviation "SAC"^^xsd:string ;
+    club:city "Sacramento"^^xsd:string ;
+    club:firstYear "1948"^^xsd:gYear ;
+    club:name "Kings"^^xsd:string .
+
+club:1610612759 a club:Club ;
+    club:abbreviation "SAS"^^xsd:string ;
+    club:city "San Antonio"^^xsd:string ;
+    club:firstYear "1976"^^xsd:gYear ;
+    club:name "Spurs"^^xsd:string .
+
+club:1610612760 a club:Club ;
+    club:abbreviation "OKC"^^xsd:string ;
+    club:city "Oklahoma City"^^xsd:string ;
+    club:firstYear "1967"^^xsd:gYear ;
+    club:name "Thunder"^^xsd:string .
+
+club:1610612761 a club:Club ;
+    club:abbreviation "TOR"^^xsd:string ;
+    club:city "Toronto"^^xsd:string ;
+    club:firstYear "1995"^^xsd:gYear ;
+    club:name "Raptors"^^xsd:string .
+
+club:1610612762 a club:Club ;
+    club:abbreviation "UTA"^^xsd:string ;
+    club:city "Utah"^^xsd:string ;
+    club:firstYear "1974"^^xsd:gYear ;
+    club:name "Jazz"^^xsd:string .
+
+club:1610612763 a club:Club ;
+    club:abbreviation "MEM"^^xsd:string ;
+    club:city "Memphis"^^xsd:string ;
+    club:firstYear "1995"^^xsd:gYear ;
+    club:name "Grizzlies"^^xsd:string .
+
+club:1610612764 a club:Club ;
+    club:abbreviation "WAS"^^xsd:string ;
+    club:city "Washington"^^xsd:string ;
+    club:firstYear "1961"^^xsd:gYear ;
+    club:name "Wizards"^^xsd:string .
+
+club:1610612765 a club:Club ;
+    club:abbreviation "DET"^^xsd:string ;
+    club:city "Detroit"^^xsd:string ;
+    club:firstYear "1948"^^xsd:gYear ;
+    club:name "Pistons"^^xsd:string .
+
+club:1610612766 a club:Club ;
+    club:abbreviation "CHA"^^xsd:string ;
+    club:city "Charlotte"^^xsd:string ;
+    club:firstYear "1988"^^xsd:gYear ;
+    club:name "Hornets"^^xsd:string .
 
