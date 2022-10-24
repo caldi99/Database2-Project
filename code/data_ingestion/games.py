@@ -14,7 +14,7 @@ helper = Helper()
 
 
 # --------------------------------------------------------------------------
-# Read games_details.csv file
+# Read games.csv file
 # --------------------------------------------------------------------------
 print("READING DATA FROM CSV FILE ..")
 games_csv_path = helper.get_csv_path("games")

@@ -14,16 +14,33 @@ helper = Helper()
 
 
 # --------------------------------------------------------------------------
-# Read teams.csv file
+# Read games.csv and teams.csv file
 # --------------------------------------------------------------------------
 print("READING DATA FROM CSV FILE ..")
 clubs_csv_path = helper.get_csv_path("clubs")
 clubs_dataframe = helper.read_csv(clubs_csv_path, ",")
 
+games_csv_path = helper.get_csv_path("games")
+games_dataframe = helper.read_csv(games_csv_path, ",")
+
+# --------------------------------------------------------------------------
+# Drop NA values
+# --------------------------------------------------------------------------
+print("DROP NA VALUES ..")
+games_dataframe = games_dataframe.dropna()
+
 # --------------------------------------------------------------------------
 # Convert Cols to corret type
 # --------------------------------------------------------------------------
+print("CONVERT COLS TO CORRECT TYPE ..")
+games_dataframe['PTS_home'] = games_dataframe['PTS_home'].astype(int)
+games_dataframe['PTS_away'] = games_dataframe['PTS_away'].astype(int)
+games_dataframe['AST_home'] = games_dataframe['AST_home'].astype(int)
+games_dataframe['AST_away'] = games_dataframe['AST_away'].astype(int)
+games_dataframe['REB_home'] = games_dataframe['REB_home'].astype(int)
+games_dataframe['REB_away'] = games_dataframe['REB_away'].astype(int)
 
+print(games_dataframe.info())
 print(clubs_dataframe.info())
 
 # --------------------------------------------------------------------------
@@ -31,6 +48,10 @@ print(clubs_dataframe.info())
 # --------------------------------------------------------------------------
 print("CREATING NAMESPACES OF THE ONTOLOGY ..")
 CLUB = Namespace("https://www.dei.unipd.it/Database2/CPS-NBA/Club#")
+GAME = Namespace("https://www.dei.unipd.it/Database2/CPS-NBA/Game#")
+
+AWAY_CLUB = Namespace("https://www.dei.unipd.it/Database2/CPS-NBA/awayClub")
+HOME_CLUB = Namespace("https://www.dei.unipd.it/Database2/CPS-NBA/homeClub")
 
 # --------------------------------------------------------------------------
 # Create the graph
@@ -43,30 +64,30 @@ graph = Graph()
 # --------------------------------------------------------------------------
 print("BINDING NAMASPACES TO PREFIXES ..")
 graph.bind("club",CLUB)
+graph.bind("game",GAME)
+graph.bind("awayClub",AWAY_CLUB)
+graph.bind("homeClub",HOME_CLUB)
 
 # --------------------------------------------------------------------------
 # Create triples and populate the graph
 # --------------------------------------------------------------------------
 print("POPULATING THE GRAPH ..")
-for index, row in clubs_dataframe.iterrows():
+for index, row in games_dataframe.iterrows():
+    #Game id
+    gameIdSubject = URIRef(CLUB + str(row['GAME_ID']))
 
-    clubSubjectURI = URIRef(CLUB + str(row['TEAM_ID']))    
-    graph.add((clubSubjectURI, RDF.type, CLUB.Club))
-            
-    #Nickname
-    graph.add((clubSubjectURI, CLUB['name'], Literal(row['NICKNAME'], datatype = XSD.string)))
+    #Home team
+    homeClubObjectURI = URIRef(CLUB + str(row['HOME_TEAM_ID']))
     
-    #Abbreviation
-    graph.add((clubSubjectURI, CLUB['abbreviation'], Literal(row['ABBREVIATION'], datatype = XSD.string)))
-    
-    #Year
-    graph.add((clubSubjectURI, CLUB['firstYear'], Literal(row['MIN_YEAR'], datatype = XSD.gYear)))
+    #Away team
+    awayClubObjectURI = URIRef(CLUB + str(row['VISITOR_TEAM_ID']))
 
-    #City
-    graph.add((clubSubjectURI, CLUB['city'], Literal(row['CITY'], datatype = XSD.string)))
+    #Add Triples
+    graph.add((gameIdSubject,URIRef(AWAY_CLUB),awayClubObjectURI))
+    graph.add((gameIdSubject,URIRef(HOME_CLUB),homeClubObjectURI))        
 
 # --------------------------------------------------------------------------
 # Serialize the graph
 # --------------------------------------------------------------------------
 print("SERIALIZING ..")
-helper.serialize(graph, "../serialization/clubs.ttl")
+helper.serialize(graph, "../serialization/clubs_games_join.ttl")
