@@ -7,6 +7,7 @@ from rdflib import Graph
 from xml.etree import ElementTree
 from pathlib import *
 import os
+from zipfile import ZipFile
 
 class Helper:
     """
@@ -31,7 +32,8 @@ class Helper:
             output_path : str
                         The output path where to serialize the graph
         """
-        with open(output_path,'wb') as file:
+        #windows complain with wb
+        with open(output_path,'w') as file:
             file.write(graph.serialize(format = self.SERIALIZATION_TYPE))        
 
     def read_csv(self, path_csv: str, sep: str, index_col: str = None) -> pd.DataFrame:
@@ -74,3 +76,34 @@ class Helper:
                     return child.attrib[self.VALUE_ATTRIBUTE_XML]
         raise Exception("There is no such file!")
                
+    def zip_files(self,path_files_to_zip : str, path_zip_to_create : str) -> None :
+        """
+            Zip files present inside folder path_files_to_zip
+            Parameters :
+                path_files_to_zip : str 
+                    Path of the folder containing files to zip
+                path_zip_to_create : str 
+                    Path of the file zip to create
+        """
+        list_path_files = self.get_list_paths_files_by_folder(path_files_to_zip)
+        
+        with ZipFile(path_zip_to_create,'w') as zip:        
+            for file in list_path_files:
+                zip.write(file)
+
+    def get_list_paths_files_by_folder(self,path_folder_files : str) -> list :
+        """
+            Get the list of paths of files inside the folder
+            Parameters
+                path_folder_files : str
+                    The folder to which obtain the path of files inside
+            Returns
+                The list of the paths of files inside path_folder_files
+        """
+        list_files = os.listdir(path_folder_files)
+        list_path_files = []
+        
+        for file_name in list_files:
+            list_path_files.append(os.path.join(path_folder_files,file_name))
+        
+        return list_files

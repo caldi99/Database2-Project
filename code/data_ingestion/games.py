@@ -11,8 +11,10 @@ from rdflib import Literal
 from rdflib.namespace import XSD
 from pathlib import Path
 
+# --------------------------------------------------------------------------
+# Create helper object
+# --------------------------------------------------------------------------
 helper = Helper()
-
 
 # --------------------------------------------------------------------------
 # Read games.csv file
@@ -44,6 +46,7 @@ print(games_dataframe.info())
 # --------------------------------------------------------------------------
 print("CREATING NAMESPACES OF THE ONTOLOGY ..")
 GAME = Namespace("https://www.dei.unipd.it/Database2/CPS-NBA/Game#")
+BASE = Namespace("https://www.dei.unipd.it/Database2/CPS-NBA/")
 
 # --------------------------------------------------------------------------
 # Create the graph
@@ -56,6 +59,7 @@ graph = Graph()
 # --------------------------------------------------------------------------
 print("BINDING NAMASPACES TO PREFIXES ..")
 graph.bind("game",GAME)
+graph.bind("base",BASE)
 
 # --------------------------------------------------------------------------
 # Create triples and populate the graph
@@ -63,7 +67,7 @@ graph.bind("game",GAME)
 print("POPULATING THE GRAPH ..")
 for index, row in games_dataframe.iterrows():
     gameSubjectURI = URIRef(GAME + str(row['GAME_ID']))    
-    graph.add((gameSubjectURI, RDF.type, GAME.Game))
+    graph.add((gameSubjectURI, RDF.type, BASE.Game))
     
     #Date
     graph.add((gameSubjectURI, GAME['matchDate'], Literal(row['GAME_DATE_EST'], datatype = XSD.date)))

@@ -10,8 +10,11 @@ from rdflib import RDF
 from rdflib import Literal
 from rdflib.namespace import XSD
 from pathlib import Path
-helper = Helper()
 
+# --------------------------------------------------------------------------
+# Create helper object
+# --------------------------------------------------------------------------
+helper = Helper()
 
 # --------------------------------------------------------------------------
 # Read teams.csv file
@@ -31,6 +34,7 @@ print(clubs_dataframe.info())
 # --------------------------------------------------------------------------
 print("CREATING NAMESPACES OF THE ONTOLOGY ..")
 CLUB = Namespace("https://www.dei.unipd.it/Database2/CPS-NBA/Club#")
+BASE = Namespace("https://www.dei.unipd.it/Database2/CPS-NBA/")
 
 # --------------------------------------------------------------------------
 # Create the graph
@@ -43,6 +47,7 @@ graph = Graph()
 # --------------------------------------------------------------------------
 print("BINDING NAMASPACES TO PREFIXES ..")
 graph.bind("club",CLUB)
+graph.bind("base",BASE)
 
 # --------------------------------------------------------------------------
 # Create triples and populate the graph
@@ -51,7 +56,7 @@ print("POPULATING THE GRAPH ..")
 for index, row in clubs_dataframe.iterrows():
 
     clubSubjectURI = URIRef(CLUB + str(row['TEAM_ID']))    
-    graph.add((clubSubjectURI, RDF.type, CLUB.Club))
+    graph.add((clubSubjectURI, RDF.type, BASE.Club))
             
     #Nickname
     graph.add((clubSubjectURI, CLUB['name'], Literal(row['NICKNAME'], datatype = XSD.string)))
