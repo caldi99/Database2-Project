@@ -1,29 +1,14 @@
 from xml.etree import ElementTree
-import sys
+from pathlib import *
 
 
+code_dir=str(Path(__file__).parent.resolve())
+# Invoking here the python files to serialize ttl files
+exec(open(code_dir+"/data_ingestion/games.py").read())
+exec(open(code_dir+"/data_ingestion/clubs.py").read())
+exec(open(code_dir+"/data_ingestion/club_games_join.py").read())
+exec(open(code_dir+"/data_ingestion/player.py").read())
+exec(open(code_dir+"/data_ingestion/country.py").read())
+exec(open(code_dir+"/data_ingestion/appearance.py").read())
 
-# Parses the xml configuration file providing a dictionary with the paths to the datasets
-def get_dataset_paths(config_path):
-    tree = ElementTree.parse(config_path)
-    root = tree.getroot()
-    paths={}
-    for child in root.iter('path'):
-        paths[child.attrib['name']]=child.attrib['value']
-    return paths
-
-
-paths={}
-try:
-    # Get the first arg passed through CLI which is the path_config.xml path
-    # 'paths' is a dictionary with couples (key,path)
-    paths=get_dataset_paths(sys.argv[1])
-
-except:
-    print("Please execute this script by passing the path to the 'path_config.xml' file as first argument")
-    exit()
-
-#
-# Invoke here the python files to serialize ttl files
-#
 

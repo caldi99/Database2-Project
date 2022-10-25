@@ -1,0 +1,234 @@
+@prefix country: <https://www.dei.unipd.it/Database2/CPS-NBA/Country#> .
+
+country:Angola a country:Country ;
+    country:name "Angola"@en .
+
+country:Argentina a country:Country ;
+    country:name "Argentina"@en .
+
+country:Australia a country:Country ;
+    country:name "Australia"@en .
+
+country:Austria a country:Country ;
+    country:name "Austria"@en .
+
+country:Bahamas a country:Country ;
+    country:name "Bahamas"@en .
+
+country:Belize a country:Country ;
+    country:name "Belize"@en .
+
+country:Bosnia a country:Country ;
+    country:name "Bosnia"@en .
+
+country:BosniaHerzegovina a country:Country ;
+    country:name "Bosnia & Herzegovina"@en .
+
+country:BosniaandHerzegovina a country:Country ;
+    country:name "Bosnia and Herzegovina"@en .
+
+country:Brazil a country:Country ;
+    country:name "Brazil"@en .
+
+country:CaboVerde a country:Country ;
+    country:name "Cabo Verde"@en .
+
+country:Cameroon a country:Country ;
+    country:name "Cameroon"@en .
+
+country:Canada a country:Country ;
+    country:name "Canada"@en .
+
+country:China a country:Country ;
+    country:name "China"@en .
+
+country:Congo a country:Country ;
+    country:name "Congo"@en .
+
+country:Croatia a country:Country ;
+    country:name "Croatia"@en .
+
+country:CzechRepublic a country:Country ;
+    country:name "Czech Republic"@en .
+
+country:DRC a country:Country ;
+    country:name "DRC"@en .
+
+country:DemocraticRepublicoftheCongo a country:Country ;
+    country:name "Democratic Republic of the Congo"@en .
+
+country:DominicanRepublic a country:Country ;
+    country:name "Dominican Republic"@en .
+
+country:Egypt a country:Country ;
+    country:name "Egypt"@en .
+
+country:England a country:Country ;
+    country:name "England"@en .
+
+country:Finland a country:Country ;
+    country:name "Finland"@en .
+
+country:France a country:Country ;
+    country:name "France"@en .
+
+country:Gabon a country:Country ;
+    country:name "Gabon"@en .
+
+country:Georgia a country:Country ;
+    country:name "Georgia"@en .
+
+country:Germany a country:Country ;
+    country:name "Germany"@en .
+
+country:Ghana a country:Country ;
+    country:name "Ghana"@en .
+
+country:GreatBritain a country:Country ;
+    country:name "Great Britain"@en .
+
+country:Greece a country:Country ;
+    country:name "Greece"@en .
+
+country:Guinea a country:Country ;
+    country:name "Guinea"@en .
+
+country:Haiti a country:Country ;
+    country:name "Haiti"@en .
+
+country:Iran a country:Country ;
+    country:name "Iran"@en .
+
+country:Ireland a country:Country ;
+    country:name "Ireland"@en .
+
+country:Israel a country:Country ;
+    country:name "Israel"@en .
+
+country:Italy a country:Country ;
+    country:name "Italy"@en .
+
+country:Jamaica a country:Country ;
+    country:name "Jamaica"@en .
+
+country:Japan a country:Country ;
+    country:name "Japan"@en .
+
+country:Latvia a country:Country ;
+    country:name "Latvia"@en .
+
+country:Lithuania a country:Country ;
+    country:name "Lithuania"@en .
+
+country:Macedonia a country:Country ;
+    country:name "Macedonia"@en .
+
+country:Mali a country:Country ;
+    country:name "Mali"@en .
+
+country:Mexico a country:Country ;
+    country:name "Mexico"@en .
+
+country:Montenegro a country:Country ;
+    country:name "Montenegro"@en .
+
+country:Netherlands a country:Country ;
+    country:name "Netherlands"@en .
+
+country:NewZealand a country:Country ;
+    country:name "New Zealand"@en .
+
+country:Nigeria a country:Country ;
+    country:name "Nigeria"@en .
+
+country:Panama a country:Country ;
+    country:name "Panama"@en .
+
+country:Poland a country:Country ;
+    country:name "Poland"@en .
+
+country:PuertoRico a country:Country ;
+    country:name "Puerto Rico"@en .
+
+country:RepublicoftheCongo a country:Country ;
+    country:name "Republic of the Congo"@en .
+
+country:Russia a country:Country ;
+    country:name "Russia"@en .
+
+country:SaintLucia a country:Country ;
+    country:name "Saint Lucia"@en .
+
+country:Senegal a country:Country ;
+    country:name "Senegal"@en .
+
+country:Serbia a country:Country ;
+    country:name "Serbia"@en .
+
+country:SerbiaandMontenegro a country:Country ;
+    country:name "Serbia and Montenegro"@en .
+
+country:Slovenia a country:Country ;
+    country:name "Slovenia"@en .
+
+country:SouthKorea a country:Country ;
+    country:name "South Korea"@en .
+
+country:SouthSudan a country:Country ;
+    country:name "South Sudan"@en .
+
+country:Spain a country:Country ;
+    country:name "Spain"@en .
+
+country:StVincentGrenadines a country:Country ;
+    country:name "St. Vincent & Grenadines"@en .
+
+country:Sudan a country:Country ;
+    country:name "Sudan"@en .
+
+country:SudanUK a country:Country ;
+    country:name "Sudan (UK)"@en .
+
+country:Sweden a country:Country ;
+    country:name "Sweden"@en .
+
+country:Switzerland a country:Country ;
+    country:name "Switzerland"@en .
+
+country:Tanzania a country:Country ;
+    country:name "Tanzania"@en .
+
+country:TrinidadandTobago a country:Country ;
+    country:name "Trinidad and Tobago"@en .
+
+country:Tunisia a country:Country ;
+    country:name "Tunisia"@en .
+
+country:Turkey a country:Country ;
+    country:name "Turkey"@en .
+
+country:USA a country:Country ;
+    country:name "USA"@en .
+
+country:USSR a country:Country ;
+    country:name "USSR"@en .
+
+country:USVirginIslands a country:Country ;
+    country:name "U.S. Virgin Islands"@en,
+        "US Virgin Islands"@en .
+
+country:Ukraine a country:Country ;
+    country:name "Ukraine"@en .
+
+country:UnitedKingdom a country:Country ;
+    country:name "United Kingdom"@en .
+
+country:Uruguay a country:Country ;
+    country:name "Uruguay"@en .
+
+country:Venezuela a country:Country ;
+    country:name "Venezuela"@en .
+
+country:Yugoslavia a country:Country ;
+    country:name "Yugoslavia"@en .
+

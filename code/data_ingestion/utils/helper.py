@@ -5,7 +5,7 @@
 import pandas as pd
 from rdflib import Graph
 from xml.etree import ElementTree
-
+from pathlib import *
 import os
 
 class Helper:
@@ -15,12 +15,12 @@ class Helper:
 
     SERIALIZATION_TYPE = "turtle"    
     CODEC = "utf-8"
-    PATHS_XML_PATH = "../config/paths.xml"
+    PATHS_XML_PATH = str(Path(__file__).parent.parent.parent.resolve())+"/config/paths.xml"
     
     PATH_NODE_XML = "path"
     NAME_ATTRIBUTE_XML = "name"
     VALUE_ATTRIBUTE_XML = "value"
-
+    
 
     def serialize(self,graph: Graph, output_path: str) -> None :
         """
@@ -31,7 +31,7 @@ class Helper:
             output_path : str
                         The output path where to serialize the graph
         """
-        with open(output_path,'w') as file:
+        with open(output_path,'wb') as file:
             file.write(graph.serialize(format = self.SERIALIZATION_TYPE))        
 
     def read_csv(self, path_csv: str, sep: str, index_col: str = None) -> pd.DataFrame:
@@ -59,9 +59,18 @@ class Helper:
             Returns
                 Path of the .csv file
         """
-        tree = ElementTree.parse(self.PATHS_XML_PATH)
-        root = tree.getroot()        
+
+        base_dir=Path(self.PATHS_XML_PATH).parent.parent.parent.resolve()
+        tree = ElementTree.parse(Path(self.PATHS_XML_PATH))
+        root = tree.getroot()
         for child in root.iter(self.PATH_NODE_XML):
             if(child.attrib[self.NAME_ATTRIBUTE_XML] == name_file):
-                return child.attrib[self.VALUE_ATTRIBUTE_XML]
-        return ""        
+
+                # If the path is relative, make it relative to the root folder and not to the folder in which we run the script
+                if(not os.path.isabs(child.attrib[self.VALUE_ATTRIBUTE_XML])):
+                    p=str(base_dir)+child.attrib[self.VALUE_ATTRIBUTE_XML][1:]
+                    return p
+                else:
+                    return child.attrib[self.VALUE_ATTRIBUTE_XML]
+        raise Exception("There is no such file!")
+               

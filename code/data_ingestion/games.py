@@ -2,13 +2,14 @@
     Author : Francesco Caldivezzi
 """
 
-from utils.helper import Helper
+from data_ingestion.utils.helper import Helper
 from rdflib import Namespace
 from rdflib import Graph
 from rdflib import URIRef
 from rdflib import RDF
 from rdflib import Literal
 from rdflib.namespace import XSD
+from pathlib import Path
 
 helper = Helper()
 
@@ -87,4 +88,5 @@ for index, row in games_dataframe.iterrows():
 # Serialize the graph
 # --------------------------------------------------------------------------
 print("SERIALIZING ..")
-helper.serialize(graph, "../serialization/games.ttl")
+serialization_path=str(Path(__file__).parent.resolve())+"/serialization/games.ttl"
+helper.serialize(graph, serialization_path)

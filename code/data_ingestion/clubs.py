@@ -2,14 +2,14 @@
     Author : Francesco Caldivezzi
 """
 
-from utils.helper import Helper
+from data_ingestion.utils.helper import Helper
 from rdflib import Namespace
 from rdflib import Graph
 from rdflib import URIRef
 from rdflib import RDF
 from rdflib import Literal
 from rdflib.namespace import XSD
-
+from pathlib import Path
 helper = Helper()
 
 
@@ -69,4 +69,5 @@ for index, row in clubs_dataframe.iterrows():
 # Serialize the graph
 # --------------------------------------------------------------------------
 print("SERIALIZING ..")
-helper.serialize(graph, "../serialization/clubs.ttl")
+serialization_path=str(Path(__file__).parent.resolve())+"/serialization/clubs.ttl"
+helper.serialize(graph, serialization_path)
