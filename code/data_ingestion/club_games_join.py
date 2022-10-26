@@ -50,9 +50,7 @@ print(clubs_dataframe.info())
 print("CREATING NAMESPACES OF THE ONTOLOGY ..")
 CLUB = Namespace("https://www.dei.unipd.it/Database2/CPS-NBA/Club#")
 GAME = Namespace("https://www.dei.unipd.it/Database2/CPS-NBA/Game#")
-
-AWAY_CLUB = Namespace("https://www.dei.unipd.it/Database2/CPS-NBA/awayClub")
-HOME_CLUB = Namespace("https://www.dei.unipd.it/Database2/CPS-NBA/homeClub")
+BASE = Namespace("https://www.dei.unipd.it/Database2/CPS-NBA/")
 
 # --------------------------------------------------------------------------
 # Create the graph
@@ -66,8 +64,7 @@ graph = Graph()
 print("BINDING NAMASPACES TO PREFIXES ..")
 graph.bind("club",CLUB)
 graph.bind("game",GAME)
-graph.bind("awayClub",AWAY_CLUB)
-graph.bind("homeClub",HOME_CLUB)
+graph.bind("base",BASE)
 
 # --------------------------------------------------------------------------
 # Create triples and populate the graph
@@ -84,8 +81,8 @@ for index, row in games_dataframe.iterrows():
     awayClubObjectURI = URIRef(CLUB + str(row['VISITOR_TEAM_ID']))
 
     #Add Triples
-    graph.add((gameIdSubject,URIRef(AWAY_CLUB),awayClubObjectURI))
-    graph.add((gameIdSubject,URIRef(HOME_CLUB),homeClubObjectURI))        
+    graph.add((gameIdSubject,URIRef(BASE) + "awayClub",awayClubObjectURI))
+    graph.add((gameIdSubject,URIRef(BASE) + "homeClub",homeClubObjectURI))        
 
 # --------------------------------------------------------------------------
 # Serialize the graph
