@@ -59,16 +59,16 @@ for index, row in clubs_dataframe.iterrows():
     graph.add((clubSubjectURI, RDF.type, BASE.Club))
             
     #Nickname
-    graph.add((clubSubjectURI, CLUB['name'], Literal(row['NICKNAME'], datatype = XSD.string)))
+    graph.add((clubSubjectURI, BASE['name'], Literal(row['NICKNAME'], datatype = XSD.string)))
     
     #Abbreviation
-    graph.add((clubSubjectURI, CLUB['abbreviation'], Literal(row['ABBREVIATION'], datatype = XSD.string)))
+    graph.add((clubSubjectURI, BASE['abbreviation'], Literal(row['ABBREVIATION'], datatype = XSD.string)))
     
     #Year
-    graph.add((clubSubjectURI, CLUB['firstYear'], Literal(row['MIN_YEAR'], datatype = XSD.gYear)))
+    graph.add((clubSubjectURI, BASE['firstYear'], Literal(row['MIN_YEAR'], datatype = XSD.gYear)))
 
     #City
-    graph.add((clubSubjectURI, CLUB['city'], Literal(row['CITY'], datatype = XSD.string)))
+    graph.add((clubSubjectURI, BASE['city'], Literal(row['CITY'], datatype = XSD.string)))
 
 # --------------------------------------------------------------------------
 # Serialize the graph

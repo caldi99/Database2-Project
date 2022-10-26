@@ -72,7 +72,7 @@ graph.bind("base",BASE)
 print("POPULATING THE GRAPH ..")
 for index, row in games_dataframe.iterrows():
     #Game id
-    gameIdSubject = URIRef(CLUB + str(row['GAME_ID']))
+    gameIdSubject = URIRef(GAME + str(row['GAME_ID']))
 
     #Home team
     homeClubObjectURI = URIRef(CLUB + str(row['HOME_TEAM_ID']))

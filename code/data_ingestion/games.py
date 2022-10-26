@@ -70,23 +70,23 @@ for index, row in games_dataframe.iterrows():
     graph.add((gameSubjectURI, RDF.type, BASE.Game))
     
     #Date
-    graph.add((gameSubjectURI, GAME['matchDate'], Literal(row['GAME_DATE_EST'], datatype = XSD.date)))
+    graph.add((gameSubjectURI, BASE['matchDate'], Literal(row['GAME_DATE_EST'], datatype = XSD.date)))
     
     #Info home team
-    graph.add((gameSubjectURI, GAME['ptsHome'], Literal(row['PTS_home'], datatype = XSD.integer)))
-    graph.add((gameSubjectURI, GAME['fgptcHome'], Literal(row['FG_PCT_home'], datatype = XSD.float)))
-    graph.add((gameSubjectURI, GAME['ftpctHome'], Literal(row['FT_PCT_home'], datatype = XSD.float)))
-    graph.add((gameSubjectURI, GAME['fg3pctHome'], Literal(row['FG3_PCT_home'], datatype = XSD.float)))
-    graph.add((gameSubjectURI, GAME['astHome'], Literal(row['AST_home'], datatype = XSD.integer)))
-    graph.add((gameSubjectURI, GAME['rebHome'], Literal(row['REB_home'], datatype = XSD.integer)))
+    graph.add((gameSubjectURI, BASE['ptsHome'], Literal(row['PTS_home'], datatype = XSD.integer)))
+    graph.add((gameSubjectURI, BASE['fgptcHome'], Literal(row['FG_PCT_home'], datatype = XSD.float)))
+    graph.add((gameSubjectURI, BASE['ftpctHome'], Literal(row['FT_PCT_home'], datatype = XSD.float)))
+    graph.add((gameSubjectURI, BASE['fg3pctHome'], Literal(row['FG3_PCT_home'], datatype = XSD.float)))
+    graph.add((gameSubjectURI, BASE['astHome'], Literal(row['AST_home'], datatype = XSD.integer)))
+    graph.add((gameSubjectURI, BASE['rebHome'], Literal(row['REB_home'], datatype = XSD.integer)))
 
     #Info away team
-    graph.add((gameSubjectURI, GAME['ptsAway'], Literal(row['PTS_away'], datatype = XSD.integer)))
-    graph.add((gameSubjectURI, GAME['fgptcAway'], Literal(row['FG_PCT_away'], datatype = XSD.float)))
-    graph.add((gameSubjectURI, GAME['ftpctAway'], Literal(row['FT_PCT_away'], datatype = XSD.float)))
-    graph.add((gameSubjectURI, GAME['fg3pctAway'], Literal(row['FG3_PCT_away'], datatype = XSD.float)))
-    graph.add((gameSubjectURI, GAME['astAway'], Literal(row['AST_away'], datatype = XSD.integer)))
-    graph.add((gameSubjectURI, GAME['rebAway'], Literal(row['REB_away'], datatype = XSD.integer)))
+    graph.add((gameSubjectURI, BASE['ptsAway'], Literal(row['PTS_away'], datatype = XSD.integer)))
+    graph.add((gameSubjectURI, BASE['fgptcAway'], Literal(row['FG_PCT_away'], datatype = XSD.float)))
+    graph.add((gameSubjectURI, BASE['ftpctAway'], Literal(row['FT_PCT_away'], datatype = XSD.float)))
+    graph.add((gameSubjectURI, BASE['fg3pctAway'], Literal(row['FG3_PCT_away'], datatype = XSD.float)))
+    graph.add((gameSubjectURI, BASE['astAway'], Literal(row['AST_away'], datatype = XSD.integer)))
+    graph.add((gameSubjectURI, BASE['rebAway'], Literal(row['REB_away'], datatype = XSD.integer)))
 
 # --------------------------------------------------------------------------
 # Serialize the graph
