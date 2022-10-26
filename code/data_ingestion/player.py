@@ -6,6 +6,7 @@ import re
 
 
 # Defining constants to keep things organized
+ONTOLOGY_URI="https://www.dei.unipd.it/Database2/CPS-NBA/"
 PLAYER_CLASS_URI="https://www.dei.unipd.it/Database2/CPS-NBA/Player#"
 COUNTRY_CLASS_URI="https://www.dei.unipd.it/Database2/CPS-NBA/Country#"
 APPEARANCE_CLASS_URI="https://www.dei.unipd.it/Database2/CPS-NBA/Appearance#"
@@ -19,6 +20,7 @@ PLAYER_BORN="wasBornIn"
 PLAYER_TEAM="playsIn"
 
 # Creating the Namespaces that will be used for the triples and creating the graph   
+ONTOLOGY= Namespace(ONTOLOGY_URI)
 PLAYER = Namespace(PLAYER_CLASS_URI)    
 COUNTRY = Namespace(COUNTRY_CLASS_URI)
 TEAM = Namespace(TEAM_CLASS_URI)
@@ -29,6 +31,7 @@ graph.bind("player",PLAYER)
 graph.bind("country",COUNTRY)
 graph.bind("team",TEAM)
 graph.bind("appearance",APPEARANCE)
+graph.bind("nba-cps",ONTOLOGY)
 
 # Instanciating the helper class
 helper=Helper()
@@ -47,7 +50,7 @@ def process_plays_in(players_path):
         team_id=row["TEAM_ID"]
         player_subj_uri = URIRef(PLAYER + str(player_id))
         team_obj_uri= URIRef(TEAM+ str(team_id)+"_"+str(season))
-        graph.add((player_subj_uri, PLAYER[PLAYER_TEAM], team_obj_uri))
+        graph.add((player_subj_uri, ONTOLOGY[PLAYER_TEAM], team_obj_uri))
 
 # Adds to the graph the triples related to the Player with its Data-Properties
 def process_player(players_path,players_details_path):
@@ -100,11 +103,17 @@ def process_player(players_path,players_details_path):
         
         # Adding the rdf triples to the graph
         player_subj_uri = URIRef(PLAYER + str(player_id))
-        graph.add((player_subj_uri, RDF.type, URIRef(PLAYER.Player)))
-        graph.add((player_subj_uri, PLAYER[PLAYER_NAME], Literal(player_name, lang="en")))
-        graph.add((player_subj_uri, PLAYER[PLAYER_DRAFT_YEAR], Literal(player_draft_year, datatype = XSD.integer)))
-        graph.add((player_subj_uri, PLAYER[PLAYER_WEIGHT], Literal(player_weight, datatype = XSD.float)))
-        graph.add((player_subj_uri, PLAYER[PLAYER_HEIGHT], Literal(player_height, datatype = XSD.float)))
+        graph.add((player_subj_uri, RDF.type, URIRef(ONTOLOGY.Player)))
+        graph.add((player_subj_uri, ONTOLOGY[PLAYER_NAME], Literal(player_name, lang="en")))
+        
+        if(str(player_draft_year)!="Undrafted"):
+            graph.add((player_subj_uri, ONTOLOGY[PLAYER_DRAFT_YEAR], Literal(player_draft_year, datatype = XSD.integer)))
+
+        if(not math.isnan(player_weight) and not math.isnan(player_height)):
+            player_weight/=n_col
+            player_height/=n_col
+            graph.add((player_subj_uri, ONTOLOGY[PLAYER_WEIGHT], Literal(player_weight, datatype = XSD.float)))
+            graph.add((player_subj_uri, ONTOLOGY[PLAYER_HEIGHT], Literal(player_height, datatype = XSD.float)))
        
         i=k
 
@@ -136,7 +145,7 @@ def process_born_in(players_path,players_details_path):
         player_country=row['country']
         player_subj_uri = URIRef(PLAYER + str(player_id))
         country_obj_uri= URIRef(COUNTRY+ re.sub(r'\W+', '', str(player_country)))
-        graph.add((player_subj_uri, PLAYER[PLAYER_BORN], country_obj_uri))
+        graph.add((player_subj_uri, ONTOLOGY[PLAYER_BORN], country_obj_uri))
 
 
 # Adds to the graph the triples related to the Player with the corrisponding played matches
@@ -160,7 +169,7 @@ def process_has_played_in_match(players_path,match_details_path):
         player_subj_uri = URIRef(PLAYER + str(player_id))
         
         game_obj_uri= URIRef(APPEARANCE+ str(game_id)+"_"+str(player_id))
-        graph.add((player_subj_uri, PLAYER[PLAYER_APPEARANCE], game_obj_uri))
+        graph.add((player_subj_uri, ONTOLOGY[PLAYER_APPEARANCE], game_obj_uri))
     
 
 # Processes the players from the dataset and serializes them in a .ttl file

@@ -5,6 +5,7 @@ import math,pathlib
 from datetime import datetime
 
 # Defining constants to keep things organized
+ONTOLOGY_URI="https://www.dei.unipd.it/Database2/CPS-NBA/"
 APPEARANCE_CLASS_URI="https://www.dei.unipd.it/Database2/CPS-NBA/Appearance#"
 TEAM_CLASS_URI="https://www.dei.unipd.it/Database2/CPS-NBA/Team#"
 APPEARANCE_MINUTES="minutes"
@@ -32,8 +33,10 @@ APPEARANCE_PLUS_MINUS="plusminus"
 
 # Creating the Namespaces that will be used for the triples and creating the graph
 APPEARANCE = Namespace(APPEARANCE_CLASS_URI)
+ONTOLOGY= Namespace(ONTOLOGY_URI)
 graph = Graph()
 graph.bind("appearance",APPEARANCE)
+graph.bind("nba-cps",ONTOLOGY)
 
 # Instanciating the helper class
 helper=Helper()
@@ -69,35 +72,35 @@ def process_appearances():
         
         
         appearance_subj_uri= URIRef(APPEARANCE+ str(game_id)+"_"+str(player_id))
-        graph.add((appearance_subj_uri, RDF.type, URIRef(APPEARANCE.Appearance)))
-        graph.add((appearance_subj_uri, APPEARANCE[APPEARANCE_MINUTES], Literal(time_vector[0], datatype= XSD.integer)))
-        graph.add((appearance_subj_uri, APPEARANCE[APPEARANCE_SECONDS], Literal(time_vector[1], datatype= XSD.integer)))
+        graph.add((appearance_subj_uri, RDF.type, URIRef(ONTOLOGY.Appearance)))
+        graph.add((appearance_subj_uri, ONTOLOGY[APPEARANCE_MINUTES], Literal(time_vector[0], datatype= XSD.integer)))
+        graph.add((appearance_subj_uri, ONTOLOGY[APPEARANCE_SECONDS], Literal(time_vector[1], datatype= XSD.integer)))
         if(str(row['COMMENT'])!="nan"):
-            graph.add((appearance_subj_uri, APPEARANCE[APPEARANCE_COMMENT], Literal(str(row['COMMENT']), lang="en")))
+            graph.add((appearance_subj_uri, ONTOLOGY[APPEARANCE_COMMENT], Literal(str(row['COMMENT']), lang="en")))
         
         if(time_vector[0]==0 and time_vector[1]==0):
             continue
 
-        graph.add((appearance_subj_uri, APPEARANCE[APPEARANCE_FGM], Literal(int(row['FGM']), datatype= XSD.integer)))
-        graph.add((appearance_subj_uri, APPEARANCE[APPEARANCE_FGA], Literal(int(row['FGA']), datatype= XSD.integer)))
-        graph.add((appearance_subj_uri, APPEARANCE[APPEARANCE_FG_PCT], Literal(row['FG_PCT'], datatype= XSD.float)))
-        graph.add((appearance_subj_uri, APPEARANCE[APPEARANCE_FG3A], Literal(int(row['FG3A']), datatype= XSD.integer)))
-        graph.add((appearance_subj_uri, APPEARANCE[APPEARANCE_FG3M], Literal(int(row['FG3M']), datatype= XSD.integer)))
-        graph.add((appearance_subj_uri, APPEARANCE[APPEARANCE_FG3_PCT], Literal(row['FG3_PCT'], datatype= XSD.float)))
-        graph.add((appearance_subj_uri, APPEARANCE[APPEARANCE_FTA], Literal(int(row['FTA']), datatype= XSD.integer)))
-        graph.add((appearance_subj_uri, APPEARANCE[APPEARANCE_FTM], Literal(int(row['FTM']), datatype= XSD.integer)))
-        graph.add((appearance_subj_uri, APPEARANCE[APPEARANCE_FT_PCT], Literal(row['FT_PCT'], datatype= XSD.float)))
-        graph.add((appearance_subj_uri, APPEARANCE[APPEARANCE_OREB], Literal(int(row['OREB']), datatype= XSD.integer)))
-        graph.add((appearance_subj_uri, APPEARANCE[APPEARANCE_DREB], Literal(int(row['DREB']), datatype= XSD.integer)))
-        graph.add((appearance_subj_uri, APPEARANCE[APPEARANCE_REB], Literal(int(row['REB']), datatype= XSD.integer)))
-        graph.add((appearance_subj_uri, APPEARANCE[APPEARANCE_AST], Literal(int(row['AST']), datatype= XSD.integer)))
-        graph.add((appearance_subj_uri, APPEARANCE[APPEARANCE_STL], Literal(int(row['STL']), datatype= XSD.integer)))
-        graph.add((appearance_subj_uri, APPEARANCE[APPEARANCE_BLK], Literal(int(row['BLK']), datatype= XSD.integer)))
-        graph.add((appearance_subj_uri, APPEARANCE[APPEARANCE_TO], Literal(int(row['TO']), datatype= XSD.integer)))
-        graph.add((appearance_subj_uri, APPEARANCE[APPEARANCE_PF], Literal(int(row['PF']), datatype= XSD.integer)))
-        graph.add((appearance_subj_uri, APPEARANCE[APPEARANCE_PTS], Literal(int(row['PTS']), datatype= XSD.integer)))
+        graph.add((appearance_subj_uri, ONTOLOGY[APPEARANCE_FGM], Literal(int(row['FGM']), datatype= XSD.integer)))
+        graph.add((appearance_subj_uri, ONTOLOGY[APPEARANCE_FGA], Literal(int(row['FGA']), datatype= XSD.integer)))
+        graph.add((appearance_subj_uri, ONTOLOGY[APPEARANCE_FG_PCT], Literal(row['FG_PCT'], datatype= XSD.float)))
+        graph.add((appearance_subj_uri, ONTOLOGY[APPEARANCE_FG3A], Literal(int(row['FG3A']), datatype= XSD.integer)))
+        graph.add((appearance_subj_uri, ONTOLOGY[APPEARANCE_FG3M], Literal(int(row['FG3M']), datatype= XSD.integer)))
+        graph.add((appearance_subj_uri, ONTOLOGY[APPEARANCE_FG3_PCT], Literal(row['FG3_PCT'], datatype= XSD.float)))
+        graph.add((appearance_subj_uri, ONTOLOGY[APPEARANCE_FTA], Literal(int(row['FTA']), datatype= XSD.integer)))
+        graph.add((appearance_subj_uri, ONTOLOGY[APPEARANCE_FTM], Literal(int(row['FTM']), datatype= XSD.integer)))
+        graph.add((appearance_subj_uri, ONTOLOGY[APPEARANCE_FT_PCT], Literal(row['FT_PCT'], datatype= XSD.float)))
+        graph.add((appearance_subj_uri, ONTOLOGY[APPEARANCE_OREB], Literal(int(row['OREB']), datatype= XSD.integer)))
+        graph.add((appearance_subj_uri, ONTOLOGY[APPEARANCE_DREB], Literal(int(row['DREB']), datatype= XSD.integer)))
+        graph.add((appearance_subj_uri, ONTOLOGY[APPEARANCE_REB], Literal(int(row['REB']), datatype= XSD.integer)))
+        graph.add((appearance_subj_uri, ONTOLOGY[APPEARANCE_AST], Literal(int(row['AST']), datatype= XSD.integer)))
+        graph.add((appearance_subj_uri, ONTOLOGY[APPEARANCE_STL], Literal(int(row['STL']), datatype= XSD.integer)))
+        graph.add((appearance_subj_uri, ONTOLOGY[APPEARANCE_BLK], Literal(int(row['BLK']), datatype= XSD.integer)))
+        graph.add((appearance_subj_uri, ONTOLOGY[APPEARANCE_TO], Literal(int(row['TO']), datatype= XSD.integer)))
+        graph.add((appearance_subj_uri, ONTOLOGY[APPEARANCE_PF], Literal(int(row['PF']), datatype= XSD.integer)))
+        graph.add((appearance_subj_uri, ONTOLOGY[APPEARANCE_PTS], Literal(int(row['PTS']), datatype= XSD.integer)))
         if(str(row['PLUS_MINUS'])!="nan"):
-            graph.add((appearance_subj_uri, APPEARANCE[APPEARANCE_PLUS_MINUS], Literal(int(row['PLUS_MINUS']), datatype= XSD.integer)))
+            graph.add((appearance_subj_uri, ONTOLOGY[APPEARANCE_PLUS_MINUS], Literal(int(row['PLUS_MINUS']), datatype= XSD.integer)))
         
 
     serialization_path=str(pathlib.Path(__file__).parent.resolve())+"/serialization/appearances.ttl"

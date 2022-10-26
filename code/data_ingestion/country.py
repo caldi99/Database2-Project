@@ -6,14 +6,17 @@ from datetime import datetime
 import re
 
 # Defining constants to keep things organized
+ONTOLOGY_URI="https://www.dei.unipd.it/Database2/CPS-NBA/"
 COUNTRY_CLASS_URI="https://www.dei.unipd.it/Database2/CPS-NBA/Country#"
 COUNTRY_NAME="name"
 
 
 # Creating the Namespaces that will be used for the triples and creating the graph
 COUNTRY = Namespace(COUNTRY_CLASS_URI)
+ONTOLOGY= Namespace(ONTOLOGY_URI)
 graph = Graph()
 graph.bind("country",COUNTRY_CLASS_URI)
+graph.bind("nba-cps",ONTOLOGY)
 
 # Instanciating the helper class
 helper=Helper()
@@ -35,8 +38,8 @@ def process_countries():
     for index,row in players_details_df.iterrows():
         country=row['country']
         country_subj_uri= URIRef(COUNTRY+ re.sub(r'\W+', '', country))
-        graph.add((country_subj_uri, COUNTRY[COUNTRY_NAME], Literal(str(country),lang="en")))
-        graph.add((country_subj_uri, RDF.type, URIRef(COUNTRY.Country)))
+        graph.add((country_subj_uri, ONTOLOGY[COUNTRY_NAME], Literal(str(country),lang="en")))
+        graph.add((country_subj_uri, RDF.type, URIRef(ONTOLOGY.Country)))
 
     serialization_path=str(pathlib.Path(__file__).parent.resolve())+"/serialization/countries.ttl"
     print("serializing...")
