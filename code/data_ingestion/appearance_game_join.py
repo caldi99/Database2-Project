@@ -69,8 +69,8 @@ graph.bind("appearance",APPEARANCE)
 # --------------------------------------------------------------------------
 print("POPULATING THE GRAPH ..")
 for index, row in merged_dataframe.iterrows():
-    #Subject TODO: DECIDE DEPEDING ON FINAL DECISION ON APPEARANCE IDENTIFICATOR
-    appearance_game_subject_uri = URIRef()
+    #Subject 
+    appearance_game_subject_uri = URIRef(APPEARANCE + row[index])
 
     #Predicate
     appearance_game_predicate_uri = URIRef(BASE + "playIn")

@@ -63,7 +63,9 @@ def process_apperas_in():
     for index,row in complete_df.iterrows():
         player_id=row['PLAYER_ID']
         game_id=row['GAME_ID']
-        appearance_subj_uri= URIRef(APPEARANCE+ str(game_id)+"_"+str(player_id))
+        #OLD URI
+        #appearance_subj_uri= URIRef(APPEARANCE+ str(game_id)+"_"+str(player_id))
+        appearance_subj_uri= URIRef(APPEARANCE+ str(index))
         game_obj_uri= URIRef(GAME+str(game_id))
         graph.add((appearance_subj_uri, ONTOLOGY[APPEARANCE_APPEARS_IN], game_obj_uri))
 
@@ -75,6 +77,8 @@ def process_appearances_instances():
     print("processing \'appearance\'...")
     players_path=helper.get_csv_path('players')
     match_details_path=helper.get_csv_path('games_details')
+
+    #TODO: DROP NA match_detail ??
 
     match_details_df = helper.read_csv(match_details_path, ",")
 
@@ -100,7 +104,9 @@ def process_appearances_instances():
                 time_vector.append(0)
         
         
-        appearance_subj_uri= URIRef(APPEARANCE+ str(game_id)+"_"+str(player_id))
+        #OLD URI
+        #appearance_subj_uri= URIRef(APPEARANCE+ str(game_id)+"_"+str(player_id))
+        appearance_subj_uri= URIRef(APPEARANCE+ str(index))
         graph.add((appearance_subj_uri, RDF.type, URIRef(ONTOLOGY.Appearance)))
         graph.add((appearance_subj_uri, ONTOLOGY[APPEARANCE_MINUTES], Literal(time_vector[0], datatype= XSD.integer)))
         graph.add((appearance_subj_uri, ONTOLOGY[APPEARANCE_SECONDS], Literal(time_vector[1], datatype= XSD.integer)))
