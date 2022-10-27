@@ -1,0 +1,5387 @@
+@prefix club: <https://www.dei.unipd.it/Database2/CPS-NBA/Club#> .
+@prefix cps-nba: <https://www.dei.unipd.it/Database2/CPS-NBA/> .
+@prefix team: <https://www.dei.unipd.it/Database2/CPS-NBA/Team#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+team:1610612737_2002 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612737 ;
+    cps-nba:gameLost "47"^^xsd:int ;
+    cps-nba:gameWon "35"^^xsd:int ;
+    cps-nba:homeRecord "26-15"^^xsd:string ;
+    cps-nba:roadRecord "9-32"^^xsd:string ;
+    cps-nba:winPct "0.4270000000000001"^^xsd:float ;
+    cps-nba:year "2002"^^xsd:gYear .
+
+team:1610612737_2003 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612737 ;
+    cps-nba:gameLost "54"^^xsd:int ;
+    cps-nba:gameWon "28"^^xsd:int ;
+    cps-nba:homeRecord "18-23"^^xsd:string ;
+    cps-nba:roadRecord "10-31"^^xsd:string ;
+    cps-nba:winPct "0.341"^^xsd:float ;
+    cps-nba:year "2003"^^xsd:gYear .
+
+team:1610612737_2004 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612737 ;
+    cps-nba:gameLost "69"^^xsd:int ;
+    cps-nba:gameWon "13"^^xsd:int ;
+    cps-nba:homeRecord "9-32"^^xsd:string ;
+    cps-nba:roadRecord "4-37"^^xsd:string ;
+    cps-nba:winPct "0.159"^^xsd:float ;
+    cps-nba:year "2004"^^xsd:gYear .
+
+team:1610612737_2005 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612737 ;
+    cps-nba:gameLost "56"^^xsd:int ;
+    cps-nba:gameWon "26"^^xsd:int ;
+    cps-nba:homeRecord "18-23"^^xsd:string ;
+    cps-nba:roadRecord "8-33"^^xsd:string ;
+    cps-nba:winPct "0.317"^^xsd:float ;
+    cps-nba:year "2005"^^xsd:gYear .
+
+team:1610612737_2006 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612737 ;
+    cps-nba:gameLost "52"^^xsd:int ;
+    cps-nba:gameWon "30"^^xsd:int ;
+    cps-nba:homeRecord "18-23"^^xsd:string ;
+    cps-nba:roadRecord "12-29"^^xsd:string ;
+    cps-nba:winPct "0.366"^^xsd:float ;
+    cps-nba:year "2006"^^xsd:gYear .
+
+team:1610612737_2007 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612737 ;
+    cps-nba:gameLost "45"^^xsd:int ;
+    cps-nba:gameWon "37"^^xsd:int ;
+    cps-nba:homeRecord "25-16"^^xsd:string ;
+    cps-nba:roadRecord "12-29"^^xsd:string ;
+    cps-nba:winPct "0.451"^^xsd:float ;
+    cps-nba:year "2007"^^xsd:gYear .
+
+team:1610612737_2008 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612737 ;
+    cps-nba:gameLost "35"^^xsd:int ;
+    cps-nba:gameWon "47"^^xsd:int ;
+    cps-nba:homeRecord "31-10"^^xsd:string ;
+    cps-nba:roadRecord "16-25"^^xsd:string ;
+    cps-nba:winPct "0.573"^^xsd:float ;
+    cps-nba:year "2008"^^xsd:gYear .
+
+team:1610612737_2009 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612737 ;
+    cps-nba:gameLost "29"^^xsd:int ;
+    cps-nba:gameWon "53"^^xsd:int ;
+    cps-nba:homeRecord "34-7"^^xsd:string ;
+    cps-nba:roadRecord "19-22"^^xsd:string ;
+    cps-nba:winPct "0.6459999999999999"^^xsd:float ;
+    cps-nba:year "2009"^^xsd:gYear .
+
+team:1610612737_2010 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612737 ;
+    cps-nba:gameLost "38"^^xsd:int ;
+    cps-nba:gameWon "44"^^xsd:int ;
+    cps-nba:homeRecord "24-17"^^xsd:string ;
+    cps-nba:roadRecord "20-21"^^xsd:string ;
+    cps-nba:winPct "0.537"^^xsd:float ;
+    cps-nba:year "2010"^^xsd:gYear .
+
+team:1610612737_2011 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612737 ;
+    cps-nba:gameLost "26"^^xsd:int ;
+    cps-nba:gameWon "40"^^xsd:int ;
+    cps-nba:homeRecord "23-10"^^xsd:string ;
+    cps-nba:roadRecord "17-16"^^xsd:string ;
+    cps-nba:winPct "0.606"^^xsd:float ;
+    cps-nba:year "2011"^^xsd:gYear .
+
+team:1610612737_2012 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612737 ;
+    cps-nba:gameLost "38"^^xsd:int ;
+    cps-nba:gameWon "44"^^xsd:int ;
+    cps-nba:homeRecord "25-16"^^xsd:string ;
+    cps-nba:roadRecord "19-22"^^xsd:string ;
+    cps-nba:winPct "0.537"^^xsd:float ;
+    cps-nba:year "2012"^^xsd:gYear .
+
+team:1610612737_2013 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612737 ;
+    cps-nba:gameLost "44"^^xsd:int ;
+    cps-nba:gameWon "38"^^xsd:int ;
+    cps-nba:homeRecord "24-17"^^xsd:string ;
+    cps-nba:roadRecord "14-27"^^xsd:string ;
+    cps-nba:winPct "0.4629999999999999"^^xsd:float ;
+    cps-nba:year "2013"^^xsd:gYear .
+
+team:1610612737_2014 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612737 ;
+    cps-nba:gameLost "22"^^xsd:int ;
+    cps-nba:gameWon "60"^^xsd:int ;
+    cps-nba:homeRecord "35-6"^^xsd:string ;
+    cps-nba:roadRecord "25-16"^^xsd:string ;
+    cps-nba:winPct "0.732"^^xsd:float ;
+    cps-nba:year "2014"^^xsd:gYear .
+
+team:1610612737_2015 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612737 ;
+    cps-nba:gameLost "34"^^xsd:int ;
+    cps-nba:gameWon "48"^^xsd:int ;
+    cps-nba:homeRecord "27-14"^^xsd:string ;
+    cps-nba:roadRecord "21-20"^^xsd:string ;
+    cps-nba:winPct "0.585"^^xsd:float ;
+    cps-nba:year "2015"^^xsd:gYear .
+
+team:1610612737_2016 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612737 ;
+    cps-nba:gameLost "39"^^xsd:int ;
+    cps-nba:gameWon "43"^^xsd:int ;
+    cps-nba:homeRecord "23-18"^^xsd:string ;
+    cps-nba:roadRecord "20-21"^^xsd:string ;
+    cps-nba:winPct "0.524"^^xsd:float ;
+    cps-nba:year "2016"^^xsd:gYear .
+
+team:1610612737_2017 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612737 ;
+    cps-nba:gameLost "58"^^xsd:int ;
+    cps-nba:gameWon "24"^^xsd:int ;
+    cps-nba:homeRecord "16-25"^^xsd:string ;
+    cps-nba:roadRecord "8-33"^^xsd:string ;
+    cps-nba:winPct "0.293"^^xsd:float ;
+    cps-nba:year "2017"^^xsd:gYear .
+
+team:1610612737_2018 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612737 ;
+    cps-nba:gameLost "53"^^xsd:int ;
+    cps-nba:gameWon "29"^^xsd:int ;
+    cps-nba:homeRecord "17-24"^^xsd:string ;
+    cps-nba:roadRecord "12-29"^^xsd:string ;
+    cps-nba:winPct "0.354"^^xsd:float ;
+    cps-nba:year "2018"^^xsd:gYear .
+
+team:1610612737_2019 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612737 ;
+    cps-nba:gameLost "47"^^xsd:int ;
+    cps-nba:gameWon "20"^^xsd:int ;
+    cps-nba:homeRecord "14-20"^^xsd:string ;
+    cps-nba:roadRecord "6-27"^^xsd:string ;
+    cps-nba:winPct "0.299"^^xsd:float ;
+    cps-nba:year "2019"^^xsd:gYear .
+
+team:1610612737_2020 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612737 ;
+    cps-nba:gameLost "31"^^xsd:int ;
+    cps-nba:gameWon "41"^^xsd:int ;
+    cps-nba:homeRecord "25-11"^^xsd:string ;
+    cps-nba:roadRecord "16-20"^^xsd:string ;
+    cps-nba:winPct "0.569"^^xsd:float ;
+    cps-nba:year "2020"^^xsd:gYear .
+
+team:1610612737_2021 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612737 ;
+    cps-nba:gameLost "34"^^xsd:int ;
+    cps-nba:gameWon "32"^^xsd:int ;
+    cps-nba:homeRecord "20-13"^^xsd:string ;
+    cps-nba:roadRecord "12-21"^^xsd:string ;
+    cps-nba:winPct "0.485"^^xsd:float ;
+    cps-nba:year "2021"^^xsd:gYear .
+
+team:1610612738_2002 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612738 ;
+    cps-nba:gameLost "38"^^xsd:int ;
+    cps-nba:gameWon "44"^^xsd:int ;
+    cps-nba:homeRecord "25-16"^^xsd:string ;
+    cps-nba:roadRecord "19-22"^^xsd:string ;
+    cps-nba:winPct "0.537"^^xsd:float ;
+    cps-nba:year "2002"^^xsd:gYear .
+
+team:1610612738_2003 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612738 ;
+    cps-nba:gameLost "46"^^xsd:int ;
+    cps-nba:gameWon "36"^^xsd:int ;
+    cps-nba:homeRecord "19-22"^^xsd:string ;
+    cps-nba:roadRecord "17-24"^^xsd:string ;
+    cps-nba:winPct "0.439"^^xsd:float ;
+    cps-nba:year "2003"^^xsd:gYear .
+
+team:1610612738_2004 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612738 ;
+    cps-nba:gameLost "37"^^xsd:int ;
+    cps-nba:gameWon "45"^^xsd:int ;
+    cps-nba:homeRecord "27-14"^^xsd:string ;
+    cps-nba:roadRecord "18-23"^^xsd:string ;
+    cps-nba:winPct "0.5489999999999999"^^xsd:float ;
+    cps-nba:year "2004"^^xsd:gYear .
+
+team:1610612738_2005 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612738 ;
+    cps-nba:gameLost "49"^^xsd:int ;
+    cps-nba:gameWon "33"^^xsd:int ;
+    cps-nba:homeRecord "21-20"^^xsd:string ;
+    cps-nba:roadRecord "12-29"^^xsd:string ;
+    cps-nba:winPct "0.402"^^xsd:float ;
+    cps-nba:year "2005"^^xsd:gYear .
+
+team:1610612738_2006 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612738 ;
+    cps-nba:gameLost "58"^^xsd:int ;
+    cps-nba:gameWon "24"^^xsd:int ;
+    cps-nba:homeRecord "12-29"^^xsd:string ;
+    cps-nba:roadRecord "12-29"^^xsd:string ;
+    cps-nba:winPct "0.293"^^xsd:float ;
+    cps-nba:year "2006"^^xsd:gYear .
+
+team:1610612738_2007 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612738 ;
+    cps-nba:gameLost "16"^^xsd:int ;
+    cps-nba:gameWon "66"^^xsd:int ;
+    cps-nba:homeRecord "35-6"^^xsd:string ;
+    cps-nba:roadRecord "31-10"^^xsd:string ;
+    cps-nba:winPct "0.805"^^xsd:float ;
+    cps-nba:year "2007"^^xsd:gYear .
+
+team:1610612738_2008 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612738 ;
+    cps-nba:gameLost "20"^^xsd:int ;
+    cps-nba:gameWon "62"^^xsd:int ;
+    cps-nba:homeRecord "35-6"^^xsd:string ;
+    cps-nba:roadRecord "27-14"^^xsd:string ;
+    cps-nba:winPct "0.7559999999999999"^^xsd:float ;
+    cps-nba:year "2008"^^xsd:gYear .
+
+team:1610612738_2009 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612738 ;
+    cps-nba:gameLost "32"^^xsd:int ;
+    cps-nba:gameWon "50"^^xsd:int ;
+    cps-nba:homeRecord "24-17"^^xsd:string ;
+    cps-nba:roadRecord "26-15"^^xsd:string ;
+    cps-nba:winPct "0.61"^^xsd:float ;
+    cps-nba:year "2009"^^xsd:gYear .
+
+team:1610612738_2010 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612738 ;
+    cps-nba:gameLost "26"^^xsd:int ;
+    cps-nba:gameWon "56"^^xsd:int ;
+    cps-nba:homeRecord "33-8"^^xsd:string ;
+    cps-nba:roadRecord "23-18"^^xsd:string ;
+    cps-nba:winPct "0.6829999999999999"^^xsd:float ;
+    cps-nba:year "2010"^^xsd:gYear .
+
+team:1610612738_2011 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612738 ;
+    cps-nba:gameLost "27"^^xsd:int ;
+    cps-nba:gameWon "39"^^xsd:int ;
+    cps-nba:homeRecord "24-9"^^xsd:string ;
+    cps-nba:roadRecord "15-18"^^xsd:string ;
+    cps-nba:winPct "0.591"^^xsd:float ;
+    cps-nba:year "2011"^^xsd:gYear .
+
+team:1610612738_2012 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612738 ;
+    cps-nba:gameLost "40"^^xsd:int ;
+    cps-nba:gameWon "41"^^xsd:int ;
+    cps-nba:homeRecord "27-13"^^xsd:string ;
+    cps-nba:roadRecord "14-27"^^xsd:string ;
+    cps-nba:winPct "0.506"^^xsd:float ;
+    cps-nba:year "2012"^^xsd:gYear .
+
+team:1610612738_2013 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612738 ;
+    cps-nba:gameLost "57"^^xsd:int ;
+    cps-nba:gameWon "25"^^xsd:int ;
+    cps-nba:homeRecord "16-25"^^xsd:string ;
+    cps-nba:roadRecord "9-32"^^xsd:string ;
+    cps-nba:winPct "0.305"^^xsd:float ;
+    cps-nba:year "2013"^^xsd:gYear .
+
+team:1610612738_2014 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612738 ;
+    cps-nba:gameLost "42"^^xsd:int ;
+    cps-nba:gameWon "40"^^xsd:int ;
+    cps-nba:homeRecord "21-20"^^xsd:string ;
+    cps-nba:roadRecord "19-22"^^xsd:string ;
+    cps-nba:winPct "0.488"^^xsd:float ;
+    cps-nba:year "2014"^^xsd:gYear .
+
+team:1610612738_2015 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612738 ;
+    cps-nba:gameLost "34"^^xsd:int ;
+    cps-nba:gameWon "48"^^xsd:int ;
+    cps-nba:homeRecord "28-13"^^xsd:string ;
+    cps-nba:roadRecord "20-21"^^xsd:string ;
+    cps-nba:winPct "0.585"^^xsd:float ;
+    cps-nba:year "2015"^^xsd:gYear .
+
+team:1610612738_2016 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612738 ;
+    cps-nba:gameLost "29"^^xsd:int ;
+    cps-nba:gameWon "53"^^xsd:int ;
+    cps-nba:homeRecord "30-11"^^xsd:string ;
+    cps-nba:roadRecord "23-18"^^xsd:string ;
+    cps-nba:winPct "0.6459999999999999"^^xsd:float ;
+    cps-nba:year "2016"^^xsd:gYear .
+
+team:1610612738_2017 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612738 ;
+    cps-nba:gameLost "27"^^xsd:int ;
+    cps-nba:gameWon "55"^^xsd:int ;
+    cps-nba:homeRecord "27-14"^^xsd:string ;
+    cps-nba:roadRecord "28-13"^^xsd:string ;
+    cps-nba:winPct "0.6709999999999999"^^xsd:float ;
+    cps-nba:year "2017"^^xsd:gYear .
+
+team:1610612738_2018 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612738 ;
+    cps-nba:gameLost "33"^^xsd:int ;
+    cps-nba:gameWon "49"^^xsd:int ;
+    cps-nba:homeRecord "28-13"^^xsd:string ;
+    cps-nba:roadRecord "21-20"^^xsd:string ;
+    cps-nba:winPct "0.598"^^xsd:float ;
+    cps-nba:year "2018"^^xsd:gYear .
+
+team:1610612738_2019 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612738 ;
+    cps-nba:gameLost "24"^^xsd:int ;
+    cps-nba:gameWon "48"^^xsd:int ;
+    cps-nba:homeRecord "26-10"^^xsd:string ;
+    cps-nba:roadRecord "22-14"^^xsd:string ;
+    cps-nba:winPct "0.667"^^xsd:float ;
+    cps-nba:year "2019"^^xsd:gYear .
+
+team:1610612738_2020 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612738 ;
+    cps-nba:gameLost "36"^^xsd:int ;
+    cps-nba:gameWon "36"^^xsd:int ;
+    cps-nba:homeRecord "21-15"^^xsd:string ;
+    cps-nba:roadRecord "15-21"^^xsd:string ;
+    cps-nba:winPct "0.5"^^xsd:float ;
+    cps-nba:year "2020"^^xsd:gYear .
+
+team:1610612738_2021 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612738 ;
+    cps-nba:gameLost "27"^^xsd:int ;
+    cps-nba:gameWon "41"^^xsd:int ;
+    cps-nba:homeRecord "24-11"^^xsd:string ;
+    cps-nba:roadRecord "17-16"^^xsd:string ;
+    cps-nba:winPct "0.603"^^xsd:float ;
+    cps-nba:year "2021"^^xsd:gYear .
+
+team:1610612739_2002 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612739 ;
+    cps-nba:gameLost "65"^^xsd:int ;
+    cps-nba:gameWon "17"^^xsd:int ;
+    cps-nba:homeRecord "14-27"^^xsd:string ;
+    cps-nba:roadRecord "3-38"^^xsd:string ;
+    cps-nba:winPct "0.207"^^xsd:float ;
+    cps-nba:year "2002"^^xsd:gYear .
+
+team:1610612739_2003 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612739 ;
+    cps-nba:gameLost "47"^^xsd:int ;
+    cps-nba:gameWon "35"^^xsd:int ;
+    cps-nba:homeRecord "23-18"^^xsd:string ;
+    cps-nba:roadRecord "12-29"^^xsd:string ;
+    cps-nba:winPct "0.4270000000000001"^^xsd:float ;
+    cps-nba:year "2003"^^xsd:gYear .
+
+team:1610612739_2004 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612739 ;
+    cps-nba:gameLost "40"^^xsd:int ;
+    cps-nba:gameWon "42"^^xsd:int ;
+    cps-nba:homeRecord "29-12"^^xsd:string ;
+    cps-nba:roadRecord "13-28"^^xsd:string ;
+    cps-nba:winPct "0.512"^^xsd:float ;
+    cps-nba:year "2004"^^xsd:gYear .
+
+team:1610612739_2005 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612739 ;
+    cps-nba:gameLost "32"^^xsd:int ;
+    cps-nba:gameWon "50"^^xsd:int ;
+    cps-nba:homeRecord "31-10"^^xsd:string ;
+    cps-nba:roadRecord "19-22"^^xsd:string ;
+    cps-nba:winPct "0.61"^^xsd:float ;
+    cps-nba:year "2005"^^xsd:gYear .
+
+team:1610612739_2006 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612739 ;
+    cps-nba:gameLost "32"^^xsd:int ;
+    cps-nba:gameWon "50"^^xsd:int ;
+    cps-nba:homeRecord "30-11"^^xsd:string ;
+    cps-nba:roadRecord "20-21"^^xsd:string ;
+    cps-nba:winPct "0.61"^^xsd:float ;
+    cps-nba:year "2006"^^xsd:gYear .
+
+team:1610612739_2007 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612739 ;
+    cps-nba:gameLost "37"^^xsd:int ;
+    cps-nba:gameWon "45"^^xsd:int ;
+    cps-nba:homeRecord "27-14"^^xsd:string ;
+    cps-nba:roadRecord "18-23"^^xsd:string ;
+    cps-nba:winPct "0.5489999999999999"^^xsd:float ;
+    cps-nba:year "2007"^^xsd:gYear .
+
+team:1610612739_2008 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612739 ;
+    cps-nba:gameLost "16"^^xsd:int ;
+    cps-nba:gameWon "66"^^xsd:int ;
+    cps-nba:homeRecord "39-2"^^xsd:string ;
+    cps-nba:roadRecord "27-14"^^xsd:string ;
+    cps-nba:winPct "0.805"^^xsd:float ;
+    cps-nba:year "2008"^^xsd:gYear .
+
+team:1610612739_2009 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612739 ;
+    cps-nba:gameLost "21"^^xsd:int ;
+    cps-nba:gameWon "61"^^xsd:int ;
+    cps-nba:homeRecord "35-6"^^xsd:string ;
+    cps-nba:roadRecord "26-15"^^xsd:string ;
+    cps-nba:winPct "0.7440000000000001"^^xsd:float ;
+    cps-nba:year "2009"^^xsd:gYear .
+
+team:1610612739_2010 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612739 ;
+    cps-nba:gameLost "63"^^xsd:int ;
+    cps-nba:gameWon "19"^^xsd:int ;
+    cps-nba:homeRecord "12-29"^^xsd:string ;
+    cps-nba:roadRecord "7-34"^^xsd:string ;
+    cps-nba:winPct "0.2319999999999999"^^xsd:float ;
+    cps-nba:year "2010"^^xsd:gYear .
+
+team:1610612739_2011 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612739 ;
+    cps-nba:gameLost "45"^^xsd:int ;
+    cps-nba:gameWon "21"^^xsd:int ;
+    cps-nba:homeRecord "11-22"^^xsd:string ;
+    cps-nba:roadRecord "10-23"^^xsd:string ;
+    cps-nba:winPct "0.318"^^xsd:float ;
+    cps-nba:year "2011"^^xsd:gYear .
+
+team:1610612739_2012 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612739 ;
+    cps-nba:gameLost "58"^^xsd:int ;
+    cps-nba:gameWon "24"^^xsd:int ;
+    cps-nba:homeRecord "14-27"^^xsd:string ;
+    cps-nba:roadRecord "10-31"^^xsd:string ;
+    cps-nba:winPct "0.293"^^xsd:float ;
+    cps-nba:year "2012"^^xsd:gYear .
+
+team:1610612739_2013 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612739 ;
+    cps-nba:gameLost "49"^^xsd:int ;
+    cps-nba:gameWon "33"^^xsd:int ;
+    cps-nba:homeRecord "19-22"^^xsd:string ;
+    cps-nba:roadRecord "14-27"^^xsd:string ;
+    cps-nba:winPct "0.402"^^xsd:float ;
+    cps-nba:year "2013"^^xsd:gYear .
+
+team:1610612739_2014 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612739 ;
+    cps-nba:gameLost "29"^^xsd:int ;
+    cps-nba:gameWon "53"^^xsd:int ;
+    cps-nba:homeRecord "31-10"^^xsd:string ;
+    cps-nba:roadRecord "22-19"^^xsd:string ;
+    cps-nba:winPct "0.6459999999999999"^^xsd:float ;
+    cps-nba:year "2014"^^xsd:gYear .
+
+team:1610612739_2015 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612739 ;
+    cps-nba:gameLost "25"^^xsd:int ;
+    cps-nba:gameWon "57"^^xsd:int ;
+    cps-nba:homeRecord "33-8"^^xsd:string ;
+    cps-nba:roadRecord "24-17"^^xsd:string ;
+    cps-nba:winPct "0.695"^^xsd:float ;
+    cps-nba:year "2015"^^xsd:gYear .
+
+team:1610612739_2016 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612739 ;
+    cps-nba:gameLost "31"^^xsd:int ;
+    cps-nba:gameWon "51"^^xsd:int ;
+    cps-nba:homeRecord "31-10"^^xsd:string ;
+    cps-nba:roadRecord "20-21"^^xsd:string ;
+    cps-nba:winPct "0.622"^^xsd:float ;
+    cps-nba:year "2016"^^xsd:gYear .
+
+team:1610612739_2017 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612739 ;
+    cps-nba:gameLost "32"^^xsd:int ;
+    cps-nba:gameWon "50"^^xsd:int ;
+    cps-nba:homeRecord "29-12"^^xsd:string ;
+    cps-nba:roadRecord "21-20"^^xsd:string ;
+    cps-nba:winPct "0.61"^^xsd:float ;
+    cps-nba:year "2017"^^xsd:gYear .
+
+team:1610612739_2018 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612739 ;
+    cps-nba:gameLost "63"^^xsd:int ;
+    cps-nba:gameWon "19"^^xsd:int ;
+    cps-nba:homeRecord "13-28"^^xsd:string ;
+    cps-nba:roadRecord "6-35"^^xsd:string ;
+    cps-nba:winPct "0.2319999999999999"^^xsd:float ;
+    cps-nba:year "2018"^^xsd:gYear .
+
+team:1610612739_2019 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612739 ;
+    cps-nba:gameLost "46"^^xsd:int ;
+    cps-nba:gameWon "19"^^xsd:int ;
+    cps-nba:homeRecord "11-25"^^xsd:string ;
+    cps-nba:roadRecord "8-21"^^xsd:string ;
+    cps-nba:winPct "0.292"^^xsd:float ;
+    cps-nba:year "2019"^^xsd:gYear .
+
+team:1610612739_2020 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612739 ;
+    cps-nba:gameLost "50"^^xsd:int ;
+    cps-nba:gameWon "22"^^xsd:int ;
+    cps-nba:homeRecord "13-23"^^xsd:string ;
+    cps-nba:roadRecord "9-27"^^xsd:string ;
+    cps-nba:winPct "0.306"^^xsd:float ;
+    cps-nba:year "2020"^^xsd:gYear .
+
+team:1610612739_2021 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612739 ;
+    cps-nba:gameLost "29"^^xsd:int ;
+    cps-nba:gameWon "38"^^xsd:int ;
+    cps-nba:homeRecord "20-11"^^xsd:string ;
+    cps-nba:roadRecord "18-18"^^xsd:string ;
+    cps-nba:winPct "0.567"^^xsd:float ;
+    cps-nba:year "2021"^^xsd:gYear .
+
+team:1610612740_2002 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612740 ;
+    cps-nba:gameLost "35"^^xsd:int ;
+    cps-nba:gameWon "47"^^xsd:int ;
+    cps-nba:homeRecord "29-12"^^xsd:string ;
+    cps-nba:roadRecord "18-23"^^xsd:string ;
+    cps-nba:winPct "0.573"^^xsd:float ;
+    cps-nba:year "2002"^^xsd:gYear .
+
+team:1610612740_2003 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612740 ;
+    cps-nba:gameLost "41"^^xsd:int ;
+    cps-nba:gameWon "41"^^xsd:int ;
+    cps-nba:homeRecord "25-16"^^xsd:string ;
+    cps-nba:roadRecord "16-25"^^xsd:string ;
+    cps-nba:winPct "0.5"^^xsd:float ;
+    cps-nba:year "2003"^^xsd:gYear .
+
+team:1610612740_2004 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612740 ;
+    cps-nba:gameLost "64"^^xsd:int ;
+    cps-nba:gameWon "18"^^xsd:int ;
+    cps-nba:homeRecord "11-30"^^xsd:string ;
+    cps-nba:roadRecord "7-34"^^xsd:string ;
+    cps-nba:winPct "0.22"^^xsd:float ;
+    cps-nba:year "2004"^^xsd:gYear .
+
+team:1610612740_2005 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612740 ;
+    cps-nba:gameLost "44"^^xsd:int ;
+    cps-nba:gameWon "38"^^xsd:int ;
+    cps-nba:homeRecord "24-17"^^xsd:string ;
+    cps-nba:roadRecord "14-27"^^xsd:string ;
+    cps-nba:winPct "0.4629999999999999"^^xsd:float ;
+    cps-nba:year "2005"^^xsd:gYear .
+
+team:1610612740_2006 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612740 ;
+    cps-nba:gameLost "43"^^xsd:int ;
+    cps-nba:gameWon "39"^^xsd:int ;
+    cps-nba:homeRecord "24-17"^^xsd:string ;
+    cps-nba:roadRecord "15-26"^^xsd:string ;
+    cps-nba:winPct "0.476"^^xsd:float ;
+    cps-nba:year "2006"^^xsd:gYear .
+
+team:1610612740_2007 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612740 ;
+    cps-nba:gameLost "26"^^xsd:int ;
+    cps-nba:gameWon "56"^^xsd:int ;
+    cps-nba:homeRecord "30-11"^^xsd:string ;
+    cps-nba:roadRecord "26-15"^^xsd:string ;
+    cps-nba:winPct "0.6829999999999999"^^xsd:float ;
+    cps-nba:year "2007"^^xsd:gYear .
+
+team:1610612740_2008 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612740 ;
+    cps-nba:gameLost "33"^^xsd:int ;
+    cps-nba:gameWon "49"^^xsd:int ;
+    cps-nba:homeRecord "28-13"^^xsd:string ;
+    cps-nba:roadRecord "21-20"^^xsd:string ;
+    cps-nba:winPct "0.598"^^xsd:float ;
+    cps-nba:year "2008"^^xsd:gYear .
+
+team:1610612740_2009 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612740 ;
+    cps-nba:gameLost "45"^^xsd:int ;
+    cps-nba:gameWon "37"^^xsd:int ;
+    cps-nba:homeRecord "24-17"^^xsd:string ;
+    cps-nba:roadRecord "13-28"^^xsd:string ;
+    cps-nba:winPct "0.451"^^xsd:float ;
+    cps-nba:year "2009"^^xsd:gYear .
+
+team:1610612740_2010 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612740 ;
+    cps-nba:gameLost "36"^^xsd:int ;
+    cps-nba:gameWon "46"^^xsd:int ;
+    cps-nba:homeRecord "28-13"^^xsd:string ;
+    cps-nba:roadRecord "18-23"^^xsd:string ;
+    cps-nba:winPct "0.561"^^xsd:float ;
+    cps-nba:year "2010"^^xsd:gYear .
+
+team:1610612740_2011 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612740 ;
+    cps-nba:gameLost "45"^^xsd:int ;
+    cps-nba:gameWon "21"^^xsd:int ;
+    cps-nba:homeRecord "11-22"^^xsd:string ;
+    cps-nba:roadRecord "10-23"^^xsd:string ;
+    cps-nba:winPct "0.318"^^xsd:float ;
+    cps-nba:year "2011"^^xsd:gYear .
+
+team:1610612740_2012 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612740 ;
+    cps-nba:gameLost "55"^^xsd:int ;
+    cps-nba:gameWon "27"^^xsd:int ;
+    cps-nba:homeRecord "16-25"^^xsd:string ;
+    cps-nba:roadRecord "11-30"^^xsd:string ;
+    cps-nba:winPct "0.3289999999999999"^^xsd:float ;
+    cps-nba:year "2012"^^xsd:gYear .
+
+team:1610612740_2013 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612740 ;
+    cps-nba:gameLost "48"^^xsd:int ;
+    cps-nba:gameWon "34"^^xsd:int ;
+    cps-nba:homeRecord "22-19"^^xsd:string ;
+    cps-nba:roadRecord "12-29"^^xsd:string ;
+    cps-nba:winPct "0.415"^^xsd:float ;
+    cps-nba:year "2013"^^xsd:gYear .
+
+team:1610612740_2014 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612740 ;
+    cps-nba:gameLost "37"^^xsd:int ;
+    cps-nba:gameWon "45"^^xsd:int ;
+    cps-nba:homeRecord "28-13"^^xsd:string ;
+    cps-nba:roadRecord "17-24"^^xsd:string ;
+    cps-nba:winPct "0.5489999999999999"^^xsd:float ;
+    cps-nba:year "2014"^^xsd:gYear .
+
+team:1610612740_2015 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612740 ;
+    cps-nba:gameLost "52"^^xsd:int ;
+    cps-nba:gameWon "30"^^xsd:int ;
+    cps-nba:homeRecord "21-20"^^xsd:string ;
+    cps-nba:roadRecord "9-32"^^xsd:string ;
+    cps-nba:winPct "0.366"^^xsd:float ;
+    cps-nba:year "2015"^^xsd:gYear .
+
+team:1610612740_2016 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612740 ;
+    cps-nba:gameLost "48"^^xsd:int ;
+    cps-nba:gameWon "34"^^xsd:int ;
+    cps-nba:homeRecord "21-20"^^xsd:string ;
+    cps-nba:roadRecord "13-28"^^xsd:string ;
+    cps-nba:winPct "0.415"^^xsd:float ;
+    cps-nba:year "2016"^^xsd:gYear .
+
+team:1610612740_2017 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612740 ;
+    cps-nba:gameLost "34"^^xsd:int ;
+    cps-nba:gameWon "48"^^xsd:int ;
+    cps-nba:homeRecord "24-17"^^xsd:string ;
+    cps-nba:roadRecord "24-17"^^xsd:string ;
+    cps-nba:winPct "0.585"^^xsd:float ;
+    cps-nba:year "2017"^^xsd:gYear .
+
+team:1610612740_2018 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612740 ;
+    cps-nba:gameLost "49"^^xsd:int ;
+    cps-nba:gameWon "33"^^xsd:int ;
+    cps-nba:homeRecord "19-22"^^xsd:string ;
+    cps-nba:roadRecord "14-27"^^xsd:string ;
+    cps-nba:winPct "0.402"^^xsd:float ;
+    cps-nba:year "2018"^^xsd:gYear .
+
+team:1610612740_2019 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612740 ;
+    cps-nba:gameLost "42"^^xsd:int ;
+    cps-nba:gameWon "30"^^xsd:int ;
+    cps-nba:homeRecord "15-21"^^xsd:string ;
+    cps-nba:roadRecord "15-21"^^xsd:string ;
+    cps-nba:winPct "0.417"^^xsd:float ;
+    cps-nba:year "2019"^^xsd:gYear .
+
+team:1610612740_2020 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612740 ;
+    cps-nba:gameLost "41"^^xsd:int ;
+    cps-nba:gameWon "31"^^xsd:int ;
+    cps-nba:homeRecord "18-18"^^xsd:string ;
+    cps-nba:roadRecord "13-23"^^xsd:string ;
+    cps-nba:winPct "0.431"^^xsd:float ;
+    cps-nba:year "2020"^^xsd:gYear .
+
+team:1610612740_2021 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612740 ;
+    cps-nba:gameLost "40"^^xsd:int ;
+    cps-nba:gameWon "27"^^xsd:int ;
+    cps-nba:homeRecord "15-19"^^xsd:string ;
+    cps-nba:roadRecord "12-21"^^xsd:string ;
+    cps-nba:winPct "0.403"^^xsd:float ;
+    cps-nba:year "2021"^^xsd:gYear .
+
+team:1610612741_2002 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612741 ;
+    cps-nba:gameLost "52"^^xsd:int ;
+    cps-nba:gameWon "30"^^xsd:int ;
+    cps-nba:homeRecord "27-14"^^xsd:string ;
+    cps-nba:roadRecord "3-38"^^xsd:string ;
+    cps-nba:winPct "0.366"^^xsd:float ;
+    cps-nba:year "2002"^^xsd:gYear .
+
+team:1610612741_2003 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612741 ;
+    cps-nba:gameLost "59"^^xsd:int ;
+    cps-nba:gameWon "23"^^xsd:int ;
+    cps-nba:homeRecord "14-27"^^xsd:string ;
+    cps-nba:roadRecord "9-32"^^xsd:string ;
+    cps-nba:winPct "0.28"^^xsd:float ;
+    cps-nba:year "2003"^^xsd:gYear .
+
+team:1610612741_2004 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612741 ;
+    cps-nba:gameLost "35"^^xsd:int ;
+    cps-nba:gameWon "47"^^xsd:int ;
+    cps-nba:homeRecord "27-14"^^xsd:string ;
+    cps-nba:roadRecord "20-21"^^xsd:string ;
+    cps-nba:winPct "0.573"^^xsd:float ;
+    cps-nba:year "2004"^^xsd:gYear .
+
+team:1610612741_2005 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612741 ;
+    cps-nba:gameLost "41"^^xsd:int ;
+    cps-nba:gameWon "41"^^xsd:int ;
+    cps-nba:homeRecord "21-20"^^xsd:string ;
+    cps-nba:roadRecord "20-21"^^xsd:string ;
+    cps-nba:winPct "0.5"^^xsd:float ;
+    cps-nba:year "2005"^^xsd:gYear .
+
+team:1610612741_2006 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612741 ;
+    cps-nba:gameLost "33"^^xsd:int ;
+    cps-nba:gameWon "49"^^xsd:int ;
+    cps-nba:homeRecord "31-10"^^xsd:string ;
+    cps-nba:roadRecord "18-23"^^xsd:string ;
+    cps-nba:winPct "0.598"^^xsd:float ;
+    cps-nba:year "2006"^^xsd:gYear .
+
+team:1610612741_2007 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612741 ;
+    cps-nba:gameLost "49"^^xsd:int ;
+    cps-nba:gameWon "33"^^xsd:int ;
+    cps-nba:homeRecord "20-21"^^xsd:string ;
+    cps-nba:roadRecord "13-28"^^xsd:string ;
+    cps-nba:winPct "0.402"^^xsd:float ;
+    cps-nba:year "2007"^^xsd:gYear .
+
+team:1610612741_2008 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612741 ;
+    cps-nba:gameLost "41"^^xsd:int ;
+    cps-nba:gameWon "41"^^xsd:int ;
+    cps-nba:homeRecord "28-13"^^xsd:string ;
+    cps-nba:roadRecord "13-28"^^xsd:string ;
+    cps-nba:winPct "0.5"^^xsd:float ;
+    cps-nba:year "2008"^^xsd:gYear .
+
+team:1610612741_2009 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612741 ;
+    cps-nba:gameLost "41"^^xsd:int ;
+    cps-nba:gameWon "41"^^xsd:int ;
+    cps-nba:homeRecord "24-17"^^xsd:string ;
+    cps-nba:roadRecord "17-24"^^xsd:string ;
+    cps-nba:winPct "0.5"^^xsd:float ;
+    cps-nba:year "2009"^^xsd:gYear .
+
+team:1610612741_2010 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612741 ;
+    cps-nba:gameLost "20"^^xsd:int ;
+    cps-nba:gameWon "62"^^xsd:int ;
+    cps-nba:homeRecord "36-5"^^xsd:string ;
+    cps-nba:roadRecord "26-15"^^xsd:string ;
+    cps-nba:winPct "0.7559999999999999"^^xsd:float ;
+    cps-nba:year "2010"^^xsd:gYear .
+
+team:1610612741_2011 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612741 ;
+    cps-nba:gameLost "16"^^xsd:int ;
+    cps-nba:gameWon "50"^^xsd:int ;
+    cps-nba:homeRecord "26-7"^^xsd:string ;
+    cps-nba:roadRecord "24-9"^^xsd:string ;
+    cps-nba:winPct "0.758"^^xsd:float ;
+    cps-nba:year "2011"^^xsd:gYear .
+
+team:1610612741_2012 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612741 ;
+    cps-nba:gameLost "37"^^xsd:int ;
+    cps-nba:gameWon "45"^^xsd:int ;
+    cps-nba:homeRecord "24-17"^^xsd:string ;
+    cps-nba:roadRecord "21-20"^^xsd:string ;
+    cps-nba:winPct "0.5489999999999999"^^xsd:float ;
+    cps-nba:year "2012"^^xsd:gYear .
+
+team:1610612741_2013 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612741 ;
+    cps-nba:gameLost "34"^^xsd:int ;
+    cps-nba:gameWon "48"^^xsd:int ;
+    cps-nba:homeRecord "27-14"^^xsd:string ;
+    cps-nba:roadRecord "21-20"^^xsd:string ;
+    cps-nba:winPct "0.585"^^xsd:float ;
+    cps-nba:year "2013"^^xsd:gYear .
+
+team:1610612741_2014 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612741 ;
+    cps-nba:gameLost "32"^^xsd:int ;
+    cps-nba:gameWon "50"^^xsd:int ;
+    cps-nba:homeRecord "27-14"^^xsd:string ;
+    cps-nba:roadRecord "23-18"^^xsd:string ;
+    cps-nba:winPct "0.61"^^xsd:float ;
+    cps-nba:year "2014"^^xsd:gYear .
+
+team:1610612741_2015 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612741 ;
+    cps-nba:gameLost "40"^^xsd:int ;
+    cps-nba:gameWon "42"^^xsd:int ;
+    cps-nba:homeRecord "26-15"^^xsd:string ;
+    cps-nba:roadRecord "16-25"^^xsd:string ;
+    cps-nba:winPct "0.512"^^xsd:float ;
+    cps-nba:year "2015"^^xsd:gYear .
+
+team:1610612741_2016 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612741 ;
+    cps-nba:gameLost "41"^^xsd:int ;
+    cps-nba:gameWon "41"^^xsd:int ;
+    cps-nba:homeRecord "25-16"^^xsd:string ;
+    cps-nba:roadRecord "16-25"^^xsd:string ;
+    cps-nba:winPct "0.5"^^xsd:float ;
+    cps-nba:year "2016"^^xsd:gYear .
+
+team:1610612741_2017 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612741 ;
+    cps-nba:gameLost "55"^^xsd:int ;
+    cps-nba:gameWon "27"^^xsd:int ;
+    cps-nba:homeRecord "17-24"^^xsd:string ;
+    cps-nba:roadRecord "10-31"^^xsd:string ;
+    cps-nba:winPct "0.3289999999999999"^^xsd:float ;
+    cps-nba:year "2017"^^xsd:gYear .
+
+team:1610612741_2018 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612741 ;
+    cps-nba:gameLost "60"^^xsd:int ;
+    cps-nba:gameWon "22"^^xsd:int ;
+    cps-nba:homeRecord "9-32"^^xsd:string ;
+    cps-nba:roadRecord "13-28"^^xsd:string ;
+    cps-nba:winPct "0.268"^^xsd:float ;
+    cps-nba:year "2018"^^xsd:gYear .
+
+team:1610612741_2019 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612741 ;
+    cps-nba:gameLost "43"^^xsd:int ;
+    cps-nba:gameWon "22"^^xsd:int ;
+    cps-nba:homeRecord "14-20"^^xsd:string ;
+    cps-nba:roadRecord "8-23"^^xsd:string ;
+    cps-nba:winPct "0.338"^^xsd:float ;
+    cps-nba:year "2019"^^xsd:gYear .
+
+team:1610612741_2020 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612741 ;
+    cps-nba:gameLost "41"^^xsd:int ;
+    cps-nba:gameWon "31"^^xsd:int ;
+    cps-nba:homeRecord "15-21"^^xsd:string ;
+    cps-nba:roadRecord "16-20"^^xsd:string ;
+    cps-nba:winPct "0.431"^^xsd:float ;
+    cps-nba:year "2020"^^xsd:gYear .
+
+team:1610612741_2021 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612741 ;
+    cps-nba:gameLost "26"^^xsd:int ;
+    cps-nba:gameWon "41"^^xsd:int ;
+    cps-nba:homeRecord "25-10"^^xsd:string ;
+    cps-nba:roadRecord "16-16"^^xsd:string ;
+    cps-nba:winPct "0.612"^^xsd:float ;
+    cps-nba:year "2021"^^xsd:gYear .
+
+team:1610612742_2002 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612742 ;
+    cps-nba:gameLost "22"^^xsd:int ;
+    cps-nba:gameWon "60"^^xsd:int ;
+    cps-nba:homeRecord "33-8"^^xsd:string ;
+    cps-nba:roadRecord "27-14"^^xsd:string ;
+    cps-nba:winPct "0.732"^^xsd:float ;
+    cps-nba:year "2002"^^xsd:gYear .
+
+team:1610612742_2003 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612742 ;
+    cps-nba:gameLost "30"^^xsd:int ;
+    cps-nba:gameWon "52"^^xsd:int ;
+    cps-nba:homeRecord "36-5"^^xsd:string ;
+    cps-nba:roadRecord "16-25"^^xsd:string ;
+    cps-nba:winPct "0.634"^^xsd:float ;
+    cps-nba:year "2003"^^xsd:gYear .
+
+team:1610612742_2004 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612742 ;
+    cps-nba:gameLost "24"^^xsd:int ;
+    cps-nba:gameWon "58"^^xsd:int ;
+    cps-nba:homeRecord "29-12"^^xsd:string ;
+    cps-nba:roadRecord "29-12"^^xsd:string ;
+    cps-nba:winPct "0.7070000000000001"^^xsd:float ;
+    cps-nba:year "2004"^^xsd:gYear .
+
+team:1610612742_2005 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612742 ;
+    cps-nba:gameLost "22"^^xsd:int ;
+    cps-nba:gameWon "60"^^xsd:int ;
+    cps-nba:homeRecord "34-7"^^xsd:string ;
+    cps-nba:roadRecord "26-15"^^xsd:string ;
+    cps-nba:winPct "0.732"^^xsd:float ;
+    cps-nba:year "2005"^^xsd:gYear .
+
+team:1610612742_2006 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612742 ;
+    cps-nba:gameLost "15"^^xsd:int ;
+    cps-nba:gameWon "67"^^xsd:int ;
+    cps-nba:homeRecord "36-5"^^xsd:string ;
+    cps-nba:roadRecord "31-10"^^xsd:string ;
+    cps-nba:winPct "0.8170000000000001"^^xsd:float ;
+    cps-nba:year "2006"^^xsd:gYear .
+
+team:1610612742_2007 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612742 ;
+    cps-nba:gameLost "31"^^xsd:int ;
+    cps-nba:gameWon "51"^^xsd:int ;
+    cps-nba:homeRecord "34-7"^^xsd:string ;
+    cps-nba:roadRecord "17-24"^^xsd:string ;
+    cps-nba:winPct "0.622"^^xsd:float ;
+    cps-nba:year "2007"^^xsd:gYear .
+
+team:1610612742_2008 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612742 ;
+    cps-nba:gameLost "32"^^xsd:int ;
+    cps-nba:gameWon "50"^^xsd:int ;
+    cps-nba:homeRecord "32-9"^^xsd:string ;
+    cps-nba:roadRecord "18-23"^^xsd:string ;
+    cps-nba:winPct "0.61"^^xsd:float ;
+    cps-nba:year "2008"^^xsd:gYear .
+
+team:1610612742_2009 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612742 ;
+    cps-nba:gameLost "27"^^xsd:int ;
+    cps-nba:gameWon "55"^^xsd:int ;
+    cps-nba:homeRecord "28-13"^^xsd:string ;
+    cps-nba:roadRecord "27-14"^^xsd:string ;
+    cps-nba:winPct "0.6709999999999999"^^xsd:float ;
+    cps-nba:year "2009"^^xsd:gYear .
+
+team:1610612742_2010 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612742 ;
+    cps-nba:gameLost "25"^^xsd:int ;
+    cps-nba:gameWon "57"^^xsd:int ;
+    cps-nba:homeRecord "29-12"^^xsd:string ;
+    cps-nba:roadRecord "28-13"^^xsd:string ;
+    cps-nba:winPct "0.695"^^xsd:float ;
+    cps-nba:year "2010"^^xsd:gYear .
+
+team:1610612742_2011 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612742 ;
+    cps-nba:gameLost "30"^^xsd:int ;
+    cps-nba:gameWon "36"^^xsd:int ;
+    cps-nba:homeRecord "23-10"^^xsd:string ;
+    cps-nba:roadRecord "13-20"^^xsd:string ;
+    cps-nba:winPct "0.545"^^xsd:float ;
+    cps-nba:year "2011"^^xsd:gYear .
+
+team:1610612742_2012 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612742 ;
+    cps-nba:gameLost "41"^^xsd:int ;
+    cps-nba:gameWon "41"^^xsd:int ;
+    cps-nba:homeRecord "24-17"^^xsd:string ;
+    cps-nba:roadRecord "17-24"^^xsd:string ;
+    cps-nba:winPct "0.5"^^xsd:float ;
+    cps-nba:year "2012"^^xsd:gYear .
+
+team:1610612742_2013 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612742 ;
+    cps-nba:gameLost "33"^^xsd:int ;
+    cps-nba:gameWon "49"^^xsd:int ;
+    cps-nba:homeRecord "26-15"^^xsd:string ;
+    cps-nba:roadRecord "23-18"^^xsd:string ;
+    cps-nba:winPct "0.598"^^xsd:float ;
+    cps-nba:year "2013"^^xsd:gYear .
+
+team:1610612742_2014 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612742 ;
+    cps-nba:gameLost "32"^^xsd:int ;
+    cps-nba:gameWon "50"^^xsd:int ;
+    cps-nba:homeRecord "27-14"^^xsd:string ;
+    cps-nba:roadRecord "23-18"^^xsd:string ;
+    cps-nba:winPct "0.61"^^xsd:float ;
+    cps-nba:year "2014"^^xsd:gYear .
+
+team:1610612742_2015 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612742 ;
+    cps-nba:gameLost "40"^^xsd:int ;
+    cps-nba:gameWon "42"^^xsd:int ;
+    cps-nba:homeRecord "23-18"^^xsd:string ;
+    cps-nba:roadRecord "19-22"^^xsd:string ;
+    cps-nba:winPct "0.512"^^xsd:float ;
+    cps-nba:year "2015"^^xsd:gYear .
+
+team:1610612742_2016 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612742 ;
+    cps-nba:gameLost "49"^^xsd:int ;
+    cps-nba:gameWon "33"^^xsd:int ;
+    cps-nba:homeRecord "21-20"^^xsd:string ;
+    cps-nba:roadRecord "12-29"^^xsd:string ;
+    cps-nba:winPct "0.402"^^xsd:float ;
+    cps-nba:year "2016"^^xsd:gYear .
+
+team:1610612742_2017 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612742 ;
+    cps-nba:gameLost "58"^^xsd:int ;
+    cps-nba:gameWon "24"^^xsd:int ;
+    cps-nba:homeRecord "15-26"^^xsd:string ;
+    cps-nba:roadRecord "9-32"^^xsd:string ;
+    cps-nba:winPct "0.293"^^xsd:float ;
+    cps-nba:year "2017"^^xsd:gYear .
+
+team:1610612742_2018 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612742 ;
+    cps-nba:gameLost "49"^^xsd:int ;
+    cps-nba:gameWon "33"^^xsd:int ;
+    cps-nba:homeRecord "24-17"^^xsd:string ;
+    cps-nba:roadRecord "9-32"^^xsd:string ;
+    cps-nba:winPct "0.402"^^xsd:float ;
+    cps-nba:year "2018"^^xsd:gYear .
+
+team:1610612742_2019 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612742 ;
+    cps-nba:gameLost "32"^^xsd:int ;
+    cps-nba:gameWon "43"^^xsd:int ;
+    cps-nba:homeRecord "20-18"^^xsd:string ;
+    cps-nba:roadRecord "23-14"^^xsd:string ;
+    cps-nba:winPct "0.573"^^xsd:float ;
+    cps-nba:year "2019"^^xsd:gYear .
+
+team:1610612742_2020 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612742 ;
+    cps-nba:gameLost "30"^^xsd:int ;
+    cps-nba:gameWon "42"^^xsd:int ;
+    cps-nba:homeRecord "21-15"^^xsd:string ;
+    cps-nba:roadRecord "21-15"^^xsd:string ;
+    cps-nba:winPct "0.583"^^xsd:float ;
+    cps-nba:year "2020"^^xsd:gYear .
+
+team:1610612742_2021 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612742 ;
+    cps-nba:gameLost "26"^^xsd:int ;
+    cps-nba:gameWon "41"^^xsd:int ;
+    cps-nba:homeRecord "23-12"^^xsd:string ;
+    cps-nba:roadRecord "18-14"^^xsd:string ;
+    cps-nba:winPct "0.612"^^xsd:float ;
+    cps-nba:year "2021"^^xsd:gYear .
+
+team:1610612743_2002 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612743 ;
+    cps-nba:gameLost "65"^^xsd:int ;
+    cps-nba:gameWon "17"^^xsd:int ;
+    cps-nba:homeRecord "13-28"^^xsd:string ;
+    cps-nba:roadRecord "4-37"^^xsd:string ;
+    cps-nba:winPct "0.207"^^xsd:float ;
+    cps-nba:year "2002"^^xsd:gYear .
+
+team:1610612743_2003 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612743 ;
+    cps-nba:gameLost "39"^^xsd:int ;
+    cps-nba:gameWon "43"^^xsd:int ;
+    cps-nba:homeRecord "29-12"^^xsd:string ;
+    cps-nba:roadRecord "14-27"^^xsd:string ;
+    cps-nba:winPct "0.524"^^xsd:float ;
+    cps-nba:year "2003"^^xsd:gYear .
+
+team:1610612743_2004 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612743 ;
+    cps-nba:gameLost "33"^^xsd:int ;
+    cps-nba:gameWon "49"^^xsd:int ;
+    cps-nba:homeRecord "31-10"^^xsd:string ;
+    cps-nba:roadRecord "18-23"^^xsd:string ;
+    cps-nba:winPct "0.598"^^xsd:float ;
+    cps-nba:year "2004"^^xsd:gYear .
+
+team:1610612743_2005 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612743 ;
+    cps-nba:gameLost "38"^^xsd:int ;
+    cps-nba:gameWon "44"^^xsd:int ;
+    cps-nba:homeRecord "26-15"^^xsd:string ;
+    cps-nba:roadRecord "18-23"^^xsd:string ;
+    cps-nba:winPct "0.537"^^xsd:float ;
+    cps-nba:year "2005"^^xsd:gYear .
+
+team:1610612743_2006 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612743 ;
+    cps-nba:gameLost "37"^^xsd:int ;
+    cps-nba:gameWon "45"^^xsd:int ;
+    cps-nba:homeRecord "23-18"^^xsd:string ;
+    cps-nba:roadRecord "22-19"^^xsd:string ;
+    cps-nba:winPct "0.5489999999999999"^^xsd:float ;
+    cps-nba:year "2006"^^xsd:gYear .
+
+team:1610612743_2007 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612743 ;
+    cps-nba:gameLost "32"^^xsd:int ;
+    cps-nba:gameWon "50"^^xsd:int ;
+    cps-nba:homeRecord "33-8"^^xsd:string ;
+    cps-nba:roadRecord "17-24"^^xsd:string ;
+    cps-nba:winPct "0.61"^^xsd:float ;
+    cps-nba:year "2007"^^xsd:gYear .
+
+team:1610612743_2008 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612743 ;
+    cps-nba:gameLost "28"^^xsd:int ;
+    cps-nba:gameWon "54"^^xsd:int ;
+    cps-nba:homeRecord "33-8"^^xsd:string ;
+    cps-nba:roadRecord "21-20"^^xsd:string ;
+    cps-nba:winPct "0.659"^^xsd:float ;
+    cps-nba:year "2008"^^xsd:gYear .
+
+team:1610612743_2009 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612743 ;
+    cps-nba:gameLost "29"^^xsd:int ;
+    cps-nba:gameWon "53"^^xsd:int ;
+    cps-nba:homeRecord "34-7"^^xsd:string ;
+    cps-nba:roadRecord "19-22"^^xsd:string ;
+    cps-nba:winPct "0.6459999999999999"^^xsd:float ;
+    cps-nba:year "2009"^^xsd:gYear .
+
+team:1610612743_2010 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612743 ;
+    cps-nba:gameLost "32"^^xsd:int ;
+    cps-nba:gameWon "50"^^xsd:int ;
+    cps-nba:homeRecord "33-8"^^xsd:string ;
+    cps-nba:roadRecord "17-24"^^xsd:string ;
+    cps-nba:winPct "0.61"^^xsd:float ;
+    cps-nba:year "2010"^^xsd:gYear .
+
+team:1610612743_2011 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612743 ;
+    cps-nba:gameLost "28"^^xsd:int ;
+    cps-nba:gameWon "38"^^xsd:int ;
+    cps-nba:homeRecord "20-13"^^xsd:string ;
+    cps-nba:roadRecord "18-15"^^xsd:string ;
+    cps-nba:winPct "0.5760000000000001"^^xsd:float ;
+    cps-nba:year "2011"^^xsd:gYear .
+
+team:1610612743_2012 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612743 ;
+    cps-nba:gameLost "25"^^xsd:int ;
+    cps-nba:gameWon "57"^^xsd:int ;
+    cps-nba:homeRecord "38-3"^^xsd:string ;
+    cps-nba:roadRecord "19-22"^^xsd:string ;
+    cps-nba:winPct "0.695"^^xsd:float ;
+    cps-nba:year "2012"^^xsd:gYear .
+
+team:1610612743_2013 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612743 ;
+    cps-nba:gameLost "46"^^xsd:int ;
+    cps-nba:gameWon "36"^^xsd:int ;
+    cps-nba:homeRecord "22-19"^^xsd:string ;
+    cps-nba:roadRecord "14-27"^^xsd:string ;
+    cps-nba:winPct "0.439"^^xsd:float ;
+    cps-nba:year "2013"^^xsd:gYear .
+
+team:1610612743_2014 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612743 ;
+    cps-nba:gameLost "52"^^xsd:int ;
+    cps-nba:gameWon "30"^^xsd:int ;
+    cps-nba:homeRecord "19-22"^^xsd:string ;
+    cps-nba:roadRecord "11-30"^^xsd:string ;
+    cps-nba:winPct "0.366"^^xsd:float ;
+    cps-nba:year "2014"^^xsd:gYear .
+
+team:1610612743_2015 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612743 ;
+    cps-nba:gameLost "49"^^xsd:int ;
+    cps-nba:gameWon "33"^^xsd:int ;
+    cps-nba:homeRecord "18-23"^^xsd:string ;
+    cps-nba:roadRecord "15-26"^^xsd:string ;
+    cps-nba:winPct "0.402"^^xsd:float ;
+    cps-nba:year "2015"^^xsd:gYear .
+
+team:1610612743_2016 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612743 ;
+    cps-nba:gameLost "42"^^xsd:int ;
+    cps-nba:gameWon "40"^^xsd:int ;
+    cps-nba:homeRecord "22-19"^^xsd:string ;
+    cps-nba:roadRecord "18-23"^^xsd:string ;
+    cps-nba:winPct "0.488"^^xsd:float ;
+    cps-nba:year "2016"^^xsd:gYear .
+
+team:1610612743_2017 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612743 ;
+    cps-nba:gameLost "36"^^xsd:int ;
+    cps-nba:gameWon "46"^^xsd:int ;
+    cps-nba:homeRecord "31-10"^^xsd:string ;
+    cps-nba:roadRecord "15-26"^^xsd:string ;
+    cps-nba:winPct "0.561"^^xsd:float ;
+    cps-nba:year "2017"^^xsd:gYear .
+
+team:1610612743_2018 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612743 ;
+    cps-nba:gameLost "28"^^xsd:int ;
+    cps-nba:gameWon "54"^^xsd:int ;
+    cps-nba:homeRecord "34-7"^^xsd:string ;
+    cps-nba:roadRecord "20-21"^^xsd:string ;
+    cps-nba:winPct "0.659"^^xsd:float ;
+    cps-nba:year "2018"^^xsd:gYear .
+
+team:1610612743_2019 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612743 ;
+    cps-nba:gameLost "27"^^xsd:int ;
+    cps-nba:gameWon "46"^^xsd:int ;
+    cps-nba:homeRecord "26-11"^^xsd:string ;
+    cps-nba:roadRecord "20-16"^^xsd:string ;
+    cps-nba:winPct "0.63"^^xsd:float ;
+    cps-nba:year "2019"^^xsd:gYear .
+
+team:1610612743_2020 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612743 ;
+    cps-nba:gameLost "25"^^xsd:int ;
+    cps-nba:gameWon "47"^^xsd:int ;
+    cps-nba:homeRecord "25-11"^^xsd:string ;
+    cps-nba:roadRecord "22-14"^^xsd:string ;
+    cps-nba:winPct "0.653"^^xsd:float ;
+    cps-nba:year "2020"^^xsd:gYear .
+
+team:1610612743_2021 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612743 ;
+    cps-nba:gameLost "28"^^xsd:int ;
+    cps-nba:gameWon "40"^^xsd:int ;
+    cps-nba:homeRecord "20-13"^^xsd:string ;
+    cps-nba:roadRecord "20-15"^^xsd:string ;
+    cps-nba:winPct "0.588"^^xsd:float ;
+    cps-nba:year "2021"^^xsd:gYear .
+
+team:1610612744_2002 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612744 ;
+    cps-nba:gameLost "44"^^xsd:int ;
+    cps-nba:gameWon "38"^^xsd:int ;
+    cps-nba:homeRecord "24-17"^^xsd:string ;
+    cps-nba:roadRecord "14-27"^^xsd:string ;
+    cps-nba:winPct "0.4629999999999999"^^xsd:float ;
+    cps-nba:year "2002"^^xsd:gYear .
+
+team:1610612744_2003 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612744 ;
+    cps-nba:gameLost "45"^^xsd:int ;
+    cps-nba:gameWon "37"^^xsd:int ;
+    cps-nba:homeRecord "27-14"^^xsd:string ;
+    cps-nba:roadRecord "10-31"^^xsd:string ;
+    cps-nba:winPct "0.451"^^xsd:float ;
+    cps-nba:year "2003"^^xsd:gYear .
+
+team:1610612744_2004 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612744 ;
+    cps-nba:gameLost "48"^^xsd:int ;
+    cps-nba:gameWon "34"^^xsd:int ;
+    cps-nba:homeRecord "20-21"^^xsd:string ;
+    cps-nba:roadRecord "14-27"^^xsd:string ;
+    cps-nba:winPct "0.415"^^xsd:float ;
+    cps-nba:year "2004"^^xsd:gYear .
+
+team:1610612744_2005 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612744 ;
+    cps-nba:gameLost "48"^^xsd:int ;
+    cps-nba:gameWon "34"^^xsd:int ;
+    cps-nba:homeRecord "21-20"^^xsd:string ;
+    cps-nba:roadRecord "13-28"^^xsd:string ;
+    cps-nba:winPct "0.415"^^xsd:float ;
+    cps-nba:year "2005"^^xsd:gYear .
+
+team:1610612744_2006 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612744 ;
+    cps-nba:gameLost "40"^^xsd:int ;
+    cps-nba:gameWon "42"^^xsd:int ;
+    cps-nba:homeRecord "30-11"^^xsd:string ;
+    cps-nba:roadRecord "12-29"^^xsd:string ;
+    cps-nba:winPct "0.512"^^xsd:float ;
+    cps-nba:year "2006"^^xsd:gYear .
+
+team:1610612744_2007 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612744 ;
+    cps-nba:gameLost "34"^^xsd:int ;
+    cps-nba:gameWon "48"^^xsd:int ;
+    cps-nba:homeRecord "27-14"^^xsd:string ;
+    cps-nba:roadRecord "21-20"^^xsd:string ;
+    cps-nba:winPct "0.585"^^xsd:float ;
+    cps-nba:year "2007"^^xsd:gYear .
+
+team:1610612744_2008 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612744 ;
+    cps-nba:gameLost "53"^^xsd:int ;
+    cps-nba:gameWon "29"^^xsd:int ;
+    cps-nba:homeRecord "21-20"^^xsd:string ;
+    cps-nba:roadRecord "8-33"^^xsd:string ;
+    cps-nba:winPct "0.354"^^xsd:float ;
+    cps-nba:year "2008"^^xsd:gYear .
+
+team:1610612744_2009 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612744 ;
+    cps-nba:gameLost "56"^^xsd:int ;
+    cps-nba:gameWon "26"^^xsd:int ;
+    cps-nba:homeRecord "18-23"^^xsd:string ;
+    cps-nba:roadRecord "8-33"^^xsd:string ;
+    cps-nba:winPct "0.317"^^xsd:float ;
+    cps-nba:year "2009"^^xsd:gYear .
+
+team:1610612744_2010 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612744 ;
+    cps-nba:gameLost "46"^^xsd:int ;
+    cps-nba:gameWon "36"^^xsd:int ;
+    cps-nba:homeRecord "26-15"^^xsd:string ;
+    cps-nba:roadRecord "10-31"^^xsd:string ;
+    cps-nba:winPct "0.439"^^xsd:float ;
+    cps-nba:year "2010"^^xsd:gYear .
+
+team:1610612744_2011 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612744 ;
+    cps-nba:gameLost "43"^^xsd:int ;
+    cps-nba:gameWon "23"^^xsd:int ;
+    cps-nba:homeRecord "12-21"^^xsd:string ;
+    cps-nba:roadRecord "11-22"^^xsd:string ;
+    cps-nba:winPct "0.348"^^xsd:float ;
+    cps-nba:year "2011"^^xsd:gYear .
+
+team:1610612744_2012 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612744 ;
+    cps-nba:gameLost "35"^^xsd:int ;
+    cps-nba:gameWon "47"^^xsd:int ;
+    cps-nba:homeRecord "28-13"^^xsd:string ;
+    cps-nba:roadRecord "19-22"^^xsd:string ;
+    cps-nba:winPct "0.573"^^xsd:float ;
+    cps-nba:year "2012"^^xsd:gYear .
+
+team:1610612744_2013 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612744 ;
+    cps-nba:gameLost "31"^^xsd:int ;
+    cps-nba:gameWon "51"^^xsd:int ;
+    cps-nba:homeRecord "27-14"^^xsd:string ;
+    cps-nba:roadRecord "24-17"^^xsd:string ;
+    cps-nba:winPct "0.622"^^xsd:float ;
+    cps-nba:year "2013"^^xsd:gYear .
+
+team:1610612744_2014 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612744 ;
+    cps-nba:gameLost "15"^^xsd:int ;
+    cps-nba:gameWon "67"^^xsd:int ;
+    cps-nba:homeRecord "39-2"^^xsd:string ;
+    cps-nba:roadRecord "28-13"^^xsd:string ;
+    cps-nba:winPct "0.8170000000000001"^^xsd:float ;
+    cps-nba:year "2014"^^xsd:gYear .
+
+team:1610612744_2015 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612744 ;
+    cps-nba:gameLost "9"^^xsd:int ;
+    cps-nba:gameWon "73"^^xsd:int ;
+    cps-nba:homeRecord "39-2"^^xsd:string ;
+    cps-nba:roadRecord "34-7"^^xsd:string ;
+    cps-nba:winPct "0.89"^^xsd:float ;
+    cps-nba:year "2015"^^xsd:gYear .
+
+team:1610612744_2016 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612744 ;
+    cps-nba:gameLost "15"^^xsd:int ;
+    cps-nba:gameWon "67"^^xsd:int ;
+    cps-nba:homeRecord "36-5"^^xsd:string ;
+    cps-nba:roadRecord "31-10"^^xsd:string ;
+    cps-nba:winPct "0.8170000000000001"^^xsd:float ;
+    cps-nba:year "2016"^^xsd:gYear .
+
+team:1610612744_2017 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612744 ;
+    cps-nba:gameLost "24"^^xsd:int ;
+    cps-nba:gameWon "58"^^xsd:int ;
+    cps-nba:homeRecord "29-12"^^xsd:string ;
+    cps-nba:roadRecord "29-12"^^xsd:string ;
+    cps-nba:winPct "0.7070000000000001"^^xsd:float ;
+    cps-nba:year "2017"^^xsd:gYear .
+
+team:1610612744_2018 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612744 ;
+    cps-nba:gameLost "25"^^xsd:int ;
+    cps-nba:gameWon "57"^^xsd:int ;
+    cps-nba:homeRecord "30-11"^^xsd:string ;
+    cps-nba:roadRecord "27-14"^^xsd:string ;
+    cps-nba:winPct "0.695"^^xsd:float ;
+    cps-nba:year "2018"^^xsd:gYear .
+
+team:1610612744_2019 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612744 ;
+    cps-nba:gameLost "50"^^xsd:int ;
+    cps-nba:gameWon "15"^^xsd:int ;
+    cps-nba:homeRecord "8-26"^^xsd:string ;
+    cps-nba:roadRecord "7-24"^^xsd:string ;
+    cps-nba:winPct "0.231"^^xsd:float ;
+    cps-nba:year "2019"^^xsd:gYear .
+
+team:1610612744_2020 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612744 ;
+    cps-nba:gameLost "33"^^xsd:int ;
+    cps-nba:gameWon "39"^^xsd:int ;
+    cps-nba:homeRecord "25-11"^^xsd:string ;
+    cps-nba:roadRecord "14-22"^^xsd:string ;
+    cps-nba:winPct "0.542"^^xsd:float ;
+    cps-nba:year "2020"^^xsd:gYear .
+
+team:1610612744_2021 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612744 ;
+    cps-nba:gameLost "22"^^xsd:int ;
+    cps-nba:gameWon "46"^^xsd:int ;
+    cps-nba:homeRecord "28-7"^^xsd:string ;
+    cps-nba:roadRecord "18-15"^^xsd:string ;
+    cps-nba:winPct "0.676"^^xsd:float ;
+    cps-nba:year "2021"^^xsd:gYear .
+
+team:1610612745_2002 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612745 ;
+    cps-nba:gameLost "39"^^xsd:int ;
+    cps-nba:gameWon "43"^^xsd:int ;
+    cps-nba:homeRecord "28-13"^^xsd:string ;
+    cps-nba:roadRecord "15-26"^^xsd:string ;
+    cps-nba:winPct "0.524"^^xsd:float ;
+    cps-nba:year "2002"^^xsd:gYear .
+
+team:1610612745_2003 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612745 ;
+    cps-nba:gameLost "37"^^xsd:int ;
+    cps-nba:gameWon "45"^^xsd:int ;
+    cps-nba:homeRecord "27-14"^^xsd:string ;
+    cps-nba:roadRecord "18-23"^^xsd:string ;
+    cps-nba:winPct "0.5489999999999999"^^xsd:float ;
+    cps-nba:year "2003"^^xsd:gYear .
+
+team:1610612745_2004 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612745 ;
+    cps-nba:gameLost "31"^^xsd:int ;
+    cps-nba:gameWon "51"^^xsd:int ;
+    cps-nba:homeRecord "26-15"^^xsd:string ;
+    cps-nba:roadRecord "25-16"^^xsd:string ;
+    cps-nba:winPct "0.622"^^xsd:float ;
+    cps-nba:year "2004"^^xsd:gYear .
+
+team:1610612745_2005 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612745 ;
+    cps-nba:gameLost "48"^^xsd:int ;
+    cps-nba:gameWon "34"^^xsd:int ;
+    cps-nba:homeRecord "15-26"^^xsd:string ;
+    cps-nba:roadRecord "19-22"^^xsd:string ;
+    cps-nba:winPct "0.415"^^xsd:float ;
+    cps-nba:year "2005"^^xsd:gYear .
+
+team:1610612745_2006 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612745 ;
+    cps-nba:gameLost "30"^^xsd:int ;
+    cps-nba:gameWon "52"^^xsd:int ;
+    cps-nba:homeRecord "28-13"^^xsd:string ;
+    cps-nba:roadRecord "24-17"^^xsd:string ;
+    cps-nba:winPct "0.634"^^xsd:float ;
+    cps-nba:year "2006"^^xsd:gYear .
+
+team:1610612745_2007 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612745 ;
+    cps-nba:gameLost "27"^^xsd:int ;
+    cps-nba:gameWon "55"^^xsd:int ;
+    cps-nba:homeRecord "31-10"^^xsd:string ;
+    cps-nba:roadRecord "24-17"^^xsd:string ;
+    cps-nba:winPct "0.6709999999999999"^^xsd:float ;
+    cps-nba:year "2007"^^xsd:gYear .
+
+team:1610612745_2008 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612745 ;
+    cps-nba:gameLost "29"^^xsd:int ;
+    cps-nba:gameWon "53"^^xsd:int ;
+    cps-nba:homeRecord "33-8"^^xsd:string ;
+    cps-nba:roadRecord "20-21"^^xsd:string ;
+    cps-nba:winPct "0.6459999999999999"^^xsd:float ;
+    cps-nba:year "2008"^^xsd:gYear .
+
+team:1610612745_2009 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612745 ;
+    cps-nba:gameLost "40"^^xsd:int ;
+    cps-nba:gameWon "42"^^xsd:int ;
+    cps-nba:homeRecord "23-18"^^xsd:string ;
+    cps-nba:roadRecord "19-22"^^xsd:string ;
+    cps-nba:winPct "0.512"^^xsd:float ;
+    cps-nba:year "2009"^^xsd:gYear .
+
+team:1610612745_2010 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612745 ;
+    cps-nba:gameLost "39"^^xsd:int ;
+    cps-nba:gameWon "43"^^xsd:int ;
+    cps-nba:homeRecord "25-16"^^xsd:string ;
+    cps-nba:roadRecord "18-23"^^xsd:string ;
+    cps-nba:winPct "0.524"^^xsd:float ;
+    cps-nba:year "2010"^^xsd:gYear .
+
+team:1610612745_2011 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612745 ;
+    cps-nba:gameLost "32"^^xsd:int ;
+    cps-nba:gameWon "34"^^xsd:int ;
+    cps-nba:homeRecord "22-11"^^xsd:string ;
+    cps-nba:roadRecord "12-21"^^xsd:string ;
+    cps-nba:winPct "0.515"^^xsd:float ;
+    cps-nba:year "2011"^^xsd:gYear .
+
+team:1610612745_2012 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612745 ;
+    cps-nba:gameLost "37"^^xsd:int ;
+    cps-nba:gameWon "45"^^xsd:int ;
+    cps-nba:homeRecord "29-12"^^xsd:string ;
+    cps-nba:roadRecord "16-25"^^xsd:string ;
+    cps-nba:winPct "0.5489999999999999"^^xsd:float ;
+    cps-nba:year "2012"^^xsd:gYear .
+
+team:1610612745_2013 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612745 ;
+    cps-nba:gameLost "28"^^xsd:int ;
+    cps-nba:gameWon "54"^^xsd:int ;
+    cps-nba:homeRecord "33-8"^^xsd:string ;
+    cps-nba:roadRecord "21-20"^^xsd:string ;
+    cps-nba:winPct "0.659"^^xsd:float ;
+    cps-nba:year "2013"^^xsd:gYear .
+
+team:1610612745_2014 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612745 ;
+    cps-nba:gameLost "26"^^xsd:int ;
+    cps-nba:gameWon "56"^^xsd:int ;
+    cps-nba:homeRecord "30-11"^^xsd:string ;
+    cps-nba:roadRecord "26-15"^^xsd:string ;
+    cps-nba:winPct "0.6829999999999999"^^xsd:float ;
+    cps-nba:year "2014"^^xsd:gYear .
+
+team:1610612745_2015 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612745 ;
+    cps-nba:gameLost "41"^^xsd:int ;
+    cps-nba:gameWon "41"^^xsd:int ;
+    cps-nba:homeRecord "23-18"^^xsd:string ;
+    cps-nba:roadRecord "18-23"^^xsd:string ;
+    cps-nba:winPct "0.5"^^xsd:float ;
+    cps-nba:year "2015"^^xsd:gYear .
+
+team:1610612745_2016 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612745 ;
+    cps-nba:gameLost "27"^^xsd:int ;
+    cps-nba:gameWon "55"^^xsd:int ;
+    cps-nba:homeRecord "30-11"^^xsd:string ;
+    cps-nba:roadRecord "25-16"^^xsd:string ;
+    cps-nba:winPct "0.6709999999999999"^^xsd:float ;
+    cps-nba:year "2016"^^xsd:gYear .
+
+team:1610612745_2017 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612745 ;
+    cps-nba:gameLost "17"^^xsd:int ;
+    cps-nba:gameWon "65"^^xsd:int ;
+    cps-nba:homeRecord "34-7"^^xsd:string ;
+    cps-nba:roadRecord "31-10"^^xsd:string ;
+    cps-nba:winPct "0.7929999999999999"^^xsd:float ;
+    cps-nba:year "2017"^^xsd:gYear .
+
+team:1610612745_2018 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612745 ;
+    cps-nba:gameLost "29"^^xsd:int ;
+    cps-nba:gameWon "53"^^xsd:int ;
+    cps-nba:homeRecord "31-10"^^xsd:string ;
+    cps-nba:roadRecord "22-19"^^xsd:string ;
+    cps-nba:winPct "0.6459999999999999"^^xsd:float ;
+    cps-nba:year "2018"^^xsd:gYear .
+
+team:1610612745_2019 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612745 ;
+    cps-nba:gameLost "28"^^xsd:int ;
+    cps-nba:gameWon "44"^^xsd:int ;
+    cps-nba:homeRecord "24-12"^^xsd:string ;
+    cps-nba:roadRecord "20-16"^^xsd:string ;
+    cps-nba:winPct "0.611"^^xsd:float ;
+    cps-nba:year "2019"^^xsd:gYear .
+
+team:1610612745_2020 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612745 ;
+    cps-nba:gameLost "55"^^xsd:int ;
+    cps-nba:gameWon "17"^^xsd:int ;
+    cps-nba:homeRecord "9-27"^^xsd:string ;
+    cps-nba:roadRecord "8-28"^^xsd:string ;
+    cps-nba:winPct "0.236"^^xsd:float ;
+    cps-nba:year "2020"^^xsd:gYear .
+
+team:1610612745_2021 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612745 ;
+    cps-nba:gameLost "50"^^xsd:int ;
+    cps-nba:gameWon "17"^^xsd:int ;
+    cps-nba:homeRecord "10-22"^^xsd:string ;
+    cps-nba:roadRecord "7-28"^^xsd:string ;
+    cps-nba:winPct "0.254"^^xsd:float ;
+    cps-nba:year "2021"^^xsd:gYear .
+
+team:1610612746_2002 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612746 ;
+    cps-nba:gameLost "55"^^xsd:int ;
+    cps-nba:gameWon "27"^^xsd:int ;
+    cps-nba:homeRecord "16-25"^^xsd:string ;
+    cps-nba:roadRecord "11-30"^^xsd:string ;
+    cps-nba:winPct "0.3289999999999999"^^xsd:float ;
+    cps-nba:year "2002"^^xsd:gYear .
+
+team:1610612746_2003 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612746 ;
+    cps-nba:gameLost "54"^^xsd:int ;
+    cps-nba:gameWon "28"^^xsd:int ;
+    cps-nba:homeRecord "18-23"^^xsd:string ;
+    cps-nba:roadRecord "10-31"^^xsd:string ;
+    cps-nba:winPct "0.341"^^xsd:float ;
+    cps-nba:year "2003"^^xsd:gYear .
+
+team:1610612746_2004 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612746 ;
+    cps-nba:gameLost "45"^^xsd:int ;
+    cps-nba:gameWon "37"^^xsd:int ;
+    cps-nba:homeRecord "27-14"^^xsd:string ;
+    cps-nba:roadRecord "10-31"^^xsd:string ;
+    cps-nba:winPct "0.451"^^xsd:float ;
+    cps-nba:year "2004"^^xsd:gYear .
+
+team:1610612746_2005 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612746 ;
+    cps-nba:gameLost "35"^^xsd:int ;
+    cps-nba:gameWon "47"^^xsd:int ;
+    cps-nba:homeRecord "27-14"^^xsd:string ;
+    cps-nba:roadRecord "20-21"^^xsd:string ;
+    cps-nba:winPct "0.573"^^xsd:float ;
+    cps-nba:year "2005"^^xsd:gYear .
+
+team:1610612746_2006 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612746 ;
+    cps-nba:gameLost "42"^^xsd:int ;
+    cps-nba:gameWon "40"^^xsd:int ;
+    cps-nba:homeRecord "25-16"^^xsd:string ;
+    cps-nba:roadRecord "15-26"^^xsd:string ;
+    cps-nba:winPct "0.488"^^xsd:float ;
+    cps-nba:year "2006"^^xsd:gYear .
+
+team:1610612746_2007 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612746 ;
+    cps-nba:gameLost "59"^^xsd:int ;
+    cps-nba:gameWon "23"^^xsd:int ;
+    cps-nba:homeRecord "13-28"^^xsd:string ;
+    cps-nba:roadRecord "10-31"^^xsd:string ;
+    cps-nba:winPct "0.28"^^xsd:float ;
+    cps-nba:year "2007"^^xsd:gYear .
+
+team:1610612746_2008 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612746 ;
+    cps-nba:gameLost "63"^^xsd:int ;
+    cps-nba:gameWon "19"^^xsd:int ;
+    cps-nba:homeRecord "11-30"^^xsd:string ;
+    cps-nba:roadRecord "8-33"^^xsd:string ;
+    cps-nba:winPct "0.2319999999999999"^^xsd:float ;
+    cps-nba:year "2008"^^xsd:gYear .
+
+team:1610612746_2009 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612746 ;
+    cps-nba:gameLost "53"^^xsd:int ;
+    cps-nba:gameWon "29"^^xsd:int ;
+    cps-nba:homeRecord "21-20"^^xsd:string ;
+    cps-nba:roadRecord "8-33"^^xsd:string ;
+    cps-nba:winPct "0.354"^^xsd:float ;
+    cps-nba:year "2009"^^xsd:gYear .
+
+team:1610612746_2010 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612746 ;
+    cps-nba:gameLost "50"^^xsd:int ;
+    cps-nba:gameWon "32"^^xsd:int ;
+    cps-nba:homeRecord "23-18"^^xsd:string ;
+    cps-nba:roadRecord "9-32"^^xsd:string ;
+    cps-nba:winPct "0.39"^^xsd:float ;
+    cps-nba:year "2010"^^xsd:gYear .
+
+team:1610612746_2011 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612746 ;
+    cps-nba:gameLost "26"^^xsd:int ;
+    cps-nba:gameWon "40"^^xsd:int ;
+    cps-nba:homeRecord "24-9"^^xsd:string ;
+    cps-nba:roadRecord "16-17"^^xsd:string ;
+    cps-nba:winPct "0.606"^^xsd:float ;
+    cps-nba:year "2011"^^xsd:gYear .
+
+team:1610612746_2012 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612746 ;
+    cps-nba:gameLost "26"^^xsd:int ;
+    cps-nba:gameWon "56"^^xsd:int ;
+    cps-nba:homeRecord "32-9"^^xsd:string ;
+    cps-nba:roadRecord "24-17"^^xsd:string ;
+    cps-nba:winPct "0.6829999999999999"^^xsd:float ;
+    cps-nba:year "2012"^^xsd:gYear .
+
+team:1610612746_2013 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612746 ;
+    cps-nba:gameLost "25"^^xsd:int ;
+    cps-nba:gameWon "57"^^xsd:int ;
+    cps-nba:homeRecord "34-7"^^xsd:string ;
+    cps-nba:roadRecord "23-18"^^xsd:string ;
+    cps-nba:winPct "0.695"^^xsd:float ;
+    cps-nba:year "2013"^^xsd:gYear .
+
+team:1610612746_2014 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612746 ;
+    cps-nba:gameLost "26"^^xsd:int ;
+    cps-nba:gameWon "56"^^xsd:int ;
+    cps-nba:homeRecord "30-11"^^xsd:string ;
+    cps-nba:roadRecord "26-15"^^xsd:string ;
+    cps-nba:winPct "0.6829999999999999"^^xsd:float ;
+    cps-nba:year "2014"^^xsd:gYear .
+
+team:1610612746_2015 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612746 ;
+    cps-nba:gameLost "29"^^xsd:int ;
+    cps-nba:gameWon "53"^^xsd:int ;
+    cps-nba:homeRecord "29-12"^^xsd:string ;
+    cps-nba:roadRecord "24-17"^^xsd:string ;
+    cps-nba:winPct "0.6459999999999999"^^xsd:float ;
+    cps-nba:year "2015"^^xsd:gYear .
+
+team:1610612746_2016 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612746 ;
+    cps-nba:gameLost "31"^^xsd:int ;
+    cps-nba:gameWon "51"^^xsd:int ;
+    cps-nba:homeRecord "29-12"^^xsd:string ;
+    cps-nba:roadRecord "22-19"^^xsd:string ;
+    cps-nba:winPct "0.622"^^xsd:float ;
+    cps-nba:year "2016"^^xsd:gYear .
+
+team:1610612746_2017 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612746 ;
+    cps-nba:gameLost "40"^^xsd:int ;
+    cps-nba:gameWon "42"^^xsd:int ;
+    cps-nba:homeRecord "22-19"^^xsd:string ;
+    cps-nba:roadRecord "20-21"^^xsd:string ;
+    cps-nba:winPct "0.512"^^xsd:float ;
+    cps-nba:year "2017"^^xsd:gYear .
+
+team:1610612746_2018 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612746 ;
+    cps-nba:gameLost "34"^^xsd:int ;
+    cps-nba:gameWon "48"^^xsd:int ;
+    cps-nba:homeRecord "26-15"^^xsd:string ;
+    cps-nba:roadRecord "22-19"^^xsd:string ;
+    cps-nba:winPct "0.585"^^xsd:float ;
+    cps-nba:year "2018"^^xsd:gYear .
+
+team:1610612746_2019 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612746 ;
+    cps-nba:gameLost "23"^^xsd:int ;
+    cps-nba:gameWon "49"^^xsd:int ;
+    cps-nba:homeRecord "27-9"^^xsd:string ;
+    cps-nba:roadRecord "22-14"^^xsd:string ;
+    cps-nba:winPct "0.6809999999999999"^^xsd:float ;
+    cps-nba:year "2019"^^xsd:gYear .
+
+team:1610612746_2020 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612746 ;
+    cps-nba:gameLost "25"^^xsd:int ;
+    cps-nba:gameWon "47"^^xsd:int ;
+    cps-nba:homeRecord "26-10"^^xsd:string ;
+    cps-nba:roadRecord "21-15"^^xsd:string ;
+    cps-nba:winPct "0.653"^^xsd:float ;
+    cps-nba:year "2020"^^xsd:gYear .
+
+team:1610612746_2021 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612746 ;
+    cps-nba:gameLost "34"^^xsd:int ;
+    cps-nba:gameWon "35"^^xsd:int ;
+    cps-nba:homeRecord "20-14"^^xsd:string ;
+    cps-nba:roadRecord "15-20"^^xsd:string ;
+    cps-nba:winPct "0.507"^^xsd:float ;
+    cps-nba:year "2021"^^xsd:gYear .
+
+team:1610612747_2002 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612747 ;
+    cps-nba:gameLost "32"^^xsd:int ;
+    cps-nba:gameWon "50"^^xsd:int ;
+    cps-nba:homeRecord "31-10"^^xsd:string ;
+    cps-nba:roadRecord "19-22"^^xsd:string ;
+    cps-nba:winPct "0.61"^^xsd:float ;
+    cps-nba:year "2002"^^xsd:gYear .
+
+team:1610612747_2003 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612747 ;
+    cps-nba:gameLost "26"^^xsd:int ;
+    cps-nba:gameWon "56"^^xsd:int ;
+    cps-nba:homeRecord "34-7"^^xsd:string ;
+    cps-nba:roadRecord "22-19"^^xsd:string ;
+    cps-nba:winPct "0.6829999999999999"^^xsd:float ;
+    cps-nba:year "2003"^^xsd:gYear .
+
+team:1610612747_2004 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612747 ;
+    cps-nba:gameLost "48"^^xsd:int ;
+    cps-nba:gameWon "34"^^xsd:int ;
+    cps-nba:homeRecord "22-19"^^xsd:string ;
+    cps-nba:roadRecord "12-29"^^xsd:string ;
+    cps-nba:winPct "0.415"^^xsd:float ;
+    cps-nba:year "2004"^^xsd:gYear .
+
+team:1610612747_2005 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612747 ;
+    cps-nba:gameLost "37"^^xsd:int ;
+    cps-nba:gameWon "45"^^xsd:int ;
+    cps-nba:homeRecord "27-14"^^xsd:string ;
+    cps-nba:roadRecord "18-23"^^xsd:string ;
+    cps-nba:winPct "0.5489999999999999"^^xsd:float ;
+    cps-nba:year "2005"^^xsd:gYear .
+
+team:1610612747_2006 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612747 ;
+    cps-nba:gameLost "40"^^xsd:int ;
+    cps-nba:gameWon "42"^^xsd:int ;
+    cps-nba:homeRecord "25-16"^^xsd:string ;
+    cps-nba:roadRecord "17-24"^^xsd:string ;
+    cps-nba:winPct "0.512"^^xsd:float ;
+    cps-nba:year "2006"^^xsd:gYear .
+
+team:1610612747_2007 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612747 ;
+    cps-nba:gameLost "25"^^xsd:int ;
+    cps-nba:gameWon "57"^^xsd:int ;
+    cps-nba:homeRecord "30-11"^^xsd:string ;
+    cps-nba:roadRecord "27-14"^^xsd:string ;
+    cps-nba:winPct "0.695"^^xsd:float ;
+    cps-nba:year "2007"^^xsd:gYear .
+
+team:1610612747_2008 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612747 ;
+    cps-nba:gameLost "17"^^xsd:int ;
+    cps-nba:gameWon "65"^^xsd:int ;
+    cps-nba:homeRecord "36-5"^^xsd:string ;
+    cps-nba:roadRecord "29-12"^^xsd:string ;
+    cps-nba:winPct "0.7929999999999999"^^xsd:float ;
+    cps-nba:year "2008"^^xsd:gYear .
+
+team:1610612747_2009 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612747 ;
+    cps-nba:gameLost "25"^^xsd:int ;
+    cps-nba:gameWon "57"^^xsd:int ;
+    cps-nba:homeRecord "34-7"^^xsd:string ;
+    cps-nba:roadRecord "23-18"^^xsd:string ;
+    cps-nba:winPct "0.695"^^xsd:float ;
+    cps-nba:year "2009"^^xsd:gYear .
+
+team:1610612747_2010 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612747 ;
+    cps-nba:gameLost "25"^^xsd:int ;
+    cps-nba:gameWon "57"^^xsd:int ;
+    cps-nba:homeRecord "30-11"^^xsd:string ;
+    cps-nba:roadRecord "27-14"^^xsd:string ;
+    cps-nba:winPct "0.695"^^xsd:float ;
+    cps-nba:year "2010"^^xsd:gYear .
+
+team:1610612747_2011 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612747 ;
+    cps-nba:gameLost "25"^^xsd:int ;
+    cps-nba:gameWon "41"^^xsd:int ;
+    cps-nba:homeRecord "26-7"^^xsd:string ;
+    cps-nba:roadRecord "15-18"^^xsd:string ;
+    cps-nba:winPct "0.621"^^xsd:float ;
+    cps-nba:year "2011"^^xsd:gYear .
+
+team:1610612747_2012 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612747 ;
+    cps-nba:gameLost "37"^^xsd:int ;
+    cps-nba:gameWon "45"^^xsd:int ;
+    cps-nba:homeRecord "29-12"^^xsd:string ;
+    cps-nba:roadRecord "16-25"^^xsd:string ;
+    cps-nba:winPct "0.5489999999999999"^^xsd:float ;
+    cps-nba:year "2012"^^xsd:gYear .
+
+team:1610612747_2013 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612747 ;
+    cps-nba:gameLost "55"^^xsd:int ;
+    cps-nba:gameWon "27"^^xsd:int ;
+    cps-nba:homeRecord "14-27"^^xsd:string ;
+    cps-nba:roadRecord "13-28"^^xsd:string ;
+    cps-nba:winPct "0.3289999999999999"^^xsd:float ;
+    cps-nba:year "2013"^^xsd:gYear .
+
+team:1610612747_2014 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612747 ;
+    cps-nba:gameLost "61"^^xsd:int ;
+    cps-nba:gameWon "21"^^xsd:int ;
+    cps-nba:homeRecord "12-29"^^xsd:string ;
+    cps-nba:roadRecord "9-32"^^xsd:string ;
+    cps-nba:winPct "0.256"^^xsd:float ;
+    cps-nba:year "2014"^^xsd:gYear .
+
+team:1610612747_2015 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612747 ;
+    cps-nba:gameLost "65"^^xsd:int ;
+    cps-nba:gameWon "17"^^xsd:int ;
+    cps-nba:homeRecord "12-29"^^xsd:string ;
+    cps-nba:roadRecord "5-36"^^xsd:string ;
+    cps-nba:winPct "0.207"^^xsd:float ;
+    cps-nba:year "2015"^^xsd:gYear .
+
+team:1610612747_2016 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612747 ;
+    cps-nba:gameLost "56"^^xsd:int ;
+    cps-nba:gameWon "26"^^xsd:int ;
+    cps-nba:homeRecord "17-24"^^xsd:string ;
+    cps-nba:roadRecord "9-32"^^xsd:string ;
+    cps-nba:winPct "0.317"^^xsd:float ;
+    cps-nba:year "2016"^^xsd:gYear .
+
+team:1610612747_2017 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612747 ;
+    cps-nba:gameLost "47"^^xsd:int ;
+    cps-nba:gameWon "35"^^xsd:int ;
+    cps-nba:homeRecord "20-21"^^xsd:string ;
+    cps-nba:roadRecord "15-26"^^xsd:string ;
+    cps-nba:winPct "0.4270000000000001"^^xsd:float ;
+    cps-nba:year "2017"^^xsd:gYear .
+
+team:1610612747_2018 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612747 ;
+    cps-nba:gameLost "45"^^xsd:int ;
+    cps-nba:gameWon "37"^^xsd:int ;
+    cps-nba:homeRecord "22-19"^^xsd:string ;
+    cps-nba:roadRecord "15-26"^^xsd:string ;
+    cps-nba:winPct "0.451"^^xsd:float ;
+    cps-nba:year "2018"^^xsd:gYear .
+
+team:1610612747_2019 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612747 ;
+    cps-nba:gameLost "19"^^xsd:int ;
+    cps-nba:gameWon "52"^^xsd:int ;
+    cps-nba:homeRecord "25-10"^^xsd:string ;
+    cps-nba:roadRecord "27-9"^^xsd:string ;
+    cps-nba:winPct "0.732"^^xsd:float ;
+    cps-nba:year "2019"^^xsd:gYear .
+
+team:1610612747_2020 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612747 ;
+    cps-nba:gameLost "30"^^xsd:int ;
+    cps-nba:gameWon "42"^^xsd:int ;
+    cps-nba:homeRecord "21-15"^^xsd:string ;
+    cps-nba:roadRecord "21-15"^^xsd:string ;
+    cps-nba:winPct "0.583"^^xsd:float ;
+    cps-nba:year "2020"^^xsd:gYear .
+
+team:1610612747_2021 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612747 ;
+    cps-nba:gameLost "37"^^xsd:int ;
+    cps-nba:gameWon "29"^^xsd:int ;
+    cps-nba:homeRecord "20-16"^^xsd:string ;
+    cps-nba:roadRecord "9-21"^^xsd:string ;
+    cps-nba:winPct "0.439"^^xsd:float ;
+    cps-nba:year "2021"^^xsd:gYear .
+
+team:1610612748_2002 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612748 ;
+    cps-nba:gameLost "57"^^xsd:int ;
+    cps-nba:gameWon "25"^^xsd:int ;
+    cps-nba:homeRecord "16-25"^^xsd:string ;
+    cps-nba:roadRecord "9-32"^^xsd:string ;
+    cps-nba:winPct "0.305"^^xsd:float ;
+    cps-nba:year "2002"^^xsd:gYear .
+
+team:1610612748_2003 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612748 ;
+    cps-nba:gameLost "40"^^xsd:int ;
+    cps-nba:gameWon "42"^^xsd:int ;
+    cps-nba:homeRecord "29-12"^^xsd:string ;
+    cps-nba:roadRecord "13-28"^^xsd:string ;
+    cps-nba:winPct "0.512"^^xsd:float ;
+    cps-nba:year "2003"^^xsd:gYear .
+
+team:1610612748_2004 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612748 ;
+    cps-nba:gameLost "23"^^xsd:int ;
+    cps-nba:gameWon "59"^^xsd:int ;
+    cps-nba:homeRecord "35-6"^^xsd:string ;
+    cps-nba:roadRecord "24-17"^^xsd:string ;
+    cps-nba:winPct "0.72"^^xsd:float ;
+    cps-nba:year "2004"^^xsd:gYear .
+
+team:1610612748_2005 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612748 ;
+    cps-nba:gameLost "30"^^xsd:int ;
+    cps-nba:gameWon "52"^^xsd:int ;
+    cps-nba:homeRecord "31-10"^^xsd:string ;
+    cps-nba:roadRecord "21-20"^^xsd:string ;
+    cps-nba:winPct "0.634"^^xsd:float ;
+    cps-nba:year "2005"^^xsd:gYear .
+
+team:1610612748_2006 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612748 ;
+    cps-nba:gameLost "38"^^xsd:int ;
+    cps-nba:gameWon "44"^^xsd:int ;
+    cps-nba:homeRecord "27-14"^^xsd:string ;
+    cps-nba:roadRecord "17-24"^^xsd:string ;
+    cps-nba:winPct "0.537"^^xsd:float ;
+    cps-nba:year "2006"^^xsd:gYear .
+
+team:1610612748_2007 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612748 ;
+    cps-nba:gameLost "67"^^xsd:int ;
+    cps-nba:gameWon "15"^^xsd:int ;
+    cps-nba:homeRecord "9-32"^^xsd:string ;
+    cps-nba:roadRecord "6-35"^^xsd:string ;
+    cps-nba:winPct "0.183"^^xsd:float ;
+    cps-nba:year "2007"^^xsd:gYear .
+
+team:1610612748_2008 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612748 ;
+    cps-nba:gameLost "39"^^xsd:int ;
+    cps-nba:gameWon "43"^^xsd:int ;
+    cps-nba:homeRecord "28-13"^^xsd:string ;
+    cps-nba:roadRecord "15-26"^^xsd:string ;
+    cps-nba:winPct "0.524"^^xsd:float ;
+    cps-nba:year "2008"^^xsd:gYear .
+
+team:1610612748_2009 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612748 ;
+    cps-nba:gameLost "35"^^xsd:int ;
+    cps-nba:gameWon "47"^^xsd:int ;
+    cps-nba:homeRecord "24-17"^^xsd:string ;
+    cps-nba:roadRecord "23-18"^^xsd:string ;
+    cps-nba:winPct "0.573"^^xsd:float ;
+    cps-nba:year "2009"^^xsd:gYear .
+
+team:1610612748_2010 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612748 ;
+    cps-nba:gameLost "24"^^xsd:int ;
+    cps-nba:gameWon "58"^^xsd:int ;
+    cps-nba:homeRecord "30-11"^^xsd:string ;
+    cps-nba:roadRecord "28-13"^^xsd:string ;
+    cps-nba:winPct "0.7070000000000001"^^xsd:float ;
+    cps-nba:year "2010"^^xsd:gYear .
+
+team:1610612748_2011 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612748 ;
+    cps-nba:gameLost "20"^^xsd:int ;
+    cps-nba:gameWon "46"^^xsd:int ;
+    cps-nba:homeRecord "28-5"^^xsd:string ;
+    cps-nba:roadRecord "18-15"^^xsd:string ;
+    cps-nba:winPct "0.6970000000000001"^^xsd:float ;
+    cps-nba:year "2011"^^xsd:gYear .
+
+team:1610612748_2012 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612748 ;
+    cps-nba:gameLost "16"^^xsd:int ;
+    cps-nba:gameWon "66"^^xsd:int ;
+    cps-nba:homeRecord "37-4"^^xsd:string ;
+    cps-nba:roadRecord "29-12"^^xsd:string ;
+    cps-nba:winPct "0.805"^^xsd:float ;
+    cps-nba:year "2012"^^xsd:gYear .
+
+team:1610612748_2013 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612748 ;
+    cps-nba:gameLost "28"^^xsd:int ;
+    cps-nba:gameWon "54"^^xsd:int ;
+    cps-nba:homeRecord "32-9"^^xsd:string ;
+    cps-nba:roadRecord "22-19"^^xsd:string ;
+    cps-nba:winPct "0.659"^^xsd:float ;
+    cps-nba:year "2013"^^xsd:gYear .
+
+team:1610612748_2014 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612748 ;
+    cps-nba:gameLost "45"^^xsd:int ;
+    cps-nba:gameWon "37"^^xsd:int ;
+    cps-nba:homeRecord "20-21"^^xsd:string ;
+    cps-nba:roadRecord "17-24"^^xsd:string ;
+    cps-nba:winPct "0.451"^^xsd:float ;
+    cps-nba:year "2014"^^xsd:gYear .
+
+team:1610612748_2015 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612748 ;
+    cps-nba:gameLost "34"^^xsd:int ;
+    cps-nba:gameWon "48"^^xsd:int ;
+    cps-nba:homeRecord "28-13"^^xsd:string ;
+    cps-nba:roadRecord "20-21"^^xsd:string ;
+    cps-nba:winPct "0.585"^^xsd:float ;
+    cps-nba:year "2015"^^xsd:gYear .
+
+team:1610612748_2016 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612748 ;
+    cps-nba:gameLost "41"^^xsd:int ;
+    cps-nba:gameWon "41"^^xsd:int ;
+    cps-nba:homeRecord "23-18"^^xsd:string ;
+    cps-nba:roadRecord "18-23"^^xsd:string ;
+    cps-nba:winPct "0.5"^^xsd:float ;
+    cps-nba:year "2016"^^xsd:gYear .
+
+team:1610612748_2017 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612748 ;
+    cps-nba:gameLost "38"^^xsd:int ;
+    cps-nba:gameWon "44"^^xsd:int ;
+    cps-nba:homeRecord "26-15"^^xsd:string ;
+    cps-nba:roadRecord "18-23"^^xsd:string ;
+    cps-nba:winPct "0.537"^^xsd:float ;
+    cps-nba:year "2017"^^xsd:gYear .
+
+team:1610612748_2018 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612748 ;
+    cps-nba:gameLost "43"^^xsd:int ;
+    cps-nba:gameWon "39"^^xsd:int ;
+    cps-nba:homeRecord "19-22"^^xsd:string ;
+    cps-nba:roadRecord "20-21"^^xsd:string ;
+    cps-nba:winPct "0.476"^^xsd:float ;
+    cps-nba:year "2018"^^xsd:gYear .
+
+team:1610612748_2019 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612748 ;
+    cps-nba:gameLost "29"^^xsd:int ;
+    cps-nba:gameWon "44"^^xsd:int ;
+    cps-nba:homeRecord "29-7"^^xsd:string ;
+    cps-nba:roadRecord "15-22"^^xsd:string ;
+    cps-nba:winPct "0.603"^^xsd:float ;
+    cps-nba:year "2019"^^xsd:gYear .
+
+team:1610612748_2020 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612748 ;
+    cps-nba:gameLost "32"^^xsd:int ;
+    cps-nba:gameWon "40"^^xsd:int ;
+    cps-nba:homeRecord "21-15"^^xsd:string ;
+    cps-nba:roadRecord "19-17"^^xsd:string ;
+    cps-nba:winPct "0.556"^^xsd:float ;
+    cps-nba:year "2020"^^xsd:gYear .
+
+team:1610612748_2021 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612748 ;
+    cps-nba:gameLost "24"^^xsd:int ;
+    cps-nba:gameWon "45"^^xsd:int ;
+    cps-nba:homeRecord "24-9"^^xsd:string ;
+    cps-nba:roadRecord "21-15"^^xsd:string ;
+    cps-nba:winPct "0.652"^^xsd:float ;
+    cps-nba:year "2021"^^xsd:gYear .
+
+team:1610612749_2002 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612749 ;
+    cps-nba:gameLost "40"^^xsd:int ;
+    cps-nba:gameWon "42"^^xsd:int ;
+    cps-nba:homeRecord "25-16"^^xsd:string ;
+    cps-nba:roadRecord "17-24"^^xsd:string ;
+    cps-nba:winPct "0.512"^^xsd:float ;
+    cps-nba:year "2002"^^xsd:gYear .
+
+team:1610612749_2003 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612749 ;
+    cps-nba:gameLost "41"^^xsd:int ;
+    cps-nba:gameWon "41"^^xsd:int ;
+    cps-nba:homeRecord "27-14"^^xsd:string ;
+    cps-nba:roadRecord "14-27"^^xsd:string ;
+    cps-nba:winPct "0.5"^^xsd:float ;
+    cps-nba:year "2003"^^xsd:gYear .
+
+team:1610612749_2004 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612749 ;
+    cps-nba:gameLost "52"^^xsd:int ;
+    cps-nba:gameWon "30"^^xsd:int ;
+    cps-nba:homeRecord "23-18"^^xsd:string ;
+    cps-nba:roadRecord "7-34"^^xsd:string ;
+    cps-nba:winPct "0.366"^^xsd:float ;
+    cps-nba:year "2004"^^xsd:gYear .
+
+team:1610612749_2005 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612749 ;
+    cps-nba:gameLost "42"^^xsd:int ;
+    cps-nba:gameWon "40"^^xsd:int ;
+    cps-nba:homeRecord "25-16"^^xsd:string ;
+    cps-nba:roadRecord "15-26"^^xsd:string ;
+    cps-nba:winPct "0.488"^^xsd:float ;
+    cps-nba:year "2005"^^xsd:gYear .
+
+team:1610612749_2006 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612749 ;
+    cps-nba:gameLost "54"^^xsd:int ;
+    cps-nba:gameWon "28"^^xsd:int ;
+    cps-nba:homeRecord "18-23"^^xsd:string ;
+    cps-nba:roadRecord "10-31"^^xsd:string ;
+    cps-nba:winPct "0.341"^^xsd:float ;
+    cps-nba:year "2006"^^xsd:gYear .
+
+team:1610612749_2007 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612749 ;
+    cps-nba:gameLost "56"^^xsd:int ;
+    cps-nba:gameWon "26"^^xsd:int ;
+    cps-nba:homeRecord "19-22"^^xsd:string ;
+    cps-nba:roadRecord "7-34"^^xsd:string ;
+    cps-nba:winPct "0.317"^^xsd:float ;
+    cps-nba:year "2007"^^xsd:gYear .
+
+team:1610612749_2008 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612749 ;
+    cps-nba:gameLost "48"^^xsd:int ;
+    cps-nba:gameWon "34"^^xsd:int ;
+    cps-nba:homeRecord "22-19"^^xsd:string ;
+    cps-nba:roadRecord "12-29"^^xsd:string ;
+    cps-nba:winPct "0.415"^^xsd:float ;
+    cps-nba:year "2008"^^xsd:gYear .
+
+team:1610612749_2009 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612749 ;
+    cps-nba:gameLost "36"^^xsd:int ;
+    cps-nba:gameWon "46"^^xsd:int ;
+    cps-nba:homeRecord "28-13"^^xsd:string ;
+    cps-nba:roadRecord "18-23"^^xsd:string ;
+    cps-nba:winPct "0.561"^^xsd:float ;
+    cps-nba:year "2009"^^xsd:gYear .
+
+team:1610612749_2010 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612749 ;
+    cps-nba:gameLost "47"^^xsd:int ;
+    cps-nba:gameWon "35"^^xsd:int ;
+    cps-nba:homeRecord "22-19"^^xsd:string ;
+    cps-nba:roadRecord "13-28"^^xsd:string ;
+    cps-nba:winPct "0.4270000000000001"^^xsd:float ;
+    cps-nba:year "2010"^^xsd:gYear .
+
+team:1610612749_2011 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612749 ;
+    cps-nba:gameLost "35"^^xsd:int ;
+    cps-nba:gameWon "31"^^xsd:int ;
+    cps-nba:homeRecord "17-16"^^xsd:string ;
+    cps-nba:roadRecord "14-19"^^xsd:string ;
+    cps-nba:winPct "0.47"^^xsd:float ;
+    cps-nba:year "2011"^^xsd:gYear .
+
+team:1610612749_2012 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612749 ;
+    cps-nba:gameLost "44"^^xsd:int ;
+    cps-nba:gameWon "38"^^xsd:int ;
+    cps-nba:homeRecord "21-20"^^xsd:string ;
+    cps-nba:roadRecord "17-24"^^xsd:string ;
+    cps-nba:winPct "0.4629999999999999"^^xsd:float ;
+    cps-nba:year "2012"^^xsd:gYear .
+
+team:1610612749_2013 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612749 ;
+    cps-nba:gameLost "67"^^xsd:int ;
+    cps-nba:gameWon "15"^^xsd:int ;
+    cps-nba:homeRecord "10-31"^^xsd:string ;
+    cps-nba:roadRecord "5-36"^^xsd:string ;
+    cps-nba:winPct "0.183"^^xsd:float ;
+    cps-nba:year "2013"^^xsd:gYear .
+
+team:1610612749_2014 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612749 ;
+    cps-nba:gameLost "41"^^xsd:int ;
+    cps-nba:gameWon "41"^^xsd:int ;
+    cps-nba:homeRecord "23-18"^^xsd:string ;
+    cps-nba:roadRecord "18-23"^^xsd:string ;
+    cps-nba:winPct "0.5"^^xsd:float ;
+    cps-nba:year "2014"^^xsd:gYear .
+
+team:1610612749_2015 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612749 ;
+    cps-nba:gameLost "49"^^xsd:int ;
+    cps-nba:gameWon "33"^^xsd:int ;
+    cps-nba:homeRecord "23-18"^^xsd:string ;
+    cps-nba:roadRecord "10-31"^^xsd:string ;
+    cps-nba:winPct "0.402"^^xsd:float ;
+    cps-nba:year "2015"^^xsd:gYear .
+
+team:1610612749_2016 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612749 ;
+    cps-nba:gameLost "40"^^xsd:int ;
+    cps-nba:gameWon "42"^^xsd:int ;
+    cps-nba:homeRecord "23-18"^^xsd:string ;
+    cps-nba:roadRecord "19-22"^^xsd:string ;
+    cps-nba:winPct "0.512"^^xsd:float ;
+    cps-nba:year "2016"^^xsd:gYear .
+
+team:1610612749_2017 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612749 ;
+    cps-nba:gameLost "38"^^xsd:int ;
+    cps-nba:gameWon "44"^^xsd:int ;
+    cps-nba:homeRecord "25-16"^^xsd:string ;
+    cps-nba:roadRecord "19-22"^^xsd:string ;
+    cps-nba:winPct "0.537"^^xsd:float ;
+    cps-nba:year "2017"^^xsd:gYear .
+
+team:1610612749_2018 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612749 ;
+    cps-nba:gameLost "22"^^xsd:int ;
+    cps-nba:gameWon "60"^^xsd:int ;
+    cps-nba:homeRecord "33-8"^^xsd:string ;
+    cps-nba:roadRecord "27-14"^^xsd:string ;
+    cps-nba:winPct "0.732"^^xsd:float ;
+    cps-nba:year "2018"^^xsd:gYear .
+
+team:1610612749_2019 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612749 ;
+    cps-nba:gameLost "17"^^xsd:int ;
+    cps-nba:gameWon "56"^^xsd:int ;
+    cps-nba:homeRecord "30-5"^^xsd:string ;
+    cps-nba:roadRecord "26-12"^^xsd:string ;
+    cps-nba:winPct "0.767"^^xsd:float ;
+    cps-nba:year "2019"^^xsd:gYear .
+
+team:1610612749_2020 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612749 ;
+    cps-nba:gameLost "26"^^xsd:int ;
+    cps-nba:gameWon "46"^^xsd:int ;
+    cps-nba:homeRecord "26-10"^^xsd:string ;
+    cps-nba:roadRecord "20-16"^^xsd:string ;
+    cps-nba:winPct "0.639"^^xsd:float ;
+    cps-nba:year "2020"^^xsd:gYear .
+
+team:1610612749_2021 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612749 ;
+    cps-nba:gameLost "26"^^xsd:int ;
+    cps-nba:gameWon "42"^^xsd:int ;
+    cps-nba:homeRecord "24-12"^^xsd:string ;
+    cps-nba:roadRecord "18-14"^^xsd:string ;
+    cps-nba:winPct "0.618"^^xsd:float ;
+    cps-nba:year "2021"^^xsd:gYear .
+
+team:1610612750_2002 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612750 ;
+    cps-nba:gameLost "31"^^xsd:int ;
+    cps-nba:gameWon "51"^^xsd:int ;
+    cps-nba:homeRecord "33-8"^^xsd:string ;
+    cps-nba:roadRecord "18-23"^^xsd:string ;
+    cps-nba:winPct "0.622"^^xsd:float ;
+    cps-nba:year "2002"^^xsd:gYear .
+
+team:1610612750_2003 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612750 ;
+    cps-nba:gameLost "24"^^xsd:int ;
+    cps-nba:gameWon "58"^^xsd:int ;
+    cps-nba:homeRecord "31-10"^^xsd:string ;
+    cps-nba:roadRecord "27-14"^^xsd:string ;
+    cps-nba:winPct "0.7070000000000001"^^xsd:float ;
+    cps-nba:year "2003"^^xsd:gYear .
+
+team:1610612750_2004 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612750 ;
+    cps-nba:gameLost "38"^^xsd:int ;
+    cps-nba:gameWon "44"^^xsd:int ;
+    cps-nba:homeRecord "24-17"^^xsd:string ;
+    cps-nba:roadRecord "20-21"^^xsd:string ;
+    cps-nba:winPct "0.537"^^xsd:float ;
+    cps-nba:year "2004"^^xsd:gYear .
+
+team:1610612750_2005 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612750 ;
+    cps-nba:gameLost "49"^^xsd:int ;
+    cps-nba:gameWon "33"^^xsd:int ;
+    cps-nba:homeRecord "24-17"^^xsd:string ;
+    cps-nba:roadRecord "9-32"^^xsd:string ;
+    cps-nba:winPct "0.402"^^xsd:float ;
+    cps-nba:year "2005"^^xsd:gYear .
+
+team:1610612750_2006 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612750 ;
+    cps-nba:gameLost "50"^^xsd:int ;
+    cps-nba:gameWon "32"^^xsd:int ;
+    cps-nba:homeRecord "20-21"^^xsd:string ;
+    cps-nba:roadRecord "12-29"^^xsd:string ;
+    cps-nba:winPct "0.39"^^xsd:float ;
+    cps-nba:year "2006"^^xsd:gYear .
+
+team:1610612750_2007 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612750 ;
+    cps-nba:gameLost "60"^^xsd:int ;
+    cps-nba:gameWon "22"^^xsd:int ;
+    cps-nba:homeRecord "15-26"^^xsd:string ;
+    cps-nba:roadRecord "7-34"^^xsd:string ;
+    cps-nba:winPct "0.268"^^xsd:float ;
+    cps-nba:year "2007"^^xsd:gYear .
+
+team:1610612750_2008 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612750 ;
+    cps-nba:gameLost "58"^^xsd:int ;
+    cps-nba:gameWon "24"^^xsd:int ;
+    cps-nba:homeRecord "11-30"^^xsd:string ;
+    cps-nba:roadRecord "13-28"^^xsd:string ;
+    cps-nba:winPct "0.293"^^xsd:float ;
+    cps-nba:year "2008"^^xsd:gYear .
+
+team:1610612750_2009 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612750 ;
+    cps-nba:gameLost "67"^^xsd:int ;
+    cps-nba:gameWon "15"^^xsd:int ;
+    cps-nba:homeRecord "10-31"^^xsd:string ;
+    cps-nba:roadRecord "5-36"^^xsd:string ;
+    cps-nba:winPct "0.183"^^xsd:float ;
+    cps-nba:year "2009"^^xsd:gYear .
+
+team:1610612750_2010 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612750 ;
+    cps-nba:gameLost "65"^^xsd:int ;
+    cps-nba:gameWon "17"^^xsd:int ;
+    cps-nba:homeRecord "12-29"^^xsd:string ;
+    cps-nba:roadRecord "5-36"^^xsd:string ;
+    cps-nba:winPct "0.207"^^xsd:float ;
+    cps-nba:year "2010"^^xsd:gYear .
+
+team:1610612750_2011 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612750 ;
+    cps-nba:gameLost "40"^^xsd:int ;
+    cps-nba:gameWon "26"^^xsd:int ;
+    cps-nba:homeRecord "13-20"^^xsd:string ;
+    cps-nba:roadRecord "13-20"^^xsd:string ;
+    cps-nba:winPct "0.3939999999999999"^^xsd:float ;
+    cps-nba:year "2011"^^xsd:gYear .
+
+team:1610612750_2012 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612750 ;
+    cps-nba:gameLost "51"^^xsd:int ;
+    cps-nba:gameWon "31"^^xsd:int ;
+    cps-nba:homeRecord "20-21"^^xsd:string ;
+    cps-nba:roadRecord "11-30"^^xsd:string ;
+    cps-nba:winPct "0.3779999999999999"^^xsd:float ;
+    cps-nba:year "2012"^^xsd:gYear .
+
+team:1610612750_2013 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612750 ;
+    cps-nba:gameLost "42"^^xsd:int ;
+    cps-nba:gameWon "40"^^xsd:int ;
+    cps-nba:homeRecord "24-17"^^xsd:string ;
+    cps-nba:roadRecord "16-25"^^xsd:string ;
+    cps-nba:winPct "0.488"^^xsd:float ;
+    cps-nba:year "2013"^^xsd:gYear .
+
+team:1610612750_2014 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612750 ;
+    cps-nba:gameLost "66"^^xsd:int ;
+    cps-nba:gameWon "16"^^xsd:int ;
+    cps-nba:homeRecord "9-32"^^xsd:string ;
+    cps-nba:roadRecord "7-34"^^xsd:string ;
+    cps-nba:winPct "0.195"^^xsd:float ;
+    cps-nba:year "2014"^^xsd:gYear .
+
+team:1610612750_2015 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612750 ;
+    cps-nba:gameLost "53"^^xsd:int ;
+    cps-nba:gameWon "29"^^xsd:int ;
+    cps-nba:homeRecord "14-27"^^xsd:string ;
+    cps-nba:roadRecord "15-26"^^xsd:string ;
+    cps-nba:winPct "0.354"^^xsd:float ;
+    cps-nba:year "2015"^^xsd:gYear .
+
+team:1610612750_2016 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612750 ;
+    cps-nba:gameLost "51"^^xsd:int ;
+    cps-nba:gameWon "31"^^xsd:int ;
+    cps-nba:homeRecord "20-21"^^xsd:string ;
+    cps-nba:roadRecord "11-30"^^xsd:string ;
+    cps-nba:winPct "0.3779999999999999"^^xsd:float ;
+    cps-nba:year "2016"^^xsd:gYear .
+
+team:1610612750_2017 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612750 ;
+    cps-nba:gameLost "35"^^xsd:int ;
+    cps-nba:gameWon "47"^^xsd:int ;
+    cps-nba:homeRecord "30-11"^^xsd:string ;
+    cps-nba:roadRecord "17-24"^^xsd:string ;
+    cps-nba:winPct "0.573"^^xsd:float ;
+    cps-nba:year "2017"^^xsd:gYear .
+
+team:1610612750_2018 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612750 ;
+    cps-nba:gameLost "46"^^xsd:int ;
+    cps-nba:gameWon "36"^^xsd:int ;
+    cps-nba:homeRecord "25-16"^^xsd:string ;
+    cps-nba:roadRecord "11-30"^^xsd:string ;
+    cps-nba:winPct "0.439"^^xsd:float ;
+    cps-nba:year "2018"^^xsd:gYear .
+
+team:1610612750_2019 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612750 ;
+    cps-nba:gameLost "45"^^xsd:int ;
+    cps-nba:gameWon "19"^^xsd:int ;
+    cps-nba:homeRecord "8-24"^^xsd:string ;
+    cps-nba:roadRecord "11-21"^^xsd:string ;
+    cps-nba:winPct "0.297"^^xsd:float ;
+    cps-nba:year "2019"^^xsd:gYear .
+
+team:1610612750_2020 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612750 ;
+    cps-nba:gameLost "49"^^xsd:int ;
+    cps-nba:gameWon "23"^^xsd:int ;
+    cps-nba:homeRecord "13-23"^^xsd:string ;
+    cps-nba:roadRecord "10-26"^^xsd:string ;
+    cps-nba:winPct "0.319"^^xsd:float ;
+    cps-nba:year "2020"^^xsd:gYear .
+
+team:1610612750_2021 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612750 ;
+    cps-nba:gameLost "30"^^xsd:int ;
+    cps-nba:gameWon "39"^^xsd:int ;
+    cps-nba:homeRecord "22-12"^^xsd:string ;
+    cps-nba:roadRecord "17-18"^^xsd:string ;
+    cps-nba:winPct "0.565"^^xsd:float ;
+    cps-nba:year "2021"^^xsd:gYear .
+
+team:1610612751_2002 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612751 ;
+    cps-nba:gameLost "33"^^xsd:int ;
+    cps-nba:gameWon "49"^^xsd:int ;
+    cps-nba:homeRecord "33-8"^^xsd:string ;
+    cps-nba:roadRecord "16-25"^^xsd:string ;
+    cps-nba:winPct "0.598"^^xsd:float ;
+    cps-nba:year "2002"^^xsd:gYear .
+
+team:1610612751_2003 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612751 ;
+    cps-nba:gameLost "35"^^xsd:int ;
+    cps-nba:gameWon "47"^^xsd:int ;
+    cps-nba:homeRecord "28-13"^^xsd:string ;
+    cps-nba:roadRecord "19-22"^^xsd:string ;
+    cps-nba:winPct "0.573"^^xsd:float ;
+    cps-nba:year "2003"^^xsd:gYear .
+
+team:1610612751_2004 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612751 ;
+    cps-nba:gameLost "40"^^xsd:int ;
+    cps-nba:gameWon "42"^^xsd:int ;
+    cps-nba:homeRecord "24-17"^^xsd:string ;
+    cps-nba:roadRecord "18-23"^^xsd:string ;
+    cps-nba:winPct "0.512"^^xsd:float ;
+    cps-nba:year "2004"^^xsd:gYear .
+
+team:1610612751_2005 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612751 ;
+    cps-nba:gameLost "33"^^xsd:int ;
+    cps-nba:gameWon "49"^^xsd:int ;
+    cps-nba:homeRecord "29-12"^^xsd:string ;
+    cps-nba:roadRecord "20-21"^^xsd:string ;
+    cps-nba:winPct "0.598"^^xsd:float ;
+    cps-nba:year "2005"^^xsd:gYear .
+
+team:1610612751_2006 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612751 ;
+    cps-nba:gameLost "41"^^xsd:int ;
+    cps-nba:gameWon "41"^^xsd:int ;
+    cps-nba:homeRecord "24-17"^^xsd:string ;
+    cps-nba:roadRecord "17-24"^^xsd:string ;
+    cps-nba:winPct "0.5"^^xsd:float ;
+    cps-nba:year "2006"^^xsd:gYear .
+
+team:1610612751_2007 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612751 ;
+    cps-nba:gameLost "48"^^xsd:int ;
+    cps-nba:gameWon "34"^^xsd:int ;
+    cps-nba:homeRecord "21-20"^^xsd:string ;
+    cps-nba:roadRecord "13-28"^^xsd:string ;
+    cps-nba:winPct "0.415"^^xsd:float ;
+    cps-nba:year "2007"^^xsd:gYear .
+
+team:1610612751_2008 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612751 ;
+    cps-nba:gameLost "48"^^xsd:int ;
+    cps-nba:gameWon "34"^^xsd:int ;
+    cps-nba:homeRecord "19-22"^^xsd:string ;
+    cps-nba:roadRecord "15-26"^^xsd:string ;
+    cps-nba:winPct "0.415"^^xsd:float ;
+    cps-nba:year "2008"^^xsd:gYear .
+
+team:1610612751_2009 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612751 ;
+    cps-nba:gameLost "70"^^xsd:int ;
+    cps-nba:gameWon "12"^^xsd:int ;
+    cps-nba:homeRecord "8-33"^^xsd:string ;
+    cps-nba:roadRecord "4-37"^^xsd:string ;
+    cps-nba:winPct "0.146"^^xsd:float ;
+    cps-nba:year "2009"^^xsd:gYear .
+
+team:1610612751_2010 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612751 ;
+    cps-nba:gameLost "58"^^xsd:int ;
+    cps-nba:gameWon "24"^^xsd:int ;
+    cps-nba:homeRecord "19-22"^^xsd:string ;
+    cps-nba:roadRecord "5-36"^^xsd:string ;
+    cps-nba:winPct "0.293"^^xsd:float ;
+    cps-nba:year "2010"^^xsd:gYear .
+
+team:1610612751_2011 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612751 ;
+    cps-nba:gameLost "44"^^xsd:int ;
+    cps-nba:gameWon "22"^^xsd:int ;
+    cps-nba:homeRecord "9-24"^^xsd:string ;
+    cps-nba:roadRecord "13-20"^^xsd:string ;
+    cps-nba:winPct "0.3329999999999999"^^xsd:float ;
+    cps-nba:year "2011"^^xsd:gYear .
+
+team:1610612751_2012 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612751 ;
+    cps-nba:gameLost "33"^^xsd:int ;
+    cps-nba:gameWon "49"^^xsd:int ;
+    cps-nba:homeRecord "26-15"^^xsd:string ;
+    cps-nba:roadRecord "23-18"^^xsd:string ;
+    cps-nba:winPct "0.598"^^xsd:float ;
+    cps-nba:year "2012"^^xsd:gYear .
+
+team:1610612751_2013 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612751 ;
+    cps-nba:gameLost "38"^^xsd:int ;
+    cps-nba:gameWon "44"^^xsd:int ;
+    cps-nba:homeRecord "28-13"^^xsd:string ;
+    cps-nba:roadRecord "16-25"^^xsd:string ;
+    cps-nba:winPct "0.537"^^xsd:float ;
+    cps-nba:year "2013"^^xsd:gYear .
+
+team:1610612751_2014 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612751 ;
+    cps-nba:gameLost "44"^^xsd:int ;
+    cps-nba:gameWon "38"^^xsd:int ;
+    cps-nba:homeRecord "19-22"^^xsd:string ;
+    cps-nba:roadRecord "19-22"^^xsd:string ;
+    cps-nba:winPct "0.4629999999999999"^^xsd:float ;
+    cps-nba:year "2014"^^xsd:gYear .
+
+team:1610612751_2015 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612751 ;
+    cps-nba:gameLost "61"^^xsd:int ;
+    cps-nba:gameWon "21"^^xsd:int ;
+    cps-nba:homeRecord "14-27"^^xsd:string ;
+    cps-nba:roadRecord "7-34"^^xsd:string ;
+    cps-nba:winPct "0.256"^^xsd:float ;
+    cps-nba:year "2015"^^xsd:gYear .
+
+team:1610612751_2016 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612751 ;
+    cps-nba:gameLost "62"^^xsd:int ;
+    cps-nba:gameWon "20"^^xsd:int ;
+    cps-nba:homeRecord "13-28"^^xsd:string ;
+    cps-nba:roadRecord "7-34"^^xsd:string ;
+    cps-nba:winPct "0.244"^^xsd:float ;
+    cps-nba:year "2016"^^xsd:gYear .
+
+team:1610612751_2017 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612751 ;
+    cps-nba:gameLost "54"^^xsd:int ;
+    cps-nba:gameWon "28"^^xsd:int ;
+    cps-nba:homeRecord "15-26"^^xsd:string ;
+    cps-nba:roadRecord "13-28"^^xsd:string ;
+    cps-nba:winPct "0.341"^^xsd:float ;
+    cps-nba:year "2017"^^xsd:gYear .
+
+team:1610612751_2018 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612751 ;
+    cps-nba:gameLost "40"^^xsd:int ;
+    cps-nba:gameWon "42"^^xsd:int ;
+    cps-nba:homeRecord "23-18"^^xsd:string ;
+    cps-nba:roadRecord "19-22"^^xsd:string ;
+    cps-nba:winPct "0.512"^^xsd:float ;
+    cps-nba:year "2018"^^xsd:gYear .
+
+team:1610612751_2019 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612751 ;
+    cps-nba:gameLost "37"^^xsd:int ;
+    cps-nba:gameWon "35"^^xsd:int ;
+    cps-nba:homeRecord "20-16"^^xsd:string ;
+    cps-nba:roadRecord "15-21"^^xsd:string ;
+    cps-nba:winPct "0.486"^^xsd:float ;
+    cps-nba:year "2019"^^xsd:gYear .
+
+team:1610612751_2020 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612751 ;
+    cps-nba:gameLost "24"^^xsd:int ;
+    cps-nba:gameWon "48"^^xsd:int ;
+    cps-nba:homeRecord "28-8"^^xsd:string ;
+    cps-nba:roadRecord "20-16"^^xsd:string ;
+    cps-nba:winPct "0.667"^^xsd:float ;
+    cps-nba:year "2020"^^xsd:gYear .
+
+team:1610612751_2021 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612751 ;
+    cps-nba:gameLost "33"^^xsd:int ;
+    cps-nba:gameWon "34"^^xsd:int ;
+    cps-nba:homeRecord "13-18"^^xsd:string ;
+    cps-nba:roadRecord "21-15"^^xsd:string ;
+    cps-nba:winPct "0.507"^^xsd:float ;
+    cps-nba:year "2021"^^xsd:gYear .
+
+team:1610612752_2002 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612752 ;
+    cps-nba:gameLost "45"^^xsd:int ;
+    cps-nba:gameWon "37"^^xsd:int ;
+    cps-nba:homeRecord "24-17"^^xsd:string ;
+    cps-nba:roadRecord "13-28"^^xsd:string ;
+    cps-nba:winPct "0.451"^^xsd:float ;
+    cps-nba:year "2002"^^xsd:gYear .
+
+team:1610612752_2003 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612752 ;
+    cps-nba:gameLost "43"^^xsd:int ;
+    cps-nba:gameWon "39"^^xsd:int ;
+    cps-nba:homeRecord "23-18"^^xsd:string ;
+    cps-nba:roadRecord "16-25"^^xsd:string ;
+    cps-nba:winPct "0.476"^^xsd:float ;
+    cps-nba:year "2003"^^xsd:gYear .
+
+team:1610612752_2004 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612752 ;
+    cps-nba:gameLost "49"^^xsd:int ;
+    cps-nba:gameWon "33"^^xsd:int ;
+    cps-nba:homeRecord "22-19"^^xsd:string ;
+    cps-nba:roadRecord "11-30"^^xsd:string ;
+    cps-nba:winPct "0.402"^^xsd:float ;
+    cps-nba:year "2004"^^xsd:gYear .
+
+team:1610612752_2005 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612752 ;
+    cps-nba:gameLost "59"^^xsd:int ;
+    cps-nba:gameWon "23"^^xsd:int ;
+    cps-nba:homeRecord "15-26"^^xsd:string ;
+    cps-nba:roadRecord "8-33"^^xsd:string ;
+    cps-nba:winPct "0.28"^^xsd:float ;
+    cps-nba:year "2005"^^xsd:gYear .
+
+team:1610612752_2006 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612752 ;
+    cps-nba:gameLost "49"^^xsd:int ;
+    cps-nba:gameWon "33"^^xsd:int ;
+    cps-nba:homeRecord "19-22"^^xsd:string ;
+    cps-nba:roadRecord "14-27"^^xsd:string ;
+    cps-nba:winPct "0.402"^^xsd:float ;
+    cps-nba:year "2006"^^xsd:gYear .
+
+team:1610612752_2007 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612752 ;
+    cps-nba:gameLost "59"^^xsd:int ;
+    cps-nba:gameWon "23"^^xsd:int ;
+    cps-nba:homeRecord "15-26"^^xsd:string ;
+    cps-nba:roadRecord "8-33"^^xsd:string ;
+    cps-nba:winPct "0.28"^^xsd:float ;
+    cps-nba:year "2007"^^xsd:gYear .
+
+team:1610612752_2008 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612752 ;
+    cps-nba:gameLost "50"^^xsd:int ;
+    cps-nba:gameWon "32"^^xsd:int ;
+    cps-nba:homeRecord "20-21"^^xsd:string ;
+    cps-nba:roadRecord "12-29"^^xsd:string ;
+    cps-nba:winPct "0.39"^^xsd:float ;
+    cps-nba:year "2008"^^xsd:gYear .
+
+team:1610612752_2009 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612752 ;
+    cps-nba:gameLost "53"^^xsd:int ;
+    cps-nba:gameWon "29"^^xsd:int ;
+    cps-nba:homeRecord "18-23"^^xsd:string ;
+    cps-nba:roadRecord "11-30"^^xsd:string ;
+    cps-nba:winPct "0.354"^^xsd:float ;
+    cps-nba:year "2009"^^xsd:gYear .
+
+team:1610612752_2010 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612752 ;
+    cps-nba:gameLost "40"^^xsd:int ;
+    cps-nba:gameWon "42"^^xsd:int ;
+    cps-nba:homeRecord "23-18"^^xsd:string ;
+    cps-nba:roadRecord "19-22"^^xsd:string ;
+    cps-nba:winPct "0.512"^^xsd:float ;
+    cps-nba:year "2010"^^xsd:gYear .
+
+team:1610612752_2011 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612752 ;
+    cps-nba:gameLost "30"^^xsd:int ;
+    cps-nba:gameWon "36"^^xsd:int ;
+    cps-nba:homeRecord "22-11"^^xsd:string ;
+    cps-nba:roadRecord "14-19"^^xsd:string ;
+    cps-nba:winPct "0.545"^^xsd:float ;
+    cps-nba:year "2011"^^xsd:gYear .
+
+team:1610612752_2012 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612752 ;
+    cps-nba:gameLost "28"^^xsd:int ;
+    cps-nba:gameWon "54"^^xsd:int ;
+    cps-nba:homeRecord "31-10"^^xsd:string ;
+    cps-nba:roadRecord "23-18"^^xsd:string ;
+    cps-nba:winPct "0.659"^^xsd:float ;
+    cps-nba:year "2012"^^xsd:gYear .
+
+team:1610612752_2013 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612752 ;
+    cps-nba:gameLost "45"^^xsd:int ;
+    cps-nba:gameWon "37"^^xsd:int ;
+    cps-nba:homeRecord "19-22"^^xsd:string ;
+    cps-nba:roadRecord "18-23"^^xsd:string ;
+    cps-nba:winPct "0.451"^^xsd:float ;
+    cps-nba:year "2013"^^xsd:gYear .
+
+team:1610612752_2014 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612752 ;
+    cps-nba:gameLost "65"^^xsd:int ;
+    cps-nba:gameWon "17"^^xsd:int ;
+    cps-nba:homeRecord "10-31"^^xsd:string ;
+    cps-nba:roadRecord "7-34"^^xsd:string ;
+    cps-nba:winPct "0.207"^^xsd:float ;
+    cps-nba:year "2014"^^xsd:gYear .
+
+team:1610612752_2015 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612752 ;
+    cps-nba:gameLost "50"^^xsd:int ;
+    cps-nba:gameWon "32"^^xsd:int ;
+    cps-nba:homeRecord "18-23"^^xsd:string ;
+    cps-nba:roadRecord "14-27"^^xsd:string ;
+    cps-nba:winPct "0.39"^^xsd:float ;
+    cps-nba:year "2015"^^xsd:gYear .
+
+team:1610612752_2016 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612752 ;
+    cps-nba:gameLost "51"^^xsd:int ;
+    cps-nba:gameWon "31"^^xsd:int ;
+    cps-nba:homeRecord "19-22"^^xsd:string ;
+    cps-nba:roadRecord "12-29"^^xsd:string ;
+    cps-nba:winPct "0.3779999999999999"^^xsd:float ;
+    cps-nba:year "2016"^^xsd:gYear .
+
+team:1610612752_2017 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612752 ;
+    cps-nba:gameLost "53"^^xsd:int ;
+    cps-nba:gameWon "29"^^xsd:int ;
+    cps-nba:homeRecord "19-22"^^xsd:string ;
+    cps-nba:roadRecord "10-31"^^xsd:string ;
+    cps-nba:winPct "0.354"^^xsd:float ;
+    cps-nba:year "2017"^^xsd:gYear .
+
+team:1610612752_2018 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612752 ;
+    cps-nba:gameLost "65"^^xsd:int ;
+    cps-nba:gameWon "17"^^xsd:int ;
+    cps-nba:homeRecord "9-32"^^xsd:string ;
+    cps-nba:roadRecord "8-33"^^xsd:string ;
+    cps-nba:winPct "0.207"^^xsd:float ;
+    cps-nba:year "2018"^^xsd:gYear .
+
+team:1610612752_2019 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612752 ;
+    cps-nba:gameLost "45"^^xsd:int ;
+    cps-nba:gameWon "21"^^xsd:int ;
+    cps-nba:homeRecord "11-22"^^xsd:string ;
+    cps-nba:roadRecord "10-23"^^xsd:string ;
+    cps-nba:winPct "0.318"^^xsd:float ;
+    cps-nba:year "2019"^^xsd:gYear .
+
+team:1610612752_2020 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612752 ;
+    cps-nba:gameLost "31"^^xsd:int ;
+    cps-nba:gameWon "41"^^xsd:int ;
+    cps-nba:homeRecord "25-11"^^xsd:string ;
+    cps-nba:roadRecord "16-20"^^xsd:string ;
+    cps-nba:winPct "0.569"^^xsd:float ;
+    cps-nba:year "2020"^^xsd:gYear .
+
+team:1610612752_2021 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612752 ;
+    cps-nba:gameLost "39"^^xsd:int ;
+    cps-nba:gameWon "28"^^xsd:int ;
+    cps-nba:homeRecord "13-19"^^xsd:string ;
+    cps-nba:roadRecord "15-20"^^xsd:string ;
+    cps-nba:winPct "0.418"^^xsd:float ;
+    cps-nba:year "2021"^^xsd:gYear .
+
+team:1610612753_2002 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612753 ;
+    cps-nba:gameLost "40"^^xsd:int ;
+    cps-nba:gameWon "42"^^xsd:int ;
+    cps-nba:homeRecord "26-15"^^xsd:string ;
+    cps-nba:roadRecord "16-25"^^xsd:string ;
+    cps-nba:winPct "0.512"^^xsd:float ;
+    cps-nba:year "2002"^^xsd:gYear .
+
+team:1610612753_2003 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612753 ;
+    cps-nba:gameLost "61"^^xsd:int ;
+    cps-nba:gameWon "21"^^xsd:int ;
+    cps-nba:homeRecord "11-30"^^xsd:string ;
+    cps-nba:roadRecord "10-31"^^xsd:string ;
+    cps-nba:winPct "0.256"^^xsd:float ;
+    cps-nba:year "2003"^^xsd:gYear .
+
+team:1610612753_2004 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612753 ;
+    cps-nba:gameLost "46"^^xsd:int ;
+    cps-nba:gameWon "36"^^xsd:int ;
+    cps-nba:homeRecord "24-17"^^xsd:string ;
+    cps-nba:roadRecord "12-29"^^xsd:string ;
+    cps-nba:winPct "0.439"^^xsd:float ;
+    cps-nba:year "2004"^^xsd:gYear .
+
+team:1610612753_2005 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612753 ;
+    cps-nba:gameLost "46"^^xsd:int ;
+    cps-nba:gameWon "36"^^xsd:int ;
+    cps-nba:homeRecord "26-15"^^xsd:string ;
+    cps-nba:roadRecord "10-31"^^xsd:string ;
+    cps-nba:winPct "0.439"^^xsd:float ;
+    cps-nba:year "2005"^^xsd:gYear .
+
+team:1610612753_2006 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612753 ;
+    cps-nba:gameLost "42"^^xsd:int ;
+    cps-nba:gameWon "40"^^xsd:int ;
+    cps-nba:homeRecord "25-16"^^xsd:string ;
+    cps-nba:roadRecord "15-26"^^xsd:string ;
+    cps-nba:winPct "0.488"^^xsd:float ;
+    cps-nba:year "2006"^^xsd:gYear .
+
+team:1610612753_2007 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612753 ;
+    cps-nba:gameLost "30"^^xsd:int ;
+    cps-nba:gameWon "52"^^xsd:int ;
+    cps-nba:homeRecord "25-16"^^xsd:string ;
+    cps-nba:roadRecord "27-14"^^xsd:string ;
+    cps-nba:winPct "0.634"^^xsd:float ;
+    cps-nba:year "2007"^^xsd:gYear .
+
+team:1610612753_2008 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612753 ;
+    cps-nba:gameLost "23"^^xsd:int ;
+    cps-nba:gameWon "59"^^xsd:int ;
+    cps-nba:homeRecord "32-9"^^xsd:string ;
+    cps-nba:roadRecord "27-14"^^xsd:string ;
+    cps-nba:winPct "0.72"^^xsd:float ;
+    cps-nba:year "2008"^^xsd:gYear .
+
+team:1610612753_2009 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612753 ;
+    cps-nba:gameLost "23"^^xsd:int ;
+    cps-nba:gameWon "59"^^xsd:int ;
+    cps-nba:homeRecord "34-7"^^xsd:string ;
+    cps-nba:roadRecord "25-16"^^xsd:string ;
+    cps-nba:winPct "0.72"^^xsd:float ;
+    cps-nba:year "2009"^^xsd:gYear .
+
+team:1610612753_2010 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612753 ;
+    cps-nba:gameLost "30"^^xsd:int ;
+    cps-nba:gameWon "52"^^xsd:int ;
+    cps-nba:homeRecord "29-12"^^xsd:string ;
+    cps-nba:roadRecord "23-18"^^xsd:string ;
+    cps-nba:winPct "0.634"^^xsd:float ;
+    cps-nba:year "2010"^^xsd:gYear .
+
+team:1610612753_2011 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612753 ;
+    cps-nba:gameLost "29"^^xsd:int ;
+    cps-nba:gameWon "37"^^xsd:int ;
+    cps-nba:homeRecord "21-12"^^xsd:string ;
+    cps-nba:roadRecord "16-17"^^xsd:string ;
+    cps-nba:winPct "0.561"^^xsd:float ;
+    cps-nba:year "2011"^^xsd:gYear .
+
+team:1610612753_2012 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612753 ;
+    cps-nba:gameLost "62"^^xsd:int ;
+    cps-nba:gameWon "20"^^xsd:int ;
+    cps-nba:homeRecord "12-29"^^xsd:string ;
+    cps-nba:roadRecord "8-33"^^xsd:string ;
+    cps-nba:winPct "0.244"^^xsd:float ;
+    cps-nba:year "2012"^^xsd:gYear .
+
+team:1610612753_2013 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612753 ;
+    cps-nba:gameLost "59"^^xsd:int ;
+    cps-nba:gameWon "23"^^xsd:int ;
+    cps-nba:homeRecord "19-22"^^xsd:string ;
+    cps-nba:roadRecord "4-37"^^xsd:string ;
+    cps-nba:winPct "0.28"^^xsd:float ;
+    cps-nba:year "2013"^^xsd:gYear .
+
+team:1610612753_2014 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612753 ;
+    cps-nba:gameLost "57"^^xsd:int ;
+    cps-nba:gameWon "25"^^xsd:int ;
+    cps-nba:homeRecord "13-28"^^xsd:string ;
+    cps-nba:roadRecord "12-29"^^xsd:string ;
+    cps-nba:winPct "0.305"^^xsd:float ;
+    cps-nba:year "2014"^^xsd:gYear .
+
+team:1610612753_2015 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612753 ;
+    cps-nba:gameLost "47"^^xsd:int ;
+    cps-nba:gameWon "35"^^xsd:int ;
+    cps-nba:homeRecord "23-18"^^xsd:string ;
+    cps-nba:roadRecord "12-29"^^xsd:string ;
+    cps-nba:winPct "0.4270000000000001"^^xsd:float ;
+    cps-nba:year "2015"^^xsd:gYear .
+
+team:1610612753_2016 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612753 ;
+    cps-nba:gameLost "53"^^xsd:int ;
+    cps-nba:gameWon "29"^^xsd:int ;
+    cps-nba:homeRecord "16-25"^^xsd:string ;
+    cps-nba:roadRecord "13-28"^^xsd:string ;
+    cps-nba:winPct "0.354"^^xsd:float ;
+    cps-nba:year "2016"^^xsd:gYear .
+
+team:1610612753_2017 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612753 ;
+    cps-nba:gameLost "57"^^xsd:int ;
+    cps-nba:gameWon "25"^^xsd:int ;
+    cps-nba:homeRecord "17-24"^^xsd:string ;
+    cps-nba:roadRecord "8-33"^^xsd:string ;
+    cps-nba:winPct "0.305"^^xsd:float ;
+    cps-nba:year "2017"^^xsd:gYear .
+
+team:1610612753_2018 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612753 ;
+    cps-nba:gameLost "40"^^xsd:int ;
+    cps-nba:gameWon "42"^^xsd:int ;
+    cps-nba:homeRecord "25-16"^^xsd:string ;
+    cps-nba:roadRecord "17-24"^^xsd:string ;
+    cps-nba:winPct "0.512"^^xsd:float ;
+    cps-nba:year "2018"^^xsd:gYear .
+
+team:1610612753_2019 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612753 ;
+    cps-nba:gameLost "40"^^xsd:int ;
+    cps-nba:gameWon "33"^^xsd:int ;
+    cps-nba:homeRecord "18-17"^^xsd:string ;
+    cps-nba:roadRecord "15-23"^^xsd:string ;
+    cps-nba:winPct "0.452"^^xsd:float ;
+    cps-nba:year "2019"^^xsd:gYear .
+
+team:1610612753_2020 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612753 ;
+    cps-nba:gameLost "51"^^xsd:int ;
+    cps-nba:gameWon "21"^^xsd:int ;
+    cps-nba:homeRecord "11-25"^^xsd:string ;
+    cps-nba:roadRecord "10-26"^^xsd:string ;
+    cps-nba:winPct "0.292"^^xsd:float ;
+    cps-nba:year "2020"^^xsd:gYear .
+
+team:1610612753_2021 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612753 ;
+    cps-nba:gameLost "50"^^xsd:int ;
+    cps-nba:gameWon "18"^^xsd:int ;
+    cps-nba:homeRecord "8-23"^^xsd:string ;
+    cps-nba:roadRecord "10-27"^^xsd:string ;
+    cps-nba:winPct "0.265"^^xsd:float ;
+    cps-nba:year "2021"^^xsd:gYear .
+
+team:1610612754_2002 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612754 ;
+    cps-nba:gameLost "34"^^xsd:int ;
+    cps-nba:gameWon "48"^^xsd:int ;
+    cps-nba:homeRecord "32-9"^^xsd:string ;
+    cps-nba:roadRecord "16-25"^^xsd:string ;
+    cps-nba:winPct "0.585"^^xsd:float ;
+    cps-nba:year "2002"^^xsd:gYear .
+
+team:1610612754_2003 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612754 ;
+    cps-nba:gameLost "21"^^xsd:int ;
+    cps-nba:gameWon "61"^^xsd:int ;
+    cps-nba:homeRecord "34-7"^^xsd:string ;
+    cps-nba:roadRecord "27-14"^^xsd:string ;
+    cps-nba:winPct "0.7440000000000001"^^xsd:float ;
+    cps-nba:year "2003"^^xsd:gYear .
+
+team:1610612754_2004 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612754 ;
+    cps-nba:gameLost "38"^^xsd:int ;
+    cps-nba:gameWon "44"^^xsd:int ;
+    cps-nba:homeRecord "25-16"^^xsd:string ;
+    cps-nba:roadRecord "19-22"^^xsd:string ;
+    cps-nba:winPct "0.537"^^xsd:float ;
+    cps-nba:year "2004"^^xsd:gYear .
+
+team:1610612754_2005 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612754 ;
+    cps-nba:gameLost "41"^^xsd:int ;
+    cps-nba:gameWon "41"^^xsd:int ;
+    cps-nba:homeRecord "27-14"^^xsd:string ;
+    cps-nba:roadRecord "14-27"^^xsd:string ;
+    cps-nba:winPct "0.5"^^xsd:float ;
+    cps-nba:year "2005"^^xsd:gYear .
+
+team:1610612754_2006 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612754 ;
+    cps-nba:gameLost "47"^^xsd:int ;
+    cps-nba:gameWon "35"^^xsd:int ;
+    cps-nba:homeRecord "22-19"^^xsd:string ;
+    cps-nba:roadRecord "13-28"^^xsd:string ;
+    cps-nba:winPct "0.4270000000000001"^^xsd:float ;
+    cps-nba:year "2006"^^xsd:gYear .
+
+team:1610612754_2007 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612754 ;
+    cps-nba:gameLost "46"^^xsd:int ;
+    cps-nba:gameWon "36"^^xsd:int ;
+    cps-nba:homeRecord "21-20"^^xsd:string ;
+    cps-nba:roadRecord "15-26"^^xsd:string ;
+    cps-nba:winPct "0.439"^^xsd:float ;
+    cps-nba:year "2007"^^xsd:gYear .
+
+team:1610612754_2008 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612754 ;
+    cps-nba:gameLost "46"^^xsd:int ;
+    cps-nba:gameWon "36"^^xsd:int ;
+    cps-nba:homeRecord "25-16"^^xsd:string ;
+    cps-nba:roadRecord "11-30"^^xsd:string ;
+    cps-nba:winPct "0.439"^^xsd:float ;
+    cps-nba:year "2008"^^xsd:gYear .
+
+team:1610612754_2009 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612754 ;
+    cps-nba:gameLost "50"^^xsd:int ;
+    cps-nba:gameWon "32"^^xsd:int ;
+    cps-nba:homeRecord "23-18"^^xsd:string ;
+    cps-nba:roadRecord "9-32"^^xsd:string ;
+    cps-nba:winPct "0.39"^^xsd:float ;
+    cps-nba:year "2009"^^xsd:gYear .
+
+team:1610612754_2010 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612754 ;
+    cps-nba:gameLost "45"^^xsd:int ;
+    cps-nba:gameWon "37"^^xsd:int ;
+    cps-nba:homeRecord "24-17"^^xsd:string ;
+    cps-nba:roadRecord "13-28"^^xsd:string ;
+    cps-nba:winPct "0.451"^^xsd:float ;
+    cps-nba:year "2010"^^xsd:gYear .
+
+team:1610612754_2011 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612754 ;
+    cps-nba:gameLost "24"^^xsd:int ;
+    cps-nba:gameWon "42"^^xsd:int ;
+    cps-nba:homeRecord "23-10"^^xsd:string ;
+    cps-nba:roadRecord "19-14"^^xsd:string ;
+    cps-nba:winPct "0.636"^^xsd:float ;
+    cps-nba:year "2011"^^xsd:gYear .
+
+team:1610612754_2012 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612754 ;
+    cps-nba:gameLost "32"^^xsd:int ;
+    cps-nba:gameWon "49"^^xsd:int ;
+    cps-nba:homeRecord "30-11"^^xsd:string ;
+    cps-nba:roadRecord "19-21"^^xsd:string ;
+    cps-nba:winPct "0.605"^^xsd:float ;
+    cps-nba:year "2012"^^xsd:gYear .
+
+team:1610612754_2013 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612754 ;
+    cps-nba:gameLost "26"^^xsd:int ;
+    cps-nba:gameWon "56"^^xsd:int ;
+    cps-nba:homeRecord "35-6"^^xsd:string ;
+    cps-nba:roadRecord "21-20"^^xsd:string ;
+    cps-nba:winPct "0.6829999999999999"^^xsd:float ;
+    cps-nba:year "2013"^^xsd:gYear .
+
+team:1610612754_2014 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612754 ;
+    cps-nba:gameLost "44"^^xsd:int ;
+    cps-nba:gameWon "38"^^xsd:int ;
+    cps-nba:homeRecord "23-18"^^xsd:string ;
+    cps-nba:roadRecord "15-26"^^xsd:string ;
+    cps-nba:winPct "0.4629999999999999"^^xsd:float ;
+    cps-nba:year "2014"^^xsd:gYear .
+
+team:1610612754_2015 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612754 ;
+    cps-nba:gameLost "37"^^xsd:int ;
+    cps-nba:gameWon "45"^^xsd:int ;
+    cps-nba:homeRecord "26-15"^^xsd:string ;
+    cps-nba:roadRecord "19-22"^^xsd:string ;
+    cps-nba:winPct "0.5489999999999999"^^xsd:float ;
+    cps-nba:year "2015"^^xsd:gYear .
+
+team:1610612754_2016 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612754 ;
+    cps-nba:gameLost "40"^^xsd:int ;
+    cps-nba:gameWon "42"^^xsd:int ;
+    cps-nba:homeRecord "29-12"^^xsd:string ;
+    cps-nba:roadRecord "13-28"^^xsd:string ;
+    cps-nba:winPct "0.512"^^xsd:float ;
+    cps-nba:year "2016"^^xsd:gYear .
+
+team:1610612754_2017 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612754 ;
+    cps-nba:gameLost "34"^^xsd:int ;
+    cps-nba:gameWon "48"^^xsd:int ;
+    cps-nba:homeRecord "27-14"^^xsd:string ;
+    cps-nba:roadRecord "21-20"^^xsd:string ;
+    cps-nba:winPct "0.585"^^xsd:float ;
+    cps-nba:year "2017"^^xsd:gYear .
+
+team:1610612754_2018 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612754 ;
+    cps-nba:gameLost "34"^^xsd:int ;
+    cps-nba:gameWon "48"^^xsd:int ;
+    cps-nba:homeRecord "29-12"^^xsd:string ;
+    cps-nba:roadRecord "19-22"^^xsd:string ;
+    cps-nba:winPct "0.585"^^xsd:float ;
+    cps-nba:year "2018"^^xsd:gYear .
+
+team:1610612754_2019 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612754 ;
+    cps-nba:gameLost "28"^^xsd:int ;
+    cps-nba:gameWon "45"^^xsd:int ;
+    cps-nba:homeRecord "25-11"^^xsd:string ;
+    cps-nba:roadRecord "20-17"^^xsd:string ;
+    cps-nba:winPct "0.616"^^xsd:float ;
+    cps-nba:year "2019"^^xsd:gYear .
+
+team:1610612754_2020 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612754 ;
+    cps-nba:gameLost "38"^^xsd:int ;
+    cps-nba:gameWon "34"^^xsd:int ;
+    cps-nba:homeRecord "13-23"^^xsd:string ;
+    cps-nba:roadRecord "21-15"^^xsd:string ;
+    cps-nba:winPct "0.472"^^xsd:float ;
+    cps-nba:year "2020"^^xsd:gYear .
+
+team:1610612754_2021 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612754 ;
+    cps-nba:gameLost "45"^^xsd:int ;
+    cps-nba:gameWon "23"^^xsd:int ;
+    cps-nba:homeRecord "15-19"^^xsd:string ;
+    cps-nba:roadRecord "8-26"^^xsd:string ;
+    cps-nba:winPct "0.338"^^xsd:float ;
+    cps-nba:year "2021"^^xsd:gYear .
+
+team:1610612755_2002 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612755 ;
+    cps-nba:gameLost "34"^^xsd:int ;
+    cps-nba:gameWon "48"^^xsd:int ;
+    cps-nba:homeRecord "25-16"^^xsd:string ;
+    cps-nba:roadRecord "23-18"^^xsd:string ;
+    cps-nba:winPct "0.585"^^xsd:float ;
+    cps-nba:year "2002"^^xsd:gYear .
+
+team:1610612755_2003 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612755 ;
+    cps-nba:gameLost "49"^^xsd:int ;
+    cps-nba:gameWon "33"^^xsd:int ;
+    cps-nba:homeRecord "21-20"^^xsd:string ;
+    cps-nba:roadRecord "12-29"^^xsd:string ;
+    cps-nba:winPct "0.402"^^xsd:float ;
+    cps-nba:year "2003"^^xsd:gYear .
+
+team:1610612755_2004 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612755 ;
+    cps-nba:gameLost "39"^^xsd:int ;
+    cps-nba:gameWon "43"^^xsd:int ;
+    cps-nba:homeRecord "25-16"^^xsd:string ;
+    cps-nba:roadRecord "18-23"^^xsd:string ;
+    cps-nba:winPct "0.524"^^xsd:float ;
+    cps-nba:year "2004"^^xsd:gYear .
+
+team:1610612755_2005 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612755 ;
+    cps-nba:gameLost "44"^^xsd:int ;
+    cps-nba:gameWon "38"^^xsd:int ;
+    cps-nba:homeRecord "23-18"^^xsd:string ;
+    cps-nba:roadRecord "15-26"^^xsd:string ;
+    cps-nba:winPct "0.4629999999999999"^^xsd:float ;
+    cps-nba:year "2005"^^xsd:gYear .
+
+team:1610612755_2006 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612755 ;
+    cps-nba:gameLost "47"^^xsd:int ;
+    cps-nba:gameWon "35"^^xsd:int ;
+    cps-nba:homeRecord "21-20"^^xsd:string ;
+    cps-nba:roadRecord "14-27"^^xsd:string ;
+    cps-nba:winPct "0.4270000000000001"^^xsd:float ;
+    cps-nba:year "2006"^^xsd:gYear .
+
+team:1610612755_2007 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612755 ;
+    cps-nba:gameLost "42"^^xsd:int ;
+    cps-nba:gameWon "40"^^xsd:int ;
+    cps-nba:homeRecord "22-19"^^xsd:string ;
+    cps-nba:roadRecord "18-23"^^xsd:string ;
+    cps-nba:winPct "0.488"^^xsd:float ;
+    cps-nba:year "2007"^^xsd:gYear .
+
+team:1610612755_2008 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612755 ;
+    cps-nba:gameLost "41"^^xsd:int ;
+    cps-nba:gameWon "41"^^xsd:int ;
+    cps-nba:homeRecord "24-17"^^xsd:string ;
+    cps-nba:roadRecord "17-24"^^xsd:string ;
+    cps-nba:winPct "0.5"^^xsd:float ;
+    cps-nba:year "2008"^^xsd:gYear .
+
+team:1610612755_2009 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612755 ;
+    cps-nba:gameLost "55"^^xsd:int ;
+    cps-nba:gameWon "27"^^xsd:int ;
+    cps-nba:homeRecord "12-29"^^xsd:string ;
+    cps-nba:roadRecord "15-26"^^xsd:string ;
+    cps-nba:winPct "0.3289999999999999"^^xsd:float ;
+    cps-nba:year "2009"^^xsd:gYear .
+
+team:1610612755_2010 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612755 ;
+    cps-nba:gameLost "41"^^xsd:int ;
+    cps-nba:gameWon "41"^^xsd:int ;
+    cps-nba:homeRecord "26-15"^^xsd:string ;
+    cps-nba:roadRecord "15-26"^^xsd:string ;
+    cps-nba:winPct "0.5"^^xsd:float ;
+    cps-nba:year "2010"^^xsd:gYear .
+
+team:1610612755_2011 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612755 ;
+    cps-nba:gameLost "31"^^xsd:int ;
+    cps-nba:gameWon "35"^^xsd:int ;
+    cps-nba:homeRecord "19-14"^^xsd:string ;
+    cps-nba:roadRecord "16-17"^^xsd:string ;
+    cps-nba:winPct "0.53"^^xsd:float ;
+    cps-nba:year "2011"^^xsd:gYear .
+
+team:1610612755_2012 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612755 ;
+    cps-nba:gameLost "48"^^xsd:int ;
+    cps-nba:gameWon "34"^^xsd:int ;
+    cps-nba:homeRecord "23-18"^^xsd:string ;
+    cps-nba:roadRecord "11-30"^^xsd:string ;
+    cps-nba:winPct "0.415"^^xsd:float ;
+    cps-nba:year "2012"^^xsd:gYear .
+
+team:1610612755_2013 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612755 ;
+    cps-nba:gameLost "63"^^xsd:int ;
+    cps-nba:gameWon "19"^^xsd:int ;
+    cps-nba:homeRecord "10-31"^^xsd:string ;
+    cps-nba:roadRecord "9-32"^^xsd:string ;
+    cps-nba:winPct "0.2319999999999999"^^xsd:float ;
+    cps-nba:year "2013"^^xsd:gYear .
+
+team:1610612755_2014 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612755 ;
+    cps-nba:gameLost "64"^^xsd:int ;
+    cps-nba:gameWon "18"^^xsd:int ;
+    cps-nba:homeRecord "12-29"^^xsd:string ;
+    cps-nba:roadRecord "6-35"^^xsd:string ;
+    cps-nba:winPct "0.22"^^xsd:float ;
+    cps-nba:year "2014"^^xsd:gYear .
+
+team:1610612755_2015 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612755 ;
+    cps-nba:gameLost "72"^^xsd:int ;
+    cps-nba:gameWon "10"^^xsd:int ;
+    cps-nba:homeRecord "7-34"^^xsd:string ;
+    cps-nba:roadRecord "3-38"^^xsd:string ;
+    cps-nba:winPct "0.122"^^xsd:float ;
+    cps-nba:year "2015"^^xsd:gYear .
+
+team:1610612755_2016 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612755 ;
+    cps-nba:gameLost "54"^^xsd:int ;
+    cps-nba:gameWon "28"^^xsd:int ;
+    cps-nba:homeRecord "17-24"^^xsd:string ;
+    cps-nba:roadRecord "11-30"^^xsd:string ;
+    cps-nba:winPct "0.341"^^xsd:float ;
+    cps-nba:year "2016"^^xsd:gYear .
+
+team:1610612755_2017 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612755 ;
+    cps-nba:gameLost "30"^^xsd:int ;
+    cps-nba:gameWon "52"^^xsd:int ;
+    cps-nba:homeRecord "30-11"^^xsd:string ;
+    cps-nba:roadRecord "22-19"^^xsd:string ;
+    cps-nba:winPct "0.634"^^xsd:float ;
+    cps-nba:year "2017"^^xsd:gYear .
+
+team:1610612755_2018 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612755 ;
+    cps-nba:gameLost "31"^^xsd:int ;
+    cps-nba:gameWon "51"^^xsd:int ;
+    cps-nba:homeRecord "31-10"^^xsd:string ;
+    cps-nba:roadRecord "20-21"^^xsd:string ;
+    cps-nba:winPct "0.622"^^xsd:float ;
+    cps-nba:year "2018"^^xsd:gYear .
+
+team:1610612755_2019 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612755 ;
+    cps-nba:gameLost "30"^^xsd:int ;
+    cps-nba:gameWon "43"^^xsd:int ;
+    cps-nba:homeRecord "31-4"^^xsd:string ;
+    cps-nba:roadRecord "12-26"^^xsd:string ;
+    cps-nba:winPct "0.589"^^xsd:float ;
+    cps-nba:year "2019"^^xsd:gYear .
+
+team:1610612755_2020 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612755 ;
+    cps-nba:gameLost "23"^^xsd:int ;
+    cps-nba:gameWon "49"^^xsd:int ;
+    cps-nba:homeRecord "29-7"^^xsd:string ;
+    cps-nba:roadRecord "20-16"^^xsd:string ;
+    cps-nba:winPct "0.681"^^xsd:float ;
+    cps-nba:year "2020"^^xsd:gYear .
+
+team:1610612755_2021 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612755 ;
+    cps-nba:gameLost "25"^^xsd:int ;
+    cps-nba:gameWon "40"^^xsd:int ;
+    cps-nba:homeRecord "19-14"^^xsd:string ;
+    cps-nba:roadRecord "21-11"^^xsd:string ;
+    cps-nba:winPct "0.615"^^xsd:float ;
+    cps-nba:year "2021"^^xsd:gYear .
+
+team:1610612756_2002 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612756 ;
+    cps-nba:gameLost "38"^^xsd:int ;
+    cps-nba:gameWon "44"^^xsd:int ;
+    cps-nba:homeRecord "30-11"^^xsd:string ;
+    cps-nba:roadRecord "14-27"^^xsd:string ;
+    cps-nba:winPct "0.537"^^xsd:float ;
+    cps-nba:year "2002"^^xsd:gYear .
+
+team:1610612756_2003 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612756 ;
+    cps-nba:gameLost "53"^^xsd:int ;
+    cps-nba:gameWon "29"^^xsd:int ;
+    cps-nba:homeRecord "18-23"^^xsd:string ;
+    cps-nba:roadRecord "11-30"^^xsd:string ;
+    cps-nba:winPct "0.354"^^xsd:float ;
+    cps-nba:year "2003"^^xsd:gYear .
+
+team:1610612756_2004 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612756 ;
+    cps-nba:gameLost "20"^^xsd:int ;
+    cps-nba:gameWon "62"^^xsd:int ;
+    cps-nba:homeRecord "31-10"^^xsd:string ;
+    cps-nba:roadRecord "31-10"^^xsd:string ;
+    cps-nba:winPct "0.7559999999999999"^^xsd:float ;
+    cps-nba:year "2004"^^xsd:gYear .
+
+team:1610612756_2005 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612756 ;
+    cps-nba:gameLost "28"^^xsd:int ;
+    cps-nba:gameWon "54"^^xsd:int ;
+    cps-nba:homeRecord "31-10"^^xsd:string ;
+    cps-nba:roadRecord "23-18"^^xsd:string ;
+    cps-nba:winPct "0.659"^^xsd:float ;
+    cps-nba:year "2005"^^xsd:gYear .
+
+team:1610612756_2006 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612756 ;
+    cps-nba:gameLost "21"^^xsd:int ;
+    cps-nba:gameWon "61"^^xsd:int ;
+    cps-nba:homeRecord "33-8"^^xsd:string ;
+    cps-nba:roadRecord "28-13"^^xsd:string ;
+    cps-nba:winPct "0.7440000000000001"^^xsd:float ;
+    cps-nba:year "2006"^^xsd:gYear .
+
+team:1610612756_2007 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612756 ;
+    cps-nba:gameLost "27"^^xsd:int ;
+    cps-nba:gameWon "55"^^xsd:int ;
+    cps-nba:homeRecord "30-11"^^xsd:string ;
+    cps-nba:roadRecord "25-16"^^xsd:string ;
+    cps-nba:winPct "0.6709999999999999"^^xsd:float ;
+    cps-nba:year "2007"^^xsd:gYear .
+
+team:1610612756_2008 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612756 ;
+    cps-nba:gameLost "36"^^xsd:int ;
+    cps-nba:gameWon "46"^^xsd:int ;
+    cps-nba:homeRecord "28-13"^^xsd:string ;
+    cps-nba:roadRecord "18-23"^^xsd:string ;
+    cps-nba:winPct "0.561"^^xsd:float ;
+    cps-nba:year "2008"^^xsd:gYear .
+
+team:1610612756_2009 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612756 ;
+    cps-nba:gameLost "28"^^xsd:int ;
+    cps-nba:gameWon "54"^^xsd:int ;
+    cps-nba:homeRecord "32-9"^^xsd:string ;
+    cps-nba:roadRecord "22-19"^^xsd:string ;
+    cps-nba:winPct "0.659"^^xsd:float ;
+    cps-nba:year "2009"^^xsd:gYear .
+
+team:1610612756_2010 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612756 ;
+    cps-nba:gameLost "42"^^xsd:int ;
+    cps-nba:gameWon "40"^^xsd:int ;
+    cps-nba:homeRecord "23-18"^^xsd:string ;
+    cps-nba:roadRecord "17-24"^^xsd:string ;
+    cps-nba:winPct "0.488"^^xsd:float ;
+    cps-nba:year "2010"^^xsd:gYear .
+
+team:1610612756_2011 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612756 ;
+    cps-nba:gameLost "33"^^xsd:int ;
+    cps-nba:gameWon "33"^^xsd:int ;
+    cps-nba:homeRecord "19-14"^^xsd:string ;
+    cps-nba:roadRecord "14-19"^^xsd:string ;
+    cps-nba:winPct "0.5"^^xsd:float ;
+    cps-nba:year "2011"^^xsd:gYear .
+
+team:1610612756_2012 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612756 ;
+    cps-nba:gameLost "57"^^xsd:int ;
+    cps-nba:gameWon "25"^^xsd:int ;
+    cps-nba:homeRecord "17-24"^^xsd:string ;
+    cps-nba:roadRecord "8-33"^^xsd:string ;
+    cps-nba:winPct "0.305"^^xsd:float ;
+    cps-nba:year "2012"^^xsd:gYear .
+
+team:1610612756_2013 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612756 ;
+    cps-nba:gameLost "34"^^xsd:int ;
+    cps-nba:gameWon "48"^^xsd:int ;
+    cps-nba:homeRecord "26-15"^^xsd:string ;
+    cps-nba:roadRecord "22-19"^^xsd:string ;
+    cps-nba:winPct "0.585"^^xsd:float ;
+    cps-nba:year "2013"^^xsd:gYear .
+
+team:1610612756_2014 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612756 ;
+    cps-nba:gameLost "43"^^xsd:int ;
+    cps-nba:gameWon "39"^^xsd:int ;
+    cps-nba:homeRecord "22-19"^^xsd:string ;
+    cps-nba:roadRecord "17-24"^^xsd:string ;
+    cps-nba:winPct "0.476"^^xsd:float ;
+    cps-nba:year "2014"^^xsd:gYear .
+
+team:1610612756_2015 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612756 ;
+    cps-nba:gameLost "59"^^xsd:int ;
+    cps-nba:gameWon "23"^^xsd:int ;
+    cps-nba:homeRecord "14-27"^^xsd:string ;
+    cps-nba:roadRecord "9-32"^^xsd:string ;
+    cps-nba:winPct "0.28"^^xsd:float ;
+    cps-nba:year "2015"^^xsd:gYear .
+
+team:1610612756_2016 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612756 ;
+    cps-nba:gameLost "58"^^xsd:int ;
+    cps-nba:gameWon "24"^^xsd:int ;
+    cps-nba:homeRecord "15-26"^^xsd:string ;
+    cps-nba:roadRecord "9-32"^^xsd:string ;
+    cps-nba:winPct "0.293"^^xsd:float ;
+    cps-nba:year "2016"^^xsd:gYear .
+
+team:1610612756_2017 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612756 ;
+    cps-nba:gameLost "61"^^xsd:int ;
+    cps-nba:gameWon "21"^^xsd:int ;
+    cps-nba:homeRecord "10-31"^^xsd:string ;
+    cps-nba:roadRecord "11-30"^^xsd:string ;
+    cps-nba:winPct "0.256"^^xsd:float ;
+    cps-nba:year "2017"^^xsd:gYear .
+
+team:1610612756_2018 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612756 ;
+    cps-nba:gameLost "63"^^xsd:int ;
+    cps-nba:gameWon "19"^^xsd:int ;
+    cps-nba:homeRecord "12-29"^^xsd:string ;
+    cps-nba:roadRecord "7-34"^^xsd:string ;
+    cps-nba:winPct "0.2319999999999999"^^xsd:float ;
+    cps-nba:year "2018"^^xsd:gYear .
+
+team:1610612756_2019 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612756 ;
+    cps-nba:gameLost "39"^^xsd:int ;
+    cps-nba:gameWon "34"^^xsd:int ;
+    cps-nba:homeRecord "17-22"^^xsd:string ;
+    cps-nba:roadRecord "17-17"^^xsd:string ;
+    cps-nba:winPct "0.466"^^xsd:float ;
+    cps-nba:year "2019"^^xsd:gYear .
+
+team:1610612756_2020 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612756 ;
+    cps-nba:gameLost "21"^^xsd:int ;
+    cps-nba:gameWon "51"^^xsd:int ;
+    cps-nba:homeRecord "27-9"^^xsd:string ;
+    cps-nba:roadRecord "24-12"^^xsd:string ;
+    cps-nba:winPct "0.708"^^xsd:float ;
+    cps-nba:year "2020"^^xsd:gYear .
+
+team:1610612756_2021 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612756 ;
+    cps-nba:gameLost "14"^^xsd:int ;
+    cps-nba:gameWon "53"^^xsd:int ;
+    cps-nba:homeRecord "28-8"^^xsd:string ;
+    cps-nba:roadRecord "25-6"^^xsd:string ;
+    cps-nba:winPct "0.791"^^xsd:float ;
+    cps-nba:year "2021"^^xsd:gYear .
+
+team:1610612757_2002 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612757 ;
+    cps-nba:gameLost "32"^^xsd:int ;
+    cps-nba:gameWon "50"^^xsd:int ;
+    cps-nba:homeRecord "27-14"^^xsd:string ;
+    cps-nba:roadRecord "23-18"^^xsd:string ;
+    cps-nba:winPct "0.61"^^xsd:float ;
+    cps-nba:year "2002"^^xsd:gYear .
+
+team:1610612757_2003 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612757 ;
+    cps-nba:gameLost "41"^^xsd:int ;
+    cps-nba:gameWon "41"^^xsd:int ;
+    cps-nba:homeRecord "25-16"^^xsd:string ;
+    cps-nba:roadRecord "16-25"^^xsd:string ;
+    cps-nba:winPct "0.5"^^xsd:float ;
+    cps-nba:year "2003"^^xsd:gYear .
+
+team:1610612757_2004 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612757 ;
+    cps-nba:gameLost "55"^^xsd:int ;
+    cps-nba:gameWon "27"^^xsd:int ;
+    cps-nba:homeRecord "18-23"^^xsd:string ;
+    cps-nba:roadRecord "9-32"^^xsd:string ;
+    cps-nba:winPct "0.3289999999999999"^^xsd:float ;
+    cps-nba:year "2004"^^xsd:gYear .
+
+team:1610612757_2005 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612757 ;
+    cps-nba:gameLost "61"^^xsd:int ;
+    cps-nba:gameWon "21"^^xsd:int ;
+    cps-nba:homeRecord "15-26"^^xsd:string ;
+    cps-nba:roadRecord "6-35"^^xsd:string ;
+    cps-nba:winPct "0.256"^^xsd:float ;
+    cps-nba:year "2005"^^xsd:gYear .
+
+team:1610612757_2006 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612757 ;
+    cps-nba:gameLost "50"^^xsd:int ;
+    cps-nba:gameWon "32"^^xsd:int ;
+    cps-nba:homeRecord "18-23"^^xsd:string ;
+    cps-nba:roadRecord "14-27"^^xsd:string ;
+    cps-nba:winPct "0.39"^^xsd:float ;
+    cps-nba:year "2006"^^xsd:gYear .
+
+team:1610612757_2007 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612757 ;
+    cps-nba:gameLost "41"^^xsd:int ;
+    cps-nba:gameWon "41"^^xsd:int ;
+    cps-nba:homeRecord "28-13"^^xsd:string ;
+    cps-nba:roadRecord "13-28"^^xsd:string ;
+    cps-nba:winPct "0.5"^^xsd:float ;
+    cps-nba:year "2007"^^xsd:gYear .
+
+team:1610612757_2008 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612757 ;
+    cps-nba:gameLost "28"^^xsd:int ;
+    cps-nba:gameWon "54"^^xsd:int ;
+    cps-nba:homeRecord "34-7"^^xsd:string ;
+    cps-nba:roadRecord "20-21"^^xsd:string ;
+    cps-nba:winPct "0.659"^^xsd:float ;
+    cps-nba:year "2008"^^xsd:gYear .
+
+team:1610612757_2009 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612757 ;
+    cps-nba:gameLost "32"^^xsd:int ;
+    cps-nba:gameWon "50"^^xsd:int ;
+    cps-nba:homeRecord "26-15"^^xsd:string ;
+    cps-nba:roadRecord "24-17"^^xsd:string ;
+    cps-nba:winPct "0.61"^^xsd:float ;
+    cps-nba:year "2009"^^xsd:gYear .
+
+team:1610612757_2010 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612757 ;
+    cps-nba:gameLost "34"^^xsd:int ;
+    cps-nba:gameWon "48"^^xsd:int ;
+    cps-nba:homeRecord "30-11"^^xsd:string ;
+    cps-nba:roadRecord "18-23"^^xsd:string ;
+    cps-nba:winPct "0.585"^^xsd:float ;
+    cps-nba:year "2010"^^xsd:gYear .
+
+team:1610612757_2011 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612757 ;
+    cps-nba:gameLost "38"^^xsd:int ;
+    cps-nba:gameWon "28"^^xsd:int ;
+    cps-nba:homeRecord "20-13"^^xsd:string ;
+    cps-nba:roadRecord "8-25"^^xsd:string ;
+    cps-nba:winPct "0.424"^^xsd:float ;
+    cps-nba:year "2011"^^xsd:gYear .
+
+team:1610612757_2012 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612757 ;
+    cps-nba:gameLost "49"^^xsd:int ;
+    cps-nba:gameWon "33"^^xsd:int ;
+    cps-nba:homeRecord "22-19"^^xsd:string ;
+    cps-nba:roadRecord "11-30"^^xsd:string ;
+    cps-nba:winPct "0.402"^^xsd:float ;
+    cps-nba:year "2012"^^xsd:gYear .
+
+team:1610612757_2013 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612757 ;
+    cps-nba:gameLost "28"^^xsd:int ;
+    cps-nba:gameWon "54"^^xsd:int ;
+    cps-nba:homeRecord "31-10"^^xsd:string ;
+    cps-nba:roadRecord "23-18"^^xsd:string ;
+    cps-nba:winPct "0.659"^^xsd:float ;
+    cps-nba:year "2013"^^xsd:gYear .
+
+team:1610612757_2014 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612757 ;
+    cps-nba:gameLost "31"^^xsd:int ;
+    cps-nba:gameWon "51"^^xsd:int ;
+    cps-nba:homeRecord "32-9"^^xsd:string ;
+    cps-nba:roadRecord "19-22"^^xsd:string ;
+    cps-nba:winPct "0.622"^^xsd:float ;
+    cps-nba:year "2014"^^xsd:gYear .
+
+team:1610612757_2015 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612757 ;
+    cps-nba:gameLost "38"^^xsd:int ;
+    cps-nba:gameWon "44"^^xsd:int ;
+    cps-nba:homeRecord "28-13"^^xsd:string ;
+    cps-nba:roadRecord "16-25"^^xsd:string ;
+    cps-nba:winPct "0.537"^^xsd:float ;
+    cps-nba:year "2015"^^xsd:gYear .
+
+team:1610612757_2016 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612757 ;
+    cps-nba:gameLost "41"^^xsd:int ;
+    cps-nba:gameWon "41"^^xsd:int ;
+    cps-nba:homeRecord "25-16"^^xsd:string ;
+    cps-nba:roadRecord "16-25"^^xsd:string ;
+    cps-nba:winPct "0.5"^^xsd:float ;
+    cps-nba:year "2016"^^xsd:gYear .
+
+team:1610612757_2017 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612757 ;
+    cps-nba:gameLost "33"^^xsd:int ;
+    cps-nba:gameWon "49"^^xsd:int ;
+    cps-nba:homeRecord "28-13"^^xsd:string ;
+    cps-nba:roadRecord "21-20"^^xsd:string ;
+    cps-nba:winPct "0.598"^^xsd:float ;
+    cps-nba:year "2017"^^xsd:gYear .
+
+team:1610612757_2018 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612757 ;
+    cps-nba:gameLost "29"^^xsd:int ;
+    cps-nba:gameWon "53"^^xsd:int ;
+    cps-nba:homeRecord "32-9"^^xsd:string ;
+    cps-nba:roadRecord "21-20"^^xsd:string ;
+    cps-nba:winPct "0.6459999999999999"^^xsd:float ;
+    cps-nba:year "2018"^^xsd:gYear .
+
+team:1610612757_2019 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612757 ;
+    cps-nba:gameLost "39"^^xsd:int ;
+    cps-nba:gameWon "35"^^xsd:int ;
+    cps-nba:homeRecord "21-15"^^xsd:string ;
+    cps-nba:roadRecord "14-24"^^xsd:string ;
+    cps-nba:winPct "0.473"^^xsd:float ;
+    cps-nba:year "2019"^^xsd:gYear .
+
+team:1610612757_2020 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612757 ;
+    cps-nba:gameLost "30"^^xsd:int ;
+    cps-nba:gameWon "42"^^xsd:int ;
+    cps-nba:homeRecord "20-16"^^xsd:string ;
+    cps-nba:roadRecord "22-14"^^xsd:string ;
+    cps-nba:winPct "0.583"^^xsd:float ;
+    cps-nba:year "2020"^^xsd:gYear .
+
+team:1610612757_2021 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612757 ;
+    cps-nba:gameLost "40"^^xsd:int ;
+    cps-nba:gameWon "26"^^xsd:int ;
+    cps-nba:homeRecord "17-18"^^xsd:string ;
+    cps-nba:roadRecord "9-22"^^xsd:string ;
+    cps-nba:winPct "0.394"^^xsd:float ;
+    cps-nba:year "2021"^^xsd:gYear .
+
+team:1610612758_2002 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612758 ;
+    cps-nba:gameLost "23"^^xsd:int ;
+    cps-nba:gameWon "59"^^xsd:int ;
+    cps-nba:homeRecord "35-6"^^xsd:string ;
+    cps-nba:roadRecord "24-17"^^xsd:string ;
+    cps-nba:winPct "0.72"^^xsd:float ;
+    cps-nba:year "2002"^^xsd:gYear .
+
+team:1610612758_2003 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612758 ;
+    cps-nba:gameLost "27"^^xsd:int ;
+    cps-nba:gameWon "55"^^xsd:int ;
+    cps-nba:homeRecord "34-7"^^xsd:string ;
+    cps-nba:roadRecord "21-20"^^xsd:string ;
+    cps-nba:winPct "0.6709999999999999"^^xsd:float ;
+    cps-nba:year "2003"^^xsd:gYear .
+
+team:1610612758_2004 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612758 ;
+    cps-nba:gameLost "32"^^xsd:int ;
+    cps-nba:gameWon "50"^^xsd:int ;
+    cps-nba:homeRecord "30-11"^^xsd:string ;
+    cps-nba:roadRecord "20-21"^^xsd:string ;
+    cps-nba:winPct "0.61"^^xsd:float ;
+    cps-nba:year "2004"^^xsd:gYear .
+
+team:1610612758_2005 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612758 ;
+    cps-nba:gameLost "38"^^xsd:int ;
+    cps-nba:gameWon "44"^^xsd:int ;
+    cps-nba:homeRecord "27-14"^^xsd:string ;
+    cps-nba:roadRecord "17-24"^^xsd:string ;
+    cps-nba:winPct "0.537"^^xsd:float ;
+    cps-nba:year "2005"^^xsd:gYear .
+
+team:1610612758_2006 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612758 ;
+    cps-nba:gameLost "49"^^xsd:int ;
+    cps-nba:gameWon "33"^^xsd:int ;
+    cps-nba:homeRecord "20-21"^^xsd:string ;
+    cps-nba:roadRecord "13-28"^^xsd:string ;
+    cps-nba:winPct "0.402"^^xsd:float ;
+    cps-nba:year "2006"^^xsd:gYear .
+
+team:1610612758_2007 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612758 ;
+    cps-nba:gameLost "44"^^xsd:int ;
+    cps-nba:gameWon "38"^^xsd:int ;
+    cps-nba:homeRecord "26-15"^^xsd:string ;
+    cps-nba:roadRecord "12-29"^^xsd:string ;
+    cps-nba:winPct "0.4629999999999999"^^xsd:float ;
+    cps-nba:year "2007"^^xsd:gYear .
+
+team:1610612758_2008 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612758 ;
+    cps-nba:gameLost "65"^^xsd:int ;
+    cps-nba:gameWon "17"^^xsd:int ;
+    cps-nba:homeRecord "11-30"^^xsd:string ;
+    cps-nba:roadRecord "6-35"^^xsd:string ;
+    cps-nba:winPct "0.207"^^xsd:float ;
+    cps-nba:year "2008"^^xsd:gYear .
+
+team:1610612758_2009 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612758 ;
+    cps-nba:gameLost "57"^^xsd:int ;
+    cps-nba:gameWon "25"^^xsd:int ;
+    cps-nba:homeRecord "18-23"^^xsd:string ;
+    cps-nba:roadRecord "7-34"^^xsd:string ;
+    cps-nba:winPct "0.305"^^xsd:float ;
+    cps-nba:year "2009"^^xsd:gYear .
+
+team:1610612758_2010 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612758 ;
+    cps-nba:gameLost "58"^^xsd:int ;
+    cps-nba:gameWon "24"^^xsd:int ;
+    cps-nba:homeRecord "11-30"^^xsd:string ;
+    cps-nba:roadRecord "13-28"^^xsd:string ;
+    cps-nba:winPct "0.293"^^xsd:float ;
+    cps-nba:year "2010"^^xsd:gYear .
+
+team:1610612758_2011 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612758 ;
+    cps-nba:gameLost "44"^^xsd:int ;
+    cps-nba:gameWon "22"^^xsd:int ;
+    cps-nba:homeRecord "16-17"^^xsd:string ;
+    cps-nba:roadRecord "6-27"^^xsd:string ;
+    cps-nba:winPct "0.3329999999999999"^^xsd:float ;
+    cps-nba:year "2011"^^xsd:gYear .
+
+team:1610612758_2012 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612758 ;
+    cps-nba:gameLost "54"^^xsd:int ;
+    cps-nba:gameWon "28"^^xsd:int ;
+    cps-nba:homeRecord "20-21"^^xsd:string ;
+    cps-nba:roadRecord "8-33"^^xsd:string ;
+    cps-nba:winPct "0.341"^^xsd:float ;
+    cps-nba:year "2012"^^xsd:gYear .
+
+team:1610612758_2013 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612758 ;
+    cps-nba:gameLost "54"^^xsd:int ;
+    cps-nba:gameWon "28"^^xsd:int ;
+    cps-nba:homeRecord "17-24"^^xsd:string ;
+    cps-nba:roadRecord "11-30"^^xsd:string ;
+    cps-nba:winPct "0.341"^^xsd:float ;
+    cps-nba:year "2013"^^xsd:gYear .
+
+team:1610612758_2014 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612758 ;
+    cps-nba:gameLost "53"^^xsd:int ;
+    cps-nba:gameWon "29"^^xsd:int ;
+    cps-nba:homeRecord "18-23"^^xsd:string ;
+    cps-nba:roadRecord "11-30"^^xsd:string ;
+    cps-nba:winPct "0.354"^^xsd:float ;
+    cps-nba:year "2014"^^xsd:gYear .
+
+team:1610612758_2015 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612758 ;
+    cps-nba:gameLost "49"^^xsd:int ;
+    cps-nba:gameWon "33"^^xsd:int ;
+    cps-nba:homeRecord "18-23"^^xsd:string ;
+    cps-nba:roadRecord "15-26"^^xsd:string ;
+    cps-nba:winPct "0.402"^^xsd:float ;
+    cps-nba:year "2015"^^xsd:gYear .
+
+team:1610612758_2016 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612758 ;
+    cps-nba:gameLost "50"^^xsd:int ;
+    cps-nba:gameWon "32"^^xsd:int ;
+    cps-nba:homeRecord "17-24"^^xsd:string ;
+    cps-nba:roadRecord "15-26"^^xsd:string ;
+    cps-nba:winPct "0.39"^^xsd:float ;
+    cps-nba:year "2016"^^xsd:gYear .
+
+team:1610612758_2017 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612758 ;
+    cps-nba:gameLost "55"^^xsd:int ;
+    cps-nba:gameWon "27"^^xsd:int ;
+    cps-nba:homeRecord "14-27"^^xsd:string ;
+    cps-nba:roadRecord "13-28"^^xsd:string ;
+    cps-nba:winPct "0.3289999999999999"^^xsd:float ;
+    cps-nba:year "2017"^^xsd:gYear .
+
+team:1610612758_2018 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612758 ;
+    cps-nba:gameLost "43"^^xsd:int ;
+    cps-nba:gameWon "39"^^xsd:int ;
+    cps-nba:homeRecord "24-17"^^xsd:string ;
+    cps-nba:roadRecord "15-26"^^xsd:string ;
+    cps-nba:winPct "0.476"^^xsd:float ;
+    cps-nba:year "2018"^^xsd:gYear .
+
+team:1610612758_2019 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612758 ;
+    cps-nba:gameLost "41"^^xsd:int ;
+    cps-nba:gameWon "31"^^xsd:int ;
+    cps-nba:homeRecord "16-19"^^xsd:string ;
+    cps-nba:roadRecord "15-22"^^xsd:string ;
+    cps-nba:winPct "0.431"^^xsd:float ;
+    cps-nba:year "2019"^^xsd:gYear .
+
+team:1610612758_2020 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612758 ;
+    cps-nba:gameLost "41"^^xsd:int ;
+    cps-nba:gameWon "31"^^xsd:int ;
+    cps-nba:homeRecord "16-20"^^xsd:string ;
+    cps-nba:roadRecord "15-21"^^xsd:string ;
+    cps-nba:winPct "0.431"^^xsd:float ;
+    cps-nba:year "2020"^^xsd:gYear .
+
+team:1610612758_2021 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612758 ;
+    cps-nba:gameLost "45"^^xsd:int ;
+    cps-nba:gameWon "24"^^xsd:int ;
+    cps-nba:homeRecord "15-20"^^xsd:string ;
+    cps-nba:roadRecord "9-25"^^xsd:string ;
+    cps-nba:winPct "0.348"^^xsd:float ;
+    cps-nba:year "2021"^^xsd:gYear .
+
+team:1610612759_2002 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612759 ;
+    cps-nba:gameLost "22"^^xsd:int ;
+    cps-nba:gameWon "60"^^xsd:int ;
+    cps-nba:homeRecord "33-8"^^xsd:string ;
+    cps-nba:roadRecord "27-14"^^xsd:string ;
+    cps-nba:winPct "0.732"^^xsd:float ;
+    cps-nba:year "2002"^^xsd:gYear .
+
+team:1610612759_2003 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612759 ;
+    cps-nba:gameLost "25"^^xsd:int ;
+    cps-nba:gameWon "57"^^xsd:int ;
+    cps-nba:homeRecord "33-8"^^xsd:string ;
+    cps-nba:roadRecord "24-17"^^xsd:string ;
+    cps-nba:winPct "0.695"^^xsd:float ;
+    cps-nba:year "2003"^^xsd:gYear .
+
+team:1610612759_2004 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612759 ;
+    cps-nba:gameLost "23"^^xsd:int ;
+    cps-nba:gameWon "59"^^xsd:int ;
+    cps-nba:homeRecord "38-3"^^xsd:string ;
+    cps-nba:roadRecord "21-20"^^xsd:string ;
+    cps-nba:winPct "0.72"^^xsd:float ;
+    cps-nba:year "2004"^^xsd:gYear .
+
+team:1610612759_2005 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612759 ;
+    cps-nba:gameLost "19"^^xsd:int ;
+    cps-nba:gameWon "63"^^xsd:int ;
+    cps-nba:homeRecord "34-7"^^xsd:string ;
+    cps-nba:roadRecord "29-12"^^xsd:string ;
+    cps-nba:winPct "0.768"^^xsd:float ;
+    cps-nba:year "2005"^^xsd:gYear .
+
+team:1610612759_2006 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612759 ;
+    cps-nba:gameLost "24"^^xsd:int ;
+    cps-nba:gameWon "58"^^xsd:int ;
+    cps-nba:homeRecord "31-10"^^xsd:string ;
+    cps-nba:roadRecord "27-14"^^xsd:string ;
+    cps-nba:winPct "0.7070000000000001"^^xsd:float ;
+    cps-nba:year "2006"^^xsd:gYear .
+
+team:1610612759_2007 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612759 ;
+    cps-nba:gameLost "26"^^xsd:int ;
+    cps-nba:gameWon "56"^^xsd:int ;
+    cps-nba:homeRecord "34-7"^^xsd:string ;
+    cps-nba:roadRecord "22-19"^^xsd:string ;
+    cps-nba:winPct "0.6829999999999999"^^xsd:float ;
+    cps-nba:year "2007"^^xsd:gYear .
+
+team:1610612759_2008 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612759 ;
+    cps-nba:gameLost "28"^^xsd:int ;
+    cps-nba:gameWon "54"^^xsd:int ;
+    cps-nba:homeRecord "28-13"^^xsd:string ;
+    cps-nba:roadRecord "26-15"^^xsd:string ;
+    cps-nba:winPct "0.659"^^xsd:float ;
+    cps-nba:year "2008"^^xsd:gYear .
+
+team:1610612759_2009 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612759 ;
+    cps-nba:gameLost "32"^^xsd:int ;
+    cps-nba:gameWon "50"^^xsd:int ;
+    cps-nba:homeRecord "29-12"^^xsd:string ;
+    cps-nba:roadRecord "21-20"^^xsd:string ;
+    cps-nba:winPct "0.61"^^xsd:float ;
+    cps-nba:year "2009"^^xsd:gYear .
+
+team:1610612759_2010 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612759 ;
+    cps-nba:gameLost "21"^^xsd:int ;
+    cps-nba:gameWon "61"^^xsd:int ;
+    cps-nba:homeRecord "36-5"^^xsd:string ;
+    cps-nba:roadRecord "25-16"^^xsd:string ;
+    cps-nba:winPct "0.7440000000000001"^^xsd:float ;
+    cps-nba:year "2010"^^xsd:gYear .
+
+team:1610612759_2011 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612759 ;
+    cps-nba:gameLost "16"^^xsd:int ;
+    cps-nba:gameWon "50"^^xsd:int ;
+    cps-nba:homeRecord "28-5"^^xsd:string ;
+    cps-nba:roadRecord "22-11"^^xsd:string ;
+    cps-nba:winPct "0.758"^^xsd:float ;
+    cps-nba:year "2011"^^xsd:gYear .
+
+team:1610612759_2012 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612759 ;
+    cps-nba:gameLost "24"^^xsd:int ;
+    cps-nba:gameWon "58"^^xsd:int ;
+    cps-nba:homeRecord "35-6"^^xsd:string ;
+    cps-nba:roadRecord "23-18"^^xsd:string ;
+    cps-nba:winPct "0.7070000000000001"^^xsd:float ;
+    cps-nba:year "2012"^^xsd:gYear .
+
+team:1610612759_2013 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612759 ;
+    cps-nba:gameLost "20"^^xsd:int ;
+    cps-nba:gameWon "62"^^xsd:int ;
+    cps-nba:homeRecord "32-9"^^xsd:string ;
+    cps-nba:roadRecord "30-11"^^xsd:string ;
+    cps-nba:winPct "0.7559999999999999"^^xsd:float ;
+    cps-nba:year "2013"^^xsd:gYear .
+
+team:1610612759_2014 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612759 ;
+    cps-nba:gameLost "27"^^xsd:int ;
+    cps-nba:gameWon "55"^^xsd:int ;
+    cps-nba:homeRecord "33-8"^^xsd:string ;
+    cps-nba:roadRecord "22-19"^^xsd:string ;
+    cps-nba:winPct "0.6709999999999999"^^xsd:float ;
+    cps-nba:year "2014"^^xsd:gYear .
+
+team:1610612759_2015 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612759 ;
+    cps-nba:gameLost "15"^^xsd:int ;
+    cps-nba:gameWon "67"^^xsd:int ;
+    cps-nba:homeRecord "40-1"^^xsd:string ;
+    cps-nba:roadRecord "27-14"^^xsd:string ;
+    cps-nba:winPct "0.8170000000000001"^^xsd:float ;
+    cps-nba:year "2015"^^xsd:gYear .
+
+team:1610612759_2016 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612759 ;
+    cps-nba:gameLost "21"^^xsd:int ;
+    cps-nba:gameWon "61"^^xsd:int ;
+    cps-nba:homeRecord "31-10"^^xsd:string ;
+    cps-nba:roadRecord "30-11"^^xsd:string ;
+    cps-nba:winPct "0.7440000000000001"^^xsd:float ;
+    cps-nba:year "2016"^^xsd:gYear .
+
+team:1610612759_2017 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612759 ;
+    cps-nba:gameLost "35"^^xsd:int ;
+    cps-nba:gameWon "47"^^xsd:int ;
+    cps-nba:homeRecord "33-8"^^xsd:string ;
+    cps-nba:roadRecord "14-27"^^xsd:string ;
+    cps-nba:winPct "0.573"^^xsd:float ;
+    cps-nba:year "2017"^^xsd:gYear .
+
+team:1610612759_2018 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612759 ;
+    cps-nba:gameLost "34"^^xsd:int ;
+    cps-nba:gameWon "48"^^xsd:int ;
+    cps-nba:homeRecord "32-9"^^xsd:string ;
+    cps-nba:roadRecord "16-25"^^xsd:string ;
+    cps-nba:winPct "0.585"^^xsd:float ;
+    cps-nba:year "2018"^^xsd:gYear .
+
+team:1610612759_2019 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612759 ;
+    cps-nba:gameLost "39"^^xsd:int ;
+    cps-nba:gameWon "32"^^xsd:int ;
+    cps-nba:homeRecord "19-15"^^xsd:string ;
+    cps-nba:roadRecord "13-24"^^xsd:string ;
+    cps-nba:winPct "0.451"^^xsd:float ;
+    cps-nba:year "2019"^^xsd:gYear .
+
+team:1610612759_2020 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612759 ;
+    cps-nba:gameLost "39"^^xsd:int ;
+    cps-nba:gameWon "33"^^xsd:int ;
+    cps-nba:homeRecord "14-22"^^xsd:string ;
+    cps-nba:roadRecord "19-17"^^xsd:string ;
+    cps-nba:winPct "0.458"^^xsd:float ;
+    cps-nba:year "2020"^^xsd:gYear .
+
+team:1610612759_2021 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612759 ;
+    cps-nba:gameLost "42"^^xsd:int ;
+    cps-nba:gameWon "26"^^xsd:int ;
+    cps-nba:homeRecord "13-21"^^xsd:string ;
+    cps-nba:roadRecord "13-21"^^xsd:string ;
+    cps-nba:winPct "0.382"^^xsd:float ;
+    cps-nba:year "2021"^^xsd:gYear .
+
+team:1610612760_2002 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612760 ;
+    cps-nba:gameLost "42"^^xsd:int ;
+    cps-nba:gameWon "40"^^xsd:int ;
+    cps-nba:homeRecord "25-16"^^xsd:string ;
+    cps-nba:roadRecord "15-26"^^xsd:string ;
+    cps-nba:winPct "0.488"^^xsd:float ;
+    cps-nba:year "2002"^^xsd:gYear .
+
+team:1610612760_2003 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612760 ;
+    cps-nba:gameLost "45"^^xsd:int ;
+    cps-nba:gameWon "37"^^xsd:int ;
+    cps-nba:homeRecord "21-20"^^xsd:string ;
+    cps-nba:roadRecord "16-25"^^xsd:string ;
+    cps-nba:winPct "0.451"^^xsd:float ;
+    cps-nba:year "2003"^^xsd:gYear .
+
+team:1610612760_2004 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612760 ;
+    cps-nba:gameLost "30"^^xsd:int ;
+    cps-nba:gameWon "52"^^xsd:int ;
+    cps-nba:homeRecord "26-15"^^xsd:string ;
+    cps-nba:roadRecord "26-15"^^xsd:string ;
+    cps-nba:winPct "0.634"^^xsd:float ;
+    cps-nba:year "2004"^^xsd:gYear .
+
+team:1610612760_2005 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612760 ;
+    cps-nba:gameLost "47"^^xsd:int ;
+    cps-nba:gameWon "35"^^xsd:int ;
+    cps-nba:homeRecord "22-19"^^xsd:string ;
+    cps-nba:roadRecord "13-28"^^xsd:string ;
+    cps-nba:winPct "0.4270000000000001"^^xsd:float ;
+    cps-nba:year "2005"^^xsd:gYear .
+
+team:1610612760_2006 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612760 ;
+    cps-nba:gameLost "51"^^xsd:int ;
+    cps-nba:gameWon "31"^^xsd:int ;
+    cps-nba:homeRecord "20-21"^^xsd:string ;
+    cps-nba:roadRecord "11-30"^^xsd:string ;
+    cps-nba:winPct "0.3779999999999999"^^xsd:float ;
+    cps-nba:year "2006"^^xsd:gYear .
+
+team:1610612760_2007 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612760 ;
+    cps-nba:gameLost "62"^^xsd:int ;
+    cps-nba:gameWon "20"^^xsd:int ;
+    cps-nba:homeRecord "13-28"^^xsd:string ;
+    cps-nba:roadRecord "7-34"^^xsd:string ;
+    cps-nba:winPct "0.244"^^xsd:float ;
+    cps-nba:year "2007"^^xsd:gYear .
+
+team:1610612760_2008 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612760 ;
+    cps-nba:gameLost "59"^^xsd:int ;
+    cps-nba:gameWon "23"^^xsd:int ;
+    cps-nba:homeRecord "15-26"^^xsd:string ;
+    cps-nba:roadRecord "8-33"^^xsd:string ;
+    cps-nba:winPct "0.28"^^xsd:float ;
+    cps-nba:year "2008"^^xsd:gYear .
+
+team:1610612760_2009 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612760 ;
+    cps-nba:gameLost "32"^^xsd:int ;
+    cps-nba:gameWon "50"^^xsd:int ;
+    cps-nba:homeRecord "27-14"^^xsd:string ;
+    cps-nba:roadRecord "23-18"^^xsd:string ;
+    cps-nba:winPct "0.61"^^xsd:float ;
+    cps-nba:year "2009"^^xsd:gYear .
+
+team:1610612760_2010 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612760 ;
+    cps-nba:gameLost "27"^^xsd:int ;
+    cps-nba:gameWon "55"^^xsd:int ;
+    cps-nba:homeRecord "30-11"^^xsd:string ;
+    cps-nba:roadRecord "25-16"^^xsd:string ;
+    cps-nba:winPct "0.6709999999999999"^^xsd:float ;
+    cps-nba:year "2010"^^xsd:gYear .
+
+team:1610612760_2011 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612760 ;
+    cps-nba:gameLost "19"^^xsd:int ;
+    cps-nba:gameWon "47"^^xsd:int ;
+    cps-nba:homeRecord "26-7"^^xsd:string ;
+    cps-nba:roadRecord "21-12"^^xsd:string ;
+    cps-nba:winPct "0.7120000000000001"^^xsd:float ;
+    cps-nba:year "2011"^^xsd:gYear .
+
+team:1610612760_2012 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612760 ;
+    cps-nba:gameLost "22"^^xsd:int ;
+    cps-nba:gameWon "60"^^xsd:int ;
+    cps-nba:homeRecord "34-7"^^xsd:string ;
+    cps-nba:roadRecord "26-15"^^xsd:string ;
+    cps-nba:winPct "0.732"^^xsd:float ;
+    cps-nba:year "2012"^^xsd:gYear .
+
+team:1610612760_2013 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612760 ;
+    cps-nba:gameLost "23"^^xsd:int ;
+    cps-nba:gameWon "59"^^xsd:int ;
+    cps-nba:homeRecord "34-7"^^xsd:string ;
+    cps-nba:roadRecord "25-16"^^xsd:string ;
+    cps-nba:winPct "0.72"^^xsd:float ;
+    cps-nba:year "2013"^^xsd:gYear .
+
+team:1610612760_2014 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612760 ;
+    cps-nba:gameLost "37"^^xsd:int ;
+    cps-nba:gameWon "45"^^xsd:int ;
+    cps-nba:homeRecord "29-12"^^xsd:string ;
+    cps-nba:roadRecord "16-25"^^xsd:string ;
+    cps-nba:winPct "0.5489999999999999"^^xsd:float ;
+    cps-nba:year "2014"^^xsd:gYear .
+
+team:1610612760_2015 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612760 ;
+    cps-nba:gameLost "27"^^xsd:int ;
+    cps-nba:gameWon "55"^^xsd:int ;
+    cps-nba:homeRecord "32-9"^^xsd:string ;
+    cps-nba:roadRecord "23-18"^^xsd:string ;
+    cps-nba:winPct "0.6709999999999999"^^xsd:float ;
+    cps-nba:year "2015"^^xsd:gYear .
+
+team:1610612760_2016 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612760 ;
+    cps-nba:gameLost "35"^^xsd:int ;
+    cps-nba:gameWon "47"^^xsd:int ;
+    cps-nba:homeRecord "28-13"^^xsd:string ;
+    cps-nba:roadRecord "19-22"^^xsd:string ;
+    cps-nba:winPct "0.573"^^xsd:float ;
+    cps-nba:year "2016"^^xsd:gYear .
+
+team:1610612760_2017 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612760 ;
+    cps-nba:gameLost "34"^^xsd:int ;
+    cps-nba:gameWon "48"^^xsd:int ;
+    cps-nba:homeRecord "27-14"^^xsd:string ;
+    cps-nba:roadRecord "21-20"^^xsd:string ;
+    cps-nba:winPct "0.585"^^xsd:float ;
+    cps-nba:year "2017"^^xsd:gYear .
+
+team:1610612760_2018 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612760 ;
+    cps-nba:gameLost "33"^^xsd:int ;
+    cps-nba:gameWon "49"^^xsd:int ;
+    cps-nba:homeRecord "27-14"^^xsd:string ;
+    cps-nba:roadRecord "22-19"^^xsd:string ;
+    cps-nba:winPct "0.598"^^xsd:float ;
+    cps-nba:year "2018"^^xsd:gYear .
+
+team:1610612760_2019 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612760 ;
+    cps-nba:gameLost "28"^^xsd:int ;
+    cps-nba:gameWon "44"^^xsd:int ;
+    cps-nba:homeRecord "23-14"^^xsd:string ;
+    cps-nba:roadRecord "21-14"^^xsd:string ;
+    cps-nba:winPct "0.611"^^xsd:float ;
+    cps-nba:year "2019"^^xsd:gYear .
+
+team:1610612760_2020 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612760 ;
+    cps-nba:gameLost "50"^^xsd:int ;
+    cps-nba:gameWon "22"^^xsd:int ;
+    cps-nba:homeRecord "10-26"^^xsd:string ;
+    cps-nba:roadRecord "12-24"^^xsd:string ;
+    cps-nba:winPct "0.306"^^xsd:float ;
+    cps-nba:year "2020"^^xsd:gYear .
+
+team:1610612760_2021 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612760 ;
+    cps-nba:gameLost "46"^^xsd:int ;
+    cps-nba:gameWon "20"^^xsd:int ;
+    cps-nba:homeRecord "9-24"^^xsd:string ;
+    cps-nba:roadRecord "11-22"^^xsd:string ;
+    cps-nba:winPct "0.303"^^xsd:float ;
+    cps-nba:year "2021"^^xsd:gYear .
+
+team:1610612761_2002 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612761 ;
+    cps-nba:gameLost "58"^^xsd:int ;
+    cps-nba:gameWon "24"^^xsd:int ;
+    cps-nba:homeRecord "15-26"^^xsd:string ;
+    cps-nba:roadRecord "9-32"^^xsd:string ;
+    cps-nba:winPct "0.293"^^xsd:float ;
+    cps-nba:year "2002"^^xsd:gYear .
+
+team:1610612761_2003 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612761 ;
+    cps-nba:gameLost "49"^^xsd:int ;
+    cps-nba:gameWon "33"^^xsd:int ;
+    cps-nba:homeRecord "18-23"^^xsd:string ;
+    cps-nba:roadRecord "15-26"^^xsd:string ;
+    cps-nba:winPct "0.402"^^xsd:float ;
+    cps-nba:year "2003"^^xsd:gYear .
+
+team:1610612761_2004 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612761 ;
+    cps-nba:gameLost "49"^^xsd:int ;
+    cps-nba:gameWon "33"^^xsd:int ;
+    cps-nba:homeRecord "22-19"^^xsd:string ;
+    cps-nba:roadRecord "11-30"^^xsd:string ;
+    cps-nba:winPct "0.402"^^xsd:float ;
+    cps-nba:year "2004"^^xsd:gYear .
+
+team:1610612761_2005 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612761 ;
+    cps-nba:gameLost "55"^^xsd:int ;
+    cps-nba:gameWon "27"^^xsd:int ;
+    cps-nba:homeRecord "15-26"^^xsd:string ;
+    cps-nba:roadRecord "12-29"^^xsd:string ;
+    cps-nba:winPct "0.3289999999999999"^^xsd:float ;
+    cps-nba:year "2005"^^xsd:gYear .
+
+team:1610612761_2006 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612761 ;
+    cps-nba:gameLost "35"^^xsd:int ;
+    cps-nba:gameWon "47"^^xsd:int ;
+    cps-nba:homeRecord "30-11"^^xsd:string ;
+    cps-nba:roadRecord "17-24"^^xsd:string ;
+    cps-nba:winPct "0.573"^^xsd:float ;
+    cps-nba:year "2006"^^xsd:gYear .
+
+team:1610612761_2007 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612761 ;
+    cps-nba:gameLost "41"^^xsd:int ;
+    cps-nba:gameWon "41"^^xsd:int ;
+    cps-nba:homeRecord "25-16"^^xsd:string ;
+    cps-nba:roadRecord "16-25"^^xsd:string ;
+    cps-nba:winPct "0.5"^^xsd:float ;
+    cps-nba:year "2007"^^xsd:gYear .
+
+team:1610612761_2008 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612761 ;
+    cps-nba:gameLost "49"^^xsd:int ;
+    cps-nba:gameWon "33"^^xsd:int ;
+    cps-nba:homeRecord "18-23"^^xsd:string ;
+    cps-nba:roadRecord "15-26"^^xsd:string ;
+    cps-nba:winPct "0.402"^^xsd:float ;
+    cps-nba:year "2008"^^xsd:gYear .
+
+team:1610612761_2009 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612761 ;
+    cps-nba:gameLost "42"^^xsd:int ;
+    cps-nba:gameWon "40"^^xsd:int ;
+    cps-nba:homeRecord "25-16"^^xsd:string ;
+    cps-nba:roadRecord "15-26"^^xsd:string ;
+    cps-nba:winPct "0.488"^^xsd:float ;
+    cps-nba:year "2009"^^xsd:gYear .
+
+team:1610612761_2010 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612761 ;
+    cps-nba:gameLost "60"^^xsd:int ;
+    cps-nba:gameWon "22"^^xsd:int ;
+    cps-nba:homeRecord "16-25"^^xsd:string ;
+    cps-nba:roadRecord "6-35"^^xsd:string ;
+    cps-nba:winPct "0.268"^^xsd:float ;
+    cps-nba:year "2010"^^xsd:gYear .
+
+team:1610612761_2011 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612761 ;
+    cps-nba:gameLost "43"^^xsd:int ;
+    cps-nba:gameWon "23"^^xsd:int ;
+    cps-nba:homeRecord "13-20"^^xsd:string ;
+    cps-nba:roadRecord "10-23"^^xsd:string ;
+    cps-nba:winPct "0.348"^^xsd:float ;
+    cps-nba:year "2011"^^xsd:gYear .
+
+team:1610612761_2012 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612761 ;
+    cps-nba:gameLost "48"^^xsd:int ;
+    cps-nba:gameWon "34"^^xsd:int ;
+    cps-nba:homeRecord "21-20"^^xsd:string ;
+    cps-nba:roadRecord "13-28"^^xsd:string ;
+    cps-nba:winPct "0.415"^^xsd:float ;
+    cps-nba:year "2012"^^xsd:gYear .
+
+team:1610612761_2013 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612761 ;
+    cps-nba:gameLost "34"^^xsd:int ;
+    cps-nba:gameWon "48"^^xsd:int ;
+    cps-nba:homeRecord "26-15"^^xsd:string ;
+    cps-nba:roadRecord "22-19"^^xsd:string ;
+    cps-nba:winPct "0.585"^^xsd:float ;
+    cps-nba:year "2013"^^xsd:gYear .
+
+team:1610612761_2014 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612761 ;
+    cps-nba:gameLost "33"^^xsd:int ;
+    cps-nba:gameWon "49"^^xsd:int ;
+    cps-nba:homeRecord "27-14"^^xsd:string ;
+    cps-nba:roadRecord "22-19"^^xsd:string ;
+    cps-nba:winPct "0.598"^^xsd:float ;
+    cps-nba:year "2014"^^xsd:gYear .
+
+team:1610612761_2015 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612761 ;
+    cps-nba:gameLost "26"^^xsd:int ;
+    cps-nba:gameWon "56"^^xsd:int ;
+    cps-nba:homeRecord "32-9"^^xsd:string ;
+    cps-nba:roadRecord "24-17"^^xsd:string ;
+    cps-nba:winPct "0.6829999999999999"^^xsd:float ;
+    cps-nba:year "2015"^^xsd:gYear .
+
+team:1610612761_2016 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612761 ;
+    cps-nba:gameLost "31"^^xsd:int ;
+    cps-nba:gameWon "51"^^xsd:int ;
+    cps-nba:homeRecord "28-13"^^xsd:string ;
+    cps-nba:roadRecord "23-18"^^xsd:string ;
+    cps-nba:winPct "0.622"^^xsd:float ;
+    cps-nba:year "2016"^^xsd:gYear .
+
+team:1610612761_2017 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612761 ;
+    cps-nba:gameLost "23"^^xsd:int ;
+    cps-nba:gameWon "59"^^xsd:int ;
+    cps-nba:homeRecord "34-7"^^xsd:string ;
+    cps-nba:roadRecord "25-16"^^xsd:string ;
+    cps-nba:winPct "0.72"^^xsd:float ;
+    cps-nba:year "2017"^^xsd:gYear .
+
+team:1610612761_2018 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612761 ;
+    cps-nba:gameLost "24"^^xsd:int ;
+    cps-nba:gameWon "58"^^xsd:int ;
+    cps-nba:homeRecord "32-9"^^xsd:string ;
+    cps-nba:roadRecord "26-15"^^xsd:string ;
+    cps-nba:winPct "0.7070000000000001"^^xsd:float ;
+    cps-nba:year "2018"^^xsd:gYear .
+
+team:1610612761_2019 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612761 ;
+    cps-nba:gameLost "19"^^xsd:int ;
+    cps-nba:gameWon "53"^^xsd:int ;
+    cps-nba:homeRecord "26-10"^^xsd:string ;
+    cps-nba:roadRecord "27-9"^^xsd:string ;
+    cps-nba:winPct "0.736"^^xsd:float ;
+    cps-nba:year "2019"^^xsd:gYear .
+
+team:1610612761_2020 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612761 ;
+    cps-nba:gameLost "45"^^xsd:int ;
+    cps-nba:gameWon "27"^^xsd:int ;
+    cps-nba:homeRecord "16-20"^^xsd:string ;
+    cps-nba:roadRecord "11-25"^^xsd:string ;
+    cps-nba:winPct "0.375"^^xsd:float ;
+    cps-nba:year "2020"^^xsd:gYear .
+
+team:1610612761_2021 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612761 ;
+    cps-nba:gameLost "30"^^xsd:int ;
+    cps-nba:gameWon "37"^^xsd:int ;
+    cps-nba:homeRecord "17-15"^^xsd:string ;
+    cps-nba:roadRecord "20-15"^^xsd:string ;
+    cps-nba:winPct "0.552"^^xsd:float ;
+    cps-nba:year "2021"^^xsd:gYear .
+
+team:1610612762_2002 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612762 ;
+    cps-nba:gameLost "35"^^xsd:int ;
+    cps-nba:gameWon "47"^^xsd:int ;
+    cps-nba:homeRecord "29-12"^^xsd:string ;
+    cps-nba:roadRecord "18-23"^^xsd:string ;
+    cps-nba:winPct "0.573"^^xsd:float ;
+    cps-nba:year "2002"^^xsd:gYear .
+
+team:1610612762_2003 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612762 ;
+    cps-nba:gameLost "40"^^xsd:int ;
+    cps-nba:gameWon "42"^^xsd:int ;
+    cps-nba:homeRecord "28-13"^^xsd:string ;
+    cps-nba:roadRecord "14-27"^^xsd:string ;
+    cps-nba:winPct "0.512"^^xsd:float ;
+    cps-nba:year "2003"^^xsd:gYear .
+
+team:1610612762_2004 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612762 ;
+    cps-nba:gameLost "56"^^xsd:int ;
+    cps-nba:gameWon "26"^^xsd:int ;
+    cps-nba:homeRecord "18-23"^^xsd:string ;
+    cps-nba:roadRecord "8-33"^^xsd:string ;
+    cps-nba:winPct "0.317"^^xsd:float ;
+    cps-nba:year "2004"^^xsd:gYear .
+
+team:1610612762_2005 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612762 ;
+    cps-nba:gameLost "41"^^xsd:int ;
+    cps-nba:gameWon "41"^^xsd:int ;
+    cps-nba:homeRecord "22-19"^^xsd:string ;
+    cps-nba:roadRecord "19-22"^^xsd:string ;
+    cps-nba:winPct "0.5"^^xsd:float ;
+    cps-nba:year "2005"^^xsd:gYear .
+
+team:1610612762_2006 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612762 ;
+    cps-nba:gameLost "31"^^xsd:int ;
+    cps-nba:gameWon "51"^^xsd:int ;
+    cps-nba:homeRecord "31-10"^^xsd:string ;
+    cps-nba:roadRecord "20-21"^^xsd:string ;
+    cps-nba:winPct "0.622"^^xsd:float ;
+    cps-nba:year "2006"^^xsd:gYear .
+
+team:1610612762_2007 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612762 ;
+    cps-nba:gameLost "28"^^xsd:int ;
+    cps-nba:gameWon "54"^^xsd:int ;
+    cps-nba:homeRecord "37-4"^^xsd:string ;
+    cps-nba:roadRecord "17-24"^^xsd:string ;
+    cps-nba:winPct "0.659"^^xsd:float ;
+    cps-nba:year "2007"^^xsd:gYear .
+
+team:1610612762_2008 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612762 ;
+    cps-nba:gameLost "34"^^xsd:int ;
+    cps-nba:gameWon "48"^^xsd:int ;
+    cps-nba:homeRecord "33-8"^^xsd:string ;
+    cps-nba:roadRecord "15-26"^^xsd:string ;
+    cps-nba:winPct "0.585"^^xsd:float ;
+    cps-nba:year "2008"^^xsd:gYear .
+
+team:1610612762_2009 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612762 ;
+    cps-nba:gameLost "29"^^xsd:int ;
+    cps-nba:gameWon "53"^^xsd:int ;
+    cps-nba:homeRecord "32-9"^^xsd:string ;
+    cps-nba:roadRecord "21-20"^^xsd:string ;
+    cps-nba:winPct "0.6459999999999999"^^xsd:float ;
+    cps-nba:year "2009"^^xsd:gYear .
+
+team:1610612762_2010 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612762 ;
+    cps-nba:gameLost "43"^^xsd:int ;
+    cps-nba:gameWon "39"^^xsd:int ;
+    cps-nba:homeRecord "21-20"^^xsd:string ;
+    cps-nba:roadRecord "18-23"^^xsd:string ;
+    cps-nba:winPct "0.476"^^xsd:float ;
+    cps-nba:year "2010"^^xsd:gYear .
+
+team:1610612762_2011 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612762 ;
+    cps-nba:gameLost "30"^^xsd:int ;
+    cps-nba:gameWon "36"^^xsd:int ;
+    cps-nba:homeRecord "25-8"^^xsd:string ;
+    cps-nba:roadRecord "11-22"^^xsd:string ;
+    cps-nba:winPct "0.545"^^xsd:float ;
+    cps-nba:year "2011"^^xsd:gYear .
+
+team:1610612762_2012 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612762 ;
+    cps-nba:gameLost "39"^^xsd:int ;
+    cps-nba:gameWon "43"^^xsd:int ;
+    cps-nba:homeRecord "30-11"^^xsd:string ;
+    cps-nba:roadRecord "13-28"^^xsd:string ;
+    cps-nba:winPct "0.524"^^xsd:float ;
+    cps-nba:year "2012"^^xsd:gYear .
+
+team:1610612762_2013 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612762 ;
+    cps-nba:gameLost "57"^^xsd:int ;
+    cps-nba:gameWon "25"^^xsd:int ;
+    cps-nba:homeRecord "16-25"^^xsd:string ;
+    cps-nba:roadRecord "9-32"^^xsd:string ;
+    cps-nba:winPct "0.305"^^xsd:float ;
+    cps-nba:year "2013"^^xsd:gYear .
+
+team:1610612762_2014 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612762 ;
+    cps-nba:gameLost "44"^^xsd:int ;
+    cps-nba:gameWon "38"^^xsd:int ;
+    cps-nba:homeRecord "21-20"^^xsd:string ;
+    cps-nba:roadRecord "17-24"^^xsd:string ;
+    cps-nba:winPct "0.4629999999999999"^^xsd:float ;
+    cps-nba:year "2014"^^xsd:gYear .
+
+team:1610612762_2015 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612762 ;
+    cps-nba:gameLost "42"^^xsd:int ;
+    cps-nba:gameWon "40"^^xsd:int ;
+    cps-nba:homeRecord "24-17"^^xsd:string ;
+    cps-nba:roadRecord "16-25"^^xsd:string ;
+    cps-nba:winPct "0.488"^^xsd:float ;
+    cps-nba:year "2015"^^xsd:gYear .
+
+team:1610612762_2016 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612762 ;
+    cps-nba:gameLost "31"^^xsd:int ;
+    cps-nba:gameWon "51"^^xsd:int ;
+    cps-nba:homeRecord "29-12"^^xsd:string ;
+    cps-nba:roadRecord "22-19"^^xsd:string ;
+    cps-nba:winPct "0.622"^^xsd:float ;
+    cps-nba:year "2016"^^xsd:gYear .
+
+team:1610612762_2017 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612762 ;
+    cps-nba:gameLost "34"^^xsd:int ;
+    cps-nba:gameWon "48"^^xsd:int ;
+    cps-nba:homeRecord "28-13"^^xsd:string ;
+    cps-nba:roadRecord "20-21"^^xsd:string ;
+    cps-nba:winPct "0.585"^^xsd:float ;
+    cps-nba:year "2017"^^xsd:gYear .
+
+team:1610612762_2018 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612762 ;
+    cps-nba:gameLost "32"^^xsd:int ;
+    cps-nba:gameWon "50"^^xsd:int ;
+    cps-nba:homeRecord "29-12"^^xsd:string ;
+    cps-nba:roadRecord "21-20"^^xsd:string ;
+    cps-nba:winPct "0.61"^^xsd:float ;
+    cps-nba:year "2018"^^xsd:gYear .
+
+team:1610612762_2019 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612762 ;
+    cps-nba:gameLost "28"^^xsd:int ;
+    cps-nba:gameWon "44"^^xsd:int ;
+    cps-nba:homeRecord "23-12"^^xsd:string ;
+    cps-nba:roadRecord "21-16"^^xsd:string ;
+    cps-nba:winPct "0.611"^^xsd:float ;
+    cps-nba:year "2019"^^xsd:gYear .
+
+team:1610612762_2020 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612762 ;
+    cps-nba:gameLost "20"^^xsd:int ;
+    cps-nba:gameWon "52"^^xsd:int ;
+    cps-nba:homeRecord "31-5"^^xsd:string ;
+    cps-nba:roadRecord "21-15"^^xsd:string ;
+    cps-nba:winPct "0.722"^^xsd:float ;
+    cps-nba:year "2020"^^xsd:gYear .
+
+team:1610612762_2021 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612762 ;
+    cps-nba:gameLost "25"^^xsd:int ;
+    cps-nba:gameWon "42"^^xsd:int ;
+    cps-nba:homeRecord "24-10"^^xsd:string ;
+    cps-nba:roadRecord "18-15"^^xsd:string ;
+    cps-nba:winPct "0.627"^^xsd:float ;
+    cps-nba:year "2021"^^xsd:gYear .
+
+team:1610612763_2002 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612763 ;
+    cps-nba:gameLost "54"^^xsd:int ;
+    cps-nba:gameWon "28"^^xsd:int ;
+    cps-nba:homeRecord "20-21"^^xsd:string ;
+    cps-nba:roadRecord "8-33"^^xsd:string ;
+    cps-nba:winPct "0.341"^^xsd:float ;
+    cps-nba:year "2002"^^xsd:gYear .
+
+team:1610612763_2003 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612763 ;
+    cps-nba:gameLost "32"^^xsd:int ;
+    cps-nba:gameWon "50"^^xsd:int ;
+    cps-nba:homeRecord "31-10"^^xsd:string ;
+    cps-nba:roadRecord "19-22"^^xsd:string ;
+    cps-nba:winPct "0.61"^^xsd:float ;
+    cps-nba:year "2003"^^xsd:gYear .
+
+team:1610612763_2004 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612763 ;
+    cps-nba:gameLost "37"^^xsd:int ;
+    cps-nba:gameWon "45"^^xsd:int ;
+    cps-nba:homeRecord "26-15"^^xsd:string ;
+    cps-nba:roadRecord "19-22"^^xsd:string ;
+    cps-nba:winPct "0.5489999999999999"^^xsd:float ;
+    cps-nba:year "2004"^^xsd:gYear .
+
+team:1610612763_2005 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612763 ;
+    cps-nba:gameLost "33"^^xsd:int ;
+    cps-nba:gameWon "49"^^xsd:int ;
+    cps-nba:homeRecord "30-11"^^xsd:string ;
+    cps-nba:roadRecord "19-22"^^xsd:string ;
+    cps-nba:winPct "0.598"^^xsd:float ;
+    cps-nba:year "2005"^^xsd:gYear .
+
+team:1610612763_2006 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612763 ;
+    cps-nba:gameLost "60"^^xsd:int ;
+    cps-nba:gameWon "22"^^xsd:int ;
+    cps-nba:homeRecord "14-27"^^xsd:string ;
+    cps-nba:roadRecord "8-33"^^xsd:string ;
+    cps-nba:winPct "0.268"^^xsd:float ;
+    cps-nba:year "2006"^^xsd:gYear .
+
+team:1610612763_2007 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612763 ;
+    cps-nba:gameLost "60"^^xsd:int ;
+    cps-nba:gameWon "22"^^xsd:int ;
+    cps-nba:homeRecord "14-27"^^xsd:string ;
+    cps-nba:roadRecord "8-33"^^xsd:string ;
+    cps-nba:winPct "0.268"^^xsd:float ;
+    cps-nba:year "2007"^^xsd:gYear .
+
+team:1610612763_2008 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612763 ;
+    cps-nba:gameLost "58"^^xsd:int ;
+    cps-nba:gameWon "24"^^xsd:int ;
+    cps-nba:homeRecord "16-25"^^xsd:string ;
+    cps-nba:roadRecord "8-33"^^xsd:string ;
+    cps-nba:winPct "0.293"^^xsd:float ;
+    cps-nba:year "2008"^^xsd:gYear .
+
+team:1610612763_2009 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612763 ;
+    cps-nba:gameLost "42"^^xsd:int ;
+    cps-nba:gameWon "40"^^xsd:int ;
+    cps-nba:homeRecord "23-18"^^xsd:string ;
+    cps-nba:roadRecord "17-24"^^xsd:string ;
+    cps-nba:winPct "0.488"^^xsd:float ;
+    cps-nba:year "2009"^^xsd:gYear .
+
+team:1610612763_2010 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612763 ;
+    cps-nba:gameLost "36"^^xsd:int ;
+    cps-nba:gameWon "46"^^xsd:int ;
+    cps-nba:homeRecord "30-11"^^xsd:string ;
+    cps-nba:roadRecord "16-25"^^xsd:string ;
+    cps-nba:winPct "0.561"^^xsd:float ;
+    cps-nba:year "2010"^^xsd:gYear .
+
+team:1610612763_2011 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612763 ;
+    cps-nba:gameLost "25"^^xsd:int ;
+    cps-nba:gameWon "41"^^xsd:int ;
+    cps-nba:homeRecord "26-7"^^xsd:string ;
+    cps-nba:roadRecord "15-18"^^xsd:string ;
+    cps-nba:winPct "0.621"^^xsd:float ;
+    cps-nba:year "2011"^^xsd:gYear .
+
+team:1610612763_2012 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612763 ;
+    cps-nba:gameLost "26"^^xsd:int ;
+    cps-nba:gameWon "56"^^xsd:int ;
+    cps-nba:homeRecord "32-9"^^xsd:string ;
+    cps-nba:roadRecord "24-17"^^xsd:string ;
+    cps-nba:winPct "0.6829999999999999"^^xsd:float ;
+    cps-nba:year "2012"^^xsd:gYear .
+
+team:1610612763_2013 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612763 ;
+    cps-nba:gameLost "32"^^xsd:int ;
+    cps-nba:gameWon "50"^^xsd:int ;
+    cps-nba:homeRecord "27-14"^^xsd:string ;
+    cps-nba:roadRecord "23-18"^^xsd:string ;
+    cps-nba:winPct "0.61"^^xsd:float ;
+    cps-nba:year "2013"^^xsd:gYear .
+
+team:1610612763_2014 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612763 ;
+    cps-nba:gameLost "27"^^xsd:int ;
+    cps-nba:gameWon "55"^^xsd:int ;
+    cps-nba:homeRecord "31-10"^^xsd:string ;
+    cps-nba:roadRecord "24-17"^^xsd:string ;
+    cps-nba:winPct "0.6709999999999999"^^xsd:float ;
+    cps-nba:year "2014"^^xsd:gYear .
+
+team:1610612763_2015 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612763 ;
+    cps-nba:gameLost "40"^^xsd:int ;
+    cps-nba:gameWon "42"^^xsd:int ;
+    cps-nba:homeRecord "26-15"^^xsd:string ;
+    cps-nba:roadRecord "16-25"^^xsd:string ;
+    cps-nba:winPct "0.512"^^xsd:float ;
+    cps-nba:year "2015"^^xsd:gYear .
+
+team:1610612763_2016 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612763 ;
+    cps-nba:gameLost "39"^^xsd:int ;
+    cps-nba:gameWon "43"^^xsd:int ;
+    cps-nba:homeRecord "24-17"^^xsd:string ;
+    cps-nba:roadRecord "19-22"^^xsd:string ;
+    cps-nba:winPct "0.524"^^xsd:float ;
+    cps-nba:year "2016"^^xsd:gYear .
+
+team:1610612763_2017 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612763 ;
+    cps-nba:gameLost "60"^^xsd:int ;
+    cps-nba:gameWon "22"^^xsd:int ;
+    cps-nba:homeRecord "16-25"^^xsd:string ;
+    cps-nba:roadRecord "6-35"^^xsd:string ;
+    cps-nba:winPct "0.268"^^xsd:float ;
+    cps-nba:year "2017"^^xsd:gYear .
+
+team:1610612763_2018 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612763 ;
+    cps-nba:gameLost "49"^^xsd:int ;
+    cps-nba:gameWon "33"^^xsd:int ;
+    cps-nba:homeRecord "21-20"^^xsd:string ;
+    cps-nba:roadRecord "12-29"^^xsd:string ;
+    cps-nba:winPct "0.402"^^xsd:float ;
+    cps-nba:year "2018"^^xsd:gYear .
+
+team:1610612763_2019 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612763 ;
+    cps-nba:gameLost "39"^^xsd:int ;
+    cps-nba:gameWon "34"^^xsd:int ;
+    cps-nba:homeRecord "20-17"^^xsd:string ;
+    cps-nba:roadRecord "14-22"^^xsd:string ;
+    cps-nba:winPct "0.466"^^xsd:float ;
+    cps-nba:year "2019"^^xsd:gYear .
+
+team:1610612763_2020 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612763 ;
+    cps-nba:gameLost "34"^^xsd:int ;
+    cps-nba:gameWon "38"^^xsd:int ;
+    cps-nba:homeRecord "18-18"^^xsd:string ;
+    cps-nba:roadRecord "20-16"^^xsd:string ;
+    cps-nba:winPct "0.528"^^xsd:float ;
+    cps-nba:year "2020"^^xsd:gYear .
+
+team:1610612763_2021 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612763 ;
+    cps-nba:gameLost "22"^^xsd:int ;
+    cps-nba:gameWon "46"^^xsd:int ;
+    cps-nba:homeRecord "24-10"^^xsd:string ;
+    cps-nba:roadRecord "22-12"^^xsd:string ;
+    cps-nba:winPct "0.676"^^xsd:float ;
+    cps-nba:year "2021"^^xsd:gYear .
+
+team:1610612764_2002 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612764 ;
+    cps-nba:gameLost "45"^^xsd:int ;
+    cps-nba:gameWon "37"^^xsd:int ;
+    cps-nba:homeRecord "23-18"^^xsd:string ;
+    cps-nba:roadRecord "14-27"^^xsd:string ;
+    cps-nba:winPct "0.451"^^xsd:float ;
+    cps-nba:year "2002"^^xsd:gYear .
+
+team:1610612764_2003 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612764 ;
+    cps-nba:gameLost "57"^^xsd:int ;
+    cps-nba:gameWon "25"^^xsd:int ;
+    cps-nba:homeRecord "17-24"^^xsd:string ;
+    cps-nba:roadRecord "8-33"^^xsd:string ;
+    cps-nba:winPct "0.305"^^xsd:float ;
+    cps-nba:year "2003"^^xsd:gYear .
+
+team:1610612764_2004 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612764 ;
+    cps-nba:gameLost "37"^^xsd:int ;
+    cps-nba:gameWon "45"^^xsd:int ;
+    cps-nba:homeRecord "29-12"^^xsd:string ;
+    cps-nba:roadRecord "16-25"^^xsd:string ;
+    cps-nba:winPct "0.5489999999999999"^^xsd:float ;
+    cps-nba:year "2004"^^xsd:gYear .
+
+team:1610612764_2005 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612764 ;
+    cps-nba:gameLost "40"^^xsd:int ;
+    cps-nba:gameWon "42"^^xsd:int ;
+    cps-nba:homeRecord "27-14"^^xsd:string ;
+    cps-nba:roadRecord "15-26"^^xsd:string ;
+    cps-nba:winPct "0.512"^^xsd:float ;
+    cps-nba:year "2005"^^xsd:gYear .
+
+team:1610612764_2006 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612764 ;
+    cps-nba:gameLost "41"^^xsd:int ;
+    cps-nba:gameWon "41"^^xsd:int ;
+    cps-nba:homeRecord "26-15"^^xsd:string ;
+    cps-nba:roadRecord "15-26"^^xsd:string ;
+    cps-nba:winPct "0.5"^^xsd:float ;
+    cps-nba:year "2006"^^xsd:gYear .
+
+team:1610612764_2007 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612764 ;
+    cps-nba:gameLost "39"^^xsd:int ;
+    cps-nba:gameWon "43"^^xsd:int ;
+    cps-nba:homeRecord "25-16"^^xsd:string ;
+    cps-nba:roadRecord "18-23"^^xsd:string ;
+    cps-nba:winPct "0.524"^^xsd:float ;
+    cps-nba:year "2007"^^xsd:gYear .
+
+team:1610612764_2008 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612764 ;
+    cps-nba:gameLost "63"^^xsd:int ;
+    cps-nba:gameWon "19"^^xsd:int ;
+    cps-nba:homeRecord "13-28"^^xsd:string ;
+    cps-nba:roadRecord "6-35"^^xsd:string ;
+    cps-nba:winPct "0.2319999999999999"^^xsd:float ;
+    cps-nba:year "2008"^^xsd:gYear .
+
+team:1610612764_2009 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612764 ;
+    cps-nba:gameLost "56"^^xsd:int ;
+    cps-nba:gameWon "26"^^xsd:int ;
+    cps-nba:homeRecord "15-26"^^xsd:string ;
+    cps-nba:roadRecord "11-30"^^xsd:string ;
+    cps-nba:winPct "0.317"^^xsd:float ;
+    cps-nba:year "2009"^^xsd:gYear .
+
+team:1610612764_2010 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612764 ;
+    cps-nba:gameLost "59"^^xsd:int ;
+    cps-nba:gameWon "23"^^xsd:int ;
+    cps-nba:homeRecord "20-21"^^xsd:string ;
+    cps-nba:roadRecord "3-38"^^xsd:string ;
+    cps-nba:winPct "0.28"^^xsd:float ;
+    cps-nba:year "2010"^^xsd:gYear .
+
+team:1610612764_2011 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612764 ;
+    cps-nba:gameLost "46"^^xsd:int ;
+    cps-nba:gameWon "20"^^xsd:int ;
+    cps-nba:homeRecord "11-22"^^xsd:string ;
+    cps-nba:roadRecord "9-24"^^xsd:string ;
+    cps-nba:winPct "0.303"^^xsd:float ;
+    cps-nba:year "2011"^^xsd:gYear .
+
+team:1610612764_2012 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612764 ;
+    cps-nba:gameLost "53"^^xsd:int ;
+    cps-nba:gameWon "29"^^xsd:int ;
+    cps-nba:homeRecord "22-19"^^xsd:string ;
+    cps-nba:roadRecord "7-34"^^xsd:string ;
+    cps-nba:winPct "0.354"^^xsd:float ;
+    cps-nba:year "2012"^^xsd:gYear .
+
+team:1610612764_2013 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612764 ;
+    cps-nba:gameLost "38"^^xsd:int ;
+    cps-nba:gameWon "44"^^xsd:int ;
+    cps-nba:homeRecord "22-19"^^xsd:string ;
+    cps-nba:roadRecord "22-19"^^xsd:string ;
+    cps-nba:winPct "0.537"^^xsd:float ;
+    cps-nba:year "2013"^^xsd:gYear .
+
+team:1610612764_2014 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612764 ;
+    cps-nba:gameLost "36"^^xsd:int ;
+    cps-nba:gameWon "46"^^xsd:int ;
+    cps-nba:homeRecord "29-12"^^xsd:string ;
+    cps-nba:roadRecord "17-24"^^xsd:string ;
+    cps-nba:winPct "0.561"^^xsd:float ;
+    cps-nba:year "2014"^^xsd:gYear .
+
+team:1610612764_2015 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612764 ;
+    cps-nba:gameLost "41"^^xsd:int ;
+    cps-nba:gameWon "41"^^xsd:int ;
+    cps-nba:homeRecord "22-19"^^xsd:string ;
+    cps-nba:roadRecord "19-22"^^xsd:string ;
+    cps-nba:winPct "0.5"^^xsd:float ;
+    cps-nba:year "2015"^^xsd:gYear .
+
+team:1610612764_2016 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612764 ;
+    cps-nba:gameLost "33"^^xsd:int ;
+    cps-nba:gameWon "49"^^xsd:int ;
+    cps-nba:homeRecord "30-11"^^xsd:string ;
+    cps-nba:roadRecord "19-22"^^xsd:string ;
+    cps-nba:winPct "0.598"^^xsd:float ;
+    cps-nba:year "2016"^^xsd:gYear .
+
+team:1610612764_2017 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612764 ;
+    cps-nba:gameLost "39"^^xsd:int ;
+    cps-nba:gameWon "43"^^xsd:int ;
+    cps-nba:homeRecord "23-18"^^xsd:string ;
+    cps-nba:roadRecord "20-21"^^xsd:string ;
+    cps-nba:winPct "0.524"^^xsd:float ;
+    cps-nba:year "2017"^^xsd:gYear .
+
+team:1610612764_2018 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612764 ;
+    cps-nba:gameLost "50"^^xsd:int ;
+    cps-nba:gameWon "32"^^xsd:int ;
+    cps-nba:homeRecord "22-19"^^xsd:string ;
+    cps-nba:roadRecord "10-31"^^xsd:string ;
+    cps-nba:winPct "0.39"^^xsd:float ;
+    cps-nba:year "2018"^^xsd:gYear .
+
+team:1610612764_2019 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612764 ;
+    cps-nba:gameLost "47"^^xsd:int ;
+    cps-nba:gameWon "25"^^xsd:int ;
+    cps-nba:homeRecord "16-20"^^xsd:string ;
+    cps-nba:roadRecord "9-27"^^xsd:string ;
+    cps-nba:winPct "0.347"^^xsd:float ;
+    cps-nba:year "2019"^^xsd:gYear .
+
+team:1610612764_2020 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612764 ;
+    cps-nba:gameLost "38"^^xsd:int ;
+    cps-nba:gameWon "34"^^xsd:int ;
+    cps-nba:homeRecord "19-17"^^xsd:string ;
+    cps-nba:roadRecord "15-21"^^xsd:string ;
+    cps-nba:winPct "0.472"^^xsd:float ;
+    cps-nba:year "2020"^^xsd:gYear .
+
+team:1610612764_2021 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612764 ;
+    cps-nba:gameLost "37"^^xsd:int ;
+    cps-nba:gameWon "29"^^xsd:int ;
+    cps-nba:homeRecord "17-17"^^xsd:string ;
+    cps-nba:roadRecord "12-20"^^xsd:string ;
+    cps-nba:winPct "0.439"^^xsd:float ;
+    cps-nba:year "2021"^^xsd:gYear .
+
+team:1610612765_2002 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612765 ;
+    cps-nba:gameLost "32"^^xsd:int ;
+    cps-nba:gameWon "50"^^xsd:int ;
+    cps-nba:homeRecord "30-11"^^xsd:string ;
+    cps-nba:roadRecord "20-21"^^xsd:string ;
+    cps-nba:winPct "0.61"^^xsd:float ;
+    cps-nba:year "2002"^^xsd:gYear .
+
+team:1610612765_2003 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612765 ;
+    cps-nba:gameLost "28"^^xsd:int ;
+    cps-nba:gameWon "54"^^xsd:int ;
+    cps-nba:homeRecord "31-10"^^xsd:string ;
+    cps-nba:roadRecord "23-18"^^xsd:string ;
+    cps-nba:winPct "0.659"^^xsd:float ;
+    cps-nba:year "2003"^^xsd:gYear .
+
+team:1610612765_2004 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612765 ;
+    cps-nba:gameLost "28"^^xsd:int ;
+    cps-nba:gameWon "54"^^xsd:int ;
+    cps-nba:homeRecord "32-9"^^xsd:string ;
+    cps-nba:roadRecord "22-19"^^xsd:string ;
+    cps-nba:winPct "0.659"^^xsd:float ;
+    cps-nba:year "2004"^^xsd:gYear .
+
+team:1610612765_2005 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612765 ;
+    cps-nba:gameLost "18"^^xsd:int ;
+    cps-nba:gameWon "64"^^xsd:int ;
+    cps-nba:homeRecord "37-4"^^xsd:string ;
+    cps-nba:roadRecord "27-14"^^xsd:string ;
+    cps-nba:winPct "0.78"^^xsd:float ;
+    cps-nba:year "2005"^^xsd:gYear .
+
+team:1610612765_2006 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612765 ;
+    cps-nba:gameLost "29"^^xsd:int ;
+    cps-nba:gameWon "53"^^xsd:int ;
+    cps-nba:homeRecord "26-15"^^xsd:string ;
+    cps-nba:roadRecord "27-14"^^xsd:string ;
+    cps-nba:winPct "0.6459999999999999"^^xsd:float ;
+    cps-nba:year "2006"^^xsd:gYear .
+
+team:1610612765_2007 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612765 ;
+    cps-nba:gameLost "23"^^xsd:int ;
+    cps-nba:gameWon "59"^^xsd:int ;
+    cps-nba:homeRecord "34-7"^^xsd:string ;
+    cps-nba:roadRecord "25-16"^^xsd:string ;
+    cps-nba:winPct "0.72"^^xsd:float ;
+    cps-nba:year "2007"^^xsd:gYear .
+
+team:1610612765_2008 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612765 ;
+    cps-nba:gameLost "43"^^xsd:int ;
+    cps-nba:gameWon "39"^^xsd:int ;
+    cps-nba:homeRecord "21-20"^^xsd:string ;
+    cps-nba:roadRecord "18-23"^^xsd:string ;
+    cps-nba:winPct "0.476"^^xsd:float ;
+    cps-nba:year "2008"^^xsd:gYear .
+
+team:1610612765_2009 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612765 ;
+    cps-nba:gameLost "55"^^xsd:int ;
+    cps-nba:gameWon "27"^^xsd:int ;
+    cps-nba:homeRecord "17-24"^^xsd:string ;
+    cps-nba:roadRecord "10-31"^^xsd:string ;
+    cps-nba:winPct "0.3289999999999999"^^xsd:float ;
+    cps-nba:year "2009"^^xsd:gYear .
+
+team:1610612765_2010 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612765 ;
+    cps-nba:gameLost "52"^^xsd:int ;
+    cps-nba:gameWon "30"^^xsd:int ;
+    cps-nba:homeRecord "21-20"^^xsd:string ;
+    cps-nba:roadRecord "9-32"^^xsd:string ;
+    cps-nba:winPct "0.366"^^xsd:float ;
+    cps-nba:year "2010"^^xsd:gYear .
+
+team:1610612765_2011 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612765 ;
+    cps-nba:gameLost "41"^^xsd:int ;
+    cps-nba:gameWon "25"^^xsd:int ;
+    cps-nba:homeRecord "18-15"^^xsd:string ;
+    cps-nba:roadRecord "7-26"^^xsd:string ;
+    cps-nba:winPct "0.379"^^xsd:float ;
+    cps-nba:year "2011"^^xsd:gYear .
+
+team:1610612765_2012 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612765 ;
+    cps-nba:gameLost "53"^^xsd:int ;
+    cps-nba:gameWon "29"^^xsd:int ;
+    cps-nba:homeRecord "18-23"^^xsd:string ;
+    cps-nba:roadRecord "11-30"^^xsd:string ;
+    cps-nba:winPct "0.354"^^xsd:float ;
+    cps-nba:year "2012"^^xsd:gYear .
+
+team:1610612765_2013 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612765 ;
+    cps-nba:gameLost "53"^^xsd:int ;
+    cps-nba:gameWon "29"^^xsd:int ;
+    cps-nba:homeRecord "17-24"^^xsd:string ;
+    cps-nba:roadRecord "12-29"^^xsd:string ;
+    cps-nba:winPct "0.354"^^xsd:float ;
+    cps-nba:year "2013"^^xsd:gYear .
+
+team:1610612765_2014 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612765 ;
+    cps-nba:gameLost "50"^^xsd:int ;
+    cps-nba:gameWon "32"^^xsd:int ;
+    cps-nba:homeRecord "18-23"^^xsd:string ;
+    cps-nba:roadRecord "14-27"^^xsd:string ;
+    cps-nba:winPct "0.39"^^xsd:float ;
+    cps-nba:year "2014"^^xsd:gYear .
+
+team:1610612765_2015 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612765 ;
+    cps-nba:gameLost "38"^^xsd:int ;
+    cps-nba:gameWon "44"^^xsd:int ;
+    cps-nba:homeRecord "26-15"^^xsd:string ;
+    cps-nba:roadRecord "18-23"^^xsd:string ;
+    cps-nba:winPct "0.537"^^xsd:float ;
+    cps-nba:year "2015"^^xsd:gYear .
+
+team:1610612765_2016 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612765 ;
+    cps-nba:gameLost "45"^^xsd:int ;
+    cps-nba:gameWon "37"^^xsd:int ;
+    cps-nba:homeRecord "24-17"^^xsd:string ;
+    cps-nba:roadRecord "13-28"^^xsd:string ;
+    cps-nba:winPct "0.451"^^xsd:float ;
+    cps-nba:year "2016"^^xsd:gYear .
+
+team:1610612765_2017 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612765 ;
+    cps-nba:gameLost "43"^^xsd:int ;
+    cps-nba:gameWon "39"^^xsd:int ;
+    cps-nba:homeRecord "25-16"^^xsd:string ;
+    cps-nba:roadRecord "14-27"^^xsd:string ;
+    cps-nba:winPct "0.476"^^xsd:float ;
+    cps-nba:year "2017"^^xsd:gYear .
+
+team:1610612765_2018 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612765 ;
+    cps-nba:gameLost "41"^^xsd:int ;
+    cps-nba:gameWon "41"^^xsd:int ;
+    cps-nba:homeRecord "26-15"^^xsd:string ;
+    cps-nba:roadRecord "15-26"^^xsd:string ;
+    cps-nba:winPct "0.5"^^xsd:float ;
+    cps-nba:year "2018"^^xsd:gYear .
+
+team:1610612765_2019 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612765 ;
+    cps-nba:gameLost "46"^^xsd:int ;
+    cps-nba:gameWon "20"^^xsd:int ;
+    cps-nba:homeRecord "11-22"^^xsd:string ;
+    cps-nba:roadRecord "9-24"^^xsd:string ;
+    cps-nba:winPct "0.303"^^xsd:float ;
+    cps-nba:year "2019"^^xsd:gYear .
+
+team:1610612765_2020 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612765 ;
+    cps-nba:gameLost "52"^^xsd:int ;
+    cps-nba:gameWon "20"^^xsd:int ;
+    cps-nba:homeRecord "13-23"^^xsd:string ;
+    cps-nba:roadRecord "7-29"^^xsd:string ;
+    cps-nba:winPct "0.278"^^xsd:float ;
+    cps-nba:year "2020"^^xsd:gYear .
+
+team:1610612765_2021 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612765 ;
+    cps-nba:gameLost "49"^^xsd:int ;
+    cps-nba:gameWon "18"^^xsd:int ;
+    cps-nba:homeRecord "11-22"^^xsd:string ;
+    cps-nba:roadRecord "7-27"^^xsd:string ;
+    cps-nba:winPct "0.269"^^xsd:float ;
+    cps-nba:year "2021"^^xsd:gYear .
+
+team:1610612766_2004 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612766 ;
+    cps-nba:gameLost "64"^^xsd:int ;
+    cps-nba:gameWon "18"^^xsd:int ;
+    cps-nba:homeRecord "14-27"^^xsd:string ;
+    cps-nba:roadRecord "4-37"^^xsd:string ;
+    cps-nba:winPct "0.22"^^xsd:float ;
+    cps-nba:year "2004"^^xsd:gYear .
+
+team:1610612766_2005 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612766 ;
+    cps-nba:gameLost "56"^^xsd:int ;
+    cps-nba:gameWon "26"^^xsd:int ;
+    cps-nba:homeRecord "17-24"^^xsd:string ;
+    cps-nba:roadRecord "9-32"^^xsd:string ;
+    cps-nba:winPct "0.317"^^xsd:float ;
+    cps-nba:year "2005"^^xsd:gYear .
+
+team:1610612766_2006 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612766 ;
+    cps-nba:gameLost "49"^^xsd:int ;
+    cps-nba:gameWon "33"^^xsd:int ;
+    cps-nba:homeRecord "20-21"^^xsd:string ;
+    cps-nba:roadRecord "13-28"^^xsd:string ;
+    cps-nba:winPct "0.402"^^xsd:float ;
+    cps-nba:year "2006"^^xsd:gYear .
+
+team:1610612766_2007 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612766 ;
+    cps-nba:gameLost "50"^^xsd:int ;
+    cps-nba:gameWon "32"^^xsd:int ;
+    cps-nba:homeRecord "21-20"^^xsd:string ;
+    cps-nba:roadRecord "11-30"^^xsd:string ;
+    cps-nba:winPct "0.39"^^xsd:float ;
+    cps-nba:year "2007"^^xsd:gYear .
+
+team:1610612766_2008 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612766 ;
+    cps-nba:gameLost "47"^^xsd:int ;
+    cps-nba:gameWon "35"^^xsd:int ;
+    cps-nba:homeRecord "23-18"^^xsd:string ;
+    cps-nba:roadRecord "12-29"^^xsd:string ;
+    cps-nba:winPct "0.4270000000000001"^^xsd:float ;
+    cps-nba:year "2008"^^xsd:gYear .
+
+team:1610612766_2009 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612766 ;
+    cps-nba:gameLost "38"^^xsd:int ;
+    cps-nba:gameWon "44"^^xsd:int ;
+    cps-nba:homeRecord "31-10"^^xsd:string ;
+    cps-nba:roadRecord "13-28"^^xsd:string ;
+    cps-nba:winPct "0.537"^^xsd:float ;
+    cps-nba:year "2009"^^xsd:gYear .
+
+team:1610612766_2010 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612766 ;
+    cps-nba:gameLost "48"^^xsd:int ;
+    cps-nba:gameWon "34"^^xsd:int ;
+    cps-nba:homeRecord "21-20"^^xsd:string ;
+    cps-nba:roadRecord "13-28"^^xsd:string ;
+    cps-nba:winPct "0.415"^^xsd:float ;
+    cps-nba:year "2010"^^xsd:gYear .
+
+team:1610612766_2011 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612766 ;
+    cps-nba:gameLost "59"^^xsd:int ;
+    cps-nba:gameWon "7"^^xsd:int ;
+    cps-nba:homeRecord "4-29"^^xsd:string ;
+    cps-nba:roadRecord "3-30"^^xsd:string ;
+    cps-nba:winPct "0.106"^^xsd:float ;
+    cps-nba:year "2011"^^xsd:gYear .
+
+team:1610612766_2012 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612766 ;
+    cps-nba:gameLost "61"^^xsd:int ;
+    cps-nba:gameWon "21"^^xsd:int ;
+    cps-nba:homeRecord "15-26"^^xsd:string ;
+    cps-nba:roadRecord "6-35"^^xsd:string ;
+    cps-nba:winPct "0.256"^^xsd:float ;
+    cps-nba:year "2012"^^xsd:gYear .
+
+team:1610612766_2013 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612766 ;
+    cps-nba:gameLost "39"^^xsd:int ;
+    cps-nba:gameWon "43"^^xsd:int ;
+    cps-nba:homeRecord "25-16"^^xsd:string ;
+    cps-nba:roadRecord "18-23"^^xsd:string ;
+    cps-nba:winPct "0.524"^^xsd:float ;
+    cps-nba:year "2013"^^xsd:gYear .
+
+team:1610612766_2014 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612766 ;
+    cps-nba:gameLost "49"^^xsd:int ;
+    cps-nba:gameWon "33"^^xsd:int ;
+    cps-nba:homeRecord "19-22"^^xsd:string ;
+    cps-nba:roadRecord "14-27"^^xsd:string ;
+    cps-nba:winPct "0.402"^^xsd:float ;
+    cps-nba:year "2014"^^xsd:gYear .
+
+team:1610612766_2015 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612766 ;
+    cps-nba:gameLost "34"^^xsd:int ;
+    cps-nba:gameWon "48"^^xsd:int ;
+    cps-nba:homeRecord "30-11"^^xsd:string ;
+    cps-nba:roadRecord "18-23"^^xsd:string ;
+    cps-nba:winPct "0.585"^^xsd:float ;
+    cps-nba:year "2015"^^xsd:gYear .
+
+team:1610612766_2016 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612766 ;
+    cps-nba:gameLost "46"^^xsd:int ;
+    cps-nba:gameWon "36"^^xsd:int ;
+    cps-nba:homeRecord "22-19"^^xsd:string ;
+    cps-nba:roadRecord "14-27"^^xsd:string ;
+    cps-nba:winPct "0.439"^^xsd:float ;
+    cps-nba:year "2016"^^xsd:gYear .
+
+team:1610612766_2017 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612766 ;
+    cps-nba:gameLost "46"^^xsd:int ;
+    cps-nba:gameWon "36"^^xsd:int ;
+    cps-nba:homeRecord "21-20"^^xsd:string ;
+    cps-nba:roadRecord "15-26"^^xsd:string ;
+    cps-nba:winPct "0.439"^^xsd:float ;
+    cps-nba:year "2017"^^xsd:gYear .
+
+team:1610612766_2018 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612766 ;
+    cps-nba:gameLost "43"^^xsd:int ;
+    cps-nba:gameWon "39"^^xsd:int ;
+    cps-nba:homeRecord "25-16"^^xsd:string ;
+    cps-nba:roadRecord "14-27"^^xsd:string ;
+    cps-nba:winPct "0.476"^^xsd:float ;
+    cps-nba:year "2018"^^xsd:gYear .
+
+team:1610612766_2019 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612766 ;
+    cps-nba:gameLost "42"^^xsd:int ;
+    cps-nba:gameWon "23"^^xsd:int ;
+    cps-nba:homeRecord "10-21"^^xsd:string ;
+    cps-nba:roadRecord "13-21"^^xsd:string ;
+    cps-nba:winPct "0.354"^^xsd:float ;
+    cps-nba:year "2019"^^xsd:gYear .
+
+team:1610612766_2020 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612766 ;
+    cps-nba:gameLost "39"^^xsd:int ;
+    cps-nba:gameWon "33"^^xsd:int ;
+    cps-nba:homeRecord "18-18"^^xsd:string ;
+    cps-nba:roadRecord "15-21"^^xsd:string ;
+    cps-nba:winPct "0.458"^^xsd:float ;
+    cps-nba:year "2020"^^xsd:gYear .
+
+team:1610612766_2021 a cps-nba:Team ;
+    cps-nba:belongsTo club:1610612766 ;
+    cps-nba:gameLost "35"^^xsd:int ;
+    cps-nba:gameWon "33"^^xsd:int ;
+    cps-nba:homeRecord "16-17"^^xsd:string ;
+    cps-nba:roadRecord "17-18"^^xsd:string ;
+    cps-nba:winPct "0.485"^^xsd:float ;
+    cps-nba:year "2021"^^xsd:gYear .
+
