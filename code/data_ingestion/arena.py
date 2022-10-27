@@ -10,6 +10,7 @@ from rdflib import RDF
 from rdflib import Literal
 from rdflib.namespace import XSD
 from pathlib import Path
+import re
 
 # --------------------------------------------------------------------------
 # Create helper object
@@ -23,11 +24,35 @@ print("READING DATA FROM CSV FILE ..")
 arena_csv_path = helper.get_csv_path("clubs")
 arena_dataframe = helper.read_csv(arena_csv_path, ",")
 
+#arena_dataframe['ARENA'] = arena_dataframe["ARENA"].astype(str)
 # --------------------------------------------------------------------------
-# Convert Cols to corret type
+# Substitute NA values with 0
 # --------------------------------------------------------------------------
+arena_dataframe['ARENACAPACITY'] = arena_dataframe['ARENACAPACITY'].fillna(0)
 
+# --------------------------------------------------------------------------
+# Compute the avg of arena capacities
+# --------------------------------------------------------------------------
+sum = 0
+arenasNumberCapacityNotZero = 0
+
+for capacity in arena_dataframe['ARENACAPACITY']:
+    if(capacity != 0):
+        sum += capacity
+        arenasNumberCapacityNotZero += 1 
+
+avgArenaCapacity = int(sum / arenasNumberCapacityNotZero)
+
+# --------------------------------------------------------------------------
+# Substitute 0 values of ARENACAPACITY with the avarage of the other ones
+# --------------------------------------------------------------------------
+arena_dataframe["ARENACAPACITY"] = arena_dataframe["ARENACAPACITY"].replace(0,avgArenaCapacity)
+
+# --------------------------------------------------------------------------
+# Print info of dataframe
+# --------------------------------------------------------------------------
 print(arena_dataframe.info())
+
 # --------------------------------------------------------------------------
 # Construct Game Ontology Namespace
 # --------------------------------------------------------------------------
@@ -46,37 +71,30 @@ graph = Graph()
 # --------------------------------------------------------------------------
 print("BINDING NAMASPACES TO PREFIXES ..")
 graph.bind("arena",ARENA)
+graph.bind("base",BASE)
 
 # --------------------------------------------------------------------------
 # Create triples and populate the graph
 # --------------------------------------------------------------------------
 print("POPULATING THE GRAPH ..")
 for index, row in arena_dataframe.iterrows():
-    gameSubjectURI = URIRef(BASE + str(row['GAME_ID']))    
-    graph.add((gameSubjectURI, RDF.type, BASE.Game))
-    
-    #Date
-    graph.add((gameSubjectURI, BASE['matchDate'], Literal(row['GAME_DATE_EST'], datatype = XSD.date)))
-    
-    #Info home team
-    graph.add((gameSubjectURI, BASE['ptsHome'], Literal(row['PTS_home'], datatype = XSD.integer)))
-    graph.add((gameSubjectURI, BASE['fgptcHome'], Literal(row['FG_PCT_home'], datatype = XSD.float)))
-    graph.add((gameSubjectURI, BASE['ftpctHome'], Literal(row['FT_PCT_home'], datatype = XSD.float)))
-    graph.add((gameSubjectURI, BASE['fg3pctHome'], Literal(row['FG3_PCT_home'], datatype = XSD.float)))
-    graph.add((gameSubjectURI, BASE['astHome'], Literal(row['AST_home'], datatype = XSD.integer)))
-    graph.add((gameSubjectURI, BASE['rebHome'], Literal(row['REB_home'], datatype = XSD.integer)))
 
-    #Info away team
-    graph.add((gameSubjectURI, BASE['ptsAway'], Literal(row['PTS_away'], datatype = XSD.integer)))
-    graph.add((gameSubjectURI, BASE['fgptcAway'], Literal(row['FG_PCT_away'], datatype = XSD.float)))
-    graph.add((gameSubjectURI, BASE['ftpctAway'], Literal(row['FT_PCT_away'], datatype = XSD.float)))
-    graph.add((gameSubjectURI, BASE['fg3pctAway'], Literal(row['FG3_PCT_away'], datatype = XSD.float)))
-    graph.add((gameSubjectURI, BASE['astAway'], Literal(row['AST_away'], datatype = XSD.integer)))
-    graph.add((gameSubjectURI, BASE['rebAway'], Literal(row['REB_away'], datatype = XSD.integer)))
+    #create Uri arena
+    arenaSubjectuUri = URIRef(ARENA + str(re.sub(r'\W+', '', row['ARENA'])))
+    
+    #add to graph uri arena
+    graph.add((arenaSubjectuUri, RDF.type, BASE.Arena))
+
+    #Name of the arena
+    graph.add((arenaSubjectuUri, BASE['name'], Literal(row['ARENA'], datatype = XSD.string)))
+    
+    #Capacity
+    graph.add((arenaSubjectuUri, BASE['capacity'], Literal(row['ARENACAPACITY'], datatype = XSD.integer)))
+       
 
 # --------------------------------------------------------------------------
 # Serialize the graph
 # --------------------------------------------------------------------------
 print("SERIALIZING ..")
-serialization_path=str(Path(__file__).parent.resolve())+"/serialization/games.ttl"
+serialization_path=str(Path(__file__).parent.resolve())+"/serialization/arenas.ttl"
 helper.serialize(graph, serialization_path)
