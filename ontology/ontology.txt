@@ -1,1 +1,15 @@
+VERSION1
 https://arrows.app/#/local/id=CGSoR632c6fh0lUrgRtQ
+
+VERSION2
+https://arrows.app/#/local/id=MDmcToiTLnL2iXSqgJ0j
+
+DISCUSS :
+- Person :
+	-FOAF OR NOT ?
+		IF NOT :
+			FIELDS ?
+- DECIDE ATTRIBUTE Player and Person 
+- DECIDE IF IS NEEDED :
+	- ARROW FROM : Player TO Person CALLED refersTo / subclassOf ?
+	
