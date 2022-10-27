@@ -20,14 +20,14 @@ helper = Helper()
 # Read teams.csv file
 # --------------------------------------------------------------------------
 print("READING DATA FROM CSV FILE ..")
-clubs_csv_path = helper.get_csv_path("clubs")
-clubs_dataframe = helper.read_csv(clubs_csv_path, ",")
+club_csv_path = helper.get_csv_path("clubs")
+club_dataframe = helper.read_csv(club_csv_path, ",")
 
 # --------------------------------------------------------------------------
 # Convert Cols to corret type
 # --------------------------------------------------------------------------
 
-print(clubs_dataframe.info())
+print(club_dataframe.info())
 
 # --------------------------------------------------------------------------
 # Construct Club Ontology Namespace
@@ -53,26 +53,26 @@ graph.bind("base",BASE)
 # Create triples and populate the graph
 # --------------------------------------------------------------------------
 print("POPULATING THE GRAPH ..")
-for index, row in clubs_dataframe.iterrows():
+for index, row in club_dataframe.iterrows():
 
-    clubSubjectURI = URIRef(CLUB + str(row['TEAM_ID']))    
-    graph.add((clubSubjectURI, RDF.type, BASE.Club))
+    club_subject = URIRef(CLUB + str(row['TEAM_ID']))    
+    graph.add((club_subject, RDF.type, BASE.Club))
             
     #Nickname
-    graph.add((clubSubjectURI, BASE['name'], Literal(row['NICKNAME'], datatype = XSD.string)))
+    graph.add((club_subject, BASE['name'], Literal(row['NICKNAME'], datatype = XSD.string)))
     
     #Abbreviation
-    graph.add((clubSubjectURI, BASE['abbreviation'], Literal(row['ABBREVIATION'], datatype = XSD.string)))
+    graph.add((club_subject, BASE['abbreviation'], Literal(row['ABBREVIATION'], datatype = XSD.string)))
     
     #Year
-    graph.add((clubSubjectURI, BASE['firstYear'], Literal(row['MIN_YEAR'], datatype = XSD.gYear)))
+    graph.add((club_subject, BASE['firstYear'], Literal(row['MIN_YEAR'], datatype = XSD.gYear)))
 
     #City
-    graph.add((clubSubjectURI, BASE['city'], Literal(row['CITY'], datatype = XSD.string)))
+    graph.add((club_subject, BASE['city'], Literal(row['CITY'], datatype = XSD.string)))
 
 # --------------------------------------------------------------------------
 # Serialize the graph
 # --------------------------------------------------------------------------
 print("SERIALIZING ..")
-serialization_path=str(Path(__file__).parent.resolve())+"/serialization/clubs.ttl"
+serialization_path=str(Path(__file__).parent.resolve())+"/serialization/club.ttl"
 helper.serialize(graph, serialization_path)

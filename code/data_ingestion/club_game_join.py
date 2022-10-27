@@ -10,53 +10,46 @@ from rdflib import RDF
 from rdflib import Literal
 from rdflib.namespace import XSD
 from pathlib import Path
-import re
 
-# --------------------------------------------------------------------------
-# Create helper object
-# --------------------------------------------------------------------------
 helper = Helper()
 
+
 # --------------------------------------------------------------------------
-# Read games.csv file
+# Read games.csv and teams.csv file
 # --------------------------------------------------------------------------
 print("READING DATA FROM CSV FILE ..")
-arena_csv_path = helper.get_csv_path("clubs")
-arena_dataframe = helper.read_csv(arena_csv_path, ",")
+club_csv_path = helper.get_csv_path("clubs")
+club_dataframe = helper.read_csv(club_csv_path, ",")
+
+game_csv_path = helper.get_csv_path("games")
+game_dataframe = helper.read_csv(game_csv_path, ",")
 
 # --------------------------------------------------------------------------
-# Substitute NA values with 0
+# Drop NA values
 # --------------------------------------------------------------------------
-arena_dataframe['ARENACAPACITY'] = arena_dataframe['ARENACAPACITY'].fillna(0)
+print("DROP NA VALUES ..")
+game_dataframe = game_dataframe.dropna()
 
 # --------------------------------------------------------------------------
-# Compute the avg of arena capacities
+# Convert Cols to corret type
 # --------------------------------------------------------------------------
-sum = 0
-arenas_capacity_not_zero = 0
+print("CONVERT COLS TO CORRECT TYPE ..")
+game_dataframe['PTS_home'] = game_dataframe['PTS_home'].astype(int)
+game_dataframe['PTS_away'] = game_dataframe['PTS_away'].astype(int)
+game_dataframe['AST_home'] = game_dataframe['AST_home'].astype(int)
+game_dataframe['AST_away'] = game_dataframe['AST_away'].astype(int)
+game_dataframe['REB_home'] = game_dataframe['REB_home'].astype(int)
+game_dataframe['REB_away'] = game_dataframe['REB_away'].astype(int)
 
-for capacity in arena_dataframe['ARENACAPACITY']:
-    if(capacity != 0):
-        sum += capacity
-        arenas_capacity_not_zero += 1 
-
-avg_arena_capacity = int(sum / arenas_capacity_not_zero)
-
-# --------------------------------------------------------------------------
-# Substitute 0 values of ARENACAPACITY with the avarage of the other ones
-# --------------------------------------------------------------------------
-arena_dataframe["ARENACAPACITY"] = arena_dataframe["ARENACAPACITY"].replace(0,avg_arena_capacity)
+print(game_dataframe.info())
+print(club_dataframe.info())
 
 # --------------------------------------------------------------------------
-# Print info of dataframe
-# --------------------------------------------------------------------------
-print(arena_dataframe.info())
-
-# --------------------------------------------------------------------------
-# Construct Game Ontology Namespace
+# Construct Club Ontology Namespace
 # --------------------------------------------------------------------------
 print("CREATING NAMESPACES OF THE ONTOLOGY ..")
-ARENA = Namespace("https://www.dei.unipd.it/Database2/CPS-NBA/Arena#")
+CLUB = Namespace("https://www.dei.unipd.it/Database2/CPS-NBA/Club#")
+GAME = Namespace("https://www.dei.unipd.it/Database2/CPS-NBA/Game#")
 BASE = Namespace("https://www.dei.unipd.it/Database2/CPS-NBA/")
 
 # --------------------------------------------------------------------------
@@ -69,31 +62,34 @@ graph = Graph()
 # Bind namespaces to a prefix for a better output
 # --------------------------------------------------------------------------
 print("BINDING NAMASPACES TO PREFIXES ..")
-graph.bind("arena",ARENA)
+graph.bind("club",CLUB)
+graph.bind("game",GAME)
 graph.bind("base",BASE)
 
 # --------------------------------------------------------------------------
 # Create triples and populate the graph
 # --------------------------------------------------------------------------
 print("POPULATING THE GRAPH ..")
-for index, row in arena_dataframe.iterrows():
+for index, row in game_dataframe.iterrows():
+    #Subject
+    club_game_subject = URIRef(GAME + str(row['GAME_ID']))
 
-    #create Uri arena
-    arena_subject = URIRef(ARENA + str(re.sub(r'\W+', '', row['ARENA'])))
-    
-    #add to graph uri arena
-    graph.add((arena_subject, RDF.type, BASE.Arena))
+    #Predicate and Object home
+    club_game_home_object = URIRef(CLUB + str(row['HOME_TEAM_ID']))
+    club_game_home_predicate = URIRef(BASE + "homeClub") 
 
-    #Name of the arena
-    graph.add((arena_subject, BASE['name'], Literal(row['ARENA'], datatype = XSD.string)))
-    
-    #Capacity
-    graph.add((arena_subject, BASE['capacity'], Literal(row['ARENACAPACITY'], datatype = XSD.integer)))
-       
+    #Predicate and Object away
+    club_game_away_object = URIRef(CLUB + str(row['VISITOR_TEAM_ID']))
+    club_game_away_predicate = URIRef(BASE + "awayClub") 
+
+
+    #Add Triples
+    graph.add((club_game_subject, club_game_away_predicate ,club_game_away_object))
+    graph.add((club_game_subject, club_game_home_predicate, club_game_home_object))        
 
 # --------------------------------------------------------------------------
 # Serialize the graph
 # --------------------------------------------------------------------------
 print("SERIALIZING ..")
-serialization_path=str(Path(__file__).parent.resolve())+"/serialization/arena.ttl"
+serialization_path=str(Path(__file__).parent.resolve())+"/serialization/club_game_join.ttl"
 helper.serialize(graph, serialization_path)

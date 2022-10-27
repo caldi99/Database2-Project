@@ -17,14 +17,20 @@ helper = Helper()
 code_dir = str(Path(__file__).parent.resolve())
 
 # -------------------------------------------------------
-# Run data ingestion
+# Run data ingestion individuals "not join"
 # -------------------------------------------------------
-exec(open(code_dir+"/data_ingestion/games.py").read())
-exec(open(code_dir+"/data_ingestion/clubs.py").read())
-exec(open(code_dir+"/data_ingestion/club_games_join.py").read())
-exec(open(code_dir+"/data_ingestion/player.py").read())
-exec(open(code_dir+"/data_ingestion/country.py").read())
 exec(open(code_dir+"/data_ingestion/appearance.py").read())
+exec(open(code_dir+"/data_ingestion/arena.py").read())
+exec(open(code_dir+"/data_ingestion/club.py").read())
+exec(open(code_dir+"/data_ingestion/country.py").read())
+exec(open(code_dir+"/data_ingestion/game.py").read())
+exec(open(code_dir+"/data_ingestion/player.py").read())
+
+# -------------------------------------------------------
+# Run data ingestion individuals "join"
+# -------------------------------------------------------
+exec(open(code_dir+"/data_ingestion/club_arena_join.py").read())
+exec(open(code_dir+"/data_ingestion/club_game_join.py").read())
 
 # -------------------------------------------------------
 # Zip files inside serialization folder
