@@ -30,19 +30,48 @@ APPEARANCE_TO="to"
 APPEARANCE_PF="pf"
 APPEARANCE_PTS="pts"
 APPEARANCE_PLUS_MINUS="plusminus"
+APPEARANCE_APPEARS_IN="appearsIn"
 
 # Creating the Namespaces that will be used for the triples and creating the graph
 APPEARANCE = Namespace(APPEARANCE_CLASS_URI)
 ONTOLOGY= Namespace(ONTOLOGY_URI)
+GAME = Namespace("https://www.dei.unipd.it/Database2/CPS-NBA/Game#")
 graph = Graph()
 graph.bind("appearance",APPEARANCE)
 graph.bind("nba-cps",ONTOLOGY)
+graph.bind("game",GAME)
 
 # Instanciating the helper class
 helper=Helper()
 
 
-def process_appearances():
+def process_apperas_in():
+    print("processing \'appearsIn\'...")
+    players_path=helper.get_csv_path('players')
+    
+    match_details_path=helper.get_csv_path('games_details')
+    games_csv_path = helper.get_csv_path("games")
+
+
+    games_df = helper.read_csv(games_csv_path, ",")
+    games_df=games_df[['GAME_ID']]
+    match_details_df = helper.read_csv(match_details_path, ",")
+    match_details_df=match_details_df[['PLAYER_ID','GAME_ID']]
+
+    complete_df = games_df.merge(match_details_df, how='inner',on='GAME_ID')
+
+    for index,row in complete_df.iterrows():
+        player_id=row['PLAYER_ID']
+        game_id=row['GAME_ID']
+        appearance_subj_uri= URIRef(APPEARANCE+ str(game_id)+"_"+str(player_id))
+        game_obj_uri= URIRef(GAME+str(game_id))
+        graph.add((appearance_subj_uri, ONTOLOGY[APPEARANCE_APPEARS_IN], game_obj_uri))
+
+
+
+
+
+def process_appearances_instances():
     print("processing \'appearance\'...")
     players_path=helper.get_csv_path('players')
     match_details_path=helper.get_csv_path('games_details')
@@ -103,6 +132,12 @@ def process_appearances():
             graph.add((appearance_subj_uri, ONTOLOGY[APPEARANCE_PLUS_MINUS], Literal(int(row['PLUS_MINUS']), datatype= XSD.integer)))
         
 
+    
+
+
+def process_appearances():
+    process_appearances_instances()
+    process_apperas_in()
     serialization_path=str(pathlib.Path(__file__).parent.resolve())+"/serialization/appearances.ttl"
     print("serializing...")
 
