@@ -31,6 +31,7 @@ exec(open(code_dir+"/data_ingestion/player.py").read())
 # -------------------------------------------------------
 exec(open(code_dir+"/data_ingestion/club_arena_join.py").read())
 exec(open(code_dir+"/data_ingestion/game_club_join.py").read())
+exec(open(code_dir+"/data_ingestion/appearance_game_join.py").read())
 
 # -------------------------------------------------------
 # Zip files inside serialization folder
