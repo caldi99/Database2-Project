@@ -72,24 +72,24 @@ graph.bind("base",BASE)
 print("POPULATING THE GRAPH ..")
 for index, row in game_dataframe.iterrows():
     #Subject
-    club_game_subject = URIRef(GAME + str(row['GAME_ID']))
+    game_club_subject = URIRef(GAME + str(row['GAME_ID']))
 
     #Predicate and Object home
-    club_game_home_object = URIRef(CLUB + str(row['HOME_TEAM_ID']))
-    club_game_home_predicate = URIRef(BASE + "homeClub") 
+    game_club_home_object = URIRef(CLUB + str(row['HOME_TEAM_ID']))
+    game_club_home_predicate = URIRef(BASE + "homeClub") 
 
     #Predicate and Object away
-    club_game_away_object = URIRef(CLUB + str(row['VISITOR_TEAM_ID']))
-    club_game_away_predicate = URIRef(BASE + "awayClub") 
+    game_club_away_object = URIRef(CLUB + str(row['VISITOR_TEAM_ID']))
+    game_club_away_predicate = URIRef(BASE + "awayClub") 
 
 
     #Add Triples
-    graph.add((club_game_subject, club_game_away_predicate ,club_game_away_object))
-    graph.add((club_game_subject, club_game_home_predicate, club_game_home_object))        
+    graph.add((game_club_subject, game_club_away_predicate ,game_club_away_object))
+    graph.add((game_club_subject, game_club_home_predicate, game_club_home_object))        
 
 # --------------------------------------------------------------------------
 # Serialize the graph
 # --------------------------------------------------------------------------
 print("SERIALIZING ..")
-serialization_path=str(Path(__file__).parent.resolve())+"/serialization/club_game_join.ttl"
+serialization_path=str(Path(__file__).parent.resolve())+"/serialization/game_club_join.ttl"
 helper.serialize(graph, serialization_path)
