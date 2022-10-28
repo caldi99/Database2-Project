@@ -2,7 +2,7 @@
     Author : Francesco Caldivezzi
 """
 
-from utils.helper import Helper
+from data_ingestion.utils.helper import Helper
 from rdflib import Namespace
 from rdflib import Graph
 from rdflib import URIRef
