@@ -60,7 +60,7 @@ for index, row in club_arena_dataframe.iterrows():
     club_arena_subject_uri = URIRef(CLUB + str(row['TEAM_ID']))
     
     #Predicate
-    club_arena_predicate_uri = URIRef(BASE + "hasArena")
+    club_arena_predicate_uri = URIRef(BASE + "hasStadium")
 
     #Object
     club_arena_object_uri = URIRef(ARENA + str(re.sub(r'\W+', '', row['ARENA'])))   

@@ -88,6 +88,9 @@ for index, row in game_dataframe.iterrows():
     graph.add((game_subject, BASE['astAway'], Literal(row['AST_away'], datatype = XSD.integer)))
     graph.add((game_subject, BASE['rebAway'], Literal(row['REB_away'], datatype = XSD.integer)))
 
+    #Info win home
+    graph.add((game_subject, BASE['winHome'], Literal(row['HOME_TEAM_WINS'], datatype = XSD.integer)))
+
 # --------------------------------------------------------------------------
 # Serialize the graph
 # --------------------------------------------------------------------------

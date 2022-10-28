@@ -59,7 +59,7 @@ for index, row in club_dataframe.iterrows():
     graph.add((club_subject, RDF.type, BASE.Club))
             
     #Nickname
-    graph.add((club_subject, BASE['name'], Literal(row['NICKNAME'], datatype = XSD.string)))
+    graph.add((club_subject, BASE['nickname'], Literal(row['NICKNAME'], datatype = XSD.string)))
     
     #Abbreviation
     graph.add((club_subject, BASE['abbreviation'], Literal(row['ABBREVIATION'], datatype = XSD.string)))

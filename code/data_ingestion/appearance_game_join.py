@@ -2,7 +2,7 @@
     Author : Francesco Caldivezzi
 """
 
-from data_ingestion.utils.helper import Helper
+from utils.helper import Helper
 from rdflib import Namespace
 from rdflib import Graph
 from rdflib import URIRef
@@ -11,19 +11,17 @@ from rdflib import Literal
 from rdflib.namespace import XSD
 from pathlib import Path
 
-# --------------------------------------------------------------------------
-# Create helper object
-# --------------------------------------------------------------------------
 helper = Helper()
 
 # --------------------------------------------------------------------------
-# Read games.csv file
+# Read games.csv and games_details.csv file
 # --------------------------------------------------------------------------
 print("READING DATA FROM CSV FILE ..")
 game_csv_path = helper.get_csv_path("games")
-game_details_csv_path = helper.get_csv_path("games_details")
 game_dataframe = helper.read_csv(game_csv_path, ",")
-game_details_dataframe = helper.read_csv(game_details_csv_path,",")
+
+game_detail_csv_path = helper.get_csv_path("games_details")
+game_detail_dataframe = helper.read_csv(game_detail_csv_path, ",")
 
 # --------------------------------------------------------------------------
 # Drop NA values
@@ -32,23 +30,30 @@ print("DROP NA VALUES ..")
 game_dataframe = game_dataframe.dropna()
 
 # --------------------------------------------------------------------------
-# Restrict game_dataframe to only GAME_ID
+# Merge two dataframes
 # --------------------------------------------------------------------------
-game_dataframe = game_dataframe[['GAME_ID']]
+print("MERGING TWO DATAFRAMES ..")
+merged_dataframe = game_dataframe.merge(game_detail_dataframe, how='left',on='GAME_ID')[
+    ['GAME_ID','PLAYER_ID','SEASON','START_POSITION','MIN','FGM','FGA','FG_PCT','FG3M',
+    'FG3A','FG3_PCT','FTM','FTA','FT_PCT','OREB','DREB','REB','AST','STL','BLK','TO','PTS','PF']] 
 
 # --------------------------------------------------------------------------
-# Join two dataframe
+# Convert to correct type columns
 # --------------------------------------------------------------------------
-merged_dataframe = game_details_dataframe.merge(game_dataframe, how='inner',on='GAME_ID')
+print("CONVERT TO CORRECT TYPE COLS ..")
+merged_dataframe['MIN'] = merged_dataframe['MIN'].astype(str)
 
-print(merged_dataframe.info())
+game_dataframe.info()
+game_detail_dataframe.info()
+merged_dataframe.info()
+
 # --------------------------------------------------------------------------
-# Construct Game Ontology Namespace
+# Construct Appearance Ontology Namespace
 # --------------------------------------------------------------------------
 print("CREATING NAMESPACES OF THE ONTOLOGY ..")
-GAME = Namespace("https://www.dei.unipd.it/Database2/CPS-NBA/Game#")
-BASE = Namespace("https://www.dei.unipd.it/Database2/CPS-NBA/")
 APPEARANCE = Namespace("https://www.dei.unipd.it/Database2/CPS-NBA/Appearance#")
+BASE = Namespace("https://www.dei.unipd.it/Database2/CPS-NBA/")
+GAME = Namespace("https://www.dei.unipd.it/Database2/CPS-NBA/Game#")
 
 # --------------------------------------------------------------------------
 # Create the graph
@@ -60,28 +65,29 @@ graph = Graph()
 # Bind namespaces to a prefix for a better output
 # --------------------------------------------------------------------------
 print("BINDING NAMASPACES TO PREFIXES ..")
-graph.bind("game",GAME)
-graph.bind("base",BASE)
 graph.bind("appearance",APPEARANCE)
+graph.bind("base",BASE)
+graph.bind("game",GAME)
 
 # --------------------------------------------------------------------------
 # Create triples and populate the graph
 # --------------------------------------------------------------------------
-print("POPULATING THE GRAPH ..")
-for index, row in merged_dataframe.iterrows():
-    #Subject 
-    appearance_game_subject_uri = URIRef(APPEARANCE + row[index])
+for index,row in merged_dataframe.iterrows():
+    
+    #if the player has played
+    if(row['MIN'] != 'nan'):
+        #Subject
+        appearance_game_subject_uri = URIRef(APPEARANCE + str("{}_{}_{}_{}".format(row['GAME_ID'],row['PLAYER_ID'],row['SEASON'],row['SEASON'] + 1)))
+        
+        #Predicate
+        appearance_game_predicate_uri = URIRef(BASE + "refersTo")
 
-    #Predicate
-    appearance_game_predicate_uri = URIRef(BASE + "playIn")
+        #Object
+        appearance_game_object_uri = URIRef(GAME + str(row['GAME_ID']))
 
-    #Object
-    appearance_game_object_uri = URIRef(GAME + row['GAME_ID'])
-
-    #Add to graph
-    graph.add((appearance_game_subject_uri,appearance_game_predicate_uri,appearance_game_object_uri))
-
-
+        #Add to graph
+        graph.add((appearance_game_subject_uri,appearance_game_predicate_uri,appearance_game_object_uri))
+               
 # --------------------------------------------------------------------------
 # Serialize the graph
 # --------------------------------------------------------------------------

@@ -33,7 +33,7 @@ class Helper:
                         The output path where to serialize the graph
         """
         #windows complain with wb
-        with open(output_path,'w') as file:
+        with open(output_path,'wb') as file:
             file.write(graph.serialize(format = self.SERIALIZATION_TYPE))        
 
     def read_csv(self, path_csv: str, sep: str, index_col: str = None) -> pd.DataFrame:
@@ -87,7 +87,7 @@ class Helper:
         """
         list_path_files = self.get_list_paths_files_by_folder(path_files_to_zip)
         
-        with ZipFile(path_zip_to_create,'w') as zip:        
+        with ZipFile(path_zip_to_create,'wb') as zip:        
             for file in list_path_files:
                 zip.write(file)
 

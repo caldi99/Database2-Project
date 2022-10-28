@@ -30,17 +30,6 @@ game_dataframe = helper.read_csv(game_csv_path, ",")
 print("DROP NA VALUES ..")
 game_dataframe = game_dataframe.dropna()
 
-# --------------------------------------------------------------------------
-# Convert Cols to corret type
-# --------------------------------------------------------------------------
-print("CONVERT COLS TO CORRECT TYPE ..")
-game_dataframe['PTS_home'] = game_dataframe['PTS_home'].astype(int)
-game_dataframe['PTS_away'] = game_dataframe['PTS_away'].astype(int)
-game_dataframe['AST_home'] = game_dataframe['AST_home'].astype(int)
-game_dataframe['AST_away'] = game_dataframe['AST_away'].astype(int)
-game_dataframe['REB_home'] = game_dataframe['REB_home'].astype(int)
-game_dataframe['REB_away'] = game_dataframe['REB_away'].astype(int)
-
 print(game_dataframe.info())
 print(club_dataframe.info())
 
