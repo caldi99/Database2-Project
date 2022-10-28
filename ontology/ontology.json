@@ -60,12 +60,12 @@
         "y": 303
       },
       "caption": "Country",
-      "style": {
-        "node-color": "#f44e3b"
-      },
       "labels": [],
       "properties": {
         "name": ""
+      },
+      "style": {
+        "node-color": "#f44e3b"
       }
     },
     {
@@ -75,15 +75,15 @@
         "y": 303
       },
       "caption": "Club",
-      "style": {
-        "node-color": "#68bc00"
-      },
       "labels": [],
       "properties": {
         "nickname": "",
         "abbreviation": "",
         "firstYear": "",
         "city": ""
+      },
+      "style": {
+        "node-color": "#68bc00"
       }
     },
     {
@@ -93,13 +93,13 @@
         "y": 303
       },
       "caption": "Arena",
-      "style": {
-        "node-color": "#ab149e"
-      },
       "labels": [],
       "properties": {
         "name": "",
         "capacity": ""
+      },
+      "style": {
+        "node-color": "#ab149e"
       }
     },
     {
@@ -109,9 +109,6 @@
         "y": -20
       },
       "caption": "Game",
-      "style": {
-        "node-color": "#fcc400"
-      },
       "labels": [],
       "properties": {
         "matchDate": "",
@@ -128,6 +125,9 @@
         "astAway": "",
         "rebAway": "",
         "winHome": ""
+      },
+      "style": {
+        "node-color": "#fcc400"
       }
     },
     {
@@ -137,9 +137,6 @@
         "y": -20.000000000000135
       },
       "caption": "Appearance",
-      "style": {
-        "node-color": "#e27300"
-      },
       "labels": [],
       "properties": {
         "role": "",
@@ -162,7 +159,11 @@
         "blk": "",
         "tO": "",
         "pF": "",
-        "pts": ""
+        "pts": "",
+        "comment": ""
+      },
+      "style": {
+        "node-color": "#e27300"
       }
     },
     {
@@ -172,15 +173,15 @@
         "y": -20.000000000000135
       },
       "caption": "Player",
-      "style": {
-        "node-color": "#0c797d"
-      },
       "labels": [],
       "properties": {
         "startYear": "",
         "endYear": "",
         "height": "",
         "weight": ""
+      },
+      "style": {
+        "node-color": "#0c797d"
       }
     },
     {
@@ -190,91 +191,91 @@
         "y": -20
       },
       "caption": "Person",
-      "style": {
-        "node-color": "#68ccca"
-      },
       "labels": [],
       "properties": {
         "name": ""
+      },
+      "style": {
+        "node-color": "#68ccca"
       }
     }
   ],
   "relationships": [
     {
       "id": "n0",
-      "type": "hasStadium",
-      "style": {},
-      "properties": {},
       "fromId": "n1",
-      "toId": "n2"
+      "toId": "n2",
+      "type": "hasStadium",
+      "properties": {},
+      "style": {}
     },
     {
       "id": "n1",
+      "fromId": "n4",
+      "toId": "n1",
       "type": "hasAwayClub",
+      "properties": {},
       "style": {
         "detail-position": "below"
-      },
-      "properties": {},
-      "fromId": "n4",
-      "toId": "n1"
+      }
     },
     {
       "id": "n2",
-      "type": "hasHomeClub",
-      "style": {},
-      "properties": {},
       "fromId": "n4",
-      "toId": "n1"
+      "toId": "n1",
+      "type": "hasHomeClub",
+      "properties": {},
+      "style": {}
     },
     {
       "id": "n3",
-      "type": "refersTo",
-      "style": {},
-      "properties": {},
       "fromId": "n5",
-      "toId": "n4"
+      "toId": "n4",
+      "type": "refersTo",
+      "properties": {},
+      "style": {}
     },
     {
       "id": "n4",
-      "type": "appearsIn",
-      "style": {},
-      "properties": {},
       "fromId": "n6",
-      "toId": "n5"
+      "toId": "n5",
+      "type": "appearsIn",
+      "properties": {},
+      "style": {}
     },
     {
       "id": "n5",
+      "fromId": "n7",
+      "toId": "n6",
       "type": "wasPlayer",
+      "properties": {},
       "style": {
         "detail-position": "below"
-      },
-      "properties": {},
-      "fromId": "n7",
-      "toId": "n6"
+      }
     },
     {
       "id": "n6",
-      "type": "isFrom",
-      "style": {},
-      "properties": {},
       "fromId": "n7",
-      "toId": "n0"
+      "toId": "n0",
+      "type": "isFrom",
+      "properties": {},
+      "style": {}
     },
     {
       "id": "n7",
-      "type": "represents",
-      "style": {},
-      "properties": {},
       "fromId": "n6",
-      "toId": "n7"
+      "toId": "n7",
+      "type": "represents",
+      "properties": {},
+      "style": {}
     },
     {
       "id": "n8",
-      "type": "playedFor",
-      "style": {},
-      "properties": {},
       "fromId": "n6",
-      "toId": "n1"
+      "toId": "n1",
+      "type": "playedFor",
+      "properties": {},
+      "style": {}
     }
   ]
 }

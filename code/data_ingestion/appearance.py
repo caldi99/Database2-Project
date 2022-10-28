@@ -35,7 +35,7 @@ game_dataframe = game_dataframe.dropna()
 print("MERGING TWO DATAFRAMES ..")
 merged_dataframe = game_dataframe.merge(game_detail_dataframe, how='left',on='GAME_ID')[
     ['GAME_ID','PLAYER_ID','SEASON','START_POSITION','MIN','FGM','FGA','FG_PCT','FG3M',
-    'FG3A','FG3_PCT','FTM','FTA','FT_PCT','OREB','DREB','REB','AST','STL','BLK','TO','PTS','PF']] 
+    'FG3A','FG3_PCT','FTM','FTA','FT_PCT','OREB','DREB','REB','AST','STL','BLK','TO','PTS','PF','COMMENT']] 
 
 # --------------------------------------------------------------------------
 # Convert to correct type columns
@@ -71,12 +71,11 @@ graph.bind("base",BASE)
 # Create triples and populate the graph
 # --------------------------------------------------------------------------
 for index,row in merged_dataframe.iterrows():
-    
-    #if the player has played
-    if(row['MIN'] != 'nan'):
-        appearance_subject_uri = URIRef(APPEARANCE + str("{}_{}_{}_{}".format(row['GAME_ID'],row['PLAYER_ID'],row['SEASON'],row['SEASON'] + 1)))
-        graph.add((appearance_subject_uri, RDF.type, BASE.Appearance))
+    appearance_subject_uri = URIRef(APPEARANCE + str("{}_{}_{}_{}".format(row['GAME_ID'],row['PLAYER_ID'],row['SEASON'],row['SEASON'] + 1)))
+    graph.add((appearance_subject_uri, RDF.type, BASE.Appearance))
 
+    #if the player has played
+    if(row['MIN'] != 'nan'):        
         #Data
         graph.add((appearance_subject_uri, BASE['role'], Literal(row['START_POSITION'],datatype = XSD.string)))
         graph.add((appearance_subject_uri, BASE['minutes'], Literal(int(row['MIN'].split(':')[0]),datatype = XSD.integer)))
@@ -99,7 +98,31 @@ for index,row in merged_dataframe.iterrows():
         graph.add((appearance_subject_uri, BASE['tO'], Literal(int(row['TO']),datatype = XSD.integer)))
         graph.add((appearance_subject_uri, BASE['pF'], Literal(int(row['PF']),datatype = XSD.integer)))
         graph.add((appearance_subject_uri, BASE['pts'], Literal(int(row['PTS']),datatype = XSD.integer)))
-
+        graph.add((appearance_subject_uri, BASE['comment'], Literal("",datatype = XSD.string)))
+    else:
+        #Data
+        graph.add((appearance_subject_uri, BASE['role'], Literal("",datatype = XSD.string)))
+        graph.add((appearance_subject_uri, BASE['minutes'], Literal(0,datatype = XSD.integer)))
+        graph.add((appearance_subject_uri, BASE['seconds'], Literal(0,datatype = XSD.integer)))
+        graph.add((appearance_subject_uri, BASE['fgm'], Literal(0,datatype = XSD.integer)))
+        graph.add((appearance_subject_uri, BASE['fga'], Literal(0,datatype = XSD.integer)))
+        graph.add((appearance_subject_uri, BASE['fgpct'], Literal(0.0,datatype = XSD.float)))
+        graph.add((appearance_subject_uri, BASE['fg3m'], Literal(0,datatype = XSD.integer)))
+        graph.add((appearance_subject_uri, BASE['fg3a'], Literal(0,datatype = XSD.integer)))
+        graph.add((appearance_subject_uri, BASE['fg3pct'], Literal(0.0,datatype = XSD.float)))
+        graph.add((appearance_subject_uri, BASE['ftm'], Literal(0,datatype = XSD.integer)))
+        graph.add((appearance_subject_uri, BASE['fta'], Literal(0,datatype = XSD.integer)))
+        graph.add((appearance_subject_uri, BASE['ftpct'], Literal(0.0,datatype = XSD.float)))
+        graph.add((appearance_subject_uri, BASE['oReb'], Literal(0,datatype = XSD.integer)))
+        graph.add((appearance_subject_uri, BASE['dReb'], Literal(0,datatype = XSD.integer)))
+        graph.add((appearance_subject_uri, BASE['reb'], Literal(0,datatype = XSD.integer)))
+        graph.add((appearance_subject_uri, BASE['ast'], Literal(0,datatype = XSD.integer)))
+        graph.add((appearance_subject_uri, BASE['stl'], Literal(0,datatype = XSD.integer)))
+        graph.add((appearance_subject_uri, BASE['blk'], Literal(0,datatype = XSD.integer)))
+        graph.add((appearance_subject_uri, BASE['tO'], Literal(0,datatype = XSD.integer)))
+        graph.add((appearance_subject_uri, BASE['pF'], Literal(0,datatype = XSD.integer)))
+        graph.add((appearance_subject_uri, BASE['pts'], Literal(0,datatype = XSD.integer)))
+        graph.add((appearance_subject_uri, BASE['comment'], Literal(row['COMMENT'],datatype = XSD.string)))
        
 # --------------------------------------------------------------------------
 # Serialize the graph
