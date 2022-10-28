@@ -8,7 +8,7 @@ import re
 ONTOLOGY_URI="https://www.dei.unipd.it/Database2/CPS-NBA/"
 PLAYER_CLASS_URI="https://www.dei.unipd.it/Database2/CPS-NBA/Player#"
 APPEARANCE_CLASS_URI="https://www.dei.unipd.it/Database2/CPS-NBA/Appearance#"
-PLAYER_APPEARANCE="hasPlayedInMatch"
+PLAYER_APPEARANCE="appearsIn"
 
 # Creating the Namespaces that will be used for the triples and creating the graph   
 BASE= Namespace(ONTOLOGY_URI)
@@ -25,26 +25,38 @@ graph.bind("nba-cps",BASE)
 helper=Helper()
 
 # Adds to the graph the triples related to the Player with the corrisponding played matches
-def process_has_played_in_match(players_path,match_details_path):
-    print("processing \'hasPlayedInMatch\'...")
+def process_has_played_in_match(match_details_path,games_path):
+    print("processing \'appearsIn\'...")
     # Getting the dataframe from the .csv file containing the match details
     match_details_df = helper.read_csv(match_details_path, ",")
     match_details_df = match_details_df[['PLAYER_ID','GAME_ID']]
 
-    players_df = helper.read_csv(players_path, ",")
-    players_df = players_df.drop_duplicates(subset=['PLAYER_ID'], keep="first")
-    players_df=players_df[['PLAYER_ID']]
+    games_df = helper.read_csv(games_path, ",")
+    games_df=games_df[['GAME_ID','GAME_DATE_EST']]
+    
 
-    players_complete_df = players_df.merge(match_details_df, how='inner',on='PLAYER_ID')
+    games_df_complete=games_df.merge(match_details_df, how='inner',on=['GAME_ID'])
+
+    for index,row in games_df_complete.iterrows():
+        date_vals=str(row['GAME_DATE_EST']).split('-')
+        year=int(date_vals[0])
+        month=int(date_vals[1])
+        if(month<7):
+            year=year-1
+        games_df_complete.at[index,'GAME_DATE_EST']=year
+    
+    games_df_complete = games_df_complete.rename(columns={'GAME_DATE_EST': 'SEASON'})
+
 
     # Adding to graph the triples of type 'player hasPlayedInMatch appearance'
-    for index,row in players_complete_df.iterrows():
+    for index,row in games_df_complete.iterrows():
         player_id=row['PLAYER_ID']
         game_id=row['GAME_ID']
-        player_subj_uri = URIRef(PLAYER + str(player_id))
+        season=row['SEASON']
+        player_subj_uri = URIRef(PLAYER + str(player_id)+"_"+str(season))
         
-        game_obj_uri= URIRef(APPEARANCE+ str(game_id)+"_"+str(player_id))
-        graph.add((player_subj_uri, BASE[PLAYER_APPEARANCE], game_obj_uri))
+        appearance_obj_uri= URIRef(APPEARANCE+ str(game_id)+"_"+str(player_id)+"_"+str(season))
+        graph.add((player_subj_uri, BASE[PLAYER_APPEARANCE], appearance_obj_uri))
 
     serialization_path=str(pathlib.Path(__file__).parent.resolve())+"/serialization/player_appearance_join.ttl"
     print("serializing...")
@@ -52,7 +64,7 @@ def process_has_played_in_match(players_path,match_details_path):
     # Serializing the graph to a .ttl file
     helper.serialize(graph, serialization_path)
 
-players_path=helper.get_csv_path('players')
 match_details_path=helper.get_csv_path('games_details')
+games_path=helper.get_csv_path('games')
 
-process_has_played_in_match(players_path,match_details_path)
+process_has_played_in_match(match_details_path,games_path)

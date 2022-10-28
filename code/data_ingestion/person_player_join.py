@@ -4,31 +4,31 @@ from rdflib.namespace import XSD
 import math,pathlib
 import re
 
-
 # Defining constants to keep things organized
 ONTOLOGY_URI="https://www.dei.unipd.it/Database2/CPS-NBA/"
+PERSON_CLASS_URI="https://www.dei.unipd.it/Database2/CPS-NBA/Person#"
 PLAYER_CLASS_URI="https://www.dei.unipd.it/Database2/CPS-NBA/Player#"
-PLAYER_HEIGHT="height"
-PLAYER_WEIGHT="weight"
-PLAYER_START_SEASON="startYear"
-PLAYER_END_SEASON="endYear"
+PERSON_WAS_PLAYER="wasPlayer"
+PLAYER_REFERS_TO="refersTo"
 
 # Creating the Namespaces that will be used for the triples and creating the graph   
 BASE= Namespace(ONTOLOGY_URI)
-PLAYER = Namespace(PLAYER_CLASS_URI)    
+PERSON = Namespace(PERSON_CLASS_URI)
+PLAYER = Namespace(PLAYER_CLASS_URI)   
 
 # Creating the Graph and binding URIs to it
 graph = Graph()
-graph.bind("player",PLAYER)
+graph.bind("person",PERSON)
 graph.bind("nba-cps",BASE)
+graph.bind("player",PLAYER)
 
 # Instanciating the helper class
 helper=Helper()
 
 
-# Adds to the graph the triples related to the Player with its Data-Properties
-def process_players(players_path,players_details_path):
-    print("processing \'Player\'...")
+# Adds to the graph the triples related to the Player with the country where he/she was born
+def process_person_join(players_path,players_details_path):
+    print("processing \'wasPlayer\' and \'refersTo\'...")
     # Getting the dataframe from the .csv file containing the players with their caractheristics (height,weight...)
     players_details_df = helper.read_csv(players_details_path, ",")
     players_details_df = players_details_df[players_details_df['season'] > str("2003-04")]
@@ -41,38 +41,30 @@ def process_players(players_path,players_details_path):
     players_df = players_df.rename(columns={'PLAYER_NAME': 'player_name','PLAYER_ID': 'player_id'})
     players_df = players_df[['player_name','player_id']]
 
-    # Merging the dataframes to obtain the final dataframe of players with their properties
+    # Merging the dataframes to obtain the final dataframe of players
     players_complete_df = players_df.merge(players_details_df, how='left',on='player_name')
     players_complete_df = players_complete_df.sort_values(by='player_name')
     players_complete_df = players_complete_df.reset_index(drop=True)
-    
-    # Iterating over the players to create the triples to be added to the graph
+
+    # Adding to graph the triples
     for index,row in players_complete_df.iterrows():
-        player_id=row['player_id']
-        player_weight=row['player_weight']
-        player_height=row['player_height']
+        person_id=row['player_id']
         season=row['season']
-        start_year=int(str(season).split('-')[0])
-        end_year=int(str(season).split('-')[1])+2000
-
-        # Adding the rdf triples to the graph
-        player_subj_uri = URIRef(PLAYER + str(player_id)+"_"+str(season)[0:4])
-        graph.add((player_subj_uri, RDF.type, URIRef(BASE.Player)))
-        if(not math.isnan(player_weight) and not math.isnan(player_height)):
-            graph.add((player_subj_uri, BASE[PLAYER_WEIGHT], Literal(player_weight, datatype = XSD.float)))
-            graph.add((player_subj_uri, BASE[PLAYER_HEIGHT], Literal(player_height, datatype = XSD.float)))
         
-        graph.add((player_subj_uri, BASE[PLAYER_START_SEASON], Literal(start_year, datatype = XSD.integer)))
-        graph.add((player_subj_uri, BASE[PLAYER_END_SEASON], Literal(end_year, datatype = XSD.integer)))
+        person_uri = URIRef(PERSON + str(person_id))
+        player_uri=URIRef(PLAYER+str(person_id)+"_"+str(season)[0:4])
 
-    serialization_path=str(pathlib.Path(__file__).parent.resolve())+"/serialization/players.ttl"
+        graph.add((player_uri, BASE[PLAYER_REFERS_TO], person_uri))
+        graph.add((person_uri, BASE[PERSON_WAS_PLAYER], player_uri))
+
+    
+    serialization_path=str(pathlib.Path(__file__).parent.resolve())+"/serialization/person_player_join.ttl"
     print("serializing...")
 
     # Serializing the graph to a .ttl file
     helper.serialize(graph, serialization_path)
 
-
 players_details_path=helper.get_csv_path('players_details')
 players_path=helper.get_csv_path('players')
 
-process_players(players_path,players_details_path)
+process_person_join(players_path,players_details_path)

@@ -6,18 +6,18 @@ import re
 
 # Defining constants to keep things organized
 ONTOLOGY_URI="https://www.dei.unipd.it/Database2/CPS-NBA/"
-PLAYER_CLASS_URI="https://www.dei.unipd.it/Database2/CPS-NBA/Player#"
+PERSON_CLASS_URI="https://www.dei.unipd.it/Database2/CPS-NBA/Person#"
 COUNTRY_CLASS_URI="https://www.dei.unipd.it/Database2/CPS-NBA/Country#"
-PLAYER_BORN="wasBornIn"
+PERSON_FROM="isFrom"
 
 # Creating the Namespaces that will be used for the triples and creating the graph   
 BASE= Namespace(ONTOLOGY_URI)
-PLAYER = Namespace(PLAYER_CLASS_URI)    
+PERSON = Namespace(PERSON_CLASS_URI)    
 COUNTRY = Namespace(COUNTRY_CLASS_URI)
 
 # Creating the Graph and binding URIs to it
 graph = Graph()
-graph.bind("player",PLAYER)
+graph.bind("person",PERSON)
 graph.bind("country",COUNTRY)
 graph.bind("nba-cps",BASE)
 
@@ -26,8 +26,8 @@ helper=Helper()
 
 
 # Adds to the graph the triples related to the Player with the country where he/she was born
-def process_born_in(players_path,players_details_path):
-    print("processing \'wasBornIn\'...")
+def process_is_from(players_path,players_details_path):
+    print("processing \'isFrom\'...")
     # Getting the dataframe from the .csv file containing the players with their caractheristics (height,weight...)
     players_details_df = helper.read_csv(players_details_path, ",")
     players_details_df = players_details_df[players_details_df['season'] > str("2003-04")]
@@ -51,12 +51,12 @@ def process_born_in(players_path,players_details_path):
         player_id=row['player_id']
         
         player_country=row['country']
-        player_subj_uri = URIRef(PLAYER + str(player_id))
+        player_subj_uri = URIRef(PERSON + str(player_id))
         country_obj_uri= URIRef(COUNTRY+ re.sub(r'\W+', '', str(player_country)))
-        graph.add((player_subj_uri, BASE[PLAYER_BORN], country_obj_uri))
+        graph.add((player_subj_uri, BASE[PERSON_FROM], country_obj_uri))
 
     
-    serialization_path=str(pathlib.Path(__file__).parent.resolve())+"/serialization/player_country_join.ttl"
+    serialization_path=str(pathlib.Path(__file__).parent.resolve())+"/serialization/person_country_join.ttl"
     print("serializing...")
 
     # Serializing the graph to a .ttl file
@@ -65,4 +65,4 @@ def process_born_in(players_path,players_details_path):
 players_details_path=helper.get_csv_path('players_details')
 players_path=helper.get_csv_path('players')
 
-process_born_in(players_path,players_details_path)
+process_is_from(players_path,players_details_path)
