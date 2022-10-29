@@ -73,20 +73,17 @@ graph.bind("game",GAME)
 # Create triples and populate the graph
 # --------------------------------------------------------------------------
 for index,row in merged_dataframe.iterrows():
-    
-    #if the player has played
-    if(row['MIN'] != 'nan'):
-        #Subject
-        appearance_game_subject_uri = URIRef(APPEARANCE + str("{}_{}_{}_{}".format(row['GAME_ID'],row['PLAYER_ID'],row['SEASON'],row['SEASON'] + 1)))
+    #Subject
+    appearance_game_subject_uri = URIRef(APPEARANCE + str("{}_{}_{}_{}".format(row['GAME_ID'],row['PLAYER_ID'],row['SEASON'],row['SEASON'] + 1)))
         
-        #Predicate
-        appearance_game_predicate_uri = URIRef(BASE + "refersTo")
+    #Predicate
+    appearance_game_predicate_uri = URIRef(BASE + "refersTo")
 
-        #Object
-        appearance_game_object_uri = URIRef(GAME + str(row['GAME_ID']))
+    #Object
+    appearance_game_object_uri = URIRef(GAME + str(row['GAME_ID']))
 
-        #Add to graph
-        graph.add((appearance_game_subject_uri,appearance_game_predicate_uri,appearance_game_object_uri))
+    #Add to graph
+    graph.add((appearance_game_subject_uri,appearance_game_predicate_uri,appearance_game_object_uri))
                
 # --------------------------------------------------------------------------
 # Serialize the graph
