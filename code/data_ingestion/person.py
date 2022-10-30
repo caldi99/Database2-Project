@@ -28,16 +28,16 @@ def process_person(players_path):
 
     # Getting the dataframe from the .csv file containing the players with their ids
     players_df = helper.read_csv(players_path, ",")
-    players_df = players_df[['player_name','player_id']]
+    players_df = players_df[['PLAYER_NAME','PLAYER_ID']]
 
     # Adding to graph the triples of type 'player bornIn country'
     for index,row in players_df.iterrows():
-        player_id=row['player_id']
-        player_name=row['player_name']
+        player_id=row['PLAYER_ID']
+        player_name=row['PLAYER_NAME']
         
         player_subj_uri = URIRef(PERSON + str(player_id))
         graph.add((player_subj_uri, XSD.type, BASE.Person))
-        graph.add((player_subj_uri, BASE[PERSON_NAME], Literal(str(player_name),type=XSD.string)))
+        graph.add((player_subj_uri, BASE[PERSON_NAME], Literal(str(player_name),datatype=XSD.string)))
 
     
     serialization_path=str(pathlib.Path(__file__).parent.resolve())+"/serialization/person.ttl"

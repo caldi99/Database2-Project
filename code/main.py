@@ -40,5 +40,5 @@ exec(open(code_dir+"/data_ingestion/person_player_join.py").read())
 # -------------------------------------------------------
 # Zip files inside serialization folder
 # -------------------------------------------------------
-helper.zip_files("serialization/","serialization/serialization.zip")
+helper.zip_files(code_dir + "/serialization/",code_dir + "/zip/serialization.zip")
 

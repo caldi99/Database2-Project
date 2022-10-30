@@ -52,8 +52,12 @@ def process_players(players_path,players_details_path):
         player_weight=row['player_weight']
         player_height=row['player_height']
         season=row['season']
-        start_year=int(str(season).split('-')[0])
-        end_year=int(str(season).split('-')[1])+2000
+        if(str(season) != "nan"):
+            start_year=int(str(season).split('-')[0])
+            end_year=int(str(season).split('-')[1])+2000
+        else:
+            start_year = 2003
+            end_year = 2022
 
         # Adding the rdf triples to the graph
         player_subj_uri = URIRef(PLAYER + str(player_id)+"_"+str(season)[0:4])

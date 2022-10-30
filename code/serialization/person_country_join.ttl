@@ -1,0 +1,3542 @@
+@prefix country: <https://www.dei.unipd.it/Database2/CPS-NBA/Country#> .
+@prefix nba-cps: <https://www.dei.unipd.it/Database2/CPS-NBA/> .
+@prefix person: <https://www.dei.unipd.it/Database2/CPS-NBA/Person#> .
+
+person:101106 nba-cps:isFrom country:Australia .
+
+person:101107 nba-cps:isFrom country:USA .
+
+person:101108 nba-cps:isFrom country:USA .
+
+person:101109 nba-cps:isFrom country:USA .
+
+person:101110 nba-cps:isFrom country:USA .
+
+person:101111 nba-cps:isFrom country:USA .
+
+person:101112 nba-cps:isFrom country:USA .
+
+person:101113 nba-cps:isFrom country:USA .
+
+person:101114 nba-cps:isFrom country:USA .
+
+person:101115 nba-cps:isFrom country:USA .
+
+person:101118 nba-cps:isFrom country:USA .
+
+person:101120 nba-cps:isFrom country:USA .
+
+person:101121 nba-cps:isFrom country:USA .
+
+person:101122 nba-cps:isFrom country:USA .
+
+person:101123 nba-cps:isFrom country:USA .
+
+person:101124 nba-cps:isFrom country:USA .
+
+person:101126 nba-cps:isFrom country:USA .
+
+person:101127 nba-cps:isFrom country:USA .
+
+person:101128 nba-cps:isFrom country:DominicanRepublic .
+
+person:101129 nba-cps:isFrom country:USA .
+
+person:101130 nba-cps:isFrom country:France .
+
+person:101131 nba-cps:isFrom country:USA .
+
+person:101132 nba-cps:isFrom country:Lithuania .
+
+person:101133 nba-cps:isFrom country:France .
+
+person:101135 nba-cps:isFrom country:USA .
+
+person:101138 nba-cps:isFrom country:USA .
+
+person:101139 nba-cps:isFrom country:USA .
+
+person:101141 nba-cps:isFrom country:Turkey .
+
+person:101142 nba-cps:isFrom country:France .
+
+person:101143 nba-cps:isFrom country:USA .
+
+person:101144 nba-cps:isFrom country:USA .
+
+person:101145 nba-cps:isFrom country:USA .
+
+person:101146 nba-cps:isFrom country:USA .
+
+person:101150 nba-cps:isFrom country:USA .
+
+person:101153 nba-cps:isFrom country:USA .
+
+person:101154 nba-cps:isFrom country:USA .
+
+person:101155 nba-cps:isFrom country:USA .
+
+person:101158 nba-cps:isFrom country:USA .
+
+person:101160 nba-cps:isFrom country:USA .
+
+person:101161 nba-cps:isFrom country:USA .
+
+person:101162 nba-cps:isFrom country:Poland .
+
+person:101177 nba-cps:isFrom country:Argentina .
+
+person:101179 nba-cps:isFrom country:USA .
+
+person:101181 nba-cps:isFrom country:Spain .
+
+person:101183 nba-cps:isFrom country:USA .
+
+person:101187 nba-cps:isFrom country:USA .
+
+person:101189 nba-cps:isFrom country:USA .
+
+person:101194 nba-cps:isFrom country:USA .
+
+person:101198 nba-cps:isFrom country:USA .
+
+person:101204 nba-cps:isFrom country:USA .
+
+person:101208 nba-cps:isFrom country:nan .
+
+person:101209 nba-cps:isFrom country:USA .
+
+person:101211 nba-cps:isFrom country:USA .
+
+person:101214 nba-cps:isFrom country:USA .
+
+person:101215 nba-cps:isFrom country:USA .
+
+person:101217 nba-cps:isFrom country:nan .
+
+person:101223 nba-cps:isFrom country:USA .
+
+person:101232 nba-cps:isFrom country:USA .
+
+person:101235 nba-cps:isFrom country:England .
+
+person:101236 nba-cps:isFrom country:USA .
+
+person:101249 nba-cps:isFrom country:USA .
+
+person:1088 nba-cps:isFrom country:USA .
+
+person:1112 nba-cps:isFrom country:USA .
+
+person:122683568 nba-cps:isFrom country:USA .
+
+person:1495 nba-cps:isFrom country:USVirginIslands .
+
+person:1497 nba-cps:isFrom country:USA .
+
+person:1498 nba-cps:isFrom country:USA .
+
+person:1499 nba-cps:isFrom country:USA .
+
+person:1501 nba-cps:isFrom country:USA .
+
+person:1502 nba-cps:isFrom country:StVincentGrenadines .
+
+person:1503 nba-cps:isFrom country:USA .
+
+person:1515 nba-cps:isFrom country:USA .
+
+person:1533 nba-cps:isFrom country:USA .
+
+person:1536 nba-cps:isFrom country:USA .
+
+person:1563 nba-cps:isFrom country:USA .
+
+person:1626143 nba-cps:isFrom country:USA .
+
+person:1626144 nba-cps:isFrom country:DemocraticRepublicoftheCongo .
+
+person:1626145 nba-cps:isFrom country:USA .
+
+person:1626146 nba-cps:isFrom country:USA .
+
+person:1626147 nba-cps:isFrom country:USA .
+
+person:1626148 nba-cps:isFrom country:USA .
+
+person:1626149 nba-cps:isFrom country:USA .
+
+person:1626150 nba-cps:isFrom country:USA .
+
+person:1626151 nba-cps:isFrom country:USA .
+
+person:1626153 nba-cps:isFrom country:USA .
+
+person:1626154 nba-cps:isFrom country:USA .
+
+person:1626155 nba-cps:isFrom country:USA .
+
+person:1626156 nba-cps:isFrom country:USA .
+
+person:1626157 nba-cps:isFrom country:USA .
+
+person:1626158 nba-cps:isFrom country:USA .
+
+person:1626159 nba-cps:isFrom country:USA .
+
+person:1626160 nba-cps:isFrom country:nan .
+
+person:1626161 nba-cps:isFrom country:USA .
+
+person:1626162 nba-cps:isFrom country:USA .
+
+person:1626163 nba-cps:isFrom country:USA .
+
+person:1626164 nba-cps:isFrom country:USA .
+
+person:1626165 nba-cps:isFrom country:nan .
+
+person:1626166 nba-cps:isFrom country:USA .
+
+person:1626167 nba-cps:isFrom country:USA .
+
+person:1626168 nba-cps:isFrom country:USA .
+
+person:1626169 nba-cps:isFrom country:USA .
+
+person:1626170 nba-cps:isFrom country:USA .
+
+person:1626171 nba-cps:isFrom country:USA .
+
+person:1626172 nba-cps:isFrom country:USA .
+
+person:1626173 nba-cps:isFrom country:USA .
+
+person:1626174 nba-cps:isFrom country:USA .
+
+person:1626175 nba-cps:isFrom country:USA .
+
+person:1626176 nba-cps:isFrom country:USA .
+
+person:1626177 nba-cps:isFrom country:USA .
+
+person:1626178 nba-cps:isFrom country:USA .
+
+person:1626179 nba-cps:isFrom country:USA .
+
+person:1626180 nba-cps:isFrom country:nan .
+
+person:1626181 nba-cps:isFrom country:USA .
+
+person:1626182 nba-cps:isFrom country:nan .
+
+person:1626183 nba-cps:isFrom country:USA .
+
+person:1626184 nba-cps:isFrom country:USA .
+
+person:1626185 nba-cps:isFrom country:USA .
+
+person:1626186 nba-cps:isFrom country:nan .
+
+person:1626187 nba-cps:isFrom country:nan .
+
+person:1626188 nba-cps:isFrom country:USA .
+
+person:1626189 nba-cps:isFrom country:nan .
+
+person:1626190 nba-cps:isFrom country:nan .
+
+person:1626191 nba-cps:isFrom country:USA .
+
+person:1626192 nba-cps:isFrom country:USA .
+
+person:1626193 nba-cps:isFrom country:nan .
+
+person:1626195 nba-cps:isFrom country:Spain .
+
+person:1626196 nba-cps:isFrom country:USA .
+
+person:1626199 nba-cps:isFrom country:USA .
+
+person:1626201 nba-cps:isFrom country:nan .
+
+person:1626202 nba-cps:isFrom country:USA .
+
+person:1626203 nba-cps:isFrom country:USA .
+
+person:1626204 nba-cps:isFrom country:USA .
+
+person:1626205 nba-cps:isFrom country:USA .
+
+person:1626207 nba-cps:isFrom country:nan .
+
+person:1626208 nba-cps:isFrom country:nan .
+
+person:1626209 nba-cps:isFrom country:Croatia .
+
+person:1626210 nba-cps:isFrom country:USA .
+
+person:1626213 nba-cps:isFrom country:nan .
+
+person:1626214 nba-cps:isFrom country:USA .
+
+person:1626217 nba-cps:isFrom country:nan .
+
+person:1626219 nba-cps:isFrom country:nan .
+
+person:1626220 nba-cps:isFrom country:USA .
+
+person:1626224 nba-cps:isFrom country:Turkey .
+
+person:1626242 nba-cps:isFrom country:DominicanRepublic .
+
+person:1626245 nba-cps:isFrom country:Brazil .
+
+person:1626246 nba-cps:isFrom country:Serbia .
+
+person:1626251 nba-cps:isFrom country:Croatia .
+
+person:1626252 nba-cps:isFrom country:nan .
+
+person:1626253 nba-cps:isFrom country:France .
+
+person:1626254 nba-cps:isFrom country:Senegal .
+
+person:1626257 nba-cps:isFrom country:Tunisia .
+
+person:1626258 nba-cps:isFrom country:nan .
+
+person:1626259 nba-cps:isFrom country:USA .
+
+person:1626260 nba-cps:isFrom country:nan .
+
+person:1626261 nba-cps:isFrom country:nan .
+
+person:1626262 nba-cps:isFrom country:USA .
+
+person:1626263 nba-cps:isFrom country:nan .
+
+person:1626266 nba-cps:isFrom country:USA .
+
+person:1626269 nba-cps:isFrom country:nan .
+
+person:1626270 nba-cps:isFrom country:nan .
+
+person:1626271 nba-cps:isFrom country:nan .
+
+person:1626272 nba-cps:isFrom country:nan .
+
+person:1626273 nba-cps:isFrom country:Brazil .
+
+person:1626275 nba-cps:isFrom country:nan .
+
+person:1626276 nba-cps:isFrom country:nan .
+
+person:1626279 nba-cps:isFrom country:nan .
+
+person:1626280 nba-cps:isFrom country:nan .
+
+person:1626281 nba-cps:isFrom country:nan .
+
+person:1626285 nba-cps:isFrom country:nan .
+
+person:1626288 nba-cps:isFrom country:nan .
+
+person:1626289 nba-cps:isFrom country:nan .
+
+person:1626290 nba-cps:isFrom country:nan .
+
+person:1626293 nba-cps:isFrom country:nan .
+
+person:1626294 nba-cps:isFrom country:nan .
+
+person:1626295 nba-cps:isFrom country:nan .
+
+person:1626296 nba-cps:isFrom country:USA .
+
+person:1626304 nba-cps:isFrom country:nan .
+
+person:1626305 nba-cps:isFrom country:nan .
+
+person:1626643 nba-cps:isFrom country:USA .
+
+person:1626780 nba-cps:isFrom country:USA .
+
+person:1627098 nba-cps:isFrom country:USA .
+
+person:1627215 nba-cps:isFrom country:USA .
+
+person:1627224 nba-cps:isFrom country:nan .
+
+person:1627258 nba-cps:isFrom country:nan .
+
+person:1627292 nba-cps:isFrom country:nan .
+
+person:1627293 nba-cps:isFrom country:USA .
+
+person:1627322 nba-cps:isFrom country:nan .
+
+person:1627362 nba-cps:isFrom country:USA .
+
+person:1627395 nba-cps:isFrom country:USA .
+
+person:1627496 nba-cps:isFrom country:nan .
+
+person:1627732 nba-cps:isFrom country:Australia .
+
+person:1627733 nba-cps:isFrom country:Croatia .
+
+person:1627734 nba-cps:isFrom country:Lithuania .
+
+person:1627735 nba-cps:isFrom country:USA .
+
+person:1627736 nba-cps:isFrom country:USA .
+
+person:1627737 nba-cps:isFrom country:USA .
+
+person:1627738 nba-cps:isFrom country:USA .
+
+person:1627739 nba-cps:isFrom country:USA .
+
+person:1627740 nba-cps:isFrom country:USA .
+
+person:1627741 nba-cps:isFrom country:Bahamas .
+
+person:1627742 nba-cps:isFrom country:USA .
+
+person:1627743 nba-cps:isFrom country:USA .
+
+person:1627744 nba-cps:isFrom country:USA .
+
+person:1627745 nba-cps:isFrom country:USA .
+
+person:1627746 nba-cps:isFrom country:Haiti .
+
+person:1627747 nba-cps:isFrom country:USA .
+
+person:1627748 nba-cps:isFrom country:SouthSudan .
+
+person:1627749 nba-cps:isFrom country:USA .
+
+person:1627750 nba-cps:isFrom country:Canada .
+
+person:1627751 nba-cps:isFrom country:Austria .
+
+person:1627752 nba-cps:isFrom country:USA .
+
+person:1627753 nba-cps:isFrom country:China .
+
+person:1627754 nba-cps:isFrom country:USA .
+
+person:1627755 nba-cps:isFrom country:USA .
+
+person:1627756 nba-cps:isFrom country:USA .
+
+person:1627757 nba-cps:isFrom country:USA .
+
+person:1627758 nba-cps:isFrom country:USA .
+
+person:1627759 nba-cps:isFrom country:USA .
+
+person:1627760 nba-cps:isFrom country:nan .
+
+person:1627761 nba-cps:isFrom country:USA .
+
+person:1627762 nba-cps:isFrom country:Ukraine .
+
+person:1627763 nba-cps:isFrom country:USA .
+
+person:1627765 nba-cps:isFrom country:nan .
+
+person:1627766 nba-cps:isFrom country:nan .
+
+person:1627767 nba-cps:isFrom country:Mali .
+
+person:1627768 nba-cps:isFrom country:nan .
+
+person:162777 nba-cps:isFrom country:USA .
+
+person:1627770 nba-cps:isFrom country:USA .
+
+person:1627771 nba-cps:isFrom country:USA .
+
+person:1627772 nba-cps:isFrom country:USA .
+
+person:1627773 nba-cps:isFrom country:USA .
+
+person:1627774 nba-cps:isFrom country:USA .
+
+person:1627775 nba-cps:isFrom country:USA .
+
+person:1627776 nba-cps:isFrom country:nan .
+
+person:1627777 nba-cps:isFrom country:USA .
+
+person:1627778 nba-cps:isFrom country:USA .
+
+person:1627779 nba-cps:isFrom country:USA .
+
+person:1627780 nba-cps:isFrom country:USA .
+
+person:1627781 nba-cps:isFrom country:USA .
+
+person:1627782 nba-cps:isFrom country:USA .
+
+person:1627783 nba-cps:isFrom country:Cameroon .
+
+person:1627784 nba-cps:isFrom country:USA .
+
+person:1627785 nba-cps:isFrom country:USA .
+
+person:1627786 nba-cps:isFrom country:USA .
+
+person:1627787 nba-cps:isFrom country:Canada .
+
+person:1627788 nba-cps:isFrom country:Turkey .
+
+person:1627789 nba-cps:isFrom country:France .
+
+person:1627790 nba-cps:isFrom country:Croatia .
+
+person:1627791 nba-cps:isFrom country:Ghana .
+
+person:1627811 nba-cps:isFrom country:nan .
+
+person:1627812 nba-cps:isFrom country:USA .
+
+person:1627814 nba-cps:isFrom country:USA .
+
+person:1627815 nba-cps:isFrom country:USA .
+
+person:1627816 nba-cps:isFrom country:USA .
+
+person:1627817 nba-cps:isFrom country:USA .
+
+person:1627818 nba-cps:isFrom country:nan .
+
+person:1627819 nba-cps:isFrom country:USA .
+
+person:1627820 nba-cps:isFrom country:USA .
+
+person:1627821 nba-cps:isFrom country:USA .
+
+person:1627823 nba-cps:isFrom country:Spain .
+
+person:1627824 nba-cps:isFrom country:France .
+
+person:1627825 nba-cps:isFrom country:nan .
+
+person:1627826 nba-cps:isFrom country:Croatia .
+
+person:1627827 nba-cps:isFrom country:USA .
+
+person:1627829 nba-cps:isFrom country:nan .
+
+person:1627832 nba-cps:isFrom country:USA .
+
+person:1627834 nba-cps:isFrom country:Greece .
+
+person:1627835 nba-cps:isFrom country:Germany .
+
+person:1627836 nba-cps:isFrom country:nan .
+
+person:1627841 nba-cps:isFrom country:nan .
+
+person:1627843 nba-cps:isFrom country:nan .
+
+person:1627846 nba-cps:isFrom country:Egypt .
+
+person:1627848 nba-cps:isFrom country:USA .
+
+person:1627849 nba-cps:isFrom country:USA .
+
+person:1627850 nba-cps:isFrom country:USA .
+
+person:1627851 nba-cps:isFrom country:Lithuania .
+
+person:1627852 nba-cps:isFrom country:Argentina .
+
+person:1627853 nba-cps:isFrom country:USA .
+
+person:1627854 nba-cps:isFrom country:USA .
+
+person:1627855 nba-cps:isFrom country:USA .
+
+person:1627856 nba-cps:isFrom country:USA .
+
+person:1627858 nba-cps:isFrom country:USA .
+
+person:1627861 nba-cps:isFrom country:USA .
+
+person:1627862 nba-cps:isFrom country:nan .
+
+person:1627863 nba-cps:isFrom country:USA .
+
+person:1627865 nba-cps:isFrom country:nan .
+
+person:1627866 nba-cps:isFrom country:USA .
+
+person:1627867 nba-cps:isFrom country:nan .
+
+person:1627868 nba-cps:isFrom country:Argentina .
+
+person:1627873 nba-cps:isFrom country:nan .
+
+person:1627875 nba-cps:isFrom country:USA .
+
+person:1627878 nba-cps:isFrom country:nan .
+
+person:1627879 nba-cps:isFrom country:Argentina .
+
+person:1627880 nba-cps:isFrom country:nan .
+
+person:1627881 nba-cps:isFrom country:nan .
+
+person:1627882 nba-cps:isFrom country:nan .
+
+person:1627883 nba-cps:isFrom country:USA .
+
+person:1627884 nba-cps:isFrom country:USA .
+
+person:1627885 nba-cps:isFrom country:USA .
+
+person:1627886 nba-cps:isFrom country:nan .
+
+person:1627887 nba-cps:isFrom country:nan .
+
+person:1627888 nba-cps:isFrom country:nan .
+
+person:1627902 nba-cps:isFrom country:nan .
+
+person:1627936 nba-cps:isFrom country:USA .
+
+person:1627938 nba-cps:isFrom country:nan .
+
+person:1627954 nba-cps:isFrom country:nan .
+
+person:1627982 nba-cps:isFrom country:USA .
+
+person:1627988 nba-cps:isFrom country:USA .
+
+person:1628021 nba-cps:isFrom country:USA .
+
+person:1628035 nba-cps:isFrom country:USA .
+
+person:1628041 nba-cps:isFrom country:nan .
+
+person:1628070 nba-cps:isFrom country:USA .
+
+person:1628174 nba-cps:isFrom country:nan .
+
+person:1628176 nba-cps:isFrom country:nan .
+
+person:1628241 nba-cps:isFrom country:nan .
+
+person:1628249 nba-cps:isFrom country:Australia .
+
+person:1628365 nba-cps:isFrom country:USA .
+
+person:1628366 nba-cps:isFrom country:USA .
+
+person:1628367 nba-cps:isFrom country:USA .
+
+person:1628368 nba-cps:isFrom country:USA .
+
+person:1628369 nba-cps:isFrom country:USA .
+
+person:1628370 nba-cps:isFrom country:USA .
+
+person:1628371 nba-cps:isFrom country:USA .
+
+person:1628372 nba-cps:isFrom country:USA .
+
+person:1628373 nba-cps:isFrom country:France .
+
+person:1628374 nba-cps:isFrom country:Finland .
+
+person:1628378 nba-cps:isFrom country:USA .
+
+person:1628379 nba-cps:isFrom country:USA .
+
+person:1628380 nba-cps:isFrom country:USA .
+
+person:1628381 nba-cps:isFrom country:USA .
+
+person:1628382 nba-cps:isFrom country:USA .
+
+person:1628383 nba-cps:isFrom country:USA .
+
+person:1628384 nba-cps:isFrom country:UnitedKingdom .
+
+person:1628385 nba-cps:isFrom country:USA .
+
+person:1628386 nba-cps:isFrom country:USA .
+
+person:1628387 nba-cps:isFrom country:USA .
+
+person:1628388 nba-cps:isFrom country:USA .
+
+person:1628389 nba-cps:isFrom country:USA .
+
+person:1628390 nba-cps:isFrom country:USA .
+
+person:1628391 nba-cps:isFrom country:USA .
+
+person:1628392 nba-cps:isFrom country:Germany .
+
+person:1628393 nba-cps:isFrom country:USA .
+
+person:1628394 nba-cps:isFrom country:Latvia .
+
+person:1628395 nba-cps:isFrom country:USA .
+
+person:1628396 nba-cps:isFrom country:USA .
+
+person:1628397 nba-cps:isFrom country:USA .
+
+person:1628398 nba-cps:isFrom country:USA .
+
+person:1628399 nba-cps:isFrom country:USA .
+
+person:1628400 nba-cps:isFrom country:USA .
+
+person:1628401 nba-cps:isFrom country:USA .
+
+person:1628402 nba-cps:isFrom country:USA .
+
+person:1628403 nba-cps:isFrom country:USA .
+
+person:1628404 nba-cps:isFrom country:USA .
+
+person:1628405 nba-cps:isFrom country:USA .
+
+person:1628407 nba-cps:isFrom country:USA .
+
+person:1628408 nba-cps:isFrom country:USA .
+
+person:1628409 nba-cps:isFrom country:USA .
+
+person:1628410 nba-cps:isFrom country:USA .
+
+person:1628411 nba-cps:isFrom country:USA .
+
+person:1628412 nba-cps:isFrom country:USA .
+
+person:1628413 nba-cps:isFrom country:Australia .
+
+person:1628414 nba-cps:isFrom country:USA .
+
+person:1628415 nba-cps:isFrom country:Canada .
+
+person:1628416 nba-cps:isFrom country:USA .
+
+person:1628417 nba-cps:isFrom country:USA .
+
+person:1628418 nba-cps:isFrom country:USA .
+
+person:1628419 nba-cps:isFrom country:USA .
+
+person:1628420 nba-cps:isFrom country:USA .
+
+person:1628421 nba-cps:isFrom country:USA .
+
+person:1628422 nba-cps:isFrom country:USA .
+
+person:1628424 nba-cps:isFrom country:USA .
+
+person:1628425 nba-cps:isFrom country:USA .
+
+person:1628427 nba-cps:isFrom country:Slovenia .
+
+person:1628429 nba-cps:isFrom country:USA .
+
+person:1628430 nba-cps:isFrom country:USA .
+
+person:1628431 nba-cps:isFrom country:nan .
+
+person:1628432 nba-cps:isFrom country:USA .
+
+person:1628433 nba-cps:isFrom country:nan .
+
+person:1628436 nba-cps:isFrom country:USA .
+
+person:1628437 nba-cps:isFrom country:nan .
+
+person:1628439 nba-cps:isFrom country:USA .
+
+person:1628443 nba-cps:isFrom country:USA .
+
+person:1628444 nba-cps:isFrom country:USA .
+
+person:1628448 nba-cps:isFrom country:nan .
+
+person:1628449 nba-cps:isFrom country:Canada .
+
+person:1628450 nba-cps:isFrom country:USA .
+
+person:1628451 nba-cps:isFrom country:USA .
+
+person:1628452 nba-cps:isFrom country:nan .
+
+person:1628453 nba-cps:isFrom country:nan .
+
+person:1628454 nba-cps:isFrom country:nan .
+
+person:1628455 nba-cps:isFrom country:USA .
+
+person:1628456 nba-cps:isFrom country:nan .
+
+person:1628460 nba-cps:isFrom country:nan .
+
+person:1628462 nba-cps:isFrom country:Serbia .
+
+person:1628463 nba-cps:isFrom country:USA .
+
+person:1628464 nba-cps:isFrom country:Germany .
+
+person:1628467 nba-cps:isFrom country:Germany .
+
+person:1628469 nba-cps:isFrom country:USA .
+
+person:1628470 nba-cps:isFrom country:USA .
+
+person:1628473 nba-cps:isFrom country:nan .
+
+person:1628475 nba-cps:isFrom country:USA .
+
+person:1628476 nba-cps:isFrom country:USA .
+
+person:1628477 nba-cps:isFrom country:nan .
+
+person:1628491 nba-cps:isFrom country:nan .
+
+person:1628492 nba-cps:isFrom country:PuertoRico .
+
+person:1628493 nba-cps:isFrom country:Australia .
+
+person:1628494 nba-cps:isFrom country:nan .
+
+person:1628495 nba-cps:isFrom country:USA .
+
+person:1628496 nba-cps:isFrom country:nan .
+
+person:1628499 nba-cps:isFrom country:USA .
+
+person:1628500 nba-cps:isFrom country:USA .
+
+person:1628502 nba-cps:isFrom country:USA .
+
+person:1628503 nba-cps:isFrom country:USA .
+
+person:1628504 nba-cps:isFrom country:Canada .
+
+person:1628505 nba-cps:isFrom country:USA .
+
+person:1628506 nba-cps:isFrom country:USA .
+
+person:1628510 nba-cps:isFrom country:USA .
+
+person:1628511 nba-cps:isFrom country:nan .
+
+person:1628512 nba-cps:isFrom country:nan .
+
+person:1628513 nba-cps:isFrom country:Canada .
+
+person:1628514 nba-cps:isFrom country:nan .
+
+person:1628515 nba-cps:isFrom country:USA .
+
+person:1628516 nba-cps:isFrom country:nan .
+
+person:1628517 nba-cps:isFrom country:nan .
+
+person:1628518 nba-cps:isFrom country:USA .
+
+person:1628528 nba-cps:isFrom country:nan .
+
+person:1628535 nba-cps:isFrom country:nan .
+
+person:1628537 nba-cps:isFrom country:USA .
+
+person:1628539 nba-cps:isFrom country:Canada .
+
+person:1628554 nba-cps:isFrom country:nan .
+
+person:1628571 nba-cps:isFrom country:USA .
+
+person:1628575 nba-cps:isFrom country:nan .
+
+person:1628576 nba-cps:isFrom country:nan .
+
+person:1628577 nba-cps:isFrom country:nan .
+
+person:1628578 nba-cps:isFrom country:USA .
+
+person:1628579 nba-cps:isFrom country:nan .
+
+person:1628605 nba-cps:isFrom country:USA .
+
+person:1628610 nba-cps:isFrom country:nan .
+
+person:1628656 nba-cps:isFrom country:USA .
+
+person:1628677 nba-cps:isFrom country:nan .
+
+person:1628679 nba-cps:isFrom country:nan .
+
+person:1628680 nba-cps:isFrom country:nan .
+
+person:1628681 nba-cps:isFrom country:USA .
+
+person:1628769 nba-cps:isFrom country:USA .
+
+person:1628935 nba-cps:isFrom country:USA .
+
+person:1628959 nba-cps:isFrom country:USA .
+
+person:1628960 nba-cps:isFrom country:USA .
+
+person:1628961 nba-cps:isFrom country:Greece .
+
+person:1628963 nba-cps:isFrom country:USA .
+
+person:1628964 nba-cps:isFrom country:USA .
+
+person:1628965 nba-cps:isFrom country:nan .
+
+person:1628966 nba-cps:isFrom country:USA .
+
+person:1628967 nba-cps:isFrom country:nan .
+
+person:1628968 nba-cps:isFrom country:USA .
+
+person:1628969 nba-cps:isFrom country:USA .
+
+person:1628970 nba-cps:isFrom country:USA .
+
+person:1628971 nba-cps:isFrom country:USA .
+
+person:1628972 nba-cps:isFrom country:USA .
+
+person:1628973 nba-cps:isFrom country:USA .
+
+person:1628975 nba-cps:isFrom country:USA .
+
+person:1628976 nba-cps:isFrom country:USA .
+
+person:1628977 nba-cps:isFrom country:USA .
+
+person:1628978 nba-cps:isFrom country:USA .
+
+person:1628979 nba-cps:isFrom country:USA .
+
+person:1628980 nba-cps:isFrom country:USA .
+
+person:1628981 nba-cps:isFrom country:Angola .
+
+person:1628982 nba-cps:isFrom country:USA .
+
+person:1628983 nba-cps:isFrom country:Canada .
+
+person:1628984 nba-cps:isFrom country:USA .
+
+person:1628985 nba-cps:isFrom country:USA .
+
+person:1628988 nba-cps:isFrom country:USA .
+
+person:1628989 nba-cps:isFrom country:USA .
+
+person:1628990 nba-cps:isFrom country:USA .
+
+person:1628991 nba-cps:isFrom country:USA .
+
+person:1628993 nba-cps:isFrom country:USA .
+
+person:1628994 nba-cps:isFrom country:USA .
+
+person:1628995 nba-cps:isFrom country:USA .
+
+person:1628996 nba-cps:isFrom country:nan .
+
+person:1628997 nba-cps:isFrom country:USA .
+
+person:1628998 nba-cps:isFrom country:USA .
+
+person:1628999 nba-cps:isFrom country:USA .
+
+person:1629000 nba-cps:isFrom country:nan .
+
+person:1629001 nba-cps:isFrom country:USA .
+
+person:1629002 nba-cps:isFrom country:USA .
+
+person:1629003 nba-cps:isFrom country:USA .
+
+person:1629004 nba-cps:isFrom country:Ukraine .
+
+person:1629005 nba-cps:isFrom country:USA .
+
+person:1629006 nba-cps:isFrom country:Nigeria .
+
+person:1629008 nba-cps:isFrom country:USA .
+
+person:1629009 nba-cps:isFrom country:nan .
+
+person:1629010 nba-cps:isFrom country:USA .
+
+person:1629011 nba-cps:isFrom country:USA .
+
+person:1629012 nba-cps:isFrom country:USA .
+
+person:1629013 nba-cps:isFrom country:USA .
+
+person:1629014 nba-cps:isFrom country:USA .
+
+person:1629015 nba-cps:isFrom country:USA .
+
+person:1629016 nba-cps:isFrom country:USA .
+
+person:1629017 nba-cps:isFrom country:USA .
+
+person:1629018 nba-cps:isFrom country:USA .
+
+person:1629019 nba-cps:isFrom country:USA .
+
+person:1629020 nba-cps:isFrom country:USA .
+
+person:1629021 nba-cps:isFrom country:Germany .
+
+person:1629022 nba-cps:isFrom country:USA .
+
+person:1629023 nba-cps:isFrom country:USA .
+
+person:1629026 nba-cps:isFrom country:USA .
+
+person:1629027 nba-cps:isFrom country:USA .
+
+person:1629028 nba-cps:isFrom country:Bahamas .
+
+person:1629029 nba-cps:isFrom country:Slovenia .
+
+person:1629033 nba-cps:isFrom country:USA .
+
+person:1629034 nba-cps:isFrom country:USA .
+
+person:1629035 nba-cps:isFrom country:USA .
+
+person:1629036 nba-cps:isFrom country:nan .
+
+person:1629037 nba-cps:isFrom country:nan .
+
+person:1629044 nba-cps:isFrom country:USA .
+
+person:1629045 nba-cps:isFrom country:USA .
+
+person:1629048 nba-cps:isFrom country:Georgia .
+
+person:1629050 nba-cps:isFrom country:nan .
+
+person:1629052 nba-cps:isFrom country:Canada .
+
+person:1629053 nba-cps:isFrom country:USA .
+
+person:1629055 nba-cps:isFrom country:USA .
+
+person:1629056 nba-cps:isFrom country:USA .
+
+person:1629057 nba-cps:isFrom country:USA .
+
+person:1629058 nba-cps:isFrom country:BosniaandHerzegovina .
+
+person:1629059 nba-cps:isFrom country:France .
+
+person:1629060 nba-cps:isFrom country:Japan .
+
+person:1629061 nba-cps:isFrom country:SouthSudan .
+
+person:1629065 nba-cps:isFrom country:USA .
+
+person:1629066 nba-cps:isFrom country:Latvia .
+
+person:1629067 nba-cps:isFrom country:Germany .
+
+person:1629070 nba-cps:isFrom country:nan .
+
+person:1629076 nba-cps:isFrom country:USA .
+
+person:1629078 nba-cps:isFrom country:nan .
+
+person:1629093 nba-cps:isFrom country:USA .
+
+person:1629094 nba-cps:isFrom country:USA .
+
+person:1629097 nba-cps:isFrom country:nan .
+
+person:1629102 nba-cps:isFrom country:USA .
+
+person:1629103 nba-cps:isFrom country:USA .
+
+person:1629109 nba-cps:isFrom country:USA .
+
+person:1629116 nba-cps:isFrom country:DominicanRepublic .
+
+person:1629117 nba-cps:isFrom country:SouthSudan .
+
+person:1629118 nba-cps:isFrom country:USA .
+
+person:1629121 nba-cps:isFrom country:USA .
+
+person:1629122 nba-cps:isFrom country:USA .
+
+person:1629123 nba-cps:isFrom country:USA .
+
+person:1629126 nba-cps:isFrom country:USA .
+
+person:1629129 nba-cps:isFrom country:nan .
+
+person:1629130 nba-cps:isFrom country:USA .
+
+person:1629131 nba-cps:isFrom country:nan .
+
+person:1629132 nba-cps:isFrom country:nan .
+
+person:1629133 nba-cps:isFrom country:USA .
+
+person:1629134 nba-cps:isFrom country:USA .
+
+person:1629136 nba-cps:isFrom country:nan .
+
+person:1629137 nba-cps:isFrom country:nan .
+
+person:1629139 nba-cps:isFrom country:Japan .
+
+person:1629140 nba-cps:isFrom country:USA .
+
+person:1629142 nba-cps:isFrom country:nan .
+
+person:1629145 nba-cps:isFrom country:nan .
+
+person:1629146 nba-cps:isFrom country:nan .
+
+person:1629147 nba-cps:isFrom country:USA .
+
+person:1629148 nba-cps:isFrom country:nan .
+
+person:1629149 nba-cps:isFrom country:nan .
+
+person:1629150 nba-cps:isFrom country:USA .
+
+person:1629151 nba-cps:isFrom country:Australia .
+
+person:1629152 nba-cps:isFrom country:TrinidadandTobago .
+
+person:1629154 nba-cps:isFrom country:nan .
+
+person:1629155 nba-cps:isFrom country:USA .
+
+person:1629156 nba-cps:isFrom country:nan .
+
+person:1629159 nba-cps:isFrom country:nan .
+
+person:1629162 nba-cps:isFrom country:USA .
+
+person:1629163 nba-cps:isFrom country:nan .
+
+person:1629164 nba-cps:isFrom country:USA .
+
+person:1629165 nba-cps:isFrom country:nan .
+
+person:1629166 nba-cps:isFrom country:nan .
+
+person:1629167 nba-cps:isFrom country:nan .
+
+person:1629168 nba-cps:isFrom country:USA .
+
+person:1629184 nba-cps:isFrom country:nan .
+
+person:1629185 nba-cps:isFrom country:USA .
+
+person:1629186 nba-cps:isFrom country:nan .
+
+person:1629190 nba-cps:isFrom country:nan .
+
+person:1629203 nba-cps:isFrom country:USA .
+
+person:1629226 nba-cps:isFrom country:nan .
+
+person:1629232 nba-cps:isFrom country:nan .
+
+person:1629234 nba-cps:isFrom country:USA .
+
+person:1629236 nba-cps:isFrom country:nan .
+
+person:1629244 nba-cps:isFrom country:USA .
+
+person:1629245 nba-cps:isFrom country:nan .
+
+person:1629246 nba-cps:isFrom country:nan .
+
+person:1629260 nba-cps:isFrom country:nan .
+
+person:1629270 nba-cps:isFrom country:nan .
+
+person:1629285 nba-cps:isFrom country:nan .
+
+person:1629305 nba-cps:isFrom country:nan .
+
+person:1629308 nba-cps:isFrom country:USA .
+
+person:1629312 nba-cps:isFrom country:USA .
+
+person:1629346 nba-cps:isFrom country:Serbia .
+
+person:1629352 nba-cps:isFrom country:nan .
+
+person:1629353 nba-cps:isFrom country:Australia .
+
+person:1629541 nba-cps:isFrom country:Latvia .
+
+person:1629594 nba-cps:isFrom country:nan .
+
+person:1629595 nba-cps:isFrom country:nan .
+
+person:1629597 nba-cps:isFrom country:USA .
+
+person:1629598 nba-cps:isFrom country:USA .
+
+person:1629599 nba-cps:isFrom country:USA .
+
+person:1629605 nba-cps:isFrom country:Senegal .
+
+person:1629606 nba-cps:isFrom country:USA .
+
+person:1629607 nba-cps:isFrom country:USA .
+
+person:1629608 nba-cps:isFrom country:USA .
+
+person:1629609 nba-cps:isFrom country:nan .
+
+person:1629610 nba-cps:isFrom country:USA .
+
+person:1629611 nba-cps:isFrom country:USA .
+
+person:1629612 nba-cps:isFrom country:nan .
+
+person:1629615 nba-cps:isFrom country:nan .
+
+person:1629616 nba-cps:isFrom country:nan .
+
+person:1629620 nba-cps:isFrom country:USA .
+
+person:1629621 nba-cps:isFrom country:Canada .
+
+person:1629622 nba-cps:isFrom country:USA .
+
+person:1629623 nba-cps:isFrom country:nan .
+
+person:1629624 nba-cps:isFrom country:nan .
+
+person:1629625 nba-cps:isFrom country:USA .
+
+person:1629626 nba-cps:isFrom country:Sudan .
+
+person:1629627 nba-cps:isFrom country:USA .
+
+person:1629628 nba-cps:isFrom country:Canada .
+
+person:1629629 nba-cps:isFrom country:USA .
+
+person:1629630 nba-cps:isFrom country:USA .
+
+person:1629631 nba-cps:isFrom country:USA .
+
+person:1629632 nba-cps:isFrom country:USA .
+
+person:1629633 nba-cps:isFrom country:USA .
+
+person:1629634 nba-cps:isFrom country:Canada .
+
+person:1629635 nba-cps:isFrom country:France .
+
+person:1629636 nba-cps:isFrom country:USA .
+
+person:1629637 nba-cps:isFrom country:USA .
+
+person:1629638 nba-cps:isFrom country:Canada .
+
+person:1629639 nba-cps:isFrom country:USA .
+
+person:1629640 nba-cps:isFrom country:USA .
+
+person:1629641 nba-cps:isFrom country:USA .
+
+person:1629642 nba-cps:isFrom country:USA .
+
+person:1629644 nba-cps:isFrom country:USA .
+
+person:1629645 nba-cps:isFrom country:USA .
+
+person:1629647 nba-cps:isFrom country:USA .
+
+person:1629648 nba-cps:isFrom country:USA .
+
+person:1629649 nba-cps:isFrom country:Canada .
+
+person:1629650 nba-cps:isFrom country:USA .
+
+person:1629651 nba-cps:isFrom country:USA .
+
+person:1629652 nba-cps:isFrom country:Canada .
+
+person:1629655 nba-cps:isFrom country:USA .
+
+person:1629657 nba-cps:isFrom country:USA .
+
+person:1629658 nba-cps:isFrom country:France .
+
+person:1629659 nba-cps:isFrom country:USA .
+
+person:1629660 nba-cps:isFrom country:USA .
+
+person:1629661 nba-cps:isFrom country:USA .
+
+person:1629662 nba-cps:isFrom country:Canada .
+
+person:1629663 nba-cps:isFrom country:USA .
+
+person:1629664 nba-cps:isFrom country:nan .
+
+person:1629665 nba-cps:isFrom country:USA .
+
+person:1629667 nba-cps:isFrom country:USA .
+
+person:1629668 nba-cps:isFrom country:USA .
+
+person:1629669 nba-cps:isFrom country:USA .
+
+person:1629671 nba-cps:isFrom country:USA .
+
+person:1629672 nba-cps:isFrom country:USA .
+
+person:1629673 nba-cps:isFrom country:USA .
+
+person:1629675 nba-cps:isFrom country:USA .
+
+person:1629676 nba-cps:isFrom country:USA .
+
+person:1629677 nba-cps:isFrom country:Croatia .
+
+person:1629678 nba-cps:isFrom country:UnitedKingdom .
+
+person:1629679 nba-cps:isFrom country:nan .
+
+person:1629680 nba-cps:isFrom country:USA .
+
+person:1629682 nba-cps:isFrom country:USA .
+
+person:1629683 nba-cps:isFrom country:USA .
+
+person:1629684 nba-cps:isFrom country:USA .
+
+person:1629685 nba-cps:isFrom country:USA .
+
+person:1629689 nba-cps:isFrom country:nan .
+
+person:1629690 nba-cps:isFrom country:France .
+
+person:1629713 nba-cps:isFrom country:USA .
+
+person:1629714 nba-cps:isFrom country:USA .
+
+person:1629715 nba-cps:isFrom country:nan .
+
+person:1629716 nba-cps:isFrom country:USA .
+
+person:1629717 nba-cps:isFrom country:USA .
+
+person:1629718 nba-cps:isFrom country:nan .
+
+person:1629719 nba-cps:isFrom country:USA .
+
+person:1629721 nba-cps:isFrom country:nan .
+
+person:1629722 nba-cps:isFrom country:nan .
+
+person:1629723 nba-cps:isFrom country:USA .
+
+person:1629724 nba-cps:isFrom country:USA .
+
+person:1629725 nba-cps:isFrom country:USA .
+
+person:1629726 nba-cps:isFrom country:USA .
+
+person:1629729 nba-cps:isFrom country:USA .
+
+person:1629730 nba-cps:isFrom country:USA .
+
+person:1629731 nba-cps:isFrom country:USA .
+
+person:1629734 nba-cps:isFrom country:Canada .
+
+person:1629735 nba-cps:isFrom country:Gabon .
+
+person:1629738 nba-cps:isFrom country:France .
+
+person:1629739 nba-cps:isFrom country:France .
+
+person:1629740 nba-cps:isFrom country:Italy .
+
+person:1629741 nba-cps:isFrom country:Serbia .
+
+person:1629742 nba-cps:isFrom country:USA .
+
+person:1629743 nba-cps:isFrom country:USA .
+
+person:1629744 nba-cps:isFrom country:USA .
+
+person:1629745 nba-cps:isFrom country:USA .
+
+person:1629746 nba-cps:isFrom country:nan .
+
+person:1629747 nba-cps:isFrom country:nan .
+
+person:1629749 nba-cps:isFrom country:nan .
+
+person:1629750 nba-cps:isFrom country:USA .
+
+person:1629751 nba-cps:isFrom country:USA .
+
+person:1629752 nba-cps:isFrom country:USA .
+
+person:1629753 nba-cps:isFrom country:nan .
+
+person:1629755 nba-cps:isFrom country:nan .
+
+person:1629756 nba-cps:isFrom country:nan .
+
+person:1629759 nba-cps:isFrom country:nan .
+
+person:1629777 nba-cps:isFrom country:nan .
+
+person:1629779 nba-cps:isFrom country:nan .
+
+person:1629786 nba-cps:isFrom country:nan .
+
+person:1629800 nba-cps:isFrom country:nan .
+
+person:1629806 nba-cps:isFrom country:nan .
+
+person:1629818 nba-cps:isFrom country:nan .
+
+person:1629819 nba-cps:isFrom country:nan .
+
+person:1629824 nba-cps:isFrom country:nan .
+
+person:1629825 nba-cps:isFrom country:nan .
+
+person:1629826 nba-cps:isFrom country:nan .
+
+person:1629833 nba-cps:isFrom country:USA .
+
+person:1629860 nba-cps:isFrom country:nan .
+
+person:1629956 nba-cps:isFrom country:nan .
+
+person:1629962 nba-cps:isFrom country:USA .
+
+person:1629967 nba-cps:isFrom country:nan .
+
+person:1630 nba-cps:isFrom country:USA .
+
+person:1710 nba-cps:isFrom country:USA .
+
+person:1712 nba-cps:isFrom country:USA .
+
+person:1713 nba-cps:isFrom country:USA .
+
+person:1715 nba-cps:isFrom country:USA .
+
+person:1716 nba-cps:isFrom country:USA .
+
+person:1717 nba-cps:isFrom country:Germany .
+
+person:1718 nba-cps:isFrom country:USA .
+
+person:1719 nba-cps:isFrom country:USA .
+
+person:1725 nba-cps:isFrom country:Slovenia .
+
+person:1729 nba-cps:isFrom country:USA .
+
+person:1730 nba-cps:isFrom country:USA .
+
+person:1733 nba-cps:isFrom country:USA .
+
+person:1737 nba-cps:isFrom country:USA .
+
+person:1740 nba-cps:isFrom country:USA .
+
+person:1747 nba-cps:isFrom country:USA .
+
+person:1752 nba-cps:isFrom country:NewZealand .
+
+person:1763 nba-cps:isFrom country:USA .
+
+person:1766 nba-cps:isFrom country:USA .
+
+person:1802 nba-cps:isFrom country:USA .
+
+person:1853 nba-cps:isFrom country:USA .
+
+person:1863 nba-cps:isFrom country:USA .
+
+person:1882 nba-cps:isFrom country:USA .
+
+person:1884 nba-cps:isFrom country:USA .
+
+person:1885 nba-cps:isFrom country:USA .
+
+person:1886 nba-cps:isFrom country:USA .
+
+person:1888 nba-cps:isFrom country:USA .
+
+person:1889 nba-cps:isFrom country:USA .
+
+person:1890 nba-cps:isFrom country:USA .
+
+person:1891 nba-cps:isFrom country:USA .
+
+person:1894 nba-cps:isFrom country:USA .
+
+person:1897 nba-cps:isFrom country:USA .
+
+person:1899 nba-cps:isFrom country:USA .
+
+person:1902 nba-cps:isFrom country:USA .
+
+person:1903 nba-cps:isFrom country:USA .
+
+person:1904 nba-cps:isFrom country:USA .
+
+person:1905 nba-cps:isFrom country:Russia .
+
+person:1913 nba-cps:isFrom country:USA .
+
+person:1922 nba-cps:isFrom country:Netherlands .
+
+person:1938 nba-cps:isFrom country:Argentina .
+
+person:1952 nba-cps:isFrom country:USVirginIslands .
+
+person:1962936250 nba-cps:isFrom country:USA .
+
+person:1962936270 nba-cps:isFrom country:USA .
+
+person:1962936483 nba-cps:isFrom country:CzechRepublic .
+
+person:1962936489 nba-cps:isFrom country:USA .
+
+person:1962936495 nba-cps:isFrom country:USA .
+
+person:1962937755 nba-cps:isFrom country:nan .
+
+person:1962937827 nba-cps:isFrom country:nan .
+
+person:200081 nba-cps:isFrom country:USA .
+
+person:200575 nba-cps:isFrom country:nan .
+
+person:200745 nba-cps:isFrom country:Italy .
+
+person:200746 nba-cps:isFrom country:USA .
+
+person:200747 nba-cps:isFrom country:USA .
+
+person:200748 nba-cps:isFrom country:USA .
+
+person:200749 nba-cps:isFrom country:USA .
+
+person:200750 nba-cps:isFrom country:USA .
+
+person:200751 nba-cps:isFrom country:USA .
+
+person:200752 nba-cps:isFrom country:USA .
+
+person:200753 nba-cps:isFrom country:USA .
+
+person:200755 nba-cps:isFrom country:USA .
+
+person:200756 nba-cps:isFrom country:USA .
+
+person:200757 nba-cps:isFrom country:Switzerland .
+
+person:200758 nba-cps:isFrom country:USA .
+
+person:200760 nba-cps:isFrom country:USA .
+
+person:200761 nba-cps:isFrom country:USA .
+
+person:200762 nba-cps:isFrom country:Ukraine .
+
+person:200763 nba-cps:isFrom country:USA .
+
+person:200764 nba-cps:isFrom country:USA .
+
+person:200765 nba-cps:isFrom country:USA .
+
+person:200766 nba-cps:isFrom country:USA .
+
+person:200767 nba-cps:isFrom country:USA .
+
+person:200768 nba-cps:isFrom country:USA .
+
+person:200769 nba-cps:isFrom country:USA .
+
+person:200770 nba-cps:isFrom country:USA .
+
+person:200771 nba-cps:isFrom country:Spain .
+
+person:200772 nba-cps:isFrom country:USA .
+
+person:200776 nba-cps:isFrom country:USA .
+
+person:200777 nba-cps:isFrom country:GreatBritain .
+
+person:200778 nba-cps:isFrom country:USA .
+
+person:200779 nba-cps:isFrom country:USA .
+
+person:200780 nba-cps:isFrom country:USA .
+
+person:200781 nba-cps:isFrom country:USA .
+
+person:200782 nba-cps:isFrom country:USA .
+
+person:200783 nba-cps:isFrom country:USA .
+
+person:200789 nba-cps:isFrom country:USA .
+
+person:200792 nba-cps:isFrom country:USA .
+
+person:200793 nba-cps:isFrom country:USA .
+
+person:200794 nba-cps:isFrom country:USA .
+
+person:200796 nba-cps:isFrom country:USA .
+
+person:200797 nba-cps:isFrom country:USA .
+
+person:200807 nba-cps:isFrom country:USA .
+
+person:200809 nba-cps:isFrom country:USA .
+
+person:200811 nba-cps:isFrom country:USA .
+
+person:200813 nba-cps:isFrom country:nan .
+
+person:200814 nba-cps:isFrom country:USA .
+
+person:200817 nba-cps:isFrom country:USA .
+
+person:200821 nba-cps:isFrom country:USA .
+
+person:200822 nba-cps:isFrom country:USA .
+
+person:200826 nba-cps:isFrom country:PuertoRico .
+
+person:200839 nba-cps:isFrom country:USA .
+
+person:200847 nba-cps:isFrom country:nan .
+
+person:200852 nba-cps:isFrom country:nan .
+
+person:200894 nba-cps:isFrom country:nan .
+
+person:200918 nba-cps:isFrom country:nan .
+
+person:200971 nba-cps:isFrom country:USA .
+
+person:200984 nba-cps:isFrom country:USA .
+
+person:201041 nba-cps:isFrom country:USA .
+
+person:201043 nba-cps:isFrom country:USA .
+
+person:201141 nba-cps:isFrom country:USA .
+
+person:201142 nba-cps:isFrom country:USA .
+
+person:201143 nba-cps:isFrom country:DominicanRepublic .
+
+person:201144 nba-cps:isFrom country:USA .
+
+person:201145 nba-cps:isFrom country:USA .
+
+person:201146 nba-cps:isFrom country:USA .
+
+person:201147 nba-cps:isFrom country:USA .
+
+person:201148 nba-cps:isFrom country:USA .
+
+person:201149 nba-cps:isFrom country:USA .
+
+person:201150 nba-cps:isFrom country:USA .
+
+person:201151 nba-cps:isFrom country:USA .
+
+person:201152 nba-cps:isFrom country:USA .
+
+person:201153 nba-cps:isFrom country:USA .
+
+person:201154 nba-cps:isFrom country:USA .
+
+person:201155 nba-cps:isFrom country:USA .
+
+person:201156 nba-cps:isFrom country:USA .
+
+person:201157 nba-cps:isFrom country:USA .
+
+person:201158 nba-cps:isFrom country:Italy .
+
+person:201159 nba-cps:isFrom country:USA .
+
+person:201160 nba-cps:isFrom country:USA .
+
+person:201161 nba-cps:isFrom country:USA .
+
+person:201162 nba-cps:isFrom country:USA .
+
+person:201163 nba-cps:isFrom country:USA .
+
+person:201164 nba-cps:isFrom country:Spain .
+
+person:201165 nba-cps:isFrom country:USA .
+
+person:201166 nba-cps:isFrom country:USA .
+
+person:201167 nba-cps:isFrom country:USA .
+
+person:201168 nba-cps:isFrom country:Brazil .
+
+person:201169 nba-cps:isFrom country:USA .
+
+person:201171 nba-cps:isFrom country:USA .
+
+person:201173 nba-cps:isFrom country:USA .
+
+person:201175 nba-cps:isFrom country:USA .
+
+person:201177 nba-cps:isFrom country:USA .
+
+person:201178 nba-cps:isFrom country:Ukraine .
+
+person:201181 nba-cps:isFrom country:USA .
+
+person:201182 nba-cps:isFrom country:USA .
+
+person:201183 nba-cps:isFrom country:nan .
+
+person:201186 nba-cps:isFrom country:Gabon .
+
+person:201187 nba-cps:isFrom country:USA .
+
+person:201188 nba-cps:isFrom country:Spain .
+
+person:201189 nba-cps:isFrom country:USA .
+
+person:201191 nba-cps:isFrom country:USA .
+
+person:201193 nba-cps:isFrom country:USA .
+
+person:201196 nba-cps:isFrom country:USA .
+
+person:201199 nba-cps:isFrom country:USA .
+
+person:201202 nba-cps:isFrom country:Canada .
+
+person:201203 nba-cps:isFrom country:USA .
+
+person:201207 nba-cps:isFrom country:USA .
+
+person:201208 nba-cps:isFrom country:USA .
+
+person:201225 nba-cps:isFrom country:nan .
+
+person:201228 nba-cps:isFrom country:USA .
+
+person:201229 nba-cps:isFrom country:USA .
+
+person:201230 nba-cps:isFrom country:nan .
+
+person:201234 nba-cps:isFrom country:USA .
+
+person:201235 nba-cps:isFrom country:USA .
+
+person:201238 nba-cps:isFrom country:USA .
+
+person:201242 nba-cps:isFrom country:USA .
+
+person:201266 nba-cps:isFrom country:nan .
+
+person:201274 nba-cps:isFrom country:USA .
+
+person:201281 nba-cps:isFrom country:USA .
+
+person:201286 nba-cps:isFrom country:USA .
+
+person:201291 nba-cps:isFrom country:USA .
+
+person:201336 nba-cps:isFrom country:USA .
+
+person:201351 nba-cps:isFrom country:nan .
+
+person:201446 nba-cps:isFrom country:USA .
+
+person:201563 nba-cps:isFrom country:USA .
+
+person:201564 nba-cps:isFrom country:USA .
+
+person:201565 nba-cps:isFrom country:USA .
+
+person:201566 nba-cps:isFrom country:USA .
+
+person:201567 nba-cps:isFrom country:USA .
+
+person:201568 nba-cps:isFrom country:Italy .
+
+person:201569 nba-cps:isFrom country:USA .
+
+person:201570 nba-cps:isFrom country:USA .
+
+person:201571 nba-cps:isFrom country:USA .
+
+person:201572 nba-cps:isFrom country:USA .
+
+person:201573 nba-cps:isFrom country:USA .
+
+person:201574 nba-cps:isFrom country:USA .
+
+person:201575 nba-cps:isFrom country:USA .
+
+person:201576 nba-cps:isFrom country:USA .
+
+person:201577 nba-cps:isFrom country:USA .
+
+person:201578 nba-cps:isFrom country:USA .
+
+person:201579 nba-cps:isFrom country:USA .
+
+person:201580 nba-cps:isFrom country:USA .
+
+person:201581 nba-cps:isFrom country:USA .
+
+person:201582 nba-cps:isFrom country:France .
+
+person:201583 nba-cps:isFrom country:USA .
+
+person:201584 nba-cps:isFrom country:USA .
+
+person:201585 nba-cps:isFrom country:USA .
+
+person:201586 nba-cps:isFrom country:DemocraticRepublicoftheCongo .
+
+person:201587 nba-cps:isFrom country:France .
+
+person:201588 nba-cps:isFrom country:USA .
+
+person:201589 nba-cps:isFrom country:USA .
+
+person:201590 nba-cps:isFrom country:USA .
+
+person:201591 nba-cps:isFrom country:USA .
+
+person:201592 nba-cps:isFrom country:USA .
+
+person:201593 nba-cps:isFrom country:Montenegro .
+
+person:201594 nba-cps:isFrom country:USA .
+
+person:201595 nba-cps:isFrom country:USA .
+
+person:201596 nba-cps:isFrom country:USA .
+
+person:201599 nba-cps:isFrom country:USA .
+
+person:201600 nba-cps:isFrom country:Turkey .
+
+person:201601 nba-cps:isFrom country:Cameroon .
+
+person:201602 nba-cps:isFrom country:USA .
+
+person:201603 nba-cps:isFrom country:USA .
+
+person:201604 nba-cps:isFrom country:USA .
+
+person:201605 nba-cps:isFrom country:Australia .
+
+person:201606 nba-cps:isFrom country:USA .
+
+person:201607 nba-cps:isFrom country:USA .
+
+person:201609 nba-cps:isFrom country:Slovenia .
+
+person:201610 nba-cps:isFrom country:nan .
+
+person:201611 nba-cps:isFrom country:USA .
+
+person:201612 nba-cps:isFrom country:USA .
+
+person:201616 nba-cps:isFrom country:USA .
+
+person:201619 nba-cps:isFrom country:Russia .
+
+person:201620 nba-cps:isFrom country:nan .
+
+person:201621 nba-cps:isFrom country:USA .
+
+person:201622 nba-cps:isFrom country:nan .
+
+person:201623 nba-cps:isFrom country:Turkey .
+
+person:201627 nba-cps:isFrom country:USA .
+
+person:201628 nba-cps:isFrom country:USA .
+
+person:201629 nba-cps:isFrom country:USA .
+
+person:201632 nba-cps:isFrom country:Iran .
+
+person:201633 nba-cps:isFrom country:USA .
+
+person:201635 nba-cps:isFrom country:nan .
+
+person:201645 nba-cps:isFrom country:nan .
+
+person:201646 nba-cps:isFrom country:nan .
+
+person:201647 nba-cps:isFrom country:nan .
+
+person:201648 nba-cps:isFrom country:nan .
+
+person:201649 nba-cps:isFrom country:nan .
+
+person:201651 nba-cps:isFrom country:nan .
+
+person:201776 nba-cps:isFrom country:nan .
+
+person:201781 nba-cps:isFrom country:nan .
+
+person:201785 nba-cps:isFrom country:USA .
+
+person:201792 nba-cps:isFrom country:nan .
+
+person:201802 nba-cps:isFrom country:USA .
+
+person:201805 nba-cps:isFrom country:USA .
+
+person:201814 nba-cps:isFrom country:Panama .
+
+person:201820 nba-cps:isFrom country:USA .
+
+person:201821 nba-cps:isFrom country:USA .
+
+person:201831 nba-cps:isFrom country:nan .
+
+person:201834 nba-cps:isFrom country:nan .
+
+person:201848 nba-cps:isFrom country:nan .
+
+person:201858 nba-cps:isFrom country:USA .
+
+person:201880 nba-cps:isFrom country:USA .
+
+person:201933 nba-cps:isFrom country:USA .
+
+person:201934 nba-cps:isFrom country:Tanzania .
+
+person:201935 nba-cps:isFrom country:USA .
+
+person:201936 nba-cps:isFrom country:USA .
+
+person:201937 nba-cps:isFrom country:Spain .
+
+person:201938 nba-cps:isFrom country:USA .
+
+person:201939 nba-cps:isFrom country:USA .
+
+person:201941 nba-cps:isFrom country:USA .
+
+person:201942 nba-cps:isFrom country:USA .
+
+person:201943 nba-cps:isFrom country:USA .
+
+person:201944 nba-cps:isFrom country:USA .
+
+person:201945 nba-cps:isFrom country:USA .
+
+person:201946 nba-cps:isFrom country:USA .
+
+person:201947 nba-cps:isFrom country:USA .
+
+person:201948 nba-cps:isFrom country:USA .
+
+person:201949 nba-cps:isFrom country:USA .
+
+person:201950 nba-cps:isFrom country:USA .
+
+person:201951 nba-cps:isFrom country:USA .
+
+person:201952 nba-cps:isFrom country:USA .
+
+person:201953 nba-cps:isFrom country:USA .
+
+person:201954 nba-cps:isFrom country:USA .
+
+person:201956 nba-cps:isFrom country:Israel .
+
+person:201957 nba-cps:isFrom country:USA .
+
+person:201958 nba-cps:isFrom country:France .
+
+person:201959 nba-cps:isFrom country:USA .
+
+person:201960 nba-cps:isFrom country:USA .
+
+person:201961 nba-cps:isFrom country:USA .
+
+person:201962 nba-cps:isFrom country:USA .
+
+person:201963 nba-cps:isFrom country:Congo .
+
+person:201964 nba-cps:isFrom country:Spain .
+
+person:201965 nba-cps:isFrom country:USA .
+
+person:201966 nba-cps:isFrom country:USA .
+
+person:201967 nba-cps:isFrom country:USA .
+
+person:201969 nba-cps:isFrom country:USA .
+
+person:201970 nba-cps:isFrom country:USA .
+
+person:201971 nba-cps:isFrom country:USA .
+
+person:201972 nba-cps:isFrom country:USA .
+
+person:201973 nba-cps:isFrom country:Sweden .
+
+person:201974 nba-cps:isFrom country:USA .
+
+person:201975 nba-cps:isFrom country:USA .
+
+person:201976 nba-cps:isFrom country:USA .
+
+person:201977 nba-cps:isFrom country:USA .
+
+person:201978 nba-cps:isFrom country:USA .
+
+person:201979 nba-cps:isFrom country:USA .
+
+person:201980 nba-cps:isFrom country:USA .
+
+person:201981 nba-cps:isFrom country:USA .
+
+person:201983 nba-cps:isFrom country:nan .
+
+person:201985 nba-cps:isFrom country:USA .
+
+person:201986 nba-cps:isFrom country:France .
+
+person:201988 nba-cps:isFrom country:Australia .
+
+person:201991 nba-cps:isFrom country:USA .
+
+person:201993 nba-cps:isFrom country:nan .
+
+person:201998 nba-cps:isFrom country:nan .
+
+person:201999 nba-cps:isFrom country:nan .
+
+person:202065 nba-cps:isFrom country:nan .
+
+person:202066 nba-cps:isFrom country:USA .
+
+person:202067 nba-cps:isFrom country:nan .
+
+person:202068 nba-cps:isFrom country:USA .
+
+person:202069 nba-cps:isFrom country:nan .
+
+person:202070 nba-cps:isFrom country:nan .
+
+person:202071 nba-cps:isFrom country:nan .
+
+person:202074 nba-cps:isFrom country:nan .
+
+person:202075 nba-cps:isFrom country:nan .
+
+person:202076 nba-cps:isFrom country:nan .
+
+person:202077 nba-cps:isFrom country:USA .
+
+person:202078 nba-cps:isFrom country:nan .
+
+person:202079 nba-cps:isFrom country:USA .
+
+person:202081 nba-cps:isFrom country:USA .
+
+person:202082 nba-cps:isFrom country:USA .
+
+person:202083 nba-cps:isFrom country:USA .
+
+person:202087 nba-cps:isFrom country:USA .
+
+person:202091 nba-cps:isFrom country:USA .
+
+person:202130 nba-cps:isFrom country:USA .
+
+person:202132 nba-cps:isFrom country:USA .
+
+person:202148 nba-cps:isFrom country:USA .
+
+person:202175 nba-cps:isFrom country:nan .
+
+person:202178 nba-cps:isFrom country:USA .
+
+person:202197 nba-cps:isFrom country:USA .
+
+person:202213 nba-cps:isFrom country:nan .
+
+person:202217 nba-cps:isFrom country:nan .
+
+person:202220 nba-cps:isFrom country:USA .
+
+person:202221 nba-cps:isFrom country:nan .
+
+person:202227 nba-cps:isFrom country:USA .
+
+person:202238 nba-cps:isFrom country:nan .
+
+person:202322 nba-cps:isFrom country:USA .
+
+person:202323 nba-cps:isFrom country:USA .
+
+person:202324 nba-cps:isFrom country:USA .
+
+person:202325 nba-cps:isFrom country:USA .
+
+person:202326 nba-cps:isFrom country:USA .
+
+person:202327 nba-cps:isFrom country:USA .
+
+person:202328 nba-cps:isFrom country:USA .
+
+person:202329 nba-cps:isFrom country:USA .
+
+person:202330 nba-cps:isFrom country:USA .
+
+person:202331 nba-cps:isFrom country:USA .
+
+person:202332 nba-cps:isFrom country:USA .
+
+person:202333 nba-cps:isFrom country:USA .
+
+person:202334 nba-cps:isFrom country:USA .
+
+person:202335 nba-cps:isFrom country:USA .
+
+person:202336 nba-cps:isFrom country:USA .
+
+person:202337 nba-cps:isFrom country:USA .
+
+person:202338 nba-cps:isFrom country:France .
+
+person:202339 nba-cps:isFrom country:USA .
+
+person:202340 nba-cps:isFrom country:USA .
+
+person:202341 nba-cps:isFrom country:USA .
+
+person:202342 nba-cps:isFrom country:USA .
+
+person:202343 nba-cps:isFrom country:USA .
+
+person:202344 nba-cps:isFrom country:USA .
+
+person:202345 nba-cps:isFrom country:USA .
+
+person:202346 nba-cps:isFrom country:USA .
+
+person:202347 nba-cps:isFrom country:USA .
+
+person:202348 nba-cps:isFrom country:USA .
+
+person:202349 nba-cps:isFrom country:Venezuela .
+
+person:202350 nba-cps:isFrom country:USA .
+
+person:202351 nba-cps:isFrom country:USA .
+
+person:202353 nba-cps:isFrom country:Germany .
+
+person:202354 nba-cps:isFrom country:USA .
+
+person:202355 nba-cps:isFrom country:USA .
+
+person:202356 nba-cps:isFrom country:USA .
+
+person:202357 nba-cps:isFrom country:Serbia .
+
+person:202358 nba-cps:isFrom country:nan .
+
+person:202359 nba-cps:isFrom country:USA .
+
+person:202360 nba-cps:isFrom country:USA .
+
+person:202361 nba-cps:isFrom country:USA .
+
+person:202362 nba-cps:isFrom country:USA .
+
+person:202363 nba-cps:isFrom country:USA .
+
+person:202365 nba-cps:isFrom country:USA .
+
+person:202366 nba-cps:isFrom country:Jamaica .
+
+person:202371 nba-cps:isFrom country:USA .
+
+person:202374 nba-cps:isFrom country:Nigeria .
+
+person:202375 nba-cps:isFrom country:nan .
+
+person:202376 nba-cps:isFrom country:USA .
+
+person:202377 nba-cps:isFrom country:France .
+
+person:202378 nba-cps:isFrom country:USA .
+
+person:202379 nba-cps:isFrom country:USA .
+
+person:202380 nba-cps:isFrom country:Senegal .
+
+person:202382 nba-cps:isFrom country:USA .
+
+person:202383 nba-cps:isFrom country:nan .
+
+person:202385 nba-cps:isFrom country:USA .
+
+person:202386 nba-cps:isFrom country:USA .
+
+person:202388 nba-cps:isFrom country:USA .
+
+person:202389 nba-cps:isFrom country:Russia .
+
+person:202390 nba-cps:isFrom country:USA .
+
+person:202391 nba-cps:isFrom country:USA .
+
+person:202392 nba-cps:isFrom country:nan .
+
+person:202393 nba-cps:isFrom country:nan .
+
+person:202394 nba-cps:isFrom country:nan .
+
+person:202395 nba-cps:isFrom country:USA .
+
+person:202396 nba-cps:isFrom country:Jamaica .
+
+person:202397 nba-cps:isFrom country:USA .
+
+person:202399 nba-cps:isFrom country:USA .
+
+person:202400 nba-cps:isFrom country:nan .
+
+person:202402 nba-cps:isFrom country:nan .
+
+person:202404 nba-cps:isFrom country:nan .
+
+person:202406 nba-cps:isFrom country:USA .
+
+person:202407 nba-cps:isFrom country:USA .
+
+person:202408 nba-cps:isFrom country:USA .
+
+person:202409 nba-cps:isFrom country:nan .
+
+person:202410 nba-cps:isFrom country:nan .
+
+person:202411 nba-cps:isFrom country:nan .
+
+person:202412 nba-cps:isFrom country:USA .
+
+person:202416 nba-cps:isFrom country:nan .
+
+person:202417 nba-cps:isFrom country:nan .
+
+person:202418 nba-cps:isFrom country:nan .
+
+person:202419 nba-cps:isFrom country:USA .
+
+person:202420 nba-cps:isFrom country:nan .
+
+person:202421 nba-cps:isFrom country:nan .
+
+person:202423 nba-cps:isFrom country:nan .
+
+person:202446 nba-cps:isFrom country:nan .
+
+person:202458 nba-cps:isFrom country:USA .
+
+person:202464 nba-cps:isFrom country:nan .
+
+person:202498 nba-cps:isFrom country:USA .
+
+person:202513 nba-cps:isFrom country:nan .
+
+person:202518 nba-cps:isFrom country:nan .
+
+person:202536 nba-cps:isFrom country:USA .
+
+person:202545 nba-cps:isFrom country:USA .
+
+person:202550 nba-cps:isFrom country:nan .
+
+person:202586 nba-cps:isFrom country:nan .
+
+person:202620 nba-cps:isFrom country:USA .
+
+person:202622 nba-cps:isFrom country:USA .
+
+person:202681 nba-cps:isFrom country:Australia .
+
+person:202682 nba-cps:isFrom country:USA .
+
+person:202683 nba-cps:isFrom country:Turkey .
+
+person:202684 nba-cps:isFrom country:Canada .
+
+person:202685 nba-cps:isFrom country:Lithuania .
+
+person:202686 nba-cps:isFrom country:CzechRepublic .
+
+person:202687 nba-cps:isFrom country:DemocraticRepublicoftheCongo .
+
+person:202688 nba-cps:isFrom country:USA .
+
+person:202689 nba-cps:isFrom country:USA .
+
+person:202690 nba-cps:isFrom country:USA .
+
+person:202691 nba-cps:isFrom country:USA .
+
+person:202692 nba-cps:isFrom country:USA .
+
+person:202693 nba-cps:isFrom country:USA .
+
+person:202694 nba-cps:isFrom country:USA .
+
+person:202695 nba-cps:isFrom country:USA .
+
+person:202696 nba-cps:isFrom country:Montenegro .
+
+person:202697 nba-cps:isFrom country:USA .
+
+person:202698 nba-cps:isFrom country:USA .
+
+person:202699 nba-cps:isFrom country:USA .
+
+person:202700 nba-cps:isFrom country:Lithuania .
+
+person:202701 nba-cps:isFrom country:USA .
+
+person:202702 nba-cps:isFrom country:USA .
+
+person:202703 nba-cps:isFrom country:Montenegro .
+
+person:202704 nba-cps:isFrom country:USA .
+
+person:202705 nba-cps:isFrom country:USA .
+
+person:202706 nba-cps:isFrom country:USA .
+
+person:202707 nba-cps:isFrom country:USA .
+
+person:202708 nba-cps:isFrom country:USA .
+
+person:202709 nba-cps:isFrom country:Canada .
+
+person:202710 nba-cps:isFrom country:USA .
+
+person:202711 nba-cps:isFrom country:Croatia .
+
+person:202712 nba-cps:isFrom country:USA .
+
+person:202713 nba-cps:isFrom country:USA .
+
+person:202714 nba-cps:isFrom country:USA .
+
+person:202715 nba-cps:isFrom country:USA .
+
+person:202716 nba-cps:isFrom country:USA .
+
+person:202717 nba-cps:isFrom country:USA .
+
+person:202718 nba-cps:isFrom country:USA .
+
+person:202719 nba-cps:isFrom country:USA .
+
+person:202720 nba-cps:isFrom country:USA .
+
+person:202721 nba-cps:isFrom country:USA .
+
+person:202722 nba-cps:isFrom country:Latvia .
+
+person:202723 nba-cps:isFrom country:USA .
+
+person:202724 nba-cps:isFrom country:USA .
+
+person:202725 nba-cps:isFrom country:USA .
+
+person:202726 nba-cps:isFrom country:USA .
+
+person:202727 nba-cps:isFrom country:USA .
+
+person:202728 nba-cps:isFrom country:USA .
+
+person:202729 nba-cps:isFrom country:USA .
+
+person:202730 nba-cps:isFrom country:USA .
+
+person:202731 nba-cps:isFrom country:USA .
+
+person:202732 nba-cps:isFrom country:USA .
+
+person:202734 nba-cps:isFrom country:USA .
+
+person:202738 nba-cps:isFrom country:USA .
+
+person:202770 nba-cps:isFrom country:Canada .
+
+person:202775 nba-cps:isFrom country:PuertoRico .
+
+person:202779 nba-cps:isFrom country:USA .
+
+person:202792 nba-cps:isFrom country:nan .
+
+person:202797 nba-cps:isFrom country:nan .
+
+person:202808 nba-cps:isFrom country:nan .
+
+person:202809 nba-cps:isFrom country:USA .
+
+person:202810 nba-cps:isFrom country:USA .
+
+person:202814 nba-cps:isFrom country:USA .
+
+person:202815 nba-cps:isFrom country:nan .
+
+person:202820 nba-cps:isFrom country:nan .
+
+person:202841 nba-cps:isFrom country:nan .
+
+person:202862 nba-cps:isFrom country:USA .
+
+person:202872 nba-cps:isFrom country:nan .
+
+person:202874 nba-cps:isFrom country:USA .
+
+person:202880 nba-cps:isFrom country:USA .
+
+person:202904 nba-cps:isFrom country:nan .
+
+person:202912 nba-cps:isFrom country:nan .
+
+person:202918 nba-cps:isFrom country:USA .
+
+person:202933 nba-cps:isFrom country:USA .
+
+person:202935 nba-cps:isFrom country:nan .
+
+person:202951 nba-cps:isFrom country:USA .
+
+person:202952 nba-cps:isFrom country:USA .
+
+person:202954 nba-cps:isFrom country:USA .
+
+person:202956 nba-cps:isFrom country:nan .
+
+person:202957 nba-cps:isFrom country:nan .
+
+person:202959 nba-cps:isFrom country:nan .
+
+person:202961 nba-cps:isFrom country:nan .
+
+person:202962 nba-cps:isFrom country:USA .
+
+person:202963 nba-cps:isFrom country:nan .
+
+person:202970 nba-cps:isFrom country:Mexico .
+
+person:2030 nba-cps:isFrom country:USA .
+
+person:203006 nba-cps:isFrom country:USA .
+
+person:203076 nba-cps:isFrom country:USA .
+
+person:203077 nba-cps:isFrom country:USA .
+
+person:203078 nba-cps:isFrom country:USA .
+
+person:203079 nba-cps:isFrom country:USA .
+
+person:203080 nba-cps:isFrom country:USA .
+
+person:203081 nba-cps:isFrom country:USA .
+
+person:203082 nba-cps:isFrom country:USA .
+
+person:203083 nba-cps:isFrom country:USA .
+
+person:203084 nba-cps:isFrom country:USA .
+
+person:203085 nba-cps:isFrom country:USA .
+
+person:203086 nba-cps:isFrom country:USA .
+
+person:203087 nba-cps:isFrom country:USA .
+
+person:203088 nba-cps:isFrom country:USA .
+
+person:203089 nba-cps:isFrom country:USA .
+
+person:203090 nba-cps:isFrom country:USA .
+
+person:203091 nba-cps:isFrom country:USA .
+
+person:203092 nba-cps:isFrom country:USA .
+
+person:203093 nba-cps:isFrom country:USA .
+
+person:203094 nba-cps:isFrom country:Canada .
+
+person:203095 nba-cps:isFrom country:France .
+
+person:203096 nba-cps:isFrom country:USA .
+
+person:203097 nba-cps:isFrom country:Brazil .
+
+person:203098 nba-cps:isFrom country:USA .
+
+person:203099 nba-cps:isFrom country:USA .
+
+person:203100 nba-cps:isFrom country:USA .
+
+person:203101 nba-cps:isFrom country:USA .
+
+person:203102 nba-cps:isFrom country:USA .
+
+person:203103 nba-cps:isFrom country:USA .
+
+person:203104 nba-cps:isFrom country:USA .
+
+person:203105 nba-cps:isFrom country:Nigeria .
+
+person:203106 nba-cps:isFrom country:Sweden .
+
+person:203107 nba-cps:isFrom country:CzechRepublic .
+
+person:203108 nba-cps:isFrom country:USA .
+
+person:203109 nba-cps:isFrom country:USA .
+
+person:203110 nba-cps:isFrom country:USA .
+
+person:203111 nba-cps:isFrom country:USA .
+
+person:203112 nba-cps:isFrom country:USA .
+
+person:203113 nba-cps:isFrom country:USA .
+
+person:203114 nba-cps:isFrom country:USA .
+
+person:203115 nba-cps:isFrom country:USA .
+
+person:203116 nba-cps:isFrom country:USA .
+
+person:203117 nba-cps:isFrom country:USA .
+
+person:203118 nba-cps:isFrom country:USA .
+
+person:203119 nba-cps:isFrom country:USA .
+
+person:203120 nba-cps:isFrom country:USA .
+
+person:203121 nba-cps:isFrom country:USA .
+
+person:203122 nba-cps:isFrom country:USA .
+
+person:203123 nba-cps:isFrom country:Greece .
+
+person:203124 nba-cps:isFrom country:USA .
+
+person:203126 nba-cps:isFrom country:USA .
+
+person:203128 nba-cps:isFrom country:Turkey .
+
+person:203129 nba-cps:isFrom country:Georgia .
+
+person:203130 nba-cps:isFrom country:USA .
+
+person:203133 nba-cps:isFrom country:USA .
+
+person:203135 nba-cps:isFrom country:Canada .
+
+person:203136 nba-cps:isFrom country:Bosnia .
+
+person:203138 nba-cps:isFrom country:USA .
+
+person:203139 nba-cps:isFrom country:Ukraine .
+
+person:203141 nba-cps:isFrom country:Bosnia .
+
+person:203142 nba-cps:isFrom country:USA .
+
+person:203143 nba-cps:isFrom country:Argentina .
+
+person:203144 nba-cps:isFrom country:Russia .
+
+person:203145 nba-cps:isFrom country:USA .
+
+person:203146 nba-cps:isFrom country:USA .
+
+person:203147 nba-cps:isFrom country:USA .
+
+person:203148 nba-cps:isFrom country:USA .
+
+person:203149 nba-cps:isFrom country:nan .
+
+person:203153 nba-cps:isFrom country:nan .
+
+person:203154 nba-cps:isFrom country:nan .
+
+person:203155 nba-cps:isFrom country:nan .
+
+person:203156 nba-cps:isFrom country:USA .
+
+person:203157 nba-cps:isFrom country:nan .
+
+person:203158 nba-cps:isFrom country:USA .
+
+person:203159 nba-cps:isFrom country:USA .
+
+person:203160 nba-cps:isFrom country:nan .
+
+person:203162 nba-cps:isFrom country:USA .
+
+person:203163 nba-cps:isFrom country:nan .
+
+person:203164 nba-cps:isFrom country:nan .
+
+person:203174 nba-cps:isFrom country:nan .
+
+person:203176 nba-cps:isFrom country:nan .
+
+person:203178 nba-cps:isFrom country:nan .
+
+person:203180 nba-cps:isFrom country:nan .
+
+person:203183 nba-cps:isFrom country:USA .
+
+person:203185 nba-cps:isFrom country:nan .
+
+person:203186 nba-cps:isFrom country:USA .
+
+person:203187 nba-cps:isFrom country:USA .
+
+person:203190 nba-cps:isFrom country:nan .
+
+person:203191 nba-cps:isFrom country:USA .
+
+person:203192 nba-cps:isFrom country:nan .
+
+person:203193 nba-cps:isFrom country:nan .
+
+person:203195 nba-cps:isFrom country:nan .
+
+person:203196 nba-cps:isFrom country:nan .
+
+person:203197 nba-cps:isFrom country:USA .
+
+person:203198 nba-cps:isFrom country:nan .
+
+person:203199 nba-cps:isFrom country:USA .
+
+person:2032 nba-cps:isFrom country:USA .
+
+person:203200 nba-cps:isFrom country:USA .
+
+person:203201 nba-cps:isFrom country:nan .
+
+person:203203 nba-cps:isFrom country:USA .
+
+person:203204 nba-cps:isFrom country:nan .
+
+person:203206 nba-cps:isFrom country:nan .
+
+person:203210 nba-cps:isFrom country:USA .
+
+person:203262 nba-cps:isFrom country:nan .
+
+person:203263 nba-cps:isFrom country:USA .
+
+person:203268 nba-cps:isFrom country:Mexico .
+
+person:203315 nba-cps:isFrom country:USA .
+
+person:203317 nba-cps:isFrom country:Germany .
+
+person:203318 nba-cps:isFrom country:USA .
+
+person:203327 nba-cps:isFrom country:nan .
+
+person:203382 nba-cps:isFrom country:Australia .
+
+person:2034 nba-cps:isFrom country:USA .
+
+person:203457 nba-cps:isFrom country:USA .
+
+person:203458 nba-cps:isFrom country:Ukraine .
+
+person:203459 nba-cps:isFrom country:USA .
+
+person:203460 nba-cps:isFrom country:USA .
+
+person:203461 nba-cps:isFrom country:Canada .
+
+person:203462 nba-cps:isFrom country:USA .
+
+person:203463 nba-cps:isFrom country:USA .
+
+person:203464 nba-cps:isFrom country:USA .
+
+person:203466 nba-cps:isFrom country:nan .
+
+person:203467 nba-cps:isFrom country:USA .
+
+person:203468 nba-cps:isFrom country:USA .
+
+person:203469 nba-cps:isFrom country:USA .
+
+person:203471 nba-cps:isFrom country:Germany .
+
+person:203472 nba-cps:isFrom country:nan .
+
+person:203473 nba-cps:isFrom country:USA .
+
+person:203474 nba-cps:isFrom country:USA .
+
+person:203475 nba-cps:isFrom country:USA .
+
+person:203476 nba-cps:isFrom country:Senegal .
+
+person:203477 nba-cps:isFrom country:USA .
+
+person:203479 nba-cps:isFrom country:USA .
+
+person:203480 nba-cps:isFrom country:USA .
+
+person:203481 nba-cps:isFrom country:USA .
+
+person:203482 nba-cps:isFrom country:Canada .
+
+person:203483 nba-cps:isFrom country:nan .
+
+person:203484 nba-cps:isFrom country:USA .
+
+person:203485 nba-cps:isFrom country:USA .
+
+person:203486 nba-cps:isFrom country:USA .
+
+person:203487 nba-cps:isFrom country:USA .
+
+person:203488 nba-cps:isFrom country:USA .
+
+person:203489 nba-cps:isFrom country:USA .
+
+person:203490 nba-cps:isFrom country:USA .
+
+person:203491 nba-cps:isFrom country:USA .
+
+person:203492 nba-cps:isFrom country:USA .
+
+person:203493 nba-cps:isFrom country:USA .
+
+person:203494 nba-cps:isFrom country:nan .
+
+person:203495 nba-cps:isFrom country:USA .
+
+person:203496 nba-cps:isFrom country:USA .
+
+person:203497 nba-cps:isFrom country:France .
+
+person:203498 nba-cps:isFrom country:USA .
+
+person:203499 nba-cps:isFrom country:USA .
+
+person:203500 nba-cps:isFrom country:NewZealand .
+
+person:203501 nba-cps:isFrom country:USA .
+
+person:203502 nba-cps:isFrom country:USA .
+
+person:203503 nba-cps:isFrom country:USA .
+
+person:203504 nba-cps:isFrom country:USA .
+
+person:203505 nba-cps:isFrom country:USA .
+
+person:203506 nba-cps:isFrom country:USA .
+
+person:203507 nba-cps:isFrom country:Greece .
+
+person:203508 nba-cps:isFrom country:Russia .
+
+person:203509 nba-cps:isFrom country:nan .
+
+person:203510 nba-cps:isFrom country:USA .
+
+person:203511 nba-cps:isFrom country:USA .
+
+person:203512 nba-cps:isFrom country:Brazil .
+
+person:203513 nba-cps:isFrom country:USA .
+
+person:203515 nba-cps:isFrom country:USA .
+
+person:203516 nba-cps:isFrom country:USA .
+
+person:203517 nba-cps:isFrom country:Serbia .
+
+person:203518 nba-cps:isFrom country:Spain .
+
+person:203519 nba-cps:isFrom country:USA .
+
+person:203520 nba-cps:isFrom country:nan .
+
+person:203521 nba-cps:isFrom country:Australia .
+
+person:203524 nba-cps:isFrom country:USA .
+
+person:203526 nba-cps:isFrom country:Brazil .
+
+person:203527 nba-cps:isFrom country:USA .
+
+person:203528 nba-cps:isFrom country:nan .
+
+person:203529 nba-cps:isFrom country:nan .
+
+person:203530 nba-cps:isFrom country:France .
+
+person:203539 nba-cps:isFrom country:Israel .
+
+person:203540 nba-cps:isFrom country:Italy .
+
+person:203543 nba-cps:isFrom country:Brazil .
+
+person:203544 nba-cps:isFrom country:Macedonia .
+
+person:203545 nba-cps:isFrom country:Serbia .
+
+person:203546 nba-cps:isFrom country:USA .
+
+person:203547 nba-cps:isFrom country:nan .
+
+person:203548 nba-cps:isFrom country:Germany .
+
+person:203551 nba-cps:isFrom country:nan .
+
+person:203552 nba-cps:isFrom country:USA .
+
+person:203556 nba-cps:isFrom country:nan .
+
+person:203558 nba-cps:isFrom country:nan .
+
+person:203560 nba-cps:isFrom country:nan .
+
+person:203561 nba-cps:isFrom country:USA .
+
+person:203564 nba-cps:isFrom country:USA .
+
+person:203565 nba-cps:isFrom country:USA .
+
+person:203566 nba-cps:isFrom country:nan .
+
+person:203568 nba-cps:isFrom country:nan .
+
+person:203569 nba-cps:isFrom country:USA .
+
+person:203576 nba-cps:isFrom country:nan .
+
+person:203577 nba-cps:isFrom country:nan .
+
+person:203579 nba-cps:isFrom country:nan .
+
+person:203580 nba-cps:isFrom country:USA .
+
+person:203583 nba-cps:isFrom country:nan .
+
+person:203584 nba-cps:isFrom country:USA .
+
+person:203585 nba-cps:isFrom country:USA .
+
+person:203586 nba-cps:isFrom country:nan .
+
+person:203587 nba-cps:isFrom country:nan .
+
+person:203588 nba-cps:isFrom country:nan .
+
+person:203589 nba-cps:isFrom country:nan .
+
+person:203590 nba-cps:isFrom country:USA .
+
+person:203613 nba-cps:isFrom country:USA .
+
+person:203629 nba-cps:isFrom country:nan .
+
+person:203648 nba-cps:isFrom country:Greece .
+
+person:203658 nba-cps:isFrom country:USA .
+
+person:203687 nba-cps:isFrom country:USA .
+
+person:2037 nba-cps:isFrom country:USA .
+
+person:203705 nba-cps:isFrom country:USA .
+
+person:203710 nba-cps:isFrom country:USA .
+
+person:203798 nba-cps:isFrom country:USA .
+
+person:2038 nba-cps:isFrom country:USA .
+
+person:203805 nba-cps:isFrom country:USA .
+
+person:203810 nba-cps:isFrom country:USA .
+
+person:203816 nba-cps:isFrom country:USA .
+
+person:203893 nba-cps:isFrom country:USA .
+
+person:203894 nba-cps:isFrom country:USA .
+
+person:203895 nba-cps:isFrom country:USA .
+
+person:203897 nba-cps:isFrom country:USA .
+
+person:203898 nba-cps:isFrom country:Canada .
+
+person:2039 nba-cps:isFrom country:USA .
+
+person:203900 nba-cps:isFrom country:USA .
+
+person:203901 nba-cps:isFrom country:USA .
+
+person:203902 nba-cps:isFrom country:USA .
+
+person:203903 nba-cps:isFrom country:USA .
+
+person:203905 nba-cps:isFrom country:nan .
+
+person:203906 nba-cps:isFrom country:USA .
+
+person:203907 nba-cps:isFrom country:USA .
+
+person:203909 nba-cps:isFrom country:USA .
+
+person:203910 nba-cps:isFrom country:USA .
+
+person:203912 nba-cps:isFrom country:nan .
+
+person:203913 nba-cps:isFrom country:USA .
+
+person:203914 nba-cps:isFrom country:USA .
+
+person:203915 nba-cps:isFrom country:USA .
+
+person:203917 nba-cps:isFrom country:Canada .
+
+person:203918 nba-cps:isFrom country:USA .
+
+person:203919 nba-cps:isFrom country:USA .
+
+person:203920 nba-cps:isFrom country:Canada .
+
+person:203921 nba-cps:isFrom country:USA .
+
+person:203922 nba-cps:isFrom country:USA .
+
+person:203923 nba-cps:isFrom country:USA .
+
+person:203924 nba-cps:isFrom country:USA .
+
+person:203925 nba-cps:isFrom country:USA .
+
+person:203926 nba-cps:isFrom country:USA .
+
+person:203927 nba-cps:isFrom country:nan .
+
+person:203928 nba-cps:isFrom country:USA .
+
+person:203929 nba-cps:isFrom country:nan .
+
+person:203930 nba-cps:isFrom country:USA .
+
+person:203932 nba-cps:isFrom country:USA .
+
+person:203933 nba-cps:isFrom country:USA .
+
+person:203934 nba-cps:isFrom country:USA .
+
+person:203935 nba-cps:isFrom country:USA .
+
+person:203937 nba-cps:isFrom country:USA .
+
+person:203939 nba-cps:isFrom country:Canada .
+
+person:203940 nba-cps:isFrom country:USA .
+
+person:203942 nba-cps:isFrom country:nan .
+
+person:203943 nba-cps:isFrom country:USA .
+
+person:203944 nba-cps:isFrom country:USA .
+
+person:203945 nba-cps:isFrom country:USA .
+
+person:203946 nba-cps:isFrom country:Australia .
+
+person:203947 nba-cps:isFrom country:nan .
+
+person:203948 nba-cps:isFrom country:USA .
+
+person:203949 nba-cps:isFrom country:USA .
+
+person:203950 nba-cps:isFrom country:USA .
+
+person:203951 nba-cps:isFrom country:USA .
+
+person:203952 nba-cps:isFrom country:Canada .
+
+person:203953 nba-cps:isFrom country:USA .
+
+person:203954 nba-cps:isFrom country:Cameroon .
+
+person:203955 nba-cps:isFrom country:USA .
+
+person:203956 nba-cps:isFrom country:USA .
+
+person:203957 nba-cps:isFrom country:Australia .
+
+person:203958 nba-cps:isFrom country:USA .
+
+person:203959 nba-cps:isFrom country:nan .
+
+person:203960 nba-cps:isFrom country:USA .
+
+person:203961 nba-cps:isFrom country:USA .
+
+person:203962 nba-cps:isFrom country:USA .
+
+person:203963 nba-cps:isFrom country:USA .
+
+person:203964 nba-cps:isFrom country:nan .
+
+person:203965 nba-cps:isFrom country:nan .
+
+person:203966 nba-cps:isFrom country:USA .
+
+person:203967 nba-cps:isFrom country:Croatia .
+
+person:203968 nba-cps:isFrom country:USA .
+
+person:203990 nba-cps:isFrom country:nan .
+
+person:203991 nba-cps:isFrom country:Switzerland .
+
+person:203992 nba-cps:isFrom country:Serbia .
+
+person:203994 nba-cps:isFrom country:BosniaHerzegovina .
+
+person:203996 nba-cps:isFrom country:France .
+
+person:203998 nba-cps:isFrom country:Brazil .
+
+person:203999 nba-cps:isFrom country:Serbia .
+
+person:204001 nba-cps:isFrom country:Latvia .
+
+person:204002 nba-cps:isFrom country:CaboVerde .
+
+person:204014 nba-cps:isFrom country:Croatia .
+
+person:204020 nba-cps:isFrom country:USA .
+
+person:204021 nba-cps:isFrom country:Canada .
+
+person:204022 nba-cps:isFrom country:USA .
+
+person:204024 nba-cps:isFrom country:nan .
+
+person:204025 nba-cps:isFrom country:USA .
+
+person:204026 nba-cps:isFrom country:nan .
+
+person:204027 nba-cps:isFrom country:USA .
+
+person:204028 nba-cps:isFrom country:USA .
+
+person:204029 nba-cps:isFrom country:nan .
+
+person:204030 nba-cps:isFrom country:nan .
+
+person:204033 nba-cps:isFrom country:USA .
+
+person:204034 nba-cps:isFrom country:nan .
+
+person:204037 nba-cps:isFrom country:USA .
+
+person:204038 nba-cps:isFrom country:USA .
+
+person:204039 nba-cps:isFrom country:nan .
+
+person:204040 nba-cps:isFrom country:nan .
+
+person:204041 nba-cps:isFrom country:nan .
+
+person:204044 nba-cps:isFrom country:nan .
+
+person:204053 nba-cps:isFrom country:nan .
+
+person:204054 nba-cps:isFrom country:Slovenia .
+
+person:204060 nba-cps:isFrom country:Australia .
+
+person:204061 nba-cps:isFrom country:nan .
+
+person:204062 nba-cps:isFrom country:nan .
+
+person:204063 nba-cps:isFrom country:nan .
+
+person:204064 nba-cps:isFrom country:nan .
+
+person:204065 nba-cps:isFrom country:USA .
+
+person:204066 nba-cps:isFrom country:USA .
+
+person:204067 nba-cps:isFrom country:USA .
+
+person:204071 nba-cps:isFrom country:nan .
+
+person:204075 nba-cps:isFrom country:nan .
+
+person:204076 nba-cps:isFrom country:nan .
+
+person:204077 nba-cps:isFrom country:nan .
+
+person:204078 nba-cps:isFrom country:nan .
+
+person:204079 nba-cps:isFrom country:USA .
+
+person:204080 nba-cps:isFrom country:nan .
+
+person:204098 nba-cps:isFrom country:USA .
+
+person:2041 nba-cps:isFrom country:USA .
+
+person:204136 nba-cps:isFrom country:nan .
+
+person:204179 nba-cps:isFrom country:Jamaica .
+
+person:204189 nba-cps:isFrom country:nan .
+
+person:204192 nba-cps:isFrom country:nan .
+
+person:204215 nba-cps:isFrom country:nan .
+
+person:204222 nba-cps:isFrom country:USA .
+
+person:204289 nba-cps:isFrom country:nan .
+
+person:204310 nba-cps:isFrom country:nan .
+
+person:204456 nba-cps:isFrom country:USA .
+
+person:2045 nba-cps:isFrom country:Turkey .
+
+person:2046 nba-cps:isFrom country:USA .
+
+person:2047 nba-cps:isFrom country:USA .
+
+person:2048 nba-cps:isFrom country:Canada .
+
+person:2049 nba-cps:isFrom country:USA .
+
+person:2050 nba-cps:isFrom country:USA .
+
+person:2052 nba-cps:isFrom country:USA .
+
+person:2056 nba-cps:isFrom country:Slovenia .
+
+person:2059 nba-cps:isFrom country:Mexico .
+
+person:2060 nba-cps:isFrom country:Serbia .
+
+person:2063 nba-cps:isFrom country:USA .
+
+person:2067 nba-cps:isFrom country:USA .
+
+person:2072 nba-cps:isFrom country:USA .
+
+person:2073 nba-cps:isFrom country:USA .
+
+person:2078 nba-cps:isFrom country:USA .
+
+person:2109 nba-cps:isFrom country:USA .
+
+person:2124 nba-cps:isFrom country:USA .
+
+person:2137 nba-cps:isFrom country:USA .
+
+person:2198 nba-cps:isFrom country:USA .
+
+person:2199 nba-cps:isFrom country:USA .
+
+person:2200 nba-cps:isFrom country:Spain .
+
+person:2201 nba-cps:isFrom country:USA .
+
+person:2202 nba-cps:isFrom country:USA .
+
+person:2203 nba-cps:isFrom country:USA .
+
+person:2205 nba-cps:isFrom country:Senegal .
+
+person:2207 nba-cps:isFrom country:USA .
+
+person:2209 nba-cps:isFrom country:Serbia .
+
+person:2210 nba-cps:isFrom country:USA .
+
+person:2211 nba-cps:isFrom country:USA .
+
+person:2212 nba-cps:isFrom country:USA .
+
+person:2215 nba-cps:isFrom country:USA .
+
+person:2216 nba-cps:isFrom country:USA .
+
+person:2217 nba-cps:isFrom country:USA .
+
+person:2222 nba-cps:isFrom country:USA .
+
+person:2223 nba-cps:isFrom country:Haiti .
+
+person:2224 nba-cps:isFrom country:USA .
+
+person:2225 nba-cps:isFrom country:France .
+
+person:2229 nba-cps:isFrom country:USA .
+
+person:2230 nba-cps:isFrom country:USA .
+
+person:2239 nba-cps:isFrom country:USA .
+
+person:2240 nba-cps:isFrom country:USA .
+
+person:2243 nba-cps:isFrom country:USA .
+
+person:2246 nba-cps:isFrom country:Turkey .
+
+person:2248 nba-cps:isFrom country:USA .
+
+person:2250 nba-cps:isFrom country:USA .
+
+person:2254 nba-cps:isFrom country:USA .
+
+person:2260 nba-cps:isFrom country:USA .
+
+person:2294 nba-cps:isFrom country:USA .
+
+person:2306 nba-cps:isFrom country:PuertoRico .
+
+person:2365 nba-cps:isFrom country:USA .
+
+person:2366 nba-cps:isFrom country:USA .
+
+person:2397 nba-cps:isFrom country:China .
+
+person:2399 nba-cps:isFrom country:USA .
+
+person:2400 nba-cps:isFrom country:USA .
+
+person:2401 nba-cps:isFrom country:Georgia .
+
+person:2403 nba-cps:isFrom country:Brazil .
+
+person:2404 nba-cps:isFrom country:USA .
+
+person:2405 nba-cps:isFrom country:USA .
+
+person:2406 nba-cps:isFrom country:USA .
+
+person:2407 nba-cps:isFrom country:USA .
+
+person:2408 nba-cps:isFrom country:USA .
+
+person:2409 nba-cps:isFrom country:USA .
+
+person:2413 nba-cps:isFrom country:USA .
+
+person:2416 nba-cps:isFrom country:USA .
+
+person:2419 nba-cps:isFrom country:USA .
+
+person:2420 nba-cps:isFrom country:SerbiaandMontenegro .
+
+person:2422 nba-cps:isFrom country:USA .
+
+person:2424 nba-cps:isFrom country:USA .
+
+person:2427 nba-cps:isFrom country:USA .
+
+person:2429 nba-cps:isFrom country:Netherlands .
+
+person:2430 nba-cps:isFrom country:USA .
+
+person:2431 nba-cps:isFrom country:USA .
+
+person:2436 nba-cps:isFrom country:USA .
+
+person:244 nba-cps:isFrom country:USA .
+
+person:2440 nba-cps:isFrom country:USA .
+
+person:2441 nba-cps:isFrom country:USA .
+
+person:2443 nba-cps:isFrom country:Lithuania .
+
+person:2446 nba-cps:isFrom country:USA .
+
+person:2449 nba-cps:isFrom country:Argentina .
+
+person:2457 nba-cps:isFrom country:USA .
+
+person:2484 nba-cps:isFrom country:USA .
+
+person:2501 nba-cps:isFrom country:USA .
+
+person:2544 nba-cps:isFrom country:USA .
+
+person:2545 nba-cps:isFrom country:Serbia .
+
+person:2546 nba-cps:isFrom country:USA .
+
+person:2547 nba-cps:isFrom country:USA .
+
+person:2548 nba-cps:isFrom country:USA .
+
+person:2549 nba-cps:isFrom country:USA .
+
+person:255 nba-cps:isFrom country:USA .
+
+person:2550 nba-cps:isFrom country:USA .
+
+person:2551 nba-cps:isFrom country:USA .
+
+person:2552 nba-cps:isFrom country:USA .
+
+person:2553 nba-cps:isFrom country:USA .
+
+person:2554 nba-cps:isFrom country:France .
+
+person:2555 nba-cps:isFrom country:USA .
+
+person:2556 nba-cps:isFrom country:USA .
+
+person:2557 nba-cps:isFrom country:USA .
+
+person:2561 nba-cps:isFrom country:USA .
+
+person:2562 nba-cps:isFrom country:Montenegro .
+
+person:2563 nba-cps:isFrom country:USA .
+
+person:2564 nba-cps:isFrom country:France .
+
+person:2566 nba-cps:isFrom country:USA .
+
+person:2567 nba-cps:isFrom country:USA .
+
+person:2568 nba-cps:isFrom country:Argentina .
+
+person:2570 nba-cps:isFrom country:USA .
+
+person:2571 nba-cps:isFrom country:Brazil .
+
+person:2572 nba-cps:isFrom country:USA .
+
+person:2574 nba-cps:isFrom country:USA .
+
+person:2575 nba-cps:isFrom country:USA .
+
+person:2581 nba-cps:isFrom country:USA .
+
+person:2584 nba-cps:isFrom country:USA .
+
+person:2585 nba-cps:isFrom country:Georgia .
+
+person:2586 nba-cps:isFrom country:USA .
+
+person:2588 nba-cps:isFrom country:USA .
+
+person:2590 nba-cps:isFrom country:USA .
+
+person:2592 nba-cps:isFrom country:USA .
+
+person:2594 nba-cps:isFrom country:USA .
+
+person:2596 nba-cps:isFrom country:nan .
+
+person:2605 nba-cps:isFrom country:USA .
+
+person:2617 nba-cps:isFrom country:USA .
+
+person:2624 nba-cps:isFrom country:USA .
+
+person:2632 nba-cps:isFrom country:USA .
+
+person:2648 nba-cps:isFrom country:USA .
+
+person:2668 nba-cps:isFrom country:USA .
+
+person:2669 nba-cps:isFrom country:USA .
+
+person:2679 nba-cps:isFrom country:USA .
+
+person:2694 nba-cps:isFrom country:USA .
+
+person:2730 nba-cps:isFrom country:USA .
+
+person:2731 nba-cps:isFrom country:USA .
+
+person:2732 nba-cps:isFrom country:USA .
+
+person:2733 nba-cps:isFrom country:USA .
+
+person:2734 nba-cps:isFrom country:USA .
+
+person:2735 nba-cps:isFrom country:USA .
+
+person:2736 nba-cps:isFrom country:UnitedKingdom .
+
+person:2738 nba-cps:isFrom country:USA .
+
+person:2739 nba-cps:isFrom country:USA .
+
+person:2740 nba-cps:isFrom country:Latvia .
+
+person:2742 nba-cps:isFrom country:USA .
+
+person:2743 nba-cps:isFrom country:USA .
+
+person:2744 nba-cps:isFrom country:USA .
+
+person:2746 nba-cps:isFrom country:USA .
+
+person:2747 nba-cps:isFrom country:USA .
+
+person:2748 nba-cps:isFrom country:USA .
+
+person:2749 nba-cps:isFrom country:USA .
+
+person:2753 nba-cps:isFrom country:USA .
+
+person:2754 nba-cps:isFrom country:USA .
+
+person:2755 nba-cps:isFrom country:USA .
+
+person:2756 nba-cps:isFrom country:Slovenia .
+
+person:2757 nba-cps:isFrom country:Slovenia .
+
+person:2760 nba-cps:isFrom country:Brazil .
+
+person:2765 nba-cps:isFrom country:USA .
+
+person:2767 nba-cps:isFrom country:USA .
+
+person:2768 nba-cps:isFrom country:USA .
+
+person:2772 nba-cps:isFrom country:USA .
+
+person:2773 nba-cps:isFrom country:nan .
+
+person:2788 nba-cps:isFrom country:DemocraticRepublicoftheCongo .
+
+person:2804 nba-cps:isFrom country:Argentina .
+
+person:283 nba-cps:isFrom country:USA .
+
+person:2853 nba-cps:isFrom country:USA .
+
+person:2857 nba-cps:isFrom country:USA .
+
+person:2863 nba-cps:isFrom country:USA .
+
+person:2876 nba-cps:isFrom country:USA .
+
+person:406 nba-cps:isFrom country:USA .
+
+person:436 nba-cps:isFrom country:USA .
+
+person:467 nba-cps:isFrom country:USA .
+
+person:500032 nba-cps:isFrom country:USA .
+
+person:686 nba-cps:isFrom country:USA .
+
+person:689 nba-cps:isFrom country:USA .
+
+person:693 nba-cps:isFrom country:USA .
+
+person:703 nba-cps:isFrom country:USA .
+
+person:708 nba-cps:isFrom country:USA .
+
+person:711 nba-cps:isFrom country:USA .
+
+person:714 nba-cps:isFrom country:USA .
+
+person:739 nba-cps:isFrom country:USA .
+
+person:947 nba-cps:isFrom country:USA .
+
+person:948 nba-cps:isFrom country:USA .
+
+person:951 nba-cps:isFrom country:USA .
+
+person:956 nba-cps:isFrom country:USA .
+
+person:959 nba-cps:isFrom country:Canada .
+
+person:965 nba-cps:isFrom country:USA .
+
+person:977 nba-cps:isFrom country:USA .
+
+person:978 nba-cps:isFrom country:SerbiaandMontenegro .
+
+person:979 nba-cps:isFrom country:USA .
+
+person:980 nba-cps:isFrom country:Lithuania .
+

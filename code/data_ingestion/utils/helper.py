@@ -86,8 +86,8 @@ class Helper:
                     Path of the file zip to create
         """
         list_path_files = self.get_list_paths_files_by_folder(path_files_to_zip)
-        
-        with ZipFile(path_zip_to_create,'wb') as zip:        
+
+        with ZipFile(path_zip_to_create,'w') as zip:        
             for file in list_path_files:
                 zip.write(file)
 
@@ -99,11 +99,12 @@ class Helper:
                     The folder to which obtain the path of files inside
             Returns
                 The list of the paths of files inside path_folder_files
-        """
+        """        
         list_files = os.listdir(path_folder_files)
-        list_path_files = []
         
+        list_path_files = []
+
         for file_name in list_files:
             list_path_files.append(os.path.join(path_folder_files,file_name))
-        
-        return list_files
+
+        return list_path_files

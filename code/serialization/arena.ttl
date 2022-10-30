@@ -1,0 +1,120 @@
+@prefix arena: <https://www.dei.unipd.it/Database2/CPS-NBA/Arena#> .
+@prefix base: <https://www.dei.unipd.it/Database2/CPS-NBA/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+arena:ATTCenter a base:Arena ;
+    base:capacity 18694.0 ;
+    base:name "AT&T Center"^^xsd:string .
+
+arena:AmericanAirlinesArena a base:Arena ;
+    base:capacity 19600.0 ;
+    base:name "AmericanAirlines Arena"^^xsd:string .
+
+arena:AmericanAirlinesCenter a base:Arena ;
+    base:capacity 19200.0 ;
+    base:name "American Airlines Center"^^xsd:string .
+
+arena:AmwayCenter a base:Arena ;
+    base:capacity 19295.0 ;
+    base:name "Amway Center"^^xsd:string .
+
+arena:BankersLifeFieldhouse a base:Arena ;
+    base:capacity 18345.0 ;
+    base:name "Bankers Life Fieldhouse"^^xsd:string .
+
+arena:BarclaysCenter a base:Arena ;
+    base:capacity 19295.0 ;
+    base:name "Barclays Center"^^xsd:string .
+
+arena:CapitalOneArena a base:Arena ;
+    base:capacity 20647.0 ;
+    base:name "Capital One Arena"^^xsd:string .
+
+arena:ChaseCenter a base:Arena ;
+    base:capacity 19596.0 ;
+    base:name "Chase Center"^^xsd:string .
+
+arena:ChesapeakeEnergyArena a base:Arena ;
+    base:capacity 19163.0 ;
+    base:name "Chesapeake Energy Arena"^^xsd:string .
+
+arena:FedExForum a base:Arena ;
+    base:capacity 18119.0 ;
+    base:name "FedExForum"^^xsd:string .
+
+arena:FiservForum a base:Arena ;
+    base:capacity 17500.0 ;
+    base:name "Fiserv Forum"^^xsd:string .
+
+arena:Golden1Center a base:Arena ;
+    base:capacity 17500.0 ;
+    base:name "Golden 1 Center"^^xsd:string .
+
+arena:LittleCaesarsArena a base:Arena ;
+    base:capacity 21000.0 ;
+    base:name "Little Caesars Arena"^^xsd:string .
+
+arena:MadisonSquareGarden a base:Arena ;
+    base:capacity 19763.0 ;
+    base:name "Madison Square Garden"^^xsd:string .
+
+arena:ModaCenter a base:Arena ;
+    base:capacity 19980.0 ;
+    base:name "Moda Center"^^xsd:string .
+
+arena:PepsiCenter a base:Arena ;
+    base:capacity 19099.0 ;
+    base:name "Pepsi Center"^^xsd:string .
+
+arena:QuickenLoansArena a base:Arena ;
+    base:capacity 20562.0 ;
+    base:name "Quicken Loans Arena"^^xsd:string .
+
+arena:ScotiabankArena a base:Arena ;
+    base:capacity 19800.0 ;
+    base:name "Scotiabank Arena"^^xsd:string .
+
+arena:SmoothieKingCenter a base:Arena ;
+    base:capacity 19295.0 ;
+    base:name "Smoothie King Center"^^xsd:string .
+
+arena:SpectrumCenter a base:Arena ;
+    base:capacity 19026.0 ;
+    base:name "Spectrum Center"^^xsd:string .
+
+arena:StaplesCenter a base:Arena ;
+    base:capacity 19060.0 ;
+    base:name "Staples Center"^^xsd:string .
+
+arena:StateFarmArena a base:Arena ;
+    base:capacity 18729.0 ;
+    base:name "State Farm Arena"^^xsd:string .
+
+arena:TDGarden a base:Arena ;
+    base:capacity 18624.0 ;
+    base:name "TD Garden"^^xsd:string .
+
+arena:TalkingStickResortArena a base:Arena ;
+    base:capacity 19295.0 ;
+    base:name "Talking Stick Resort Arena"^^xsd:string .
+
+arena:TargetCenter a base:Arena ;
+    base:capacity 19356.0 ;
+    base:name "Target Center"^^xsd:string .
+
+arena:ToyotaCenter a base:Arena ;
+    base:capacity 18104.0 ;
+    base:name "Toyota Center"^^xsd:string .
+
+arena:UnitedCenter a base:Arena ;
+    base:capacity 21711.0 ;
+    base:name "United Center"^^xsd:string .
+
+arena:VivintSmartHomeArena a base:Arena ;
+    base:capacity 20148.0 ;
+    base:name "Vivint Smart Home Arena"^^xsd:string .
+
+arena:WellsFargoCenter a base:Arena ;
+    base:capacity 19295.0 ;
+    base:name "Wells Fargo Center"^^xsd:string .
+
