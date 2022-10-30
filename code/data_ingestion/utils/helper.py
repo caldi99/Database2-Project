@@ -33,7 +33,7 @@ class Helper:
                         The output path where to serialize the graph
         """
         #windows complain with wb
-        with open(output_path,'wb') as file:
+        with open(output_path,'w') as file:
             file.write(graph.serialize(format = self.SERIALIZATION_TYPE))        
 
     def read_csv(self, path_csv: str, sep: str, index_col: str = None) -> pd.DataFrame:

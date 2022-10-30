@@ -78,8 +78,14 @@ for index,row in merged_dataframe.iterrows():
     if(row['MIN'] != 'nan'):        
         #Data
         graph.add((appearance_subject_uri, BASE['role'], Literal(row['START_POSITION'],datatype = XSD.string)))
-        graph.add((appearance_subject_uri, BASE['minutes'], Literal(int(row['MIN'].split(':')[0]),datatype = XSD.integer)))
-        graph.add((appearance_subject_uri, BASE['seconds'], Literal(int(row['MIN'].split(':')[1]),datatype = XSD.integer)))
+
+        if(len(row['MIN'].split(':')) == 2):
+            graph.add((appearance_subject_uri, BASE['minutes'], Literal(int(row['MIN'].split(':')[0]),datatype = XSD.integer)))
+            graph.add((appearance_subject_uri, BASE['seconds'], Literal(int(row['MIN'].split(':')[1]),datatype = XSD.integer)))
+        elif (len(row['MIN'].split(':')) == 1):
+            graph.add((appearance_subject_uri, BASE['minutes'], Literal(int(row['MIN'].split(':')[0]),datatype = XSD.integer)))
+            graph.add((appearance_subject_uri, BASE['seconds'], Literal(0,datatype = XSD.integer)))
+            
         graph.add((appearance_subject_uri, BASE['fgm'], Literal(int(row['FGM']),datatype = XSD.integer)))
         graph.add((appearance_subject_uri, BASE['fga'], Literal(int(row['FGA']),datatype = XSD.integer)))
         graph.add((appearance_subject_uri, BASE['fgpct'], Literal(row['FG_PCT'],datatype = XSD.float)))
