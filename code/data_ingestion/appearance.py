@@ -1,5 +1,5 @@
 """
-    Author : Andrea Pasin
+    Author : Andrea Pasin, Francesco Caldivezzi
 """
 
 from data_ingestion.utils.helper import Helper
@@ -68,6 +68,14 @@ graph.bind("appearance",APPEARANCE)
 graph.bind("base",BASE)
 
 # --------------------------------------------------------------------------
+# Serialization Variables
+# --------------------------------------------------------------------------
+BLOCK_SERIALIZATION_SIZE = 200000 
+index_file = 0
+base_serialization_path = str(Path(__file__).parent.resolve())+"/serialization"
+path_list_file_merge = []
+
+# --------------------------------------------------------------------------
 # Create triples and populate the graph
 # --------------------------------------------------------------------------
 for index,row in merged_dataframe.iterrows():
@@ -129,10 +137,28 @@ for index,row in merged_dataframe.iterrows():
         graph.add((appearance_subject_uri, BASE['pF'], Literal(0,datatype = XSD.integer)))
         graph.add((appearance_subject_uri, BASE['pts'], Literal(0,datatype = XSD.integer)))
         graph.add((appearance_subject_uri, BASE['comment'], Literal(row['COMMENT'],datatype = XSD.string)))
-       
+    
+
+    # --------------------------------------------------------------------------
+    # Serialize at blocks
+    # --------------------------------------------------------------------------
+    if(index != 0 and (index % BLOCK_SERIALIZATION_SIZE == 0)):
+        serialization_path = base_serialization_path + "/appearance{}.ttl".format(index_file)
+        path_list_file_merge.append(serialization_path)
+        index_file += 1
+        helper.serialize(graph,serialization_path)
+        #graph.remove((None,None,None))
+        graph = Graph()
+        graph.bind("appearance",APPEARANCE)
+        graph.bind("base",BASE)
+    elif(index == (merged_dataframe.shape[0]-1)):
+        serialization_path = base_serialization_path + "/appearance{}.ttl".format(index_file)
+        path_list_file_merge.append(serialization_path)
+        helper.serialize(graph,serialization_path)
+
+
 # --------------------------------------------------------------------------
-# Serialize the graph
+# Serialize and remove blocks
 # --------------------------------------------------------------------------
 print("SERIALIZING ..")
-serialization_path=str(Path(__file__).parent.resolve())+"/serialization/appearance.ttl"
-helper.serialize(graph, serialization_path)
+helper.merge_serialization_files(path_list_file_merge,base_serialization_path + "/appearance.ttl",3)

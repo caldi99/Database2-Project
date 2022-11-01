@@ -41,7 +41,7 @@ def process_countries():
         graph.add((country_subj_uri, ONTOLOGY[COUNTRY_NAME], Literal(str(country),lang="en")))
         graph.add((country_subj_uri, RDF.type, URIRef(ONTOLOGY.Country)))
 
-    serialization_path=str(pathlib.Path(__file__).parent.resolve())+"/serialization/countries.ttl"
+    serialization_path=str(pathlib.Path(__file__).parent.resolve())+"/serialization/country.ttl"
     print("serializing...")
 
     # Serializing the graph to a .ttl file

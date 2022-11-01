@@ -69,7 +69,7 @@ def process_players(players_path,players_details_path):
         graph.add((player_subj_uri, BASE[PLAYER_START_SEASON], Literal(start_year, datatype = XSD.integer)))
         graph.add((player_subj_uri, BASE[PLAYER_END_SEASON], Literal(end_year, datatype = XSD.integer)))
 
-    serialization_path=str(pathlib.Path(__file__).parent.resolve())+"/serialization/players.ttl"
+    serialization_path=str(pathlib.Path(__file__).parent.resolve())+"/serialization/player.ttl"
     print("serializing...")
 
     # Serializing the graph to a .ttl file

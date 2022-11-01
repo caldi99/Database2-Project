@@ -108,3 +108,25 @@ class Helper:
             list_path_files.append(os.path.join(path_folder_files,file_name))
 
         return list_path_files
+
+    def merge_serialization_files(self,list_path_file_to_merge , destination_path : str, namespaces_number : int)-> None:        
+        
+        first = True
+        list_lines = []  
+                           
+        for path_file in list_path_file_to_merge:              
+            with open(path_file, "r") as fr:
+                lines = fr.readlines()            
+            
+            if(first):
+                first = False
+                list_lines.append(lines)
+            else:
+                list_lines.append(lines[namespaces_number + 1:])                                    
+        
+        for l in list_lines:
+            with open(destination_path, "a") as fw:
+                fw.writelines(l)
+
+        for path_file in list_path_file_to_merge:
+            os.remove(path_file)
