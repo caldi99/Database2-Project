@@ -1,5 +1,8 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_web_app/constants.dart' as constants;
+
 
 // This is the file where the header style is defined
 class CustomHeader extends StatefulWidget {
@@ -29,7 +32,7 @@ class _CustomHeader extends State<CustomHeader> {
         decoration: BoxDecoration(
           shape: BoxShape.rectangle,
           gradient: const LinearGradient(
-            colors: [constants.LIGHT_BLUE, constants.ORANGE],
+            colors: [constants.BLUE, constants.RED],
           ),
           borderRadius: BorderRadius.only(
             topLeft: Radius.zero,
@@ -58,7 +61,22 @@ class _CustomHeader extends State<CustomHeader> {
                       fit:BoxFit.fitHeight
                   ),
                 )
-            )
+            ),
+            Container(
+                padding: EdgeInsets.only(left:20,top:20,bottom: 20,right:20),
+                //height: double.infinity,
+                child:Align(
+                    alignment: Alignment.center,
+
+                    child:Text( 'NBA Ontology',
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 80.0*(_sizeAnimation.value/200.0),
+                    color: Colors.white,
+
+                  ),))
+            ),
+
           ],
         )
     );

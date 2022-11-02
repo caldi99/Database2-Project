@@ -1,4 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:flutter_web_app/graph_handler.dart';
+import 'package:flutter_web_app/graph_visualizer.dart';
+import 'package:flutter_web_app/home_vs_away_wins_chart.dart';
+import 'package:flutter_web_app/html_graph_visualizer.dart';
+import 'package:flutter_web_app/query_handler.dart';
+import 'package:flutter_web_app/query_input_field.dart';
+import 'package:flutter_web_app/test_rich_controller.dart';
 import 'package:syncfusion_flutter_charts/charts.dart';
 import 'package:flutter_web_app/constants.dart' as constants;
 import 'package:http/http.dart' as http;
@@ -42,6 +50,7 @@ class _MyHomePageState extends State<MyHomePage> with SingleTickerProviderStateM
   late Animation sizeAnimation;
   final _scrollController = ScrollController();
   bool scrollTop=true;
+  late SvgPicture picture;
 
   @override
   void initState() {
@@ -52,11 +61,14 @@ class _MyHomePageState extends State<MyHomePage> with SingleTickerProviderStateM
         curve: Curves.easeInOut
     ));
     _animationController.addListener(() { setState(() {
+      sizeAnimation;
 
     });});
+    //picture= GraphVisualizer.httpRequestGraphDb();
 
     // Setting up the scroll listener
     _scrollController.addListener(() {
+      print("SCROLL");
       if(_scrollController.position.pixels<=_scrollController.position.maxScrollExtent/10 && !scrollTop){
         _animationController.reverse();
         scrollTop=true;
@@ -75,33 +87,6 @@ class _MyHomePageState extends State<MyHomePage> with SingleTickerProviderStateM
     super.dispose();
   }
 
-  // Makes the http post to our GraphDB server and retrieves in JSON format the triples
-  void httpRequestGraphDb(String query, bool infer, bool sameAS,[limit=1001,offset=0]) async{
-    query="select * where { ?s ?p ?o .} limit 100";
-    var url = Uri.parse('http://localhost:7270/repositories/pokemon');
-    try {
-      var response = await http.post(url,
-          body: {
-            'query': query,
-            'infer': infer.toString(),
-            'sameAs': sameAS.toString(),
-            'limit': limit.toString(),
-            'offset': offset.toString()
-          },
-          headers: {
-            'Accept':"application/x-sparqlstar-results+json, application/sparql-results+json;q=0.9, */*;q=0.8",
-            'Content-Type':"application/x-www-form-urlencoded; charset=UTF-8"
-          }
-      );
-      print('Response status: ${response.statusCode}');
-      print('Response body: ${response.body}');
-    }
-    catch(ex){
-      print(ex);
-    }
-  }
-
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -111,6 +96,7 @@ class _MyHomePageState extends State<MyHomePage> with SingleTickerProviderStateM
           Positioned.fill(
             top:minHeight-roundBorderSize,
             child:ListView(
+
               controller: _scrollController,
               scrollDirection: Axis.vertical,
               children: [
@@ -119,9 +105,69 @@ class _MyHomePageState extends State<MyHomePage> with SingleTickerProviderStateM
                 ),
                 const Padding(
                   padding: EdgeInsets.all(20.0),
-                  child: TitleAndDescription(),
+                  child: TitleAndDescriptionParagraph(),
                 ),
-                SizedBox(
+                const Padding(
+                  padding: EdgeInsets.all(20.0),
+                  child: GraphParagraph(),
+                ),
+                const Padding(
+                  padding: EdgeInsets.all(20.0),
+                  child: GraphIFrame(),
+                ),
+                const Padding(
+                  padding: EdgeInsets.all(20.0),
+                  child: ChartParagraph(),
+                ),
+                Padding(
+                  padding: EdgeInsets.all(20.0),
+                  child: Column(
+                    children: [
+                      //HomeVsAwayWinsChart()
+                      SizedBox(
+                          height: 400,
+
+                          child:Row(
+
+
+
+                            children: const [
+                              Expanded(
+                                flex: 3,
+                                child:SizedBox(),
+
+                              ),
+                              Expanded(
+                                flex: 12,
+                                child:HomeVsAwayWinsChart(),
+
+                              ),
+                              Expanded(
+                                flex: 3,
+                                child:SizedBox(),
+
+                              ),
+                              Expanded(
+                                flex:12,
+                                child:HomeVsAwayWinsChart(),
+
+                              ),
+                              Expanded(
+                                flex: 3,
+                                child:SizedBox(),
+
+                              ),
+
+                            ],
+                          )
+                      ),
+                    ],
+                  ),
+                ),
+
+
+
+                /*SizedBox(
                   height: 500,
                   //color: Colors.amber[500],
                   child: Padding(
@@ -175,15 +221,29 @@ class _MyHomePageState extends State<MyHomePage> with SingleTickerProviderStateM
                     ),
                   ),
                 ),
-                Container(
+*/
+                const Padding(
+                  padding: EdgeInsets.all(20.0),
+                  child: QueryParagraph(),
+                ),
+
+                const Padding(
+                    padding: EdgeInsets.all(20.0),
+                    child:QueryInput()
+                ),
+                /*Container(
                   height: 500,
                   color: Colors.amber[100],
                   child: const Center(child: Text('Entry C')),
+                ),*/
+                /*ElevatedButton(
+                  child: Text("ciao"),
+                  onPressed: ()=>QueryHandler.httpRequestGraphDb("",true,true),
                 ),
                 ElevatedButton(
-                  child: Text("ciao"),
-                  onPressed: ()=>httpRequestGraphDb("",true,true),
-                )
+                  child: Text("ciao2"),
+                  onPressed: ()=>GraphVisualizer.httpRequestGraphDb(),
+                )*/
               ],
             ),
           ),
