@@ -12,3 +12,7 @@ const double SIZE_TEXT=20.0;
 
 const GRAPHDB_SERVER_ADDRESS="http://localhost:7270/repositories/pokemon";
 const GRAPH_HTML="http://localhost:8000/assets/assets/graph.html";
+
+const HOME_PAGE=0;
+const QUERY_PAGE_1=1;
+const QUERY_PAGE_2=2;

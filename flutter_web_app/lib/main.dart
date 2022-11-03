@@ -2,8 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter_web_app/home_vs_away_wins_chart.dart';
 import 'package:flutter_web_app/html_graph_visualizer.dart';
+import 'package:flutter_web_app/main_page.dart';
 import 'package:flutter_web_app/query_handler.dart';
 import 'package:flutter_web_app/query_input_field.dart';
+import 'package:flutter_web_app/query_page_1.dart';
+import 'package:flutter_web_app/query_page_2.dart';
 import 'package:syncfusion_flutter_charts/charts.dart';
 import 'package:flutter_web_app/constants.dart' as constants;
 import 'package:http/http.dart' as http;
@@ -45,11 +48,13 @@ class _MyHomePageState extends State<MyHomePage> with SingleTickerProviderStateM
   final roundBorderSize=40.0;
   late AnimationController _animationController;
   late Animation sizeAnimation;
-  final _scrollController = ScrollController();
-  bool scrollTop=true;
-  late SvgPicture picture;
-  List<List<String>> elementsQueried=[];
-  List<String> columns=[];
+  List<bool> scrollAtTop=[true,true,true];
+
+
+  /*List<List<String>> elementsQueried=[];
+  List<String> columns=[];*/
+
+  int indexShowingPage=0;
 
   @override
   void initState() {
@@ -59,62 +64,57 @@ class _MyHomePageState extends State<MyHomePage> with SingleTickerProviderStateM
         parent: _animationController,
         curve: Curves.easeInOut
     ));
-    _animationController.addListener(() { setState(() {
-      sizeAnimation;
-
-    });});
-
-    // Setting up the scroll listener
-    _scrollController.addListener(() {
-      if(_scrollController.position.pixels<=_scrollController.position.maxScrollExtent/10 && !scrollTop){
-        _animationController.reverse();
-        scrollTop=true;
-      }
-      else if(_scrollController.position.pixels>_scrollController.position.maxScrollExtent/10 && scrollTop){
-        _animationController.forward();
-        scrollTop=false;
-      }
+    _animationController.addListener(() {
+      setState(() {
+        sizeAnimation;
+      });
     });
+  }
+
+  scrollCallback(String arg){
+    if(arg.compareTo("TOP")==0){
+      if(!scrollAtTop[indexShowingPage]) {
+        _animationController.reverse();
+        scrollAtTop[indexShowingPage]=true;
+      }
+    }
+    else if(arg.compareTo("BOTTOM")==0){
+      if(scrollAtTop[indexShowingPage]) {
+        _animationController.forward();
+        scrollAtTop[indexShowingPage]=false;
+      }
+    }
+  }
+
+  _forceScrollCallback(String arg){
+    if(arg.compareTo("TOP")==0){
+        _animationController.reverse();
+    }
+    else if(arg.compareTo("BOTTOM")==0){
+        _animationController.forward();
+    }
+
   }
 
   @override
   void dispose() {
     _animationController.dispose();
-    _scrollController.dispose();
+    //_scrollController.dispose();
     super.dispose();
   }
 
 
-  callbackQueryResult(var result){
-    print(result);
-    elementsQueried.clear();
-    columns.clear();
 
-    List<List<String>> elements=[];
-    List<String> columnsTemp=[];
-
-    for (String column in result['head']['vars']){
-      columnsTemp.add(column);
-    }
+  void goToPage(int page){
     setState(() {
-      columns.addAll(columnsTemp);
+      indexShowingPage=page;
     });
-
-    int k=0;
-    for (var elem in result['results']['bindings']){
-
-      List<String> valuesK=[];
-      for (int i=0;i<columns.length;i++){
-        valuesK.add(elem[columns[i]]['value']);
-      }
-      elements.add(valuesK);
-      k++;
+    if(!scrollAtTop[indexShowingPage]){
+      _forceScrollCallback("BOTTOM");
     }
-
-    setState(() {
-      elementsQueried.addAll(elements);
-    });
-
+    else if(scrollAtTop[indexShowingPage]){
+      _forceScrollCallback("TOP");
+    }
   }
 
   @override
@@ -125,11 +125,7 @@ class _MyHomePageState extends State<MyHomePage> with SingleTickerProviderStateM
         children: [
           Positioned.fill(
             top:minHeight-roundBorderSize,
-            child:ListView(
-
-              controller: _scrollController,
-              scrollDirection: Axis.vertical,
-              children: [
+              /*children: [
                 const SizedBox(
                   height: 200,
                 ),
@@ -191,11 +187,11 @@ class _MyHomePageState extends State<MyHomePage> with SingleTickerProviderStateM
                 ),
 
                 Padding(
-                    padding: EdgeInsets.all(20.0),
+                    padding: EdgeInsets.only(top:20,bottom: 20,left: 100,right: 100),
                     child:QueryInput(callbackQueryResult:callbackQueryResult)
                 ),
 
-                Padding(
+                (columns.length>0)?Padding(
                   padding: EdgeInsets.only(left: 100,right: 100),
                   child:Container(
                       padding: EdgeInsets.only(left: 20,right: 20),
@@ -224,8 +220,8 @@ class _MyHomePageState extends State<MyHomePage> with SingleTickerProviderStateM
                         ),
                       )
                   ),
-                ),
-                Padding(
+                ):SizedBox(),
+                (columns.length>0)?Padding(
                   padding: EdgeInsets.only(left: 100,right: 100,bottom: 50),
                   child:
                   Container(
@@ -278,16 +274,29 @@ class _MyHomePageState extends State<MyHomePage> with SingleTickerProviderStateM
                           );
                         }),
                   ),
-                ),
-              ],
+                ):SizedBox(),
+              ],*/
+              child:IndexedStack(
+                index: indexShowingPage,
+                children: [
+                  MainPage(scrollCallback: scrollCallback,),
+                  QueryPage1(scrollCallback: scrollCallback,),
+                  QueryPage2(scrollCallback: scrollCallback,)
+                ],
+
+              )
+
             ),
-          ),
+          //),
 
           Positioned(
             top:0,
             right: 0,
             left: 0,
-            child: CustomHeader( sizeAnimation: sizeAnimation),
+            child: CustomHeader( sizeAnimation: sizeAnimation,
+              goToPage: goToPage,
+
+            ),
           ),
         ],
       ),

@@ -9,8 +9,11 @@ class CustomHeader extends StatefulWidget {
   const CustomHeader({
     super.key,
     required this.sizeAnimation,
+    required this.goToPage,
   });
   final Animation sizeAnimation;
+  final goToPage;
+
   @override
   State<CustomHeader> createState() => _CustomHeader();
 }
@@ -18,12 +21,14 @@ class CustomHeader extends StatefulWidget {
 class _CustomHeader extends State<CustomHeader> {
   late final Animation _sizeAnimation;
   final roundBorderSize=40.0;
+  late final goToPage;
+
   @override
   void initState() {
     _sizeAnimation=widget.sizeAnimation;
+    goToPage=widget.goToPage;
     super.initState();
   }
-
 
   @override
   Widget build(BuildContext context) {
@@ -51,7 +56,9 @@ class _CustomHeader extends State<CustomHeader> {
         ),
         child:Row(
           children: [
-            Container(
+
+            GestureDetector(
+              child:Container(
                 padding: EdgeInsets.only(left:20,top:20,bottom: 20),
 
                 child:ClipRRect(
@@ -60,7 +67,12 @@ class _CustomHeader extends State<CustomHeader> {
                       "assets/logo.png",
                       fit:BoxFit.fitHeight
                   ),
-                )
+                ),
+
+              ),
+              onTap: () async {
+                goToPage(constants.HOME_PAGE);
+              },
             ),
             Container(
                 padding: EdgeInsets.only(left:20,top:20,bottom: 20,right:20),
@@ -78,6 +90,39 @@ class _CustomHeader extends State<CustomHeader> {
                     )
                 )
             ),
+            Expanded(child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              mainAxisSize: MainAxisSize.max,
+              children: [
+                GestureDetector(
+                  child: const Text(
+
+                    'Query page 1',
+                    style: TextStyle(
+                        color: Colors.white, decoration: TextDecoration.underline,fontSize:20),
+                  ),
+                  onTap: () async {
+                    goToPage(constants.QUERY_PAGE_1);
+                  },
+                ),
+                GestureDetector(
+                  child: const Text(
+                    'Query page 2',
+                    style: TextStyle(
+                        color: Colors.white, decoration: TextDecoration.underline,fontSize:20),
+                  ),
+                  onTap: () async {
+                    goToPage(constants.QUERY_PAGE_2);
+                  },
+                ),
+              ],
+            )
+            )
+
+            //Expanded(flex: 1,child: SizedBox(),),
+
+            //Expanded(flex: 1,child: SizedBox(),),
+
           ],
         )
     );

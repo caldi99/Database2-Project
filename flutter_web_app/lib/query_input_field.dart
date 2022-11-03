@@ -14,6 +14,8 @@ class _QueryInput extends State<QueryInput> {
   late final callbackQueryResult;
 // Add a controller
   late RichTextController _controller;
+  Color borderColorFocused=constants.BLUE;
+  Color borderColor=Colors.grey;
 
   @override
   void initState() {
@@ -67,16 +69,16 @@ class _QueryInput extends State<QueryInput> {
                     keyboardType: TextInputType.multiline,
                     maxLines: 15,
                     cursorColor: constants.BLUE,
-                    decoration: const InputDecoration(
+                    decoration: InputDecoration(
 
                       enabledBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.all(Radius.circular(30.0)),
-                        borderSide: BorderSide(color: Colors.grey, width: 2.0),
+                        borderSide: BorderSide(color: borderColor, width: 2.0),
 
                       ),
                       focusedBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.all(Radius.circular(30.0)),
-                        borderSide: BorderSide(color: constants.BLUE, width: 2.0),
+                        borderSide: BorderSide(color: borderColorFocused, width: 2.0),
 
                       ),
                       contentPadding: EdgeInsets.only(top:30,bottom: 30,left: 25,right: 25),
@@ -94,8 +96,21 @@ class _QueryInput extends State<QueryInput> {
 
 
               onPressed: () async {
-                var json=await QueryHandler.httpRequestGraphDb(_controller.text, true, true);
-                callbackQueryResult(json);
+                try {
+                  var json = await QueryHandler.httpRequestGraphDb(
+                      _controller.text, true, true);
+                  callbackQueryResult(json);
+                  setState(() {
+                    borderColor=Colors.grey;
+                    borderColorFocused=constants.BLUE;
+                  });
+                }
+                catch(exception){
+                  setState(() {
+                    borderColor=constants.RED;
+                    borderColorFocused=constants.RED;
+                  });
+                }
 
                 },
               style: ButtonStyle(
