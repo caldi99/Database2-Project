@@ -69,14 +69,15 @@ class _CustomHeader extends State<CustomHeader> {
                     alignment: Alignment.center,
 
                     child:Text( 'NBA Ontology',
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 80.0*(_sizeAnimation.value/200.0),
-                    color: Colors.white,
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 80.0*(_sizeAnimation.value/200.0),
+                        color: Colors.white,
 
-                  ),))
+                      ),
+                    )
+                )
             ),
-
           ],
         )
     );

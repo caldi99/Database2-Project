@@ -1,12 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:flutter_web_app/graph_handler.dart';
-import 'package:flutter_web_app/graph_visualizer.dart';
 import 'package:flutter_web_app/home_vs_away_wins_chart.dart';
 import 'package:flutter_web_app/html_graph_visualizer.dart';
 import 'package:flutter_web_app/query_handler.dart';
 import 'package:flutter_web_app/query_input_field.dart';
-import 'package:flutter_web_app/test_rich_controller.dart';
 import 'package:syncfusion_flutter_charts/charts.dart';
 import 'package:flutter_web_app/constants.dart' as constants;
 import 'package:http/http.dart' as http;
@@ -51,6 +48,8 @@ class _MyHomePageState extends State<MyHomePage> with SingleTickerProviderStateM
   final _scrollController = ScrollController();
   bool scrollTop=true;
   late SvgPicture picture;
+  List<List<String>> elementsQueried=[];
+  List<String> columns=[];
 
   @override
   void initState() {
@@ -64,11 +63,9 @@ class _MyHomePageState extends State<MyHomePage> with SingleTickerProviderStateM
       sizeAnimation;
 
     });});
-    //picture= GraphVisualizer.httpRequestGraphDb();
 
     // Setting up the scroll listener
     _scrollController.addListener(() {
-      print("SCROLL");
       if(_scrollController.position.pixels<=_scrollController.position.maxScrollExtent/10 && !scrollTop){
         _animationController.reverse();
         scrollTop=true;
@@ -85,6 +82,39 @@ class _MyHomePageState extends State<MyHomePage> with SingleTickerProviderStateM
     _animationController.dispose();
     _scrollController.dispose();
     super.dispose();
+  }
+
+
+  callbackQueryResult(var result){
+    print(result);
+    elementsQueried.clear();
+    columns.clear();
+
+    List<List<String>> elements=[];
+    List<String> columnsTemp=[];
+
+    for (String column in result['head']['vars']){
+      columnsTemp.add(column);
+    }
+    setState(() {
+      columns.addAll(columnsTemp);
+    });
+
+    int k=0;
+    for (var elem in result['results']['bindings']){
+
+      List<String> valuesK=[];
+      for (int i=0;i<columns.length;i++){
+        valuesK.add(elem[columns[i]]['value']);
+      }
+      elements.add(valuesK);
+      k++;
+    }
+
+    setState(() {
+      elementsQueried.addAll(elements);
+    });
+
   }
 
   @override
@@ -123,41 +153,31 @@ class _MyHomePageState extends State<MyHomePage> with SingleTickerProviderStateM
                   padding: EdgeInsets.all(20.0),
                   child: Column(
                     children: [
-                      //HomeVsAwayWinsChart()
                       SizedBox(
                           height: 400,
-
+                          // A couple of charts
                           child:Row(
-
-
-
                             children: const [
                               Expanded(
                                 flex: 3,
                                 child:SizedBox(),
-
                               ),
                               Expanded(
                                 flex: 12,
                                 child:HomeVsAwayWinsChart(),
-
                               ),
                               Expanded(
                                 flex: 3,
                                 child:SizedBox(),
-
                               ),
                               Expanded(
                                 flex:12,
                                 child:HomeVsAwayWinsChart(),
-
                               ),
                               Expanded(
                                 flex: 3,
                                 child:SizedBox(),
-
                               ),
-
                             ],
                           )
                       ),
@@ -165,85 +185,100 @@ class _MyHomePageState extends State<MyHomePage> with SingleTickerProviderStateM
                   ),
                 ),
 
-
-
-                /*SizedBox(
-                  height: 500,
-                  //color: Colors.amber[500],
-                  child: Padding(
-                    padding: const EdgeInsets.all(20.0),
-                    child:Row(
-
-                      children: [
-                        Expanded(
-                          child:
-                          SfCartesianChart(
-                            // Initialize category axis
-                              primaryXAxis: CategoryAxis(),
-
-                              series: <LineSeries<SalesData, String>>[
-                                LineSeries<SalesData, String>(
-                                  // Bind data source
-                                    dataSource:  <SalesData>[
-                                      SalesData('Jan', 35),
-                                      SalesData('Feb', 28),
-                                      SalesData('Mar', 34),
-                                      SalesData('Apr', 32),
-                                      SalesData('May', 40)
-                                    ],
-                                    xValueMapper: (SalesData sales, _) => sales.year,
-                                    yValueMapper: (SalesData sales, _) => sales.sales
-                                )
-                              ]
-                          ),
-                        ),
-                        Expanded(child:SfCartesianChart(
-                          // Initialize category axis
-                            primaryXAxis: CategoryAxis(),
-
-                            series: <LineSeries<SalesData, String>>[
-                              LineSeries<SalesData, String>(
-                                // Bind data source
-                                  dataSource:  <SalesData>[
-                                    SalesData('Jan', 35),
-                                    SalesData('Feb', 28),
-                                    SalesData('Mar', 34),
-                                    SalesData('Apr', 32),
-                                    SalesData('May', 40)
-                                  ],
-                                  xValueMapper: (SalesData sales, _) => sales.year,
-                                  yValueMapper: (SalesData sales, _) => sales.sales
-                              )
-                            ]
-                        )
-                        )
-                      ],
-                    ),
-                  ),
-                ),
-*/
                 const Padding(
                   padding: EdgeInsets.all(20.0),
                   child: QueryParagraph(),
                 ),
 
-                const Padding(
+                Padding(
                     padding: EdgeInsets.all(20.0),
-                    child:QueryInput()
+                    child:QueryInput(callbackQueryResult:callbackQueryResult)
                 ),
-                /*Container(
-                  height: 500,
-                  color: Colors.amber[100],
-                  child: const Center(child: Text('Entry C')),
-                ),*/
-                /*ElevatedButton(
-                  child: Text("ciao"),
-                  onPressed: ()=>QueryHandler.httpRequestGraphDb("",true,true),
+
+                Padding(
+                  padding: EdgeInsets.only(left: 100,right: 100),
+                  child:Container(
+                      padding: EdgeInsets.only(left: 20,right: 20),
+                      height: 100,
+                      decoration: BoxDecoration(
+                        color: constants.BLUE,
+                        borderRadius: BorderRadius.only(topRight: Radius.circular(20),topLeft: Radius.circular(20),),
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.grey.withOpacity(0.8),
+                            spreadRadius: 3,
+                            blurRadius: 8,
+                            offset: Offset(0, 3), // changes position of shadow
+                          ),
+                        ],
+                      ),
+                      child:Row(
+
+                        children: List<Widget>.generate(columns.length, (i) {
+                          return Expanded(
+                            flex: 1,
+                            child:Text(columns[i],style: TextStyle(color: Colors.white,fontSize: 20, fontWeight: FontWeight.bold,),textAlign: TextAlign.center,),
+
+                          );
+                        }
+                        ),
+                      )
+                  ),
                 ),
-                ElevatedButton(
-                  child: Text("ciao2"),
-                  onPressed: ()=>GraphVisualizer.httpRequestGraphDb(),
-                )*/
+                Padding(
+                  padding: EdgeInsets.only(left: 100,right: 100,bottom: 50),
+                  child:
+                  Container(
+                    height: 600,
+                    padding: EdgeInsets.only(left: 20,right: 20),
+
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.only(bottomRight: Radius.circular(20),bottomLeft: Radius.circular(20),),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.grey.withOpacity(0.8),
+                          spreadRadius: 1,
+                          blurRadius: 8,
+                          offset: Offset(0, 3), // changes position of shadow
+                        ),
+                      ],
+                    ),
+                    child:ListView.separated(
+                        separatorBuilder: (context, index) => const Divider(
+                          color: Colors.grey,
+
+                        ),
+                        itemCount: elementsQueried.length,
+                        itemBuilder: (BuildContext context, int index) {
+                          if(index==0){
+                            return Container(
+                                height: 35,
+                                padding: EdgeInsets.only(top:5),
+                                child:Row(
+                                  children: List<Widget>.generate(elementsQueried[0].length, (i) {
+                                    return Expanded(
+                                      flex: 1,
+                                      child:Text(elementsQueried[index][i],textAlign: TextAlign.center,),
+                                    );
+                                  }),
+                                )
+                            );
+                          }
+                          return SizedBox(
+                            height: 30,
+                              child:Row(
+                                children: List<Widget>.generate(elementsQueried[0].length, (i) {
+                                  return Expanded(
+                                    flex: 1,
+                                    child:Text(elementsQueried[index][i],textAlign: TextAlign.center,),
+                                  );
+                                }),
+                              )
+                          );
+                        }),
+                  ),
+                ),
               ],
             ),
           ),
@@ -253,17 +288,13 @@ class _MyHomePageState extends State<MyHomePage> with SingleTickerProviderStateM
             right: 0,
             left: 0,
             child: CustomHeader( sizeAnimation: sizeAnimation),
-
-            //child: ClipPath(
-            //clipper: BackgroundWaveClipper(),
           ),
-
         ],
       ),
     );
   }
 }
-
+/*
 class BackgroundWaveClipper extends CustomClipper<Path> {
   @override
   Path getClip(Size size) {
@@ -301,4 +332,4 @@ class SalesData {
   SalesData(this.year, this.sales);
   final String year;
   final double sales;
-}
+}*/

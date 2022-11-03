@@ -1,7 +1,6 @@
 import 'dart:html';
 import 'dart:ui' as ui;
 
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_web_app/constants.dart' as constants;
 
@@ -21,7 +20,7 @@ class _GraphIFrame extends State<GraphIFrame> {
   void initState() {
     _iframeElement.height = '700';
     _iframeElement.width = '900';
-    _iframeElement.src = 'http://localhost:8000/assets/assets/graph.html';
+    _iframeElement.src = constants.GRAPH_HTML;
     _iframeElement.style.border = 'none';
     // ignore: undefined_prefixed_name
     ui.platformViewRegistry.registerViewFactory(
@@ -32,18 +31,14 @@ class _GraphIFrame extends State<GraphIFrame> {
     _iframeWidget = HtmlElementView(
       key: UniqueKey(),
       viewType: 'iframeElement',
-
     );
     super.initState();
   }
-
 
   @override
   Widget build(BuildContext context) {
     return Center(
         child:Container(
-
-
           height: 720,
           width: 920,
           decoration: BoxDecoration(
@@ -58,11 +53,8 @@ class _GraphIFrame extends State<GraphIFrame> {
               ),
             ],
           ),
-
           child: _iframeWidget,
-              //child:Container(color: Colors.blue,width: 50,height: 50,)),
         )
-
     );
   }
 

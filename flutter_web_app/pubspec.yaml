@@ -39,15 +39,16 @@ dependencies:
   syncfusion_flutter_charts: ^20.3.52
   http: ^0.13.5
   url_launcher: ^6.1.6
-  graphview: ^1.1.1
+  #graphview: ^1.1.1
   flutter_svg: ^0.23.0
-  gviz: ^0.4.0
-  flutter_html: ^2.2.1
-  flutter_widget_from_html: ^0.8.5
-  pointer_interceptor: ^0.9.3+3
-  code_text_field: ^1.0.2
+  #gviz: ^0.4.0
+  #flutter_html: ^2.2.1
+  #flutter_widget_from_html: ^0.8.5
+  #pointer_interceptor: ^0.9.3+3
+  #code_text_field: ^1.0.2
   flutter_highlight: ^0.7.0
   rich_text_controller: ^1.4.0
+  #syncfusion_flutter_datagrid: ^20.3.52
 
 dev_dependencies:
   flutter_test:

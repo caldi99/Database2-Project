@@ -2,8 +2,8 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:flutter_web_app/constants.dart' as constants;
-
 // This is the file where all the texts in our web-app should be placed
+
 class TitleAndDescriptionParagraph extends StatelessWidget {
   const TitleAndDescriptionParagraph({
     super.key,

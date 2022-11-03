@@ -3,19 +3,21 @@ import 'package:flutter_web_app/query_handler.dart';
 import 'package:rich_text_controller/rich_text_controller.dart';
 import 'package:flutter_web_app/constants.dart' as constants;
 class QueryInput extends StatefulWidget {
-  const QueryInput({super.key});
+  const QueryInput({super.key,this.callbackQueryResult});
+  final callbackQueryResult;
 
   @override
   _QueryInput createState() => _QueryInput();
 }
 
 class _QueryInput extends State<QueryInput> {
-
+  late final callbackQueryResult;
 // Add a controller
   late RichTextController _controller;
 
   @override
   void initState() {
+    callbackQueryResult=widget.callbackQueryResult;
     _controller = RichTextController(
       stringMatchMap: {
         "FILTER":const TextStyle(color: constants.RED,fontWeight: FontWeight.bold),
@@ -29,6 +31,7 @@ class _QueryInput extends State<QueryInput> {
         "DISTINCT":const TextStyle(color: constants.RED,fontWeight: FontWeight.bold),
         "FROM":const TextStyle(color: constants.RED,fontWeight: FontWeight.bold),
         "ORDER BY":const TextStyle(color: constants.RED,fontWeight: FontWeight.bold),
+        "LIMIT":const TextStyle(color: constants.RED,fontWeight: FontWeight.bold),
 
 
         /*"}":const TextStyle(color: constants.BLUE,fontWeight: FontWeight.bold),
@@ -80,7 +83,6 @@ class _QueryInput extends State<QueryInput> {
                       hintText: 'Type your query here...',
                     ),
 
-
                   )
               )
           ),
@@ -91,7 +93,11 @@ class _QueryInput extends State<QueryInput> {
             child:ElevatedButton(
 
 
-              onPressed: () {QueryHandler.httpRequestGraphDb(_controller.text, false, false);},
+              onPressed: () async {
+                var json=await QueryHandler.httpRequestGraphDb(_controller.text, true, true);
+                callbackQueryResult(json);
+
+                },
               style: ButtonStyle(
                 elevation: MaterialStateProperty.all(10), //buttons Material shadow
                 shape: MaterialStateProperty.all(const CircleBorder()),
