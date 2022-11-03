@@ -25,11 +25,11 @@ We have used the following open datasets that have been created using the NBA St
 We took only part of the .csv files and we pre-processed the data to avoid having NULL values during the data-ingestion phase.
 
 ## Installation Istructions ##
-We used docker to run our GraphDB server and our Web-App backend by means of separated containers. This was done to have a common working environment avoiding incompatibilities that could rise up from our host machines.
+We used Docker to run our GraphDB server and our Web-App backend by means of separated containers. This was done to have a common working environment avoiding incompatibilities that could rise up from our host machines.
 Also in a production environment, the various part would be effectively separated granting more flexibility.
 
 ### Web-App backend ###
-The docker container used can be found ...
+The Docker container used can be found ...
 It's necessary to copy the 'build/web' folder inside of it. Once done, just run the following command to startup a basic http server:
 ```
 python3 -m http.server 8000
@@ -37,10 +37,15 @@ python3 -m http.server 8000
 
 ### GraphDB ###
 The GraphDB docker container used can be found [here](https://hub.docker.com/r/khaller/graphdb-free) . 
-It's necessary to create a GraphDB repository inside of it to make it work.
+To download the image just type the following command:
+```
+sudo docker pull khaller/graphdb-free
+```
+
+It's necessary to create a GraphDB repository inside of it to make it work. To create it...
 
 ### Container orchestrator ###
-We used Docker Compose as orchestrator. Docker Compose is suited for testing purposes. In a production environment the State-Of-The-Art orchestrator is Kubernetes provided by Google.
+We used [Docker Compose](https://github.com/docker/compose) as orchestrator. Docker Compose is suited for testing purposes. In a production environment the State-Of-The-Art orchestrator is Kubernetes provided by Google.
 To install Docker Compose on Ubuntu you just have to open the terminal and type the following commands:
 
 ```
