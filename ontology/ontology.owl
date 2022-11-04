@@ -139,7 +139,7 @@ xsd:gYear rdf:type rdfs:Datatype .
 ###  https://www.dei.unipd.it/Database2/CPS-NBA/endYear
 :endYear rdf:type owl:DatatypeProperty ;
          rdfs:domain :Player ;
-         rdfs:range xsd:integer .
+         rdfs:range xsd:gYear .
 
 
 ###  https://www.dei.unipd.it/Database2/CPS-NBA/fg3a
@@ -368,7 +368,7 @@ xsd:gYear rdf:type rdfs:Datatype .
 ###  https://www.dei.unipd.it/Database2/CPS-NBA/startYear
 :startYear rdf:type owl:DatatypeProperty ;
            rdfs:domain :Player ;
-           rdfs:range xsd:integer .
+           rdfs:range xsd:gYear .
 
 
 ###  https://www.dei.unipd.it/Database2/CPS-NBA/stl

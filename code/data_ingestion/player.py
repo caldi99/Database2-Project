@@ -66,8 +66,8 @@ def process_players(players_path,players_details_path):
             graph.add((player_subj_uri, BASE[PLAYER_WEIGHT], Literal(player_weight, datatype = XSD.float)))
             graph.add((player_subj_uri, BASE[PLAYER_HEIGHT], Literal(player_height, datatype = XSD.float)))
         
-        graph.add((player_subj_uri, BASE[PLAYER_START_SEASON], Literal(start_year, datatype = XSD.integer)))
-        graph.add((player_subj_uri, BASE[PLAYER_END_SEASON], Literal(end_year, datatype = XSD.integer)))
+        graph.add((player_subj_uri, BASE[PLAYER_START_SEASON], Literal(start_year, datatype = XSD.gYear)))
+        graph.add((player_subj_uri, BASE[PLAYER_END_SEASON], Literal(end_year, datatype = XSD.gYear)))
 
     serialization_path=str(pathlib.Path(__file__).parent.resolve())+"/serialization/player.ttl"
     print("serializing...")
