@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter_web_app/home_vs_away_wins_chart.dart';
 import 'package:flutter_web_app/html_graph_visualizer.dart';
+import 'package:flutter_web_app/input_query_code_field.dart';
 import 'package:flutter_web_app/paragraphs.dart';
 import 'package:flutter_web_app/constants.dart' as constants;
-import 'package:flutter_web_app/query_input_field.dart';
 
 class MainPage extends StatefulWidget {
   const MainPage({Key? key, this.scrollCallback}) : super(key: key);
@@ -96,10 +96,11 @@ class _MainPage extends State<MainPage> {
             padding: EdgeInsets.all(20.0),
             child: GraphIFrame(),
           ),
+          /*CodeEditor(),
           const Padding(
             padding: EdgeInsets.all(20.0),
             child: ChartParagraph(),
-          ),
+          ),*/
           Padding(
             padding: EdgeInsets.all(20.0),
             child: Column(
@@ -142,8 +143,8 @@ class _MainPage extends State<MainPage> {
           ),
 
           Padding(
-              padding: EdgeInsets.only(top:20,bottom: 20,left: 100,right: 100),
-              child:QueryInput(callbackQueryResult:callbackQueryResult)
+              padding: EdgeInsets.only(top:20,bottom: 50,left: 100,right: 100),
+              child:QueryInputCode(callbackQueryResult:callbackQueryResult)
           ),
 
           (columns.length>0)?Padding(

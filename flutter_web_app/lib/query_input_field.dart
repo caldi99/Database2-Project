@@ -1,7 +1,9 @@
-import 'package:flutter/material.dart';
+/*import 'package:flutter/material.dart';
 import 'package:flutter_web_app/query_handler.dart';
 import 'package:rich_text_controller/rich_text_controller.dart';
 import 'package:flutter_web_app/constants.dart' as constants;
+*/
+/*
 class QueryInput extends StatefulWidget {
   const QueryInput({super.key,this.callbackQueryResult});
   final callbackQueryResult;
@@ -132,3 +134,5 @@ class _QueryInput extends State<QueryInput> {
       
   }
 }
+
+ */*/*/

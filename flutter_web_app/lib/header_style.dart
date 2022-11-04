@@ -56,10 +56,13 @@ class _CustomHeader extends State<CustomHeader> {
         ),
         child:Row(
           children: [
-
-            GestureDetector(
-              child:Container(
-                padding: EdgeInsets.only(left:20,top:20,bottom: 20),
+            TextButton(
+              style: ButtonStyle(
+                  overlayColor: MaterialStateProperty.all(Colors.transparent)
+              ),
+              onPressed: () {goToPage(constants.HOME_PAGE);},
+              child: Container(
+                padding: const EdgeInsets.only(left:20,top:20,bottom: 20),
 
                 child:ClipRRect(
                   borderRadius: BorderRadius.circular(20),
@@ -68,18 +71,13 @@ class _CustomHeader extends State<CustomHeader> {
                       fit:BoxFit.fitHeight
                   ),
                 ),
-
               ),
-              onTap: () async {
-                goToPage(constants.HOME_PAGE);
-              },
             ),
             Container(
                 padding: EdgeInsets.only(left:20,top:20,bottom: 20,right:20),
                 //height: double.infinity,
                 child:Align(
                     alignment: Alignment.center,
-
                     child:Text( 'NBA Ontology',
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
@@ -94,34 +92,30 @@ class _CustomHeader extends State<CustomHeader> {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               mainAxisSize: MainAxisSize.max,
               children: [
-                GestureDetector(
-                  child: const Text(
-
-                    'Query page 1',
-                    style: TextStyle(
-                        color: Colors.white, decoration: TextDecoration.underline,fontSize:20),
+                TextButton(
+                  style: ButtonStyle(
+                      overlayColor: MaterialStateProperty.all(Colors.transparent)
                   ),
-                  onTap: () async {
-                    goToPage(constants.QUERY_PAGE_1);
-                  },
+                  onPressed: () {goToPage(constants.QUERY_PAGE_1);},
+                  child: const Text('Query Page 1',style: TextStyle(fontSize: 20,color: Colors.white), ),
                 ),
-                GestureDetector(
-                  child: const Text(
-                    'Query page 2',
-                    style: TextStyle(
-                        color: Colors.white, decoration: TextDecoration.underline,fontSize:20),
+                TextButton(
+                  style: ButtonStyle(
+                      overlayColor: MaterialStateProperty.all(Colors.transparent)
                   ),
-                  onTap: () async {
-                    goToPage(constants.QUERY_PAGE_2);
-                  },
+                  onPressed: () {goToPage(constants.QUERY_PAGE_2);},
+                  child: const Text('Query Page 2',style: TextStyle(fontSize: 20,color: Colors.white), ),
+                ),
+                TextButton(
+                  style: ButtonStyle(
+                      overlayColor: MaterialStateProperty.all(Colors.transparent)
+                  ),
+                  onPressed: () {goToPage(constants.QUERY_PAGE_3);},
+                  child: const Text('Query Page 3',style: TextStyle(fontSize: 20,color: Colors.white), ),
                 ),
               ],
             )
             )
-
-            //Expanded(flex: 1,child: SizedBox(),),
-
-            //Expanded(flex: 1,child: SizedBox(),),
 
           ],
         )

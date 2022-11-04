@@ -7,6 +7,7 @@ import 'package:flutter_web_app/query_handler.dart';
 import 'package:flutter_web_app/query_input_field.dart';
 import 'package:flutter_web_app/query_page_1.dart';
 import 'package:flutter_web_app/query_page_2.dart';
+import 'package:flutter_web_app/query_page_3.dart';
 import 'package:syncfusion_flutter_charts/charts.dart';
 import 'package:flutter_web_app/constants.dart' as constants;
 import 'package:http/http.dart' as http;
@@ -48,7 +49,7 @@ class _MyHomePageState extends State<MyHomePage> with SingleTickerProviderStateM
   final roundBorderSize=40.0;
   late AnimationController _animationController;
   late Animation sizeAnimation;
-  List<bool> scrollAtTop=[true,true,true];
+  List<bool> scrollAtTop=[true,true,true,true];
 
 
   /*List<List<String>> elementsQueried=[];
@@ -125,169 +126,16 @@ class _MyHomePageState extends State<MyHomePage> with SingleTickerProviderStateM
         children: [
           Positioned.fill(
             top:minHeight-roundBorderSize,
-              /*children: [
-                const SizedBox(
-                  height: 200,
-                ),
-                const Padding(
-                  padding: EdgeInsets.all(20.0),
-                  child: TitleAndDescriptionParagraph(),
-                ),
-                const Padding(
-                  padding: EdgeInsets.all(20.0),
-                  child: GraphParagraph(),
-                ),
-                const Padding(
-                  padding: EdgeInsets.all(20.0),
-                  child: GraphIFrame(),
-                ),
-                const Padding(
-                  padding: EdgeInsets.all(20.0),
-                  child: ChartParagraph(),
-                ),
-                Padding(
-                  padding: EdgeInsets.all(20.0),
-                  child: Column(
-                    children: [
-                      SizedBox(
-                          height: 400,
-                          // A couple of charts
-                          child:Row(
-                            children: const [
-                              Expanded(
-                                flex: 3,
-                                child:SizedBox(),
-                              ),
-                              Expanded(
-                                flex: 12,
-                                child:HomeVsAwayWinsChart(),
-                              ),
-                              Expanded(
-                                flex: 3,
-                                child:SizedBox(),
-                              ),
-                              Expanded(
-                                flex:12,
-                                child:HomeVsAwayWinsChart(),
-                              ),
-                              Expanded(
-                                flex: 3,
-                                child:SizedBox(),
-                              ),
-                            ],
-                          )
-                      ),
-                    ],
-                  ),
-                ),
-
-                const Padding(
-                  padding: EdgeInsets.all(20.0),
-                  child: QueryParagraph(),
-                ),
-
-                Padding(
-                    padding: EdgeInsets.only(top:20,bottom: 20,left: 100,right: 100),
-                    child:QueryInput(callbackQueryResult:callbackQueryResult)
-                ),
-
-                (columns.length>0)?Padding(
-                  padding: EdgeInsets.only(left: 100,right: 100),
-                  child:Container(
-                      padding: EdgeInsets.only(left: 20,right: 20),
-                      height: 100,
-                      decoration: BoxDecoration(
-                        color: constants.BLUE,
-                        borderRadius: BorderRadius.only(topRight: Radius.circular(20),topLeft: Radius.circular(20),),
-                        boxShadow: [
-                          BoxShadow(
-                            color: Colors.grey.withOpacity(0.8),
-                            spreadRadius: 3,
-                            blurRadius: 8,
-                            offset: Offset(0, 3), // changes position of shadow
-                          ),
-                        ],
-                      ),
-                      child:Row(
-
-                        children: List<Widget>.generate(columns.length, (i) {
-                          return Expanded(
-                            flex: 1,
-                            child:Text(columns[i],style: TextStyle(color: Colors.white,fontSize: 20, fontWeight: FontWeight.bold,),textAlign: TextAlign.center,),
-
-                          );
-                        }
-                        ),
-                      )
-                  ),
-                ):SizedBox(),
-                (columns.length>0)?Padding(
-                  padding: EdgeInsets.only(left: 100,right: 100,bottom: 50),
-                  child:
-                  Container(
-                    height: 600,
-                    padding: EdgeInsets.only(left: 20,right: 20),
-
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.only(bottomRight: Radius.circular(20),bottomLeft: Radius.circular(20),),
-                      boxShadow: [
-                        BoxShadow(
-                          color: Colors.grey.withOpacity(0.8),
-                          spreadRadius: 1,
-                          blurRadius: 8,
-                          offset: Offset(0, 3), // changes position of shadow
-                        ),
-                      ],
-                    ),
-                    child:ListView.separated(
-                        separatorBuilder: (context, index) => const Divider(
-                          color: Colors.grey,
-
-                        ),
-                        itemCount: elementsQueried.length,
-                        itemBuilder: (BuildContext context, int index) {
-                          if(index==0){
-                            return Container(
-                                height: 35,
-                                padding: EdgeInsets.only(top:5),
-                                child:Row(
-                                  children: List<Widget>.generate(elementsQueried[0].length, (i) {
-                                    return Expanded(
-                                      flex: 1,
-                                      child:Text(elementsQueried[index][i],textAlign: TextAlign.center,),
-                                    );
-                                  }),
-                                )
-                            );
-                          }
-                          return SizedBox(
-                            height: 30,
-                              child:Row(
-                                children: List<Widget>.generate(elementsQueried[0].length, (i) {
-                                  return Expanded(
-                                    flex: 1,
-                                    child:Text(elementsQueried[index][i],textAlign: TextAlign.center,),
-                                  );
-                                }),
-                              )
-                          );
-                        }),
-                  ),
-                ):SizedBox(),
-              ],*/
               child:IndexedStack(
                 index: indexShowingPage,
                 children: [
                   MainPage(scrollCallback: scrollCallback,),
                   QueryPage1(scrollCallback: scrollCallback,),
-                  QueryPage2(scrollCallback: scrollCallback,)
+                  QueryPage2(scrollCallback: scrollCallback,),
+                  QueryPage3(scrollCallback: scrollCallback,)
                 ],
-
               )
-
             ),
-          //),
 
           Positioned(
             top:0,
