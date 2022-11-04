@@ -48,7 +48,7 @@ class _QueryInputCode extends State<QueryInputCode> {
   Widget build(BuildContext context) {
 
     return SizedBox(
-        height: 300,
+        height: 315,
         child: Center(child:Stack(
 
           children: [
@@ -69,10 +69,15 @@ class _QueryInputCode extends State<QueryInputCode> {
 
                   child:ClipRRect(
                       borderRadius: BorderRadius.circular(20.0),
-                      child: CodeField(
-                        controller: _codeController!,
-                        textStyle: TextStyle(fontFamily: 'SourceCode',wordSpacing: 5,fontSize: 20),
+                      child:SingleChildScrollView(
+                          child: CodeField(
+                            minLines: 13,
+                            //maxLines: 13,
+                            controller: _codeController!,
+                            textStyle: TextStyle(fontFamily: 'SourceCode',wordSpacing: 5,fontSize: 20),
+                          )
                       )
+
                   ),
                 )
             ),

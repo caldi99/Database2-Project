@@ -143,7 +143,7 @@ class _MainPage extends State<MainPage> {
           ),
 
           Padding(
-              padding: EdgeInsets.only(top:20,bottom: 50,left: 100,right: 100),
+              padding: (columns.length>0)?EdgeInsets.only(top:20,bottom: 10,left: 100,right: 100):EdgeInsets.only(top:20,bottom: 50,left: 100,right: 100),
               child:QueryInputCode(callbackQueryResult:callbackQueryResult)
           ),
 
@@ -151,7 +151,7 @@ class _MainPage extends State<MainPage> {
             padding: EdgeInsets.only(left: 100,right: 100),
             child:Container(
                 padding: EdgeInsets.only(left: 20,right: 20),
-                height: 100,
+                height: 80,
                 decoration: BoxDecoration(
                   color: constants.BLUE,
                   borderRadius: BorderRadius.only(topRight: Radius.circular(20),topLeft: Radius.circular(20),),
@@ -197,6 +197,7 @@ class _MainPage extends State<MainPage> {
                 ],
               ),
               child:ListView.separated(
+
                   separatorBuilder: (context, index) => const Divider(
                     color: Colors.grey,
 
