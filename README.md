@@ -33,7 +33,7 @@ In order to execute the **Data Ingestion** code follow these steps :
     - `pip install -r requirments.txt`.
 - Execute the `main.py` file : `python3 main.py`.
 
-The above steps can be skipped and download the `.ttl` files directly from this [link](https://mega.nz/file/dJ0gSThD#Lky7Bt5djrkCFhPZJoPsQD3vJNv6sEAvBjyJFpudE8k).
+The above steps can be skipped by downloading the `.ttl` files directly from this [link](https://mega.nz/file/dJ0gSThD#Lky7Bt5djrkCFhPZJoPsQD3vJNv6sEAvBjyJFpudE8k).
 
 ## Installation Istructions ##
 We used Docker to run our GraphDB server and our Web-App backend by means of separated containers. This was done to have a common working environment avoiding incompatibilities that could rise up from our host machines.
