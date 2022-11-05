@@ -143,12 +143,13 @@ final sparql = Mode(
           beginKeywords: "select prefix insert",
           end: ";",
           endsWithParent: true,
-          lexemes: "[\\w\\.]+",
+          //lexemes: "[\\w\\.]+",
+          lexemes: "[:^A-Za-z]+",
+
           keywords: {
             "keyword": "select prefix insert as order by distinct where count from limit",
             "literal": "true false null unknown",
-            "built_in":
-            "array bigint binary bit blob bool boolean char character date dec decimal float int int8 integer interval number numeric real record serial serial8 smallint text time timestamp tinyint varchar varchar2 varying void"
+            "built_in":"^^xsd:string ^^xsd:integer ^^xsd:dateTime ^^xsd:boolean ^^xsd:integer ^^xsd:float ^^xsd:double ^^xsd:decimal"
           },
           contains: [
             Mode(

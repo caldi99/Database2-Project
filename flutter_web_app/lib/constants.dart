@@ -4,6 +4,7 @@ import 'dart:ui';
 const Color RED=Color(0xFFFD1D1D);
 const Color BLUE=Color(0xFF405DE6);
 const Color LIGHT_BLUE=Color(0xFF558DCA);
+const Color PURPLE=Color(0xFF7F00FF);
 const Color CYAN=Color(0xFF16FFFF);
 const Color CYAN_GREY=Color(0xFFC8EFF9);
 const double SIZE_H1=60.0;
