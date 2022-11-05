@@ -6,9 +6,6 @@ from data_ingestion.utils.helper import Helper
 from rdflib import Namespace
 from rdflib import Graph
 from rdflib import URIRef
-from rdflib import RDF
-from rdflib import Literal
-from rdflib.namespace import XSD
 from pathlib import Path
 import re
 

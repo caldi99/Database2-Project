@@ -1,8 +1,6 @@
 from data_ingestion.utils.helper import Helper
-from rdflib import Namespace,Graph,URIRef,RDF,Literal
-from rdflib.namespace import XSD
-import math,pathlib
-import re
+from rdflib import Namespace,Graph,URIRef
+import pathlib
 
 # Defining constants to keep things organized
 ONTOLOGY_URI="https://www.dei.unipd.it/Database2/CPS-NBA/"
@@ -19,7 +17,7 @@ APPEARANCE = Namespace(APPEARANCE_CLASS_URI)
 graph = Graph()
 graph.bind("player",PLAYER)
 graph.bind("appearance",APPEARANCE)
-graph.bind("nba-cps",BASE)
+graph.bind("base",BASE)
 
 # Instanciating the helper class
 helper=Helper()
@@ -34,7 +32,6 @@ def process_has_played_in_match(match_details_path,games_path):
     games_df = helper.read_csv(games_path, ",")
     games_df=games_df[['GAME_ID','GAME_DATE_EST']]
     
-
     games_df_complete=games_df.merge(match_details_df, how='inner',on=['GAME_ID'])
 
     for index,row in games_df_complete.iterrows():
@@ -53,9 +50,9 @@ def process_has_played_in_match(match_details_path,games_path):
         player_id=row['PLAYER_ID']
         game_id=row['GAME_ID']
         season=row['SEASON']
-        player_subj_uri = URIRef(PLAYER + str(player_id)+"_"+str(season))
+        player_subj_uri = URIRef(PLAYER + str(player_id)+"_"+str(season)+"_"+str(season+1))
         
-        appearance_obj_uri= URIRef(APPEARANCE+ str(game_id)+"_"+str(player_id)+"_"+str(season))
+        appearance_obj_uri= URIRef(APPEARANCE+ str(game_id)+"_"+str(player_id)+"_"+str(season)+"_"+str(season+1))
         graph.add((player_subj_uri, BASE[PLAYER_APPEARANCE], appearance_obj_uri))
 
     serialization_path=str(pathlib.Path(__file__).parent.resolve())+"/serialization/player_appearance_join.ttl"

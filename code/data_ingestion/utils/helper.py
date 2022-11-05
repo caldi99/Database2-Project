@@ -128,5 +128,5 @@ class Helper:
             with open(destination_path, "a") as fw:
                 fw.writelines(l)
 
-        #for path_file in list_path_file_to_merge:
-        #    os.remove(path_file)
+        for path_file in list_path_file_to_merge:
+            os.remove(path_file)

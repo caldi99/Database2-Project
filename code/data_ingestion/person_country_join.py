@@ -1,7 +1,6 @@
 from data_ingestion.utils.helper import Helper
-from rdflib import Namespace,Graph,URIRef,RDF,Literal
-from rdflib.namespace import XSD
-import math,pathlib
+from rdflib import Namespace,Graph,URIRef
+import pathlib
 import re
 
 # Defining constants to keep things organized
@@ -19,7 +18,7 @@ COUNTRY = Namespace(COUNTRY_CLASS_URI)
 graph = Graph()
 graph.bind("person",PERSON)
 graph.bind("country",COUNTRY)
-graph.bind("nba-cps",BASE)
+graph.bind("base",BASE)
 
 # Instanciating the helper class
 helper=Helper()
@@ -30,8 +29,8 @@ def process_is_from(players_path,players_details_path):
     print("processing \'isFrom\'...")
     # Getting the dataframe from the .csv file containing the players with their caractheristics (height,weight...)
     players_details_df = helper.read_csv(players_details_path, ",")
-    players_details_df = players_details_df[players_details_df['season'] > str("2003-04")]
-    players_details_df = players_details_df[players_details_df['season'] < str("2021-22")]
+    players_details_df = players_details_df[players_details_df['season'] >= str("2003-04")]
+    players_details_df = players_details_df[players_details_df['season'] <= str("2021-22")]
     players_details_df = players_details_df.drop_duplicates(subset='player_name', keep="first")
     players_details_df = players_details_df[['player_name', 'country']]
 
@@ -42,14 +41,11 @@ def process_is_from(players_path,players_details_path):
     players_df = players_df[['player_name','player_id']]
 
     # Merging the dataframes to obtain the final dataframe of players with their properties
-    players_complete_df = players_df.merge(players_details_df, how='left',on='player_name')
-    players_complete_df = players_complete_df.sort_values(by='player_name')
-    players_complete_df = players_complete_df.reset_index(drop=True)
+    players_complete_df = players_df.merge(players_details_df, how='inner',on='player_name').drop_duplicates()
 
     # Adding to graph the triples of type 'player bornIn country'
     for index,row in players_complete_df.iterrows():
-        player_id=row['player_id']
-        
+        player_id=row['player_id']        
         player_country=row['country']
         player_subj_uri = URIRef(PERSON + str(player_id))
         country_obj_uri= URIRef(COUNTRY+ re.sub(r'\W+', '', str(player_country)))

@@ -141,7 +141,7 @@ for index,row in merged_dataframe.iterrows():
 
     # --------------------------------------------------------------------------
     # Serialize at blocks
-    # --------------------------------------------------------------------------
+    # --------------------------------------------------------------------------    
     if(index != 0 and (index % BLOCK_SERIALIZATION_SIZE == 0)):
         serialization_path = base_serialization_path + "/appearance{}.ttl".format(index_file)
         path_list_file_merge.append(serialization_path)
@@ -152,13 +152,7 @@ for index,row in merged_dataframe.iterrows():
         graph.bind("appearance",APPEARANCE)
         graph.bind("base",BASE)
     elif(index == (merged_dataframe.shape[0]-1)):
+        print("SERIALIZING ..")
         serialization_path = base_serialization_path + "/appearance{}.ttl".format(index_file)
         path_list_file_merge.append(serialization_path)
         helper.serialize(graph,serialization_path)
-
-
-# --------------------------------------------------------------------------
-# Serialize and remove blocks
-# --------------------------------------------------------------------------
-print("SERIALIZING ..")
-helper.merge_serialization_files(path_list_file_merge,base_serialization_path + "/appearance.ttl",3)

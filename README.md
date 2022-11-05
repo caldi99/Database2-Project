@@ -7,8 +7,6 @@ into GraphDB and some SPARQL queries will be run to obtain data.
 TODO : ADD LINKS HERE
 TODO : CLEANUP OF THE UNECESSARY FILES
 
-
-
 ## Group members ##
 | Surname       | Name          | ID            |
 | ------------- | ------------- | ------------- |
@@ -16,13 +14,26 @@ TODO : CLEANUP OF THE UNECESSARY FILES
 | Pasin		    | Andrea	    | 2041605       |
 | Singh	        | Harjot	    | 2053081	    |
 
-
 ## Datasets ##
-We have used the following open datasets that have been created using the NBA Stats API:
+The dataset used for this project are : 
 * [NBA Players](https://www.kaggle.com/datasets/justinas/nba-players-data)
 * [NBA games data](https://www.kaggle.com/datasets/nathanlauga/nba-games?select=games_details.csv)
 
-We took only part of the .csv files and we pre-processed the data to avoid having NULL values during the data-ingestion phase.
+Notice that, those two datasets are **open** datasets. Moreover, only part of the `.csv` files have been pre-processed in order to avoid **NUL**L values during the **Data Ingestion** phase.
+
+## Data Ingestion ##
+The **Data Ingestion** code, that process the dataset can be found under the directory `code`.  
+In order to execute the **Data Ingestion** code follow these steps :
+- Create a folder called `serialization` inside the `code` folder : 
+    - `md ./code/serialization`.
+- Create a folder called `zip` inside the `code` folder : 
+    - `md ./code/zip`.
+- Make sure that, **rdflib** and **pandas** libraries are installed, if not, execute the following commands to install them :
+    - `cd code`.
+    - `pip install -r requirments.txt`.
+- Execute the `main.py` file : `python3 main.py`.
+
+The above steps can be skipped and download the `.ttl` files directly from this [link](https://mega.nz/file/dJ0gSThD#Lky7Bt5djrkCFhPZJoPsQD3vJNv6sEAvBjyJFpudE8k).
 
 ## Installation Istructions ##
 We used Docker to run our GraphDB server and our Web-App backend by means of separated containers. This was done to have a common working environment avoiding incompatibilities that could rise up from our host machines.

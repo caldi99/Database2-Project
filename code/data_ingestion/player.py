@@ -2,7 +2,6 @@ from data_ingestion.utils.helper import Helper
 from rdflib import Namespace,Graph,URIRef,RDF,Literal
 from rdflib.namespace import XSD
 import math,pathlib
-import re
 
 
 # Defining constants to keep things organized
@@ -20,7 +19,7 @@ PLAYER = Namespace(PLAYER_CLASS_URI)
 # Creating the Graph and binding URIs to it
 graph = Graph()
 graph.bind("player",PLAYER)
-graph.bind("nba-cps",BASE)
+graph.bind("base",BASE)
 
 # Instanciating the helper class
 helper=Helper()
@@ -31,36 +30,29 @@ def process_players(players_path,players_details_path):
     print("processing \'Player\'...")
     # Getting the dataframe from the .csv file containing the players with their caractheristics (height,weight...)
     players_details_df = helper.read_csv(players_details_path, ",")
-    players_details_df = players_details_df[players_details_df['season'] > str("2003-04")]
-    players_details_df = players_details_df[players_details_df['season'] < str("2021-22")]
+    players_details_df = players_details_df[players_details_df['season'] >= str("2003-04")]
+    players_details_df = players_details_df[players_details_df['season'] <= str("2021-22")]
     players_details_df = players_details_df[['player_name', 'player_height', 'player_weight','draft_year','season']]
 
     # Getting the dataframe from the .csv file containing the players with their ids
     players_df = helper.read_csv(players_path, ",")
-    players_df = players_df.drop_duplicates(subset='PLAYER_ID', keep="first")
     players_df = players_df.rename(columns={'PLAYER_NAME': 'player_name','PLAYER_ID': 'player_id'})
     players_df = players_df[['player_name','player_id']]
 
     # Merging the dataframes to obtain the final dataframe of players with their properties
-    players_complete_df = players_df.merge(players_details_df, how='left',on='player_name')
-    players_complete_df = players_complete_df.sort_values(by='player_name')
-    players_complete_df = players_complete_df.reset_index(drop=True)
-    
+    players_complete_df = players_df.merge(players_details_df, how='inner',on='player_name').drop_duplicates()
+
     # Iterating over the players to create the triples to be added to the graph
     for index,row in players_complete_df.iterrows():
         player_id=row['player_id']
         player_weight=row['player_weight']
         player_height=row['player_height']
         season=row['season']
-        if(str(season) != "nan"):
-            start_year=int(str(season).split('-')[0])
-            end_year=int(str(season).split('-')[1])+2000
-        else:
-            start_year = 2003
-            end_year = 2022
+        start_year=int(str(season).split('-')[0])
+        end_year=int(str(season).split('-')[1])+2000
 
         # Adding the rdf triples to the graph
-        player_subj_uri = URIRef(PLAYER + str(player_id)+"_"+str(season)[0:4])
+        player_subj_uri = URIRef(PLAYER + str(player_id)+"_"+str(season)[0:4]+"_"+str(int(str(season)[0:4]) + 1))
         graph.add((player_subj_uri, RDF.type, URIRef(BASE.Player)))
         if(not math.isnan(player_weight) and not math.isnan(player_height)):
             graph.add((player_subj_uri, BASE[PLAYER_WEIGHT], Literal(player_weight, datatype = XSD.float)))

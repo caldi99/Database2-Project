@@ -1,8 +1,7 @@
 from data_ingestion.utils.helper import Helper
-from rdflib import Namespace,Graph,URIRef,RDF,Literal
+from rdflib import Namespace,Graph,URIRef,Literal
 from rdflib.namespace import XSD
-import math,pathlib
-import re
+import pathlib
 
 # Defining constants to keep things organized
 ONTOLOGY_URI="https://www.dei.unipd.it/Database2/CPS-NBA/"
@@ -16,7 +15,7 @@ PERSON = Namespace(PERSON_CLASS_URI)
 # Creating the Graph and binding URIs to it
 graph = Graph()
 graph.bind("person",PERSON)
-graph.bind("nba-cps",BASE)
+graph.bind("base",BASE)
 
 # Instanciating the helper class
 helper=Helper()

@@ -33,6 +33,7 @@ exec(open(code_dir+"/data_ingestion/person.py").read())
 exec(open(code_dir+"/data_ingestion/club_arena_join.py").read())
 exec(open(code_dir+"/data_ingestion/game_club_join.py").read())
 exec(open(code_dir+"/data_ingestion/player_appearance_join.py").read())
+exec(open(code_dir+"/data_ingestion/player_club_join.py").read())
 exec(open(code_dir+"/data_ingestion/appearance_game_join.py").read())
 exec(open(code_dir+"/data_ingestion/person_country_join.py").read())
 exec(open(code_dir+"/data_ingestion/person_player_join.py").read())
@@ -40,5 +41,5 @@ exec(open(code_dir+"/data_ingestion/person_player_join.py").read())
 # -------------------------------------------------------
 # Zip files inside serialization folder
 # -------------------------------------------------------
-helper.zip_files(code_dir + "/serialization/",code_dir + "/zip/serialization.zip")
+#helper.zip_files(code_dir + "/serialization/",code_dir + "/zip/serialization.zip")
 

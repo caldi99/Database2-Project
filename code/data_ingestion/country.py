@@ -1,8 +1,6 @@
 from data_ingestion.utils.helper import Helper
 from rdflib import Namespace,Graph,URIRef,RDF,Literal
-from rdflib.namespace import XSD
-import math,pathlib
-from datetime import datetime
+import pathlib
 import re
 
 # Defining constants to keep things organized
@@ -16,7 +14,7 @@ COUNTRY = Namespace(COUNTRY_CLASS_URI)
 ONTOLOGY= Namespace(ONTOLOGY_URI)
 graph = Graph()
 graph.bind("country",COUNTRY_CLASS_URI)
-graph.bind("nba-cps",ONTOLOGY)
+graph.bind("base",ONTOLOGY)
 
 # Instanciating the helper class
 helper=Helper()
@@ -28,8 +26,8 @@ def process_countries():
 
     # Getting the dataframe from the .csv file containing the players with their caractheristics (height,weight...)
     players_details_df = helper.read_csv(players_details_path, ",")
-    players_details_df = players_details_df[players_details_df['season'] > str("2003-04")]
-    players_details_df = players_details_df[players_details_df['season'] < str("2021-22")]
+    players_details_df = players_details_df[players_details_df['season'] >= str("2003-04")]
+    players_details_df = players_details_df[players_details_df['season'] <= str("2021-22")]
     players_details_df = players_details_df.drop_duplicates(subset='country', keep="first")
     players_details_df = players_details_df[['country']]
 
