@@ -49,7 +49,7 @@ final sparql = Mode(
           lexemes: "[:^A-Za-z]+",
 
           keywords: {
-            "keyword": "select prefix insert as order by distinct where count from limit sum avg",
+            "keyword": "select prefix insert as order by group distinct where count from limit sum avg",
             "literal": "true false null unknown",
             "built_in":"^^xsd:string ^^xsd:integer ^^xsd:dateTime ^^xsd:boolean ^^xsd:integer ^^xsd:float ^^xsd:double ^^xsd:decimal"
           },

@@ -77,7 +77,7 @@ class _QueryInputCode extends State<QueryInputCode> {
                             minLines: 13,
                             controller: _codeController!,
                             enabled: editable,
-                            textStyle: TextStyle(fontFamily: 'SourceCode',wordSpacing: 5,fontSize: 20),
+                            textStyle: TextStyle(fontFamily: 'SourceCode',fontSize: 20),
                           )
                       )
 
@@ -128,7 +128,7 @@ class _QueryInputCode extends State<QueryInputCode> {
                       if (states.contains(MaterialState.pressed)) return Colors.blueAccent; // <-- Splash color
                     }),
                   ),
-                  child: const Icon(Icons.send,size: 40,),
+                  child: const Icon(Icons.play_arrow_rounded,size: 40,),
                 )
             )
           ],
