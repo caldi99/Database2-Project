@@ -20,10 +20,7 @@ class _QueryInputCode extends State<QueryInputCode> {
   CodeController? _codeController;
   late final bool editable;
   late final String startQuery;
-// Add a controller
 
-  Color borderColorFocused=constants.BLUE;
-  Color borderColor=Colors.grey;
 
   @override
   void initState() {
@@ -60,6 +57,7 @@ class _QueryInputCode extends State<QueryInputCode> {
                   decoration: BoxDecoration(
                     color: Colors.transparent,
                     borderRadius: BorderRadius.circular(20.0),
+
                     boxShadow: [
                       BoxShadow(
                         color: Colors.grey.withOpacity(0.8),
@@ -84,16 +82,6 @@ class _QueryInputCode extends State<QueryInputCode> {
                   ),
                 )
             ),
-
-
-            /*(editable)?Container(width: 0,height: 0,color: Colors.transparent,):Positioned.fill(
-                child: Container(
-                )
-            ),*/
-
-
-
-
             Positioned(
                 right: 15,
                 bottom: 20,
@@ -106,17 +94,19 @@ class _QueryInputCode extends State<QueryInputCode> {
                       var json = await QueryHandler.httpRequestGraphDb(
                           query, true, true);
                       callbackQueryResult(json);
-                      setState(() {
-                        borderColor=Colors.grey;
-                        borderColorFocused=constants.BLUE;
-                      });
                     }
                     catch(exception){
-                      print(exception);
-                      setState(() {
-                        borderColor=constants.RED;
-                        borderColorFocused=constants.RED;
-                      });
+                      SnackBar snackBar = SnackBar(
+                        content: Row(
+                          mainAxisSize: MainAxisSize.min,
+                          children: [
+                            Icon(Icons.error_outline,color: Colors.red,),
+                            SizedBox(width: 10,),
+                            Text(exception.toString(),),
+                          ],
+                        ),
+                      );
+                      ScaffoldMessenger.of(context).showSnackBar(snackBar);
                     }
                   },
                   style: ButtonStyle(
