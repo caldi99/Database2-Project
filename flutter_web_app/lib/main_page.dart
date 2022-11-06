@@ -4,7 +4,7 @@ import 'package:flutter_web_app/home_vs_away_wins_chart.dart';
 import 'package:flutter_web_app/html_graph_visualizer.dart';
 import 'package:flutter_web_app/input_query_code_field.dart';
 import 'package:flutter_web_app/paragraphs.dart';
-import 'package:flutter_web_app/constants.dart' as constants;
+import 'package:flutter_web_app/constants/constants.dart' as constants;
 
 class MainPage extends StatefulWidget {
   const MainPage({Key? key, this.scrollCallback}) : super(key: key);

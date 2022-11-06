@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_web_app/query_handler.dart';
+import 'package:flutter_web_app/backend/query_handler.dart';
 import 'package:syncfusion_flutter_charts/charts.dart';
-import 'package:flutter_web_app/constants.dart' as constants;
+import 'package:flutter_web_app/constants/constants.dart' as constants;
 
 class TopScorersChart extends StatefulWidget {
   const TopScorersChart({ super.key, this.data });

@@ -1,7 +1,7 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_web_app/constants.dart' as constants;
+import 'package:flutter_web_app/constants/constants.dart' as constants;
 import 'package:flutter_web_app/input_query_code_field.dart';
 import 'package:flutter_web_app/paragraphs.dart';
 import 'package:flutter_web_app/top_scorers_chart.dart';

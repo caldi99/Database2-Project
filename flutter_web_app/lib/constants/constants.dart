@@ -18,7 +18,7 @@ const double SIZE_H1=60.0;
 const double SIZE_H2=30.0;
 const double SIZE_TEXT=20.0;
 
-const GRAPHDB_SERVER_ADDRESS="http://localhost:7270/repositories/NBA-CPS";
+const GRAPHDB_SERVER_ADDRESS="http://localhost:7200/repositories/CSP-NBA";
 const GRAPH_HTML="http://localhost:8000/assets/assets/graph.html";
 const GRAPH_HTML_DEBUG="http://localhost:8000/assets/assets/graph.html";
 

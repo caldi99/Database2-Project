@@ -4,6 +4,7 @@ import 'package:flutter_web_app/query_page_1.dart';
 import 'package:flutter_web_app/query_page_2.dart';
 import 'package:flutter_web_app/query_page_3.dart';
 import 'package:flutter_web_app/header_style.dart';
+import 'package:flutter_web_app/pages/francesco_query_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -110,7 +111,8 @@ class _MyHomePageState extends State<MyHomePage> with SingleTickerProviderStateM
                 children: [
                   MainPage(scrollCallback: scrollCallback,),
                   QueryPage1(scrollCallback: scrollCallback,),
-                  QueryPage2(scrollCallback: scrollCallback,),
+                  //QueryPage2(scrollCallback: scrollCallback,),
+                  FrancescoQueryPage(scrollCallback: scrollCallback,),
                   QueryPage3(scrollCallback: scrollCallback,)
                 ],
               )

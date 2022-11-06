@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_web_app/constants.dart' as constants;
+import 'package:flutter_web_app/constants/constants.dart' as constants;
 
 
 // This is the file where the header style is defined
@@ -105,7 +105,7 @@ class _CustomHeader extends State<CustomHeader> {
                       overlayColor: MaterialStateProperty.all(Colors.transparent)
                   ),
                   onPressed: () {goToPage(constants.QUERY_PAGE_2);},
-                  child: const Text('Query Page 2',style: TextStyle(fontSize: 20,color: Colors.white), ),
+                  child: const Text('Francesco Query Page',style: TextStyle(fontSize: 20,color: Colors.white), ),
                 ),
                 TextButton(
                   style: ButtonStyle(

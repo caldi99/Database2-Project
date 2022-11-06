@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_web_app/constants.dart' as constants;
-import 'package:flutter_web_app/query_handler.dart';
+import 'package:flutter_web_app/constants/constants.dart' as constants;
+import 'package:flutter_web_app/backend/query_handler.dart';
 import 'package:code_text_field/code_text_field.dart';
 import 'package:flutter_highlight/themes/atom-one-dark.dart';
 

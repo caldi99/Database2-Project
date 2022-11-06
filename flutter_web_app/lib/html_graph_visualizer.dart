@@ -2,7 +2,7 @@ import 'dart:html';
 import 'dart:ui' as ui;
 
 import 'package:flutter/material.dart';
-import 'package:flutter_web_app/constants.dart' as constants;
+import 'package:flutter_web_app/constants/constants.dart' as constants;
 
 class GraphIFrame extends StatefulWidget {
   const GraphIFrame({super.key});

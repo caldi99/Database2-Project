@@ -1,6 +1,6 @@
 import 'package:http/http.dart' as http;
 import 'dart:convert';
-import 'package:flutter_web_app/constants.dart' as constants;
+import 'package:flutter_web_app/constants/constants.dart' as constants;
 class QueryHandler{
 
   // Makes the http post to our GraphDB server and retrieves in JSON format the triples
@@ -8,6 +8,8 @@ class QueryHandler{
     /*query='''select * where {
         ?s ?p ?o .
   } limit 100 ''';*/
+
+    print("PROVA");
     var url = Uri.parse(constants.GRAPHDB_SERVER_ADDRESS);
 
     var response = await http.post(url,
@@ -23,6 +25,7 @@ class QueryHandler{
           'Content-Type':"application/x-www-form-urlencoded; charset=UTF-8"
         }
     );
+    print(response.body);
     /*print('Response status: ${response.statusCode}');
     print('Response body: ${response.body}');*/
     final body = json.decode(response.body);

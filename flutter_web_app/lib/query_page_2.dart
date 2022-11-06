@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_web_app/constants.dart' as constants;
+import 'package:flutter_web_app/constants/constants.dart' as constants;
 class QueryPage2 extends StatefulWidget {
   const QueryPage2({Key? key,this.scrollCallback}) : super(key: key);
   final scrollCallback;
@@ -40,30 +40,6 @@ class _QueryPage2 extends State<QueryPage2> {
     return SingleChildScrollView(
       controller: _scrollController,
       child:Column(
-        children: [
-          Container(
-            height: 300,
-            width: double.infinity,
-            color: constants.BLUE,
-          ),
-          Container(
-            height: 300,
-            width: double.infinity,
-            color: constants.RED,
-          ),
-          Text("QueryPage2"),
-          Container(
-            height: 300,
-            width: double.infinity,
-            color: constants.BLUE,
-          ),
-
-          Container(
-            height: 300,
-            width: double.infinity,
-            color: constants.RED,
-          ),
-        ],
       ),
     );
   }

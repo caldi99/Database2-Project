@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_web_app/constants.dart' as constants;
+import 'package:flutter_web_app/constants/constants.dart' as constants;
 class QueryPage3 extends StatefulWidget {
   const QueryPage3({Key? key,this.scrollCallback}) : super(key: key);
   final scrollCallback;
