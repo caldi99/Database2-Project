@@ -19,7 +19,7 @@ The dataset used for this project are :
 * [NBA Players](https://www.kaggle.com/datasets/justinas/nba-players-data)
 * [NBA games data](https://www.kaggle.com/datasets/nathanlauga/nba-games?select=games_details.csv)
 
-Notice that, those two datasets are **open** datasets. Moreover, only part of the `.csv` files have been pre-processed in order to avoid **NUL**L values during the **Data Ingestion** phase.
+Notice that, those two datasets are **open** datasets. Moreover, only part of the `.csv` files have been pre-processed in order to avoid **NULL** values during the **Data Ingestion** phase.
 
 ## Data Ingestion ##
 The **Data Ingestion** code, that process the dataset can be found under the directory `code`.  
@@ -33,7 +33,7 @@ In order to execute the **Data Ingestion** code follow these steps :
     - `pip install -r requirments.txt`.
 - Execute the `main.py` file : `python3 main.py`.
 
-The above steps can be skipped by downloading the `.ttl` files directly from this [link](https://mega.nz/file/dJ0gSThD#Lky7Bt5djrkCFhPZJoPsQD3vJNv6sEAvBjyJFpudE8k).
+The above steps can be skipped by downloading the `.ttl` files directly from this [link](https://mega.nz/file/pFdgxRCJ#uzAVPhZT2zl6_ToRT9f_lNLKRltx3C4-JcobGIK_u2E).
 
 ## Installation Istructions ##
 We used Docker to run our GraphDB server and our Web-App backend by means of separated containers. This was done to have a common working environment avoiding incompatibilities that could rise up from our host machines.
