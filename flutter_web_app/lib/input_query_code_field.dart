@@ -2,15 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_web_app/constants.dart' as constants;
 import 'package:flutter_web_app/query_handler.dart';
 import 'package:code_text_field/code_text_field.dart';
-import 'package:highlight/highlight.dart';
-import 'package:highlight/src/common_modes.dart';
-import 'package:highlight/highlight_core.dart';
 import 'package:flutter_highlight/themes/atom-one-dark.dart';
 
 
 class QueryInputCode extends StatefulWidget {
-  const QueryInputCode({super.key,this.callbackQueryResult});
+  const QueryInputCode({super.key,this.callbackQueryResult,this.editable,this.startQuery});
   final callbackQueryResult;
+  final editable;
+  final startQuery;
 
   @override
   _QueryInputCode createState() => _QueryInputCode();
@@ -19,6 +18,8 @@ class QueryInputCode extends StatefulWidget {
 class _QueryInputCode extends State<QueryInputCode> {
   late final callbackQueryResult;
   CodeController? _codeController;
+  late final bool editable;
+  late final String startQuery;
 // Add a controller
 
   Color borderColorFocused=constants.BLUE;
@@ -26,13 +27,14 @@ class _QueryInputCode extends State<QueryInputCode> {
 
   @override
   void initState() {
+    editable=widget.editable;
     callbackQueryResult=widget.callbackQueryResult;
-    final start_text = "# Add your query here :)";
+    startQuery=widget.startQuery;
     // Instantiate the CodeController
     _codeController = CodeController(
 
-        text: start_text,
-        language: sparql,
+        text: startQuery,
+        language: constants.sparql,
         theme: atomOneDarkTheme,
     );
     super.initState();
@@ -49,7 +51,8 @@ class _QueryInputCode extends State<QueryInputCode> {
 
     return SizedBox(
         height: 315,
-        child: Center(child:Stack(
+        child: Center(
+          child:Stack(
 
           children: [
             Positioned.fill(
@@ -72,8 +75,8 @@ class _QueryInputCode extends State<QueryInputCode> {
                       child:SingleChildScrollView(
                           child: CodeField(
                             minLines: 13,
-                            //maxLines: 13,
                             controller: _codeController!,
+                            enabled: editable,
                             textStyle: TextStyle(fontFamily: 'SourceCode',wordSpacing: 5,fontSize: 20),
                           )
                       )
@@ -81,6 +84,15 @@ class _QueryInputCode extends State<QueryInputCode> {
                   ),
                 )
             ),
+
+
+            /*(editable)?Container(width: 0,height: 0,color: Colors.transparent,):Positioned.fill(
+                child: Container(
+                )
+            ),*/
+
+
+
 
             Positioned(
                 right: 15,
@@ -100,6 +112,7 @@ class _QueryInputCode extends State<QueryInputCode> {
                       });
                     }
                     catch(exception){
+                      print(exception);
                       setState(() {
                         borderColor=constants.RED;
                         borderColorFocused=constants.RED;
@@ -124,52 +137,4 @@ class _QueryInputCode extends State<QueryInputCode> {
   }
 }
 
-
-final sparql = Mode(
-    refs: {
-      '~contains~0~contains~5':
-      Mode(className: "comment", begin: "#", end: "\$", contains: [
-        PHRASAL_WORDS_MODE,
-        Mode(
-            className: "doctag",
-            begin: "(?:TODO|FIXME|NOTE|BUG|XXX):",
-            relevance: 0)
-      ]),
-    },
-    case_insensitive: true,
-    illegal: "[<>{}*]",
-    contains: [
-      Mode(
-          beginKeywords: "select prefix insert",
-          end: ";",
-          endsWithParent: true,
-          //lexemes: "[\\w\\.]+",
-          lexemes: "[:^A-Za-z]+",
-
-          keywords: {
-            "keyword": "select prefix insert as order by distinct where count from limit",
-            "literal": "true false null unknown",
-            "built_in":"^^xsd:string ^^xsd:integer ^^xsd:dateTime ^^xsd:boolean ^^xsd:integer ^^xsd:float ^^xsd:double ^^xsd:decimal"
-          },
-          contains: [
-            Mode(
-                className: "string",
-                begin: "'",
-                end: "'",
-                contains: [Mode(begin: "''")]),
-            Mode(
-                className: "string",
-                begin: "\"",
-                end: "\"",
-                contains: [Mode(begin: "\"\"")]),
-            Mode(className: "string", begin: "`", end: "`"),
-            C_NUMBER_MODE,
-            C_BLOCK_COMMENT_MODE,
-            Mode(ref: '~contains~0~contains~5'),
-            HASH_COMMENT_MODE
-          ]),
-      C_BLOCK_COMMENT_MODE,
-      Mode(ref: '~contains~0~contains~5'),
-      HASH_COMMENT_MODE
-    ]);
 

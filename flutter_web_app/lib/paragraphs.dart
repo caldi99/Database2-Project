@@ -134,3 +134,30 @@ class QueryParagraph extends StatelessWidget {
     );
   }
 }
+
+class QueryPage1FirstQueryParagraph extends StatelessWidget {
+  const QueryPage1FirstQueryParagraph({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return RichText(
+
+      text: const TextSpan(
+        text: 'Top Scorers\n',
+        style: TextStyle(
+          fontWeight: FontWeight.bold,
+          fontSize: constants.SIZE_H2,
+          height: HEIGHT,
+        ),
+        children: <TextSpan>[
+          TextSpan(text: 'This query aims at finding the top 10 scorers in the NBA championship.\n'
+              , style: TextStyle(fontWeight: FontWeight.normal,fontSize: constants.SIZE_TEXT,height: 1.2)),
+          TextSpan(text: 'The query result will consists in the name of the players and the corresponding amount of points scored sorted in descending order.\n'
+              , style: TextStyle(fontWeight: FontWeight.normal,fontSize: constants.SIZE_TEXT,height: 1.2)),
+        ],
+      ),
+    );
+  }
+}

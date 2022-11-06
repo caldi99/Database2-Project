@@ -1,5 +1,3 @@
-import 'dart:math';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_web_app/constants.dart' as constants;
 
@@ -11,7 +9,7 @@ class CustomHeader extends StatefulWidget {
     required this.sizeAnimation,
     required this.goToPage,
   });
-  final Animation sizeAnimation;
+  final HeaderSize sizeAnimation;
   final goToPage;
 
   @override
@@ -19,7 +17,7 @@ class CustomHeader extends StatefulWidget {
 }
 
 class _CustomHeader extends State<CustomHeader> {
-  late final Animation _sizeAnimation;
+  late final HeaderSize _sizeAnimation;
   final roundBorderSize=40.0;
   late final goToPage;
 
@@ -32,8 +30,9 @@ class _CustomHeader extends State<CustomHeader> {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-        height: _sizeAnimation.value,
+    return AnimatedContainer(
+      duration: const Duration(milliseconds: 300),
+        height: _sizeAnimation.size,
         decoration: BoxDecoration(
           shape: BoxShape.rectangle,
           gradient: const LinearGradient(
@@ -78,14 +77,16 @@ class _CustomHeader extends State<CustomHeader> {
                 //height: double.infinity,
                 child:Align(
                     alignment: Alignment.center,
-                    child:Text( 'NBA Ontology',
-                      style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        fontSize: 80.0*(_sizeAnimation.value/200.0),
-                        color: Colors.white,
+                  child:AnimatedDefaultTextStyle(
+                    duration: Duration(milliseconds: 300),
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 80.0*(_sizeAnimation.size/200.0),
+                      color: Colors.white,
 
-                      ),
-                    )
+                    ),
+                    child: Text('NBA Ontology'),
+                  ),
                 )
             ),
             Expanded(child: Row(
@@ -122,6 +123,14 @@ class _CustomHeader extends State<CustomHeader> {
     );
   }
 }
+
+class HeaderSize{
+  HeaderSize(this.size);
+  double size;
+}
+
+
+
 
 
 

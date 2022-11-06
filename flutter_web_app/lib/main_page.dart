@@ -82,7 +82,7 @@ class _MainPage extends State<MainPage> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           const SizedBox(
-            height: 200,
+            height: 100,
           ),
           const Padding(
             padding: EdgeInsets.all(20.0),
@@ -144,7 +144,7 @@ class _MainPage extends State<MainPage> {
 
           Padding(
               padding: (columns.length>0)?EdgeInsets.only(top:20,bottom: 10,left: 100,right: 100):EdgeInsets.only(top:20,bottom: 50,left: 100,right: 100),
-              child:QueryInputCode(callbackQueryResult:callbackQueryResult)
+              child:QueryInputCode(callbackQueryResult:callbackQueryResult,editable: true, startQuery: "# Add your query here :)",)
           ),
 
           (columns.length>0)?Padding(

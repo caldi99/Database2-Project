@@ -1,18 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:flutter_web_app/home_vs_away_wins_chart.dart';
-import 'package:flutter_web_app/html_graph_visualizer.dart';
 import 'package:flutter_web_app/main_page.dart';
-import 'package:flutter_web_app/query_handler.dart';
-import 'package:flutter_web_app/query_input_field.dart';
 import 'package:flutter_web_app/query_page_1.dart';
 import 'package:flutter_web_app/query_page_2.dart';
 import 'package:flutter_web_app/query_page_3.dart';
-import 'package:syncfusion_flutter_charts/charts.dart';
-import 'package:flutter_web_app/constants.dart' as constants;
-import 'package:http/http.dart' as http;
 import 'package:flutter_web_app/header_style.dart';
-import 'package:flutter_web_app/paragraphs.dart';
 
 void main() {
   runApp(const MyApp());
@@ -47,41 +38,32 @@ class _MyHomePageState extends State<MyHomePage> with SingleTickerProviderStateM
   final maxHeight=200.0;
   final minHeight=80.0;
   final roundBorderSize=40.0;
-  late AnimationController _animationController;
-  late Animation sizeAnimation;
   List<bool> scrollAtTop=[true,true,true,true];
+  late final HeaderSize headerSize;
 
-
-  /*List<List<String>> elementsQueried=[];
-  List<String> columns=[];*/
 
   int indexShowingPage=0;
 
   @override
   void initState() {
     super.initState();
-    _animationController =  AnimationController(vsync: this, duration: Duration(milliseconds: 300));
-    sizeAnimation = Tween<double>(begin: maxHeight, end: minHeight).animate(CurvedAnimation(
-        parent: _animationController,
-        curve: Curves.easeInOut
-    ));
-    _animationController.addListener(() {
-      setState(() {
-        sizeAnimation;
-      });
-    });
+    headerSize=HeaderSize(maxHeight);
   }
 
   scrollCallback(String arg){
     if(arg.compareTo("TOP")==0){
       if(!scrollAtTop[indexShowingPage]) {
-        _animationController.reverse();
+        setState(() {
+          headerSize.size=maxHeight;
+        });
         scrollAtTop[indexShowingPage]=true;
       }
     }
     else if(arg.compareTo("BOTTOM")==0){
       if(scrollAtTop[indexShowingPage]) {
-        _animationController.forward();
+        setState(() {
+          headerSize.size=minHeight;
+        });
         scrollAtTop[indexShowingPage]=false;
       }
     }
@@ -89,19 +71,16 @@ class _MyHomePageState extends State<MyHomePage> with SingleTickerProviderStateM
 
   _forceScrollCallback(String arg){
     if(arg.compareTo("TOP")==0){
-        _animationController.reverse();
+      setState(() {
+        headerSize.size=maxHeight;
+      });
     }
     else if(arg.compareTo("BOTTOM")==0){
-        _animationController.forward();
+        setState(() {
+          headerSize.size=minHeight;
+        });
     }
 
-  }
-
-  @override
-  void dispose() {
-    _animationController.dispose();
-    //_scrollController.dispose();
-    super.dispose();
   }
 
 
@@ -141,7 +120,7 @@ class _MyHomePageState extends State<MyHomePage> with SingleTickerProviderStateM
             top:0,
             right: 0,
             left: 0,
-            child: CustomHeader( sizeAnimation: sizeAnimation,
+            child: CustomHeader( sizeAnimation: headerSize,
               goToPage: goToPage,
 
             ),
