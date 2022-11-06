@@ -161,3 +161,30 @@ class QueryPage1FirstQueryParagraph extends StatelessWidget {
     );
   }
 }
+
+class QueryPage1SecondQueryParagraph extends StatelessWidget {
+  const QueryPage1SecondQueryParagraph({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return RichText(
+
+      text: const TextSpan(
+        text: 'Arenas with most played matches\n',
+        style: TextStyle(
+          fontWeight: FontWeight.bold,
+          fontSize: constants.SIZE_H2,
+          height: HEIGHT,
+        ),
+        children: <TextSpan>[
+          TextSpan(text: 'This query aims at retrieving in ascending order the Arenas with the highest numbers of played matches.\n'
+              , style: TextStyle(fontWeight: FontWeight.normal,fontSize: constants.SIZE_TEXT,height: 1.2)),
+          TextSpan(text: 'The query result will consists in the name of the arenas and the corresponding amount of played matches. We also show their capacities.\n'
+              , style: TextStyle(fontWeight: FontWeight.normal,fontSize: constants.SIZE_TEXT,height: 1.2)),
+        ],
+      ),
+    );
+  }
+}
