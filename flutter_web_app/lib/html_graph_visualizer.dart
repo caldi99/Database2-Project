@@ -21,7 +21,7 @@ class _GraphIFrame extends State<GraphIFrame> {
     _iframeElement.height = '700';
     _iframeElement.width = '900';
     //_iframeElement.src = constants.GRAPH_HTML;
-    _iframeElement.src = constants.GRAPH_HTML_DEBUG;
+    _iframeElement.src = constants.GRAPH_HTML;
     _iframeElement.style.border = 'none';
     // ignore: undefined_prefixed_name
     ui.platformViewRegistry.registerViewFactory(

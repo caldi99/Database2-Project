@@ -3,14 +3,15 @@ import 'package:flutter_web_app/constants/constants.dart' as constants;
 
 class ParagraphBlock extends StatelessWidget {
 
-  const ParagraphBlock({
-    super.key, required this.title,required this.paragraphText, required this.titleStyle, required this.paragraphStyle
-  });
-
+  //DATA MEMBERS
   final title;
-  final paragraphText;
+  final content;
   final titleStyle;
-  final paragraphStyle;
+  final contentStyle;
+
+  const ParagraphBlock({
+    super.key, required this.title,required this.content, required this.titleStyle, required this.contentStyle
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -19,10 +20,10 @@ class ParagraphBlock extends StatelessWidget {
         text: title,
         style: titleStyle,
         children: <TextSpan>[
-          for(String pharse in paragraphText.split('\n')) ... [
+          for(String pharse in content) ... [
               TextSpan(
-                  text: pharse + '\n',
-                  style: paragraphStyle
+                  text: pharse,
+                  style: contentStyle
               )
             ]
         ],

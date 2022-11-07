@@ -1,63 +1,37 @@
 import 'package:flutter/cupertino.dart';
-import 'package:flutter_web_app/page_blocks/date_number_chart_data.dart';
-import 'package:flutter_web_app/page_blocks/query_prompt_block.dart';
+import 'package:flutter_web_app/classes/date_number_chart_data.dart';
 import 'package:flutter_web_app/page_blocks/paragraph_block.dart';
 import 'package:flutter_web_app/constants/constants.dart' as constants;
-
-import '../input_query_code_field.dart';
+import 'package:flutter_web_app/page_blocks/table_block.dart';
+import 'package:format/format.dart';
+import '../page_blocks/query_code_block.dart';
 import '../page_blocks/histogram_date_number_chart_block.dart';
 
 class FrancescoQueryPage extends StatefulWidget{
+  final scrollCallback;
 
   const FrancescoQueryPage({Key? key,this.scrollCallback}) : super(key: key);
-  final scrollCallback;
+
   @override
   State<FrancescoQueryPage> createState() => _FrancescoQueryPage();
 }
 
 class _FrancescoQueryPage extends State<FrancescoQueryPage> {
-  final ScrollController _scrollController=ScrollController();
-  late final scrollCallback;
-  final query1 = """PREFIX base: <https://www.dei.unipd.it/Database2/CPS-NBA/>
-  PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-  SELECT ?matchDate ?pts WHERE {
-?person base:wasPlayer ?player ;
-base:name "LeBron James"^^xsd:string .
-?player base:appearsIn ?appearance .
-?appearance base:pts ?pts ;
-base:refersTo ?game .
-?game base:matchDate ?matchDate .
-FILTER( ?matchDate >= "2017-10-01"^^xsd:date && ?matchDate <= "2018-07-31"^^xsd:date) .
-}""";
-  final query2 = """PREFIX base: <https://www.dei.unipd.it/Database2/CPS-NBA/>
-PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-SELECT (SUM(?minutes) as ?totalMinutesPlayer) (SUM(?seconds) as ?totalSecondsPlayer) ?name WHERE {
-	?player base:playedFor ?club ;
-		base:appearsIn ?appearance ;
-		base:startYear "2006"^^xsd:gYear ;
-		base:endYear "2007"^^xsd:gYear ;
-		base:represents ?person .
-	?person base:name ?name .
-	?club base:nickname "Bulls"^^xsd:string .
-	?appearance base:minutes ?minutes ;
-				base:seconds ?seconds .	
-}GROUP BY (?name)
-""";
-
-  List<DateNumberChartData> resultQueryData1 = [];
-
+  //DATA MEMBERS
+  final ScrollController _scrollController = ScrollController();
+  late final _scrollCallback;
+  List<DateNumberChartData> _resultQueryData1 = [];
+  List<List<String>> _resultQueryData2 = [];
 
   //CALLED AT THE BEGINNING
   @override
   void initState() {
-    scrollCallback=widget.scrollCallback;
+    _scrollCallback = widget.scrollCallback;
     _scrollController.addListener(() {
-      if(_scrollController.position.pixels<=150){
-        scrollCallback("TOP");
-      }
-      else if(_scrollController.position.pixels>150){
-        scrollCallback("BOTTOM");
-      }
+      if(_scrollController.position.pixels <= constants.SCROLLCONTROLLER_POSITION_PIXELS)
+        _scrollCallback(constants.TOP);
+      else if(_scrollController.position.pixels> constants.SCROLLCONTROLLER_POSITION_PIXELS)
+        _scrollCallback(constants.BOTTOM);
     });
     super.initState();
   }
@@ -75,59 +49,45 @@ SELECT (SUM(?minutes) as ?totalMinutesPlayer) (SUM(?seconds) as ?totalSecondsPla
     return SingleChildScrollView(
       controller: _scrollController,
         child: Padding(
-          padding: const EdgeInsets.only(left: 20,right: 20),
+          padding: constants.PAGE_PADDING_PADDING_PROPRIETY,
           child:Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const SizedBox(
-                height: 150,
-              ),
+              constants.SIZED_BOX_BLOCK,
               const ParagraphBlock(
                 title: "LeBron James points during 2017-2018 season\n",
-                titleStyle: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  fontSize: constants.SIZE_H2,
-                  height: 3,
-                ),
-                paragraphText: "This query finds the points scored by LeBron James during the 2017-2018 season.\n",
-                paragraphStyle: TextStyle(
-                    fontWeight: FontWeight.normal,
-                    fontSize: constants.SIZE_TEXT,
-                    height: 1.2
-                ),
+                titleStyle: constants.BLOCK_PAGES_TITLE_STYLE_PARAGRAPH,
+                content: ["This query finds the points scored by LeBron James during the 2017-2018 season.\n"],
+                contentStyle: constants.BLOCK_PAGES_CONTENT_STYLE_PARAGRAPH
               ),
               Padding(
-                padding: const EdgeInsets.only(left: 150,right: 150,top: 20,bottom: 20),
-                child: QueryInputCode(callbackQueryResult: callbackQueryResult1,editable: false,startQuery: query1),
+                padding: constants.BLOCK_PAGES_PADDING_PADDING_PROPRIETY,
+                child: QueryCodeBlock(callbackQueryResult: callbackQueryResult1,editable: false,startQuery: constants.FRANCESCO_QUERY_1)
               ),
               Padding(
-                  padding: const EdgeInsets.only(left: 150,right: 150,top: 20,bottom: 20),
-                  child:SizedBox(width: double.infinity,height: 400, child:HistogramDateNumberChartBlock(chartData: resultQueryData1,),)
+                padding: constants.BLOCK_PAGES_PADDING_PADDING_PROPRIETY,
+                child:SizedBox(width: double.infinity,height: 400, child:HistogramDateNumberChartBlock(chartData: _resultQueryData1))
               ),
               const ParagraphBlock(
                 title: "Chicago Bulls team during the 2006-2007 season with the corresponding time played\n",
-                titleStyle: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  fontSize: constants.SIZE_H2,
-                  height: 3,
-                ),
-                paragraphText: "This query finds who played for the Chicago Bulls team during the 2006-2007 season and how much time was played for each player.\n",
-                paragraphStyle: TextStyle(
-                    fontWeight: FontWeight.normal,
-                    fontSize: constants.SIZE_TEXT,
-                    height: 1.2
-                ),
-              ),              
+                titleStyle: constants.BLOCK_PAGES_TITLE_STYLE_PARAGRAPH,
+                content: ["This query finds who played for the Chicago Bulls team during the 2006-2007 season and how much time was played for each player.\n"],
+                contentStyle: constants.BLOCK_PAGES_CONTENT_STYLE_PARAGRAPH
+              ),
               Padding(
-                padding: const EdgeInsets.only(left: 150,right: 150,top: 20,bottom: 20),
-                child: QueryInputCode(callbackQueryResult: callbackQueryResult2,editable: false,startQuery: query2),
-              )              
+                padding: constants.BLOCK_PAGES_PADDING_PADDING_PROPRIETY,
+                child: QueryCodeBlock(callbackQueryResult: callbackQueryResult2,editable: false,startQuery: constants.FRANCESCO_QUERY_2),
+              ),
+              Padding(
+                padding: constants.BLOCK_PAGES_PADDING_PADDING_PROPRIETY,
+                child:SizedBox(width: double.infinity,height: 400, child:TableBlock(tableData: _resultQueryData2, tableCols: constants.TABLE_COLUMN_NAME_QUERY2_FRANCESCO))
+              )
             ],
           ),
         )
     );
   }
-
+  //CALLBACKS
   callbackQueryResult1(var response){
     List<DateNumberChartData> list = [];
 
@@ -144,16 +104,37 @@ SELECT (SUM(?minutes) as ?totalMinutesPlayer) (SUM(?seconds) as ?totalSecondsPla
     }
 
     //Remove Previous Content
-    resultQueryData1.clear();
+    _resultQueryData1.clear();
 
     //Add new content
     setState(() {
-      resultQueryData1.addAll(list);
+      _resultQueryData1.addAll(list);
     });
   }
 
   callbackQueryResult2(var response){
-    print(response);
-  }
+    List<List<String>> list = [];
 
+    //Parse the response
+    for(var data in response['results']['bindings']){
+      String playerName = data['name']['value'];
+      int minutesPlayed = int.parse(data['totalMinutesPlayer']['value']);
+      int secondsPlayed = int.parse(data['totalSecondsPlayer']['value']);
+
+      //Convert into hours-minutes-seconds
+      List<String> parts = Duration(minutes: minutesPlayed,seconds: secondsPlayed).toString().split(':');
+
+      String timePlayed = format("Hours : {} Minutes : {} Seconds : {}",parts[0],parts[1],parts[2].substring(0,2));
+
+      list.add([playerName,timePlayed]);
+    }
+
+    //Remove Previous Content
+    _resultQueryData2.clear();
+
+    //Add new content
+    setState(() {
+      _resultQueryData2.addAll(list);
+    });
+  }
 }

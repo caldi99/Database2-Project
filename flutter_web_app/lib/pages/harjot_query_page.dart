@@ -1,27 +1,29 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_web_app/constants/constants.dart' as constants;
-class QueryPage3 extends StatefulWidget {
-  const QueryPage3({Key? key,this.scrollCallback}) : super(key: key);
+class HarjotQueryPage extends StatefulWidget {
   final scrollCallback;
+
+  const HarjotQueryPage({Key? key,this.scrollCallback}) : super(key: key);
+
   @override
-  State<QueryPage3> createState() => _QueryPage3();
+  State<HarjotQueryPage> createState() => _QueryPage3();
 }
 
-class _QueryPage3 extends State<QueryPage3> {
+class _QueryPage3 extends State<HarjotQueryPage> {
+
+  //DATA MEMBERS
   final ScrollController _scrollController=ScrollController();
-  late final scrollCallback;
+  late final _scrollCallback;
 
   //CALLED AT THE BEGINNING
   @override
   void initState() {
-    scrollCallback=widget.scrollCallback;
+    _scrollCallback=widget.scrollCallback;
     _scrollController.addListener(() {
-      if(_scrollController.position.pixels<=150){
-        scrollCallback("TOP");
-      }
-      else if(_scrollController.position.pixels>150){
-        scrollCallback("BOTTOM");
-      }
+      if(_scrollController.position.pixels <= constants.SCROLLCONTROLLER_POSITION_PIXELS)
+        _scrollCallback(constants.TOP);
+      else if(_scrollController.position.pixels > constants.SCROLLCONTROLLER_POSITION_PIXELS)
+        _scrollCallback(constants.BOTTOM);
     });
     super.initState();
   }
@@ -32,7 +34,6 @@ class _QueryPage3 extends State<QueryPage3> {
     _scrollController.dispose();
     super.dispose();
   }
-
 
   //HERE YOU SPECIFY THE LAYOUT
   @override

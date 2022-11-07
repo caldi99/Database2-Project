@@ -6,7 +6,7 @@ import 'package:flutter_web_app/constants/constants.dart' as constants;
 
 const double HEIGHT=3;
 
-
+/*
 class TitleAndDescriptionParagraph extends StatelessWidget {
   const TitleAndDescriptionParagraph({
     super.key,
@@ -53,7 +53,6 @@ class TitleAndDescriptionParagraph extends StatelessWidget {
   }
 }
 
-
 class GraphParagraph extends StatelessWidget {
   const GraphParagraph({
     super.key,
@@ -78,7 +77,7 @@ class GraphParagraph extends StatelessWidget {
     );
   }
 }
-
+*/
 class ChartParagraph extends StatelessWidget {
   const ChartParagraph({
     super.key,

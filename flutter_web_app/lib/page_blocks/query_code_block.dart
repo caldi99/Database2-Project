@@ -5,17 +5,19 @@ import 'package:code_text_field/code_text_field.dart';
 import 'package:flutter_highlight/themes/atom-one-dark.dart';
 
 
-class QueryInputCode extends StatefulWidget {
-  const QueryInputCode({super.key,this.callbackQueryResult,this.editable,this.startQuery});
+class QueryCodeBlock extends StatefulWidget {
+  //DATA MEMEBERS
   final callbackQueryResult;
   final editable;
   final startQuery;
+
+  const QueryCodeBlock({super.key,this.callbackQueryResult,this.editable,this.startQuery});
 
   @override
   _QueryInputCode createState() => _QueryInputCode();
 }
 
-class _QueryInputCode extends State<QueryInputCode> {
+class _QueryInputCode extends State<QueryCodeBlock> {
   late final callbackQueryResult;
   CodeController? _codeController;
   late final bool editable;
@@ -29,7 +31,6 @@ class _QueryInputCode extends State<QueryInputCode> {
     startQuery=widget.startQuery;
     // Instantiate the CodeController
     _codeController = CodeController(
-
         text: startQuery,
         language: constants.sparql,
         theme: atomOneDarkTheme,
@@ -45,12 +46,10 @@ class _QueryInputCode extends State<QueryInputCode> {
 
   @override
   Widget build(BuildContext context) {
-
     return SizedBox(
         height: 315,
         child: Center(
           child:Stack(
-
           children: [
             Positioned.fill(
                 child: Container(

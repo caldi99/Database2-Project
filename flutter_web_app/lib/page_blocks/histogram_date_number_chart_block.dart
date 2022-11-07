@@ -1,9 +1,9 @@
-
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_web_app/page_blocks/date_number_chart_data.dart';
+import 'package:flutter_web_app/classes/date_number_chart_data.dart';
 import 'package:syncfusion_flutter_charts/charts.dart';
+import 'package:flutter_web_app/constants/constants.dart' as constants;
+
 
 class HistogramDateNumberChartBlock extends StatefulWidget {
   final chartData;
@@ -15,6 +15,7 @@ class HistogramDateNumberChartBlock extends StatefulWidget {
 }
 
 class _HistogramDateNumberChartBlockState extends State<HistogramDateNumberChartBlock> {
+  //DATA MEMBERS
   late TooltipBehavior _tooltipBehavior;
   late List<DateNumberChartData> _chartData;
 
@@ -28,33 +29,20 @@ class _HistogramDateNumberChartBlockState extends State<HistogramDateNumberChart
   @override
   Widget build(BuildContext context) {
     return Container(
-        padding: EdgeInsets.all(20),
-        decoration: BoxDecoration(
-          shape: BoxShape.rectangle,
-          color: Colors.white,
-          borderRadius: BorderRadius.circular(30),
-          boxShadow: [
-            BoxShadow(
-              color: Colors.grey.withOpacity(0.8),
-              spreadRadius: 1,
-              blurRadius: 8,
-              offset: Offset(0, 3),
-            ),
-          ],
-        ),
-        child:Column(
-          children: [
-            Expanded(
-              child:SfCartesianChart(
+        padding: constants.BLOCK_PAGES_CONTAINER_PADDING_PROPRIETY,
+        decoration: constants.BLOCK_PAGES_CONTAINER_DECORATION_PROPRIETY,
+        child:Column(children: [
+          Expanded(
+                  child:SfCartesianChart(
                   primaryXAxis: DateTimeCategoryAxis(),
                   tooltipBehavior: _tooltipBehavior,
                   series: <ChartSeries<DateNumberChartData, DateTime>>[
                     ColumnSeries<DateNumberChartData, DateTime>(
-                        dataSource: _chartData,
-                        xValueMapper: (DateNumberChartData data, _) => data.xValue,
-                        yValueMapper: (DateNumberChartData data, _) => data.yValue
-                    )
-                  ]
+                      dataSource: _chartData,
+                      xValueMapper: (DateNumberChartData data, _) => data.xValue,
+                      yValueMapper: (DateNumberChartData data, _) => data.yValue
+                  )
+                 ]
               ),
             )
           ],

@@ -98,7 +98,7 @@ class _CustomHeader extends State<CustomHeader> {
                       overlayColor: MaterialStateProperty.all(Colors.transparent)
                   ),
                   onPressed: () {goToPage(constants.QUERY_PAGE_1);},
-                  child: const Text('Query Page 1',style: TextStyle(fontSize: 20,color: Colors.white), ),
+                  child: const Text('Andrea Query Page',style: TextStyle(fontSize: 20,color: Colors.white), ),
                 ),
                 TextButton(
                   style: ButtonStyle(
@@ -112,7 +112,7 @@ class _CustomHeader extends State<CustomHeader> {
                       overlayColor: MaterialStateProperty.all(Colors.transparent)
                   ),
                   onPressed: () {goToPage(constants.QUERY_PAGE_3);},
-                  child: const Text('Query Page 3',style: TextStyle(fontSize: 20,color: Colors.white), ),
+                  child: const Text('Harjot Query Page',style: TextStyle(fontSize: 20,color: Colors.white), ),
                 ),
               ],
             )

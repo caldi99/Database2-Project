@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_web_app/main_page.dart';
-import 'package:flutter_web_app/query_page_1.dart';
-import 'package:flutter_web_app/query_page_3.dart';
+import 'package:flutter_web_app/pages/main_page.dart';
+import 'package:flutter_web_app/pages/andrea_query_page.dart';
+import 'package:flutter_web_app/pages/harjot_query_page.dart';
 import 'package:flutter_web_app/header_style.dart';
 import 'package:flutter_web_app/pages/francesco_query_page.dart';
 import 'package:url_strategy/url_strategy.dart';
+import 'package:flutter_web_app/constants/constants.dart' as constants;
 
 void main() {
   setPathUrlStrategy();
@@ -43,7 +44,6 @@ class _MyHomePageState extends State<MyHomePage> with SingleTickerProviderStateM
   List<bool> scrollAtTop=[true,true,true,true];
   late final HeaderSize headerSize;
 
-
   int indexShowingPage=0;
 
   @override
@@ -53,7 +53,7 @@ class _MyHomePageState extends State<MyHomePage> with SingleTickerProviderStateM
   }
 
   scrollCallback(String arg){
-    if(arg.compareTo("TOP")==0){
+    if(arg.compareTo(constants.TOP)==0){
       if(!scrollAtTop[indexShowingPage]) {
         setState(() {
           headerSize.size=maxHeight;
@@ -61,7 +61,7 @@ class _MyHomePageState extends State<MyHomePage> with SingleTickerProviderStateM
         scrollAtTop[indexShowingPage]=true;
       }
     }
-    else if(arg.compareTo("BOTTOM")==0){
+    else if(arg.compareTo(constants.BOTTOM)==0){
       if(scrollAtTop[indexShowingPage]) {
         setState(() {
           headerSize.size=minHeight;
@@ -72,30 +72,27 @@ class _MyHomePageState extends State<MyHomePage> with SingleTickerProviderStateM
   }
 
   _forceScrollCallback(String arg){
-    if(arg.compareTo("TOP")==0){
+    if(arg.compareTo(constants.TOP)==0){
       setState(() {
         headerSize.size=maxHeight;
       });
     }
-    else if(arg.compareTo("BOTTOM")==0){
+    else if(arg.compareTo(constants.BOTTOM)==0){
         setState(() {
           headerSize.size=minHeight;
         });
     }
-
   }
-
-
 
   void goToPage(int page){
     setState(() {
       indexShowingPage=page;
     });
     if(!scrollAtTop[indexShowingPage]){
-      _forceScrollCallback("BOTTOM");
+      _forceScrollCallback(constants.BOTTOM);
     }
     else if(scrollAtTop[indexShowingPage]){
-      _forceScrollCallback("TOP");
+      _forceScrollCallback(constants.TOP);
     }
   }
 
@@ -111,20 +108,18 @@ class _MyHomePageState extends State<MyHomePage> with SingleTickerProviderStateM
                 index: indexShowingPage,
                 children: [
                   MainPage(scrollCallback: scrollCallback,),
-                  QueryPage1(scrollCallback: scrollCallback,),
+                  AndreaQueryPage(scrollCallback: scrollCallback,),
                   FrancescoQueryPage(scrollCallback: scrollCallback,),
-                  QueryPage3(scrollCallback: scrollCallback,)
+                  HarjotQueryPage(scrollCallback: scrollCallback,)
                 ],
               )
             ),
-
           Positioned(
             top:0,
             right: 0,
             left: 0,
             child: CustomHeader( sizeAnimation: headerSize,
               goToPage: goToPage,
-
             ),
           ),
         ],
@@ -132,42 +127,3 @@ class _MyHomePageState extends State<MyHomePage> with SingleTickerProviderStateM
     );
   }
 }
-/*
-class BackgroundWaveClipper extends CustomClipper<Path> {
-  @override
-  Path getClip(Size size) {
-    print(size);
-    var path = Path();
-
-    const minSize = 50.0;
-
-    // when h = max = 280
-    // h = 280, p1 = 210, p1Diff = 70
-    // when h = min = 140
-    // h = 140, p1 = 140, p1Diff = 0
-    final p1Diff = ((minSize - size.height) * 0.5).truncate().abs();
-    path.lineTo(0.0, size.height - p1Diff);
-
-    final controlPoint = Offset(size.width * 0.1, size.height);
-
-
-    final endPoint = Offset(size.width, minSize);
-
-    path.quadraticBezierTo(
-        controlPoint.dx, controlPoint.dy, endPoint.dx, endPoint.dy);
-
-    path.lineTo(size.width, 0.0);
-    path.close();
-
-    return path;
-  }
-
-  @override
-  bool shouldReclip(BackgroundWaveClipper oldClipper) => oldClipper != this;
-}
-
-class SalesData {
-  SalesData(this.year, this.sales);
-  final String year;
-  final double sales;
-}*/

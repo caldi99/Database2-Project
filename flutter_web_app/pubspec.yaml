@@ -49,7 +49,7 @@ dependencies:
   flutter_highlight: ^0.7.0
   url_strategy: ^0.2.0
   #rich_text_controller: ^1.4.0
-
+  format: ^1.2.0
 
 
 
