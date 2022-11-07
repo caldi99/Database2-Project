@@ -41,9 +41,9 @@ Also in a production environment, the various part would be effectively separate
 
 ### Web-App backend ###
 The Docker container used can be found ...
-It's necessary to copy the 'build/web' folder inside of it. Once done, just run the following command to startup a basic http server:
+It's necessary to copy the 'build/web' folder inside of it. Once done, just run the backend script with the following command to startup a basic http server:
 ```
-python3 -m http.server 8000
+python3 scriptname.py
 ```
 
 ### GraphDB ###
