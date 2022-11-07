@@ -42,11 +42,12 @@ dependencies:
   #graphview: ^1.1.1
   flutter_svg: ^0.23.0
   #gviz: ^0.4.0
-  #flutter_html: ^2.2.1
-  #flutter_widget_from_html: ^0.8.5
+  flutter_html: ^2.2.1
+  flutter_widget_from_html: ^0.8.5
   #pointer_interceptor: ^0.9.3+3
   code_text_field: ^1.0.2
   flutter_highlight: ^0.7.0
+  url_strategy: ^0.2.0
   #rich_text_controller: ^1.4.0
 
 

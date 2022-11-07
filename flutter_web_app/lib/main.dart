@@ -4,8 +4,10 @@ import 'package:flutter_web_app/query_page_1.dart';
 import 'package:flutter_web_app/query_page_3.dart';
 import 'package:flutter_web_app/header_style.dart';
 import 'package:flutter_web_app/pages/francesco_query_page.dart';
+import 'package:url_strategy/url_strategy.dart';
 
 void main() {
+  setPathUrlStrategy();
   runApp(const MyApp());
 }
 
