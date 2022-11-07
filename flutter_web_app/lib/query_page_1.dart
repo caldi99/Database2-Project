@@ -69,11 +69,20 @@ SELECT ?name ?capacity ?numberOfGames WHERE{
   callbackQueryResultTopScorers(var res){
     //print(res);
     List<TopScorersChartData> temp=[];
+    int tot=0;
+    for (var r in res['results']['bindings']){
+      tot++;
+    }
+    int i=0;
+
+
     for (var result  in res['results']['bindings']){
       String name=result['name']['value'];
       int pointsScored=int.parse(result['points']['value']);
-      Color color=Color((Random().nextDouble() * 0xFFFFFF).toInt()).withOpacity(1.0);
-      temp.add(TopScorersChartData(name, pointsScored, color));
+      //Color color=Color((Random().nextDouble() * 0xFFFFFF).toInt()).withOpacity(1.0);
+      Color? color=Color.lerp(constants.BLUE, constants.RED, i*1.0/tot);
+      temp.add(TopScorersChartData(name, pointsScored, color!));
+      i++;
     }
     dataTopScorers.clear();
     setState(() {
@@ -85,12 +94,19 @@ SELECT ?name ?capacity ?numberOfGames WHERE{
   callbackQueryResultTopArenas(var res){
     print(res);
     List<TopArenasChartData> temp=[];
+    int tot=0;
+    for (var r in res['results']['bindings']){
+      tot++;
+    }
+    int i=0;
     for (var result  in res['results']['bindings']){
       String name=result['name']['value'];
       int capacity=double.parse(result['capacity']['value']) as int;
       int numberOfGames=double.parse(result['numberOfGames']['value']) as int;
-      Color color=Color((Random().nextDouble() * 0xFFFFFF).toInt()).withOpacity(1.0);
-      temp.add(TopArenasChartData(name,numberOfGames, capacity, color));
+      Color? color=Color.lerp(constants.BLUE, constants.RED, i*1.0/tot);
+      //Color color=Color((Random().nextDouble() * 0xFFFFFF).toInt()).withOpacity(1.0);
+      temp.add(TopArenasChartData(name,numberOfGames, capacity, color!));
+      i++;
     }
     dataTopScorers.clear();
     setState(() {
