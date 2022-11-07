@@ -4,6 +4,7 @@ import 'package:flutter_web_app/page_blocks/query_prompt_block.dart';
 import 'package:flutter_web_app/page_blocks/paragraph_block.dart';
 import 'package:flutter_web_app/constants/constants.dart' as constants;
 
+import '../input_query_code_field.dart';
 import '../page_blocks/histogram_date_number_chart_block.dart';
 
 class FrancescoQueryPage extends StatefulWidget{
@@ -97,7 +98,7 @@ SELECT (SUM(?minutes) as ?totalMinutesPlayer) (SUM(?seconds) as ?totalSecondsPla
               ),
               Padding(
                 padding: const EdgeInsets.only(left: 150,right: 150,top: 20,bottom: 20),
-                child: QueryPromptBlock(callbackQueryResult: callbackQueryResult1,editable: false,startQuery: query1),
+                child: QueryInputCode(callbackQueryResult: callbackQueryResult1,editable: false,startQuery: query1),
               ),
               Padding(
                   padding: const EdgeInsets.only(left: 150,right: 150,top: 20,bottom: 20),
@@ -119,7 +120,7 @@ SELECT (SUM(?minutes) as ?totalMinutesPlayer) (SUM(?seconds) as ?totalSecondsPla
               ),              
               Padding(
                 padding: const EdgeInsets.only(left: 150,right: 150,top: 20,bottom: 20),
-                child: QueryPromptBlock(callbackQueryResult: callbackQueryResult2,editable: false,startQuery: query2),
+                child: QueryInputCode(callbackQueryResult: callbackQueryResult2,editable: false,startQuery: query2),
               )              
             ],
           ),

@@ -89,20 +89,37 @@ class _QueryPromptBlock extends State<QueryPromptBlock> {
                         String query = _codeController!.text.toString();
                         query = query.replaceAll('·', ' ');
                         print(query);
-                        var json = await QueryHandler.httpRequestGraphDb(
+                        GraphDBAnswer answer=await QueryHandler.httpRequestGraphDb(
                             query, true, true);
-                        callbackQueryResult(json);
-                        setState(() {
-                          borderColor = Colors.grey;
-                          borderColorFocused = constants.BLUE;
-                        });
+                        if(answer.isError){
+                          SnackBar snackBar = SnackBar(
+                            content: Row(
+                              mainAxisSize: MainAxisSize.min,
+                              children: [
+                                Icon(Icons.error_outline,color: Colors.red,),
+                                SizedBox(width: 10,),
+                                Text(answer.msg),
+                              ],
+                            ),
+                          );
+                          ScaffoldMessenger.of(context).showSnackBar(snackBar);
+                        }
+                        else{
+                          callbackQueryResult(answer.msg);
+                        }
                       }
                       catch (exception) {
-                        print(exception);
-                        setState(() {
-                          borderColor = constants.RED;
-                          borderColorFocused = constants.RED;
-                        });
+                        SnackBar snackBar = SnackBar(
+                          content: Row(
+                            mainAxisSize: MainAxisSize.min,
+                            children: [
+                              Icon(Icons.error_outline,color: Colors.red,),
+                              SizedBox(width: 10,),
+                              Text(exception.toString(),),
+                            ],
+                          ),
+                        );
+                        ScaffoldMessenger.of(context).showSnackBar(snackBar);
                       }
                     },
                     style: ButtonStyle(

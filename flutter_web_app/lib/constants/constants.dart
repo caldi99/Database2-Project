@@ -42,14 +42,14 @@ final sparql = Mode(
     illegal: "[<>{}*]",
     contains: [
       Mode(
-          beginKeywords: "select prefix insert",
+          beginKeywords: "select prefix insert ask describe",
           //end: ";",
           endsWithParent: true,
           //lexemes: "[\\w\\.]+",
           lexemes: "[:^A-Za-z]+",
 
           keywords: {
-            "keyword": "select prefix insert as order by group distinct where count from limit sum avg",
+            "keyword": "select prefix insert as order by group distinct where count from limit sum avg ask describe",
             "literal": "true false null unknown",
             "built_in":"^^xsd:string ^^xsd:integer ^^xsd:dateTime ^^xsd:boolean ^^xsd:integer ^^xsd:float ^^xsd:double ^^xsd:decimal"
           },

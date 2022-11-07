@@ -9,7 +9,7 @@ class QueryHandler{
         ?s ?p ?o .
   } limit 100 ''';*/
 
-    print("PROVA");
+    //print("PROVA");
     var url = Uri.parse(constants.GRAPHDB_SERVER_ADDRESS);
 
     var response = await http.post(url,
@@ -25,10 +25,23 @@ class QueryHandler{
           'Content-Type':"application/x-www-form-urlencoded; charset=UTF-8"
         }
     );
-    print(response.body);
+    //print(response.body);
     /*print('Response status: ${response.statusCode}');
     print('Response body: ${response.body}');*/
-    final body = json.decode(response.body);
-    return body;
+    GraphDBAnswer answer;
+    try{
+      final body = json.decode(response.body);
+      answer=GraphDBAnswer(body, false);
+    }catch(exception){
+      answer=GraphDBAnswer(response.body, true);
+    }
+    //final body = json.decode(response.body);
+    return answer;
   }
+}
+
+class GraphDBAnswer{
+  GraphDBAnswer(this.msg,this.isError);
+  final bool isError;
+  final msg;
 }

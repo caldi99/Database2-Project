@@ -63,7 +63,7 @@ class _QueryInputCode extends State<QueryInputCode> {
                         color: Colors.grey.withOpacity(0.8),
                         spreadRadius: 3,
                         blurRadius: 8,
-                        offset: Offset(0, 3), // changes position of shadow
+                        offset: const Offset(0, 3), // changes position of shadow
                       ),
                     ],
                   ),
@@ -75,7 +75,7 @@ class _QueryInputCode extends State<QueryInputCode> {
                             minLines: 13,
                             controller: _codeController!,
                             enabled: editable,
-                            textStyle: TextStyle(fontFamily: 'SourceCode',fontSize: 20),
+                            textStyle: const TextStyle(fontFamily: 'SourceCode',fontSize: 20),
                           )
                       )
 
@@ -90,18 +90,37 @@ class _QueryInputCode extends State<QueryInputCode> {
                     try {
                       String query=_codeController!.text.toString();
                       query=query.replaceAll('·', ' ');
-                      print(query);
-                      var json = await QueryHandler.httpRequestGraphDb(
+                      //print(query);
+                      GraphDBAnswer answer=await QueryHandler.httpRequestGraphDb(
                           query, true, true);
-                      callbackQueryResult(json);
+                      if(answer.isError){
+                        SnackBar snackBar = SnackBar(
+                          content: Row(
+                            mainAxisSize: MainAxisSize.min,
+                            children: [
+                              const Icon(Icons.error_outline,color: Colors.red,),
+                              const SizedBox(width: 10,),
+                              Text(answer.msg.toString()),
+                            ],
+                          ),
+                        );
+                        ScaffoldMessenger.of(context).showSnackBar(snackBar);
+                      }
+                      else{
+                        callbackQueryResult(answer.msg);
+                      }
+
+                      //var json = await QueryHandler.httpRequestGraphDb(
+                      //    query, true, true);
+                      //callbackQueryResult(json);
                     }
                     catch(exception){
                       SnackBar snackBar = SnackBar(
                         content: Row(
                           mainAxisSize: MainAxisSize.min,
                           children: [
-                            Icon(Icons.error_outline,color: Colors.red,),
-                            SizedBox(width: 10,),
+                            const Icon(Icons.error_outline,color: Colors.red,),
+                            const SizedBox(width: 10,),
                             Text(exception.toString(),),
                           ],
                         ),
