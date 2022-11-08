@@ -1,11 +1,14 @@
 # Database2-Project
-This repository is carried out by group NBA-CPS at the University of Padua as a homework of the [Database 2](https://iiia.dei.unipd.it/education/database-2/) course.
-The homework consists in developing an Ontology related to the NBA world (players, teams, matches...) from 2004 to 2022. The Ontology will be then imported
+This repository is carried out by group **NBA-CPS** at the University of Padua as a homework of the [Database 2](https://iiia.dei.unipd.it/education/database-2/) course.
+The homework consists in developing an **Ontology** related to the NBA world (players, teams, matches...) from 2004 to 2022. The Ontology will be then imported
 into GraphDB and some SPARQL queries will be run to obtain data.
 
 ## Overview ##
-TODO : ADD LINKS HERE
-TODO : CLEANUP OF THE UNECESSARY FILES
+* [Group Members](#group-members)
+* [Datasets](#datasets)
+* [Data Ingestion](#data-ingestion)
+* []
+* []
 
 ## Group members ##
 | Surname       | Name          | ID            |
@@ -22,14 +25,14 @@ The dataset used for this project are :
 Notice that, those two datasets are **open** datasets. Moreover, only part of the `.csv` files have been pre-processed in order to avoid **NULL** values during the **Data Ingestion** phase.
 
 ## Data Ingestion ##
-The **Data Ingestion** code, that process the dataset can be found under the directory `code`.  
+The **Data Ingestion** code, that process the dataset can be found under the directory `data-ingestion`.  
 In order to execute the **Data Ingestion** code follow these steps :
 - Create a folder called `serialization` inside the `code` folder : 
-    - `mkdir ./code/serialization`.
+    - `mkdir ./data-ingestion/serialization`.
 - Create a folder called `zip` inside the `code` folder : 
-    - `mkdir ./code/zip`.
+    - `mkdir ./data-ingestion/zip`.
 - Make sure that, **rdflib** and **pandas** libraries are installed, if not, execute the following commands to install them :
-    - `cd code`.
+    - `cd data-ingestion`.
     - `pip install -r requirments.txt`.
 - Execute the `main.py` file : `python3 main.py`.
 

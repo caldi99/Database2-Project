@@ -5,7 +5,6 @@ import 'package:flutter_web_app/html_graph_visualizer.dart';
 import 'package:flutter_web_app/page_blocks/link_bock.dart';
 import 'package:flutter_web_app/page_blocks/paragraph_block.dart';
 import 'package:flutter_web_app/page_blocks/query_code_block.dart';
-import 'package:flutter_web_app/paragraphs.dart';
 import 'package:flutter_web_app/constants/constants.dart' as constants;
 
 class MainPage extends StatefulWidget {
