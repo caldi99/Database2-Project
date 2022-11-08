@@ -6,23 +6,32 @@ import 'package:highlight/highlight_core.dart';
 
 // This is the file where constants are placed to avoid having too many constants in different files
 
+//COLORS
 const Color RED=Color(0xFFFD1D1D);
 const Color BLUE=Color(0xFF405DE6);
 const Color LIGHT_BLUE=Color(0xFF558DCA);
 const Color PURPLE=Color(0xFF7F00FF);
 const Color CYAN=Color(0xFF16FFFF);
 const Color CYAN_GREY=Color(0xFFC8EFF9);
-const double SIZE_H1=60.0;
-const double SIZE_H2=30.0;
-const double SIZE_TEXT=20.0;
 
-const GRAPHDB_SERVER_ADDRESS="http://localhost:7200/repositories/CPS-NBA";
+//SIZES
+const double SIZE_H1 =60.0;
+const double SIZE_H2 = 30.0;
+const double SIZE_TEXT = 20.0;
+const IFRAME_HEIGHT = "700";
+const IFRAME_WIDTH = "900";
+const CONTAINER_IFRAME_HEIGHT = 720.0;
+const CONTAINER_IFRAME_WIDTH = 920.0;
+
+//URLS
+const GRAPHDB_SERVER_ADDRESS="http://localhost:8000/repositories/CPS-NBA";
 const GRAPH_HTML="http://localhost:8000/assets/assets/graph.html";
 
-const HOME_PAGE=0;
-const QUERY_PAGE_1=1;
-const QUERY_PAGE_2=2;
-const QUERY_PAGE_3=3;
+//PAGE INDEXES
+const HOME_PAGE_INDEX = 0;
+const ANDREA_QUERY_PAGE_INDEX = 1;
+const FRANCESCO_QUERY_PAGE_INDEX = 2;
+const HARJOT_QUERY_PAGE_INDEX = 3;
 
 final sparql = Mode(
     refs: {
@@ -93,7 +102,7 @@ const BLOCK_PAGES_HEADER_COLUMN_STYLE = TextStyle(fontWeight: FontWeight.bold, f
 const BLOCK_PAGES_CONTENT_CELL_STYLE = TextStyle(fontSize: SIZE_TEXT);
 const BLOCK_PAGES_DESCRIPTION_AXIS_STYLE = TextStyle(fontSize: 13,fontWeight: FontWeight.w300);
 const BLOCK_PAGES_COLUMNSERIES_BORDERRADIUS_PROPRIETY = BorderRadius.only(topLeft: Radius.circular(5),topRight: Radius.circular(5));
-
+const IFRAME_STYLE_BORDER_PROPRIETY = "none";
 
 
 //QUERIES

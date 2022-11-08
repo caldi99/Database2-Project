@@ -17,14 +17,15 @@ class CustomHeader extends StatefulWidget {
 }
 
 class _CustomHeader extends State<CustomHeader> {
+  //DATA MEMBERS
   late final HeaderSize _sizeAnimation;
-  final roundBorderSize=40.0;
+  final roundBorderSize = 40.0;
   late final goToPage;
 
   @override
   void initState() {
     _sizeAnimation=widget.sizeAnimation;
-    goToPage=widget.goToPage;
+    goToPage = widget.goToPage;
     super.initState();
   }
 
@@ -59,7 +60,7 @@ class _CustomHeader extends State<CustomHeader> {
               style: ButtonStyle(
                   overlayColor: MaterialStateProperty.all(Colors.transparent)
               ),
-              onPressed: () {goToPage(constants.HOME_PAGE);},
+              onPressed: () {goToPage(constants.HOME_PAGE_INDEX);},
               child: Container(
                 padding: const EdgeInsets.only(left:20,top:20,bottom: 20),
 
@@ -73,7 +74,7 @@ class _CustomHeader extends State<CustomHeader> {
               ),
             ),
             Container(
-                padding: EdgeInsets.only(left:20,top:20,bottom: 20,right:20),
+                padding: constants.BLOCK_PAGES_CONTAINER_PADDING_PROPRIETY,
                 //height: double.infinity,
                 child:Align(
                     alignment: Alignment.center,
@@ -97,27 +98,26 @@ class _CustomHeader extends State<CustomHeader> {
                   style: ButtonStyle(
                       overlayColor: MaterialStateProperty.all(Colors.transparent)
                   ),
-                  onPressed: () {goToPage(constants.QUERY_PAGE_1);},
+                  onPressed: () {goToPage(constants.ANDREA_QUERY_PAGE_INDEX);},
                   child: const Text('Andrea Query Page',style: TextStyle(fontSize: 20,color: Colors.white), ),
                 ),
                 TextButton(
                   style: ButtonStyle(
                       overlayColor: MaterialStateProperty.all(Colors.transparent)
                   ),
-                  onPressed: () {goToPage(constants.QUERY_PAGE_2);},
+                  onPressed: () {goToPage(constants.FRANCESCO_QUERY_PAGE_INDEX);},
                   child: const Text('Francesco Query Page',style: TextStyle(fontSize: 20,color: Colors.white), ),
                 ),
                 TextButton(
                   style: ButtonStyle(
                       overlayColor: MaterialStateProperty.all(Colors.transparent)
                   ),
-                  onPressed: () {goToPage(constants.QUERY_PAGE_3);},
+                  onPressed: () {goToPage(constants.HARJOT_QUERY_PAGE_INDEX);},
                   child: const Text('Harjot Query Page',style: TextStyle(fontSize: 20,color: Colors.white), ),
                 ),
               ],
             )
             )
-
           ],
         )
     );

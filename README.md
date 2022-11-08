@@ -27,9 +27,9 @@ Notice that, those two datasets are **open** datasets. Moreover, only part of th
 ## Data Ingestion ##
 The **Data Ingestion** code, that process the dataset can be found under the directory `data_ingestion`.  
 In order to execute the **Data Ingestion** code follow these steps :
-- Create a folder called `serialization` inside the `code` folder : 
+- Create a folder called `serialization` inside the `data_ingestion` folder : 
     - `mkdir ./data_ingestion/serialization`.
-- Create a folder called `zip` inside the `code` folder : 
+- Create a folder called `zip` inside the `data_ingestion` folder : 
     - `mkdir ./data_ingestion/zip`.
 - Make sure that, **rdflib** and **pandas** libraries are installed, if not, execute the following commands to install them :
     - `cd data_ingestion`.

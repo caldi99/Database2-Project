@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter_web_app/home_vs_away_wins_chart.dart';
-import 'package:flutter_web_app/html_graph_visualizer.dart';
+import 'package:flutter_web_app/page_blocks/graph_iframe_block.dart';
 import 'package:flutter_web_app/page_blocks/link_bock.dart';
 import 'package:flutter_web_app/page_blocks/paragraph_block.dart';
 import 'package:flutter_web_app/page_blocks/query_code_block.dart';
@@ -110,7 +110,7 @@ class _MainPage extends State<MainPage> {
             ),
             const Padding(
               padding: constants.BLOCK_PAGES_PADDING_PADDING_PROPRIETY,
-              child: GraphIFrame(),
+              child: GraphIFrameBlock(),
             ),
             Padding(
               padding: EdgeInsets.all(20.0),
