@@ -42,7 +42,7 @@ parser=argparse.ArgumentParser(description="How to run the python backend server
 parser.add_argument('--port', help='The server Port', default=8080)
 args=parser.parse_args()
 config=vars(args)
-port=config['port']
+port=int(config['port'])
 
 # --------------------------------------------------------------------------
 # Start the HTTP server and loop forever
