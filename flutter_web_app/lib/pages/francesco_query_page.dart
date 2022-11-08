@@ -66,7 +66,7 @@ class _FrancescoQueryPage extends State<FrancescoQueryPage> {
               ),
               Padding(
                 padding: constants.BLOCK_PAGES_PADDING_PADDING_PROPRIETY,
-                child:SizedBox(width: double.infinity,height: 400, child:HistogramDateNumberChartBlock(chartData: _resultQueryData1))
+                child:SizedBox(width: double.infinity,height: 400, child:HistogramDateNumberChartBlock(chartData: _resultQueryData1,seriesName: "Scored points by L.J.",))
               ),
               const ParagraphBlock(
                 title: "Chicago Bulls team during the 2006-2007 season with the corresponding time played\n",
@@ -90,6 +90,12 @@ class _FrancescoQueryPage extends State<FrancescoQueryPage> {
   //CALLBACKS
   callbackQueryResult1(var response){
     List<DateNumberChartData> list = [];
+    int tot=0;
+    for (var r in response['results']['bindings']){
+      tot++;
+    }
+
+    int i=0;
 
     //Parse the response
     for(var data in response['results']['bindings']){
@@ -99,8 +105,9 @@ class _FrancescoQueryPage extends State<FrancescoQueryPage> {
           int.parse(datePieces.elementAt(2)));
 
       int points = int.parse(data['pts']['value']);
-
-      list.add(DateNumberChartData(date, points));
+      Color? color=Color.lerp(constants.BLUE, constants.RED, i*1.0/tot);
+      list.add(DateNumberChartData(date, points,color!));
+      i++;
     }
 
     //Remove Previous Content

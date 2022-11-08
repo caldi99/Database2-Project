@@ -1,5 +1,8 @@
+import 'dart:ui';
+
 class DateNumberChartData{
   DateTime xValue;
   int yValue;
-  DateNumberChartData(this.xValue,this.yValue);
+  Color color;
+  DateNumberChartData(this.xValue,this.yValue,this.color);
 }
