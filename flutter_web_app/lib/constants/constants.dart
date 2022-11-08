@@ -16,7 +16,7 @@ const double SIZE_H1=60.0;
 const double SIZE_H2=30.0;
 const double SIZE_TEXT=20.0;
 
-const GRAPHDB_SERVER_ADDRESS="http://localhost:7200/repositories/CPS-NBA";
+const GRAPHDB_SERVER_ADDRESS="http://localhost:8000/repositories/CPS-NBA";
 const GRAPH_HTML="http://localhost:8000/assets/assets/graph.html";
 
 const HOME_PAGE=0;
@@ -48,7 +48,7 @@ final sparql = Mode(
           keywords: {
             "keyword": "select prefix insert as order by group distinct where count from limit sum avg ask describe",
             "literal": "true false null unknown",
-            "built_in":"^^xsd:string ^^xsd:integer ^^xsd:dateTime ^^xsd:boolean ^^xsd:integer ^^xsd:float ^^xsd:double ^^xsd:decimal"
+            "built_in":"^^xsd:string ^^xsd:integer ^^xsd:date ^^xsd:dateTime ^^xsd:boolean ^^xsd:integer ^^xsd:float ^^xsd:double ^^xsd:decimal"
           },
           contains: [
             Mode(
@@ -93,50 +93,49 @@ const BLOCK_PAGES_HEADER_COLUMN_STYLE = TextStyle(fontWeight: FontWeight.bold, f
 const BLOCK_PAGES_CONTENT_CELL_STYLE = TextStyle(fontSize: SIZE_TEXT);
 
 //QUERIES
-final FRANCESCO_QUERY_1 = """PREFIX base: <https://www.dei.unipd.it/Database2/CPS-NBA/>
-  PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-  SELECT ?matchDate ?pts WHERE {
-?person base:wasPlayer ?player ;
-base:name "LeBron James"^^xsd:string .
-?player base:appearsIn ?appearance .
-?appearance base:pts ?pts ;
-base:refersTo ?game .
-?game base:matchDate ?matchDate .
-FILTER( ?matchDate >= "2017-10-01"^^xsd:date && ?matchDate <= "2018-07-31"^^xsd:date) .
-}""";
-final FRANCESCO_QUERY_2 = """PREFIX base: <https://www.dei.unipd.it/Database2/CPS-NBA/>
+const FRANCESCO_QUERY_1 = """PREFIX base: <https://www.dei.unipd.it/Database2/CPS-NBA/>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-SELECT (SUM(?minutes) as ?totalMinutesPlayer) (SUM(?seconds) as ?totalSecondsPlayer) ?name WHERE {
-	?player base:playedFor ?club ;
-		base:appearsIn ?appearance ;
-		base:startYear "2006"^^xsd:gYear ;
-		base:endYear "2007"^^xsd:gYear ;
-		base:represents ?person .
-	?person base:name ?name .
-	?club base:nickname "Bulls"^^xsd:string .
-	?appearance base:minutes ?minutes ;
-				base:seconds ?seconds .	
-}GROUP BY (?name)
-""";
-final ANDREA_QUERY_1 = """PREFIX base: <https://www.dei.unipd.it/Database2/CPS-NBA/>
+SELECT ?matchDate ?pts WHERE {
+        ?person base:wasPlayer ?player ;
+        base:name "LeBron James"^^xsd:string .
+        ?player base:appearsIn ?appearance .
+        ?appearance base:pts ?pts ;
+                base:refersTo ?game .
+        ?game base:matchDate ?matchDate .
+        FILTER( ?matchDate >= "2017-10-01"^^xsd:date && ?matchDate <= "2018-07-31"^^xsd:date) .
+}""";
+const FRANCESCO_QUERY_2 = """PREFIX base: <https://www.dei.unipd.it/Database2/CPS-NBA/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+SELECT (SUM(?minutes) AS ?totalMinutesPlayer) (SUM(?seconds) AS ?totalSecondsPlayer) ?name WHERE {
+        ?player base:playedFor ?club ;
+                base:appearsIn ?appearance ;
+                base:startYear "2006"^^xsd:gYear ;
+                base:endYear "2007"^^xsd:gYear ;
+                base:represents ?person .
+        ?person base:name ?name .
+        ?club base:nickname "Bulls"^^xsd:string .
+        ?appearance base:minutes ?minutes ;
+                base:seconds ?seconds .	
+} GROUP BY (?name)""";
+const ANDREA_QUERY_1 = """PREFIX base: <https://www.dei.unipd.it/Database2/CPS-NBA/>
 SELECT ?name ( SUM(?pts) AS ?points ) WHERE {
-    ?person base:wasPlayer ?player ;
-        base:name ?name .
-    ?player base:appearsIn ?appearance .
-    ?appearance base:pts ?pts .
+        ?person base:wasPlayer ?player ;
+                base:name ?name .
+        ?player base:appearsIn ?appearance .
+        ?appearance base:pts ?pts .
 } GROUP BY (?name)
 ORDER BY DESC (?points)
 LIMIT 10""";
-final ANDREA_QUERY_2 = """PREFIX base: <https://www.dei.unipd.it/Database2/CPS-NBA/>
+const ANDREA_QUERY_2 = """PREFIX base: <https://www.dei.unipd.it/Database2/CPS-NBA/>
 SELECT ?name ?capacity ?numberOfGames WHERE{
-    ?arena base:name ?name ;
-        base:capacity ?capacity .
-    {
-        SELECT ?arena ( COUNT(?game) AS ?numberOfGames ) WHERE {
-              ?game base:hasHomeClub ?club .
-              ?club base:hasStadium ?arena .   
-        } GROUP BY ?arena
-    }
+        ?arena base:name ?name ;
+                base:capacity ?capacity .
+        {
+                SELECT ?arena ( COUNT(?game) AS ?numberOfGames ) WHERE {
+                          ?game base:hasHomeClub ?club .
+                          ?club base:hasStadium ?arena .   
+                } GROUP BY ?arena
+        }
 } ORDER BY DESC (?numberOfGames)""";
 
 //TABLE COLUMN NAME
