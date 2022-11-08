@@ -150,7 +150,27 @@ SELECT ?name ?capacity ?numberOfGames WHERE{
                 } GROUP BY ?arena
         }
 } ORDER BY DESC (?numberOfGames)""";
+// Harjot 
+const HARJOT_QUERY_1 = """
+PREFIX base: <https://www.dei.unipd.it/Database2/CPS-NBA/>
+SELECT ?winHome ( COUNT(?winHome) AS ?numberOfGames ) WHERE { 
+	?game base:winHome ?winHome .
+} GROUP BY (?winHome)
+""";
+const HARJOT_QUERY_2 = """
+PREFIX base: <https://www.dei.unipd.it/Database2/CPS-NBA/>
+PREFIX country: <https://www.dei.unipd.it/Database2/CPS-NBA/Country#>
+SELECT ?clubName ( COUNT(?person) AS ?internationalPlayers ) WHERE {
+  ?person base:isFrom ?country ;
+	      base:wasPlayer ?player .
+	?player base:playedFor ?club .
+	?club base:city ?city ;
+	      base:nickname ?nickname .
+    FILTER (?country != country:USA)
+    BIND(concat(?nickname, ", ",?city) as ?clubName)
+} GROUP BY ?clubName
+ORDER BY DESC(?internationalPlayers)""";
 
 //TABLE COLUMN NAME
 const TABLE_COLUMNS_NAME_QUERY2_FRANCESCO = ['Name','Time Played'];
-
+const TABLE_COLUMNS_NAME_QUERY2_HARJOT = ['Club Name','# International Players'];
