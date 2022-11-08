@@ -111,7 +111,7 @@ class _MainPage extends State<MainPage> {
             ),
             const Padding(
               padding: constants.BLOCK_PAGES_PADDING_PADDING_PROPRIETY,
-              child: GraphIFrame(), //TODO: REFACTORING DONE UNTIL HERE
+              child: GraphIFrame(),
             ),
             Padding(
               padding: EdgeInsets.all(20.0),
@@ -148,17 +148,19 @@ class _MainPage extends State<MainPage> {
                 ],
               ),
             ),
-
-            const Padding(
-              padding: EdgeInsets.all(20.0),
-              child: QueryParagraph(),
-            ),
-
+            ParagraphBlock(
+                title: "Queries\n",
+                content: ["We provide a set of default queries for which we extracted data in other pages that can be accessed from our Header. ",
+                  "You can select one of these and some default queries will be executed to get relevant data from our GraphDB server.\n",
+                "For these queries we show charts that will illustrate some statistics of the retrieved data.\n",
+                "We also provide an Input-Box where you can type your own queries. For these you will simply see a tabular-like result containing all the matches."],
+                titleStyle: constants.BLOCK_PAGES_TITLE_STYLE_PARAGRAPH,
+                contentStyle: constants.BLOCK_PAGES_CONTENT_STYLE_PARAGRAPH
+            ), //TODO : REFACTORING HERE
             Padding(
                 padding: (columns.length>0)?EdgeInsets.only(top:20,bottom: 10,left: 100,right: 100):EdgeInsets.only(top:20,bottom: 50,left: 100,right: 100),
                 child:QueryCodeBlock(callbackQueryResult:callbackQueryResult,editable: true, startQuery: "# Add your query here :)",)
             ),
-
             (columns.length>0)?Padding(
               padding: EdgeInsets.only(left: 100,right: 100),
               child:Container(

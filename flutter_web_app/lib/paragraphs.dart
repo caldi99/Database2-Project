@@ -6,78 +6,6 @@ import 'package:flutter_web_app/constants/constants.dart' as constants;
 
 const double HEIGHT=3;
 
-/*
-class TitleAndDescriptionParagraph extends StatelessWidget {
-  const TitleAndDescriptionParagraph({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return RichText(
-
-      text: TextSpan(
-        text: 'NBA-CPS: Our Ontology\n',
-        style: const TextStyle(
-          fontWeight: FontWeight.bold,
-          fontSize: constants.SIZE_H1,
-          height: HEIGHT,
-        ),
-        children: <TextSpan>[
-          const TextSpan(text: 'This is a Web-App that can be used to make SPARQL queries to the NBA Ontology we created.\n', style: TextStyle(fontWeight: FontWeight.normal,fontSize: constants.SIZE_TEXT,height: 1.2)),
-          const TextSpan(text: 'Our aim is firstly to provide here an insight of the Ontology making a visual graph representing the classes and their properties and relationships. ', style: TextStyle(fontWeight: FontWeight.normal,fontSize: constants.SIZE_TEXT,height: 1.2)),
-          const TextSpan(text: 'We also make here available a set of queries that we thought to be valuable. For these queries it is possible to visualize some charts. ', style: TextStyle(fontWeight: FontWeight.normal,fontSize: constants.SIZE_TEXT,height: 1.2)),
-          const TextSpan(text: 'Finally, we implemented a Text-Box where you can type your query and view the results in tabular form.\n', style: TextStyle(fontWeight: FontWeight.normal,fontSize: constants.SIZE_TEXT,height: 1.2)),
-          const TextSpan(text: 'The data used are provided by Kaggle. You can download the .csv files by clicking the following URLs:\n', style: TextStyle(fontWeight: FontWeight.normal,fontSize: constants.SIZE_TEXT,height: 1.2)),
-
-
-          TextSpan(
-            text: '-  NBA Players\n',
-            style: const TextStyle(color: constants.RED,fontWeight: FontWeight.normal,fontSize: constants.SIZE_TEXT,height: 2),
-            recognizer: TapGestureRecognizer()
-              ..onTap = () { launchUrl(Uri.parse('https://www.kaggle.com/datasets/justinas/nba-players-data'));
-              },
-          ),
-
-          TextSpan(
-            text: '-  NBA games data',
-            style: const TextStyle(color: constants.RED,fontWeight: FontWeight.normal,fontSize: constants.SIZE_TEXT,height: 2),
-            recognizer: TapGestureRecognizer()
-              ..onTap = () { launchUrl(Uri.parse('https://www.kaggle.com/datasets/nathanlauga/nba-games'));
-              },
-          ),
-
-        ],
-      ),
-    );
-  }
-}
-
-class GraphParagraph extends StatelessWidget {
-  const GraphParagraph({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return RichText(
-
-      text: const TextSpan(
-        text: 'How the Graph looks\n',
-        style: TextStyle(
-          fontWeight: FontWeight.bold,
-          fontSize: constants.SIZE_H2,
-          height: HEIGHT,
-        ),
-        children: <TextSpan>[
-          TextSpan(text: 'Here we provide an interactive sandbox created with d3js where you can see which are our classes and their relationships:'
-           , style: TextStyle(fontWeight: FontWeight.normal,fontSize: constants.SIZE_TEXT,height: 1.2)),
-        ],
-      ),
-    );
-  }
-}
-*/
 class ChartParagraph extends StatelessWidget {
   const ChartParagraph({
     super.key,
@@ -127,60 +55,6 @@ class QueryParagraph extends StatelessWidget {
           TextSpan(text: 'For these queries we show charts that will illustrate some statistics of the retrieved data.\n'
               , style: TextStyle(fontWeight: FontWeight.normal,fontSize: constants.SIZE_TEXT,height: 1.2)),
           TextSpan(text: 'We also provide an Input-Box where you can type your own queries. For these you will simply see a tabular-like result containing all the matches.'
-              , style: TextStyle(fontWeight: FontWeight.normal,fontSize: constants.SIZE_TEXT,height: 1.2)),
-        ],
-      ),
-    );
-  }
-}
-
-class QueryPage1FirstQueryParagraph extends StatelessWidget {
-  const QueryPage1FirstQueryParagraph({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return RichText(
-
-      text: const TextSpan(
-        text: 'Top Scorers\n',
-        style: TextStyle(
-          fontWeight: FontWeight.bold,
-          fontSize: constants.SIZE_H2,
-          height: HEIGHT,
-        ),
-        children: <TextSpan>[
-          TextSpan(text: 'This query aims at finding the top 10 scorers in the NBA championship.\n'
-              , style: TextStyle(fontWeight: FontWeight.normal,fontSize: constants.SIZE_TEXT,height: 1.2)),
-          TextSpan(text: 'The query result will consists in the name of the players and the corresponding amount of points scored sorted in descending order.\n'
-              , style: TextStyle(fontWeight: FontWeight.normal,fontSize: constants.SIZE_TEXT,height: 1.2)),
-        ],
-      ),
-    );
-  }
-}
-
-class QueryPage1SecondQueryParagraph extends StatelessWidget {
-  const QueryPage1SecondQueryParagraph({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return RichText(
-
-      text: const TextSpan(
-        text: 'Arenas with most played matches\n',
-        style: TextStyle(
-          fontWeight: FontWeight.bold,
-          fontSize: constants.SIZE_H2,
-          height: HEIGHT,
-        ),
-        children: <TextSpan>[
-          TextSpan(text: 'This query aims at retrieving in ascending order the Arenas with the highest numbers of played matches.\n'
-              , style: TextStyle(fontWeight: FontWeight.normal,fontSize: constants.SIZE_TEXT,height: 1.2)),
-          TextSpan(text: 'The query result will consists in the name of the arenas and the corresponding amount of played matches. We also show their capacities.\n'
               , style: TextStyle(fontWeight: FontWeight.normal,fontSize: constants.SIZE_TEXT,height: 1.2)),
         ],
       ),

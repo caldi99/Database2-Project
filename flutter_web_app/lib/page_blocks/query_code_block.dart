@@ -56,7 +56,6 @@ class _QueryInputCode extends State<QueryCodeBlock> {
                   decoration: BoxDecoration(
                     color: Colors.transparent,
                     borderRadius: BorderRadius.circular(20.0),
-
                     boxShadow: [
                       BoxShadow(
                         color: Colors.grey.withOpacity(0.8),
@@ -66,7 +65,6 @@ class _QueryInputCode extends State<QueryCodeBlock> {
                       ),
                     ],
                   ),
-
                   child:ClipRRect(
                       borderRadius: BorderRadius.circular(20.0),
                       child:SingleChildScrollView(
@@ -77,7 +75,6 @@ class _QueryInputCode extends State<QueryCodeBlock> {
                             textStyle: const TextStyle(fontFamily: 'SourceCode',fontSize: 20),
                           )
                       )
-
                   ),
                 )
             ),
@@ -87,17 +84,15 @@ class _QueryInputCode extends State<QueryCodeBlock> {
                 child:ElevatedButton(
                   onPressed: () async {
                     try {
-                      String query=_codeController!.text.toString();
-                      query=query.replaceAll('·', ' ');
-                      //print(query);
-                      GraphDBAnswer answer=await QueryHandler.httpRequestGraphDb(
-                          query, true, true);
+                      String query = _codeController!.text.toString();
+                      query = query.replaceAll('·', ' ');
+                      GraphDBAnswer answer = await QueryHandler.httpRequestGraphDb(query, true, true);
                       if(answer.isError){
                         SnackBar snackBar = SnackBar(
                           content: Row(
                             mainAxisSize: MainAxisSize.min,
                             children: [
-                              const Icon(Icons.error_outline,color: Colors.red,),
+                              const Icon(Icons.error_outline,color: Colors.red),
                               const SizedBox(width: 10,),
                               Text(answer.msg.toString()),
                             ],
@@ -108,10 +103,6 @@ class _QueryInputCode extends State<QueryCodeBlock> {
                       else{
                         callbackQueryResult(answer.msg);
                       }
-
-                      //var json = await QueryHandler.httpRequestGraphDb(
-                      //    query, true, true);
-                      //callbackQueryResult(json);
                     }
                     catch(exception){
                       SnackBar snackBar = SnackBar(
@@ -132,11 +123,13 @@ class _QueryInputCode extends State<QueryCodeBlock> {
                     shape: MaterialStateProperty.all(const CircleBorder()),
                     padding: MaterialStateProperty.all(const EdgeInsets.all(20)),
                     backgroundColor: MaterialStateProperty.all(constants.BLUE), // <-- Button color
-                    overlayColor: MaterialStateProperty.resolveWith<Color?>((states) {
-                      if (states.contains(MaterialState.pressed)) return Colors.blueAccent; // <-- Splash color
+                    overlayColor: MaterialStateProperty.resolveWith<Color?>((states)
+                    {
+                      if (states.contains(MaterialState.pressed))
+                        return Colors.blueAccent; // <-- Splash color
                     }),
                   ),
-                  child: const Icon(Icons.play_arrow_rounded,size: 40,),
+                  child: const Icon(Icons.play_arrow_rounded,size: 40),
                 )
             )
           ],

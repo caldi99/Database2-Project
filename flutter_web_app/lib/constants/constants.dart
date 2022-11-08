@@ -91,6 +91,10 @@ var BLOCK_PAGES_CONTAINER_DECORATION_PROPRIETY = BoxDecoration(shape: BoxShape.r
 const BLOCK_PAGES_LINK_STYLE = TextStyle(color: RED,fontWeight: FontWeight.normal,fontSize: SIZE_TEXT,height: 2);
 const BLOCK_PAGES_HEADER_COLUMN_STYLE = TextStyle(fontWeight: FontWeight.bold, fontSize: SIZE_TEXT);
 const BLOCK_PAGES_CONTENT_CELL_STYLE = TextStyle(fontSize: SIZE_TEXT);
+const BLOCK_PAGES_DESCRIPTION_AXIS_STYLE = TextStyle(fontSize: 13,fontWeight: FontWeight.w300);
+const BLOCK_PAGES_COLUMNSERIES_BORDERRADIUS_PROPRIETY = BorderRadius.only(topLeft: Radius.circular(5),topRight: Radius.circular(5));
+
+
 
 //QUERIES
 final FRANCESCO_QUERY_1 = """PREFIX base: <https://www.dei.unipd.it/Database2/CPS-NBA/>
@@ -140,5 +144,5 @@ SELECT ?name ?capacity ?numberOfGames WHERE{
 } ORDER BY DESC (?numberOfGames)""";
 
 //TABLE COLUMN NAME
-const TABLE_COLUMN_NAME_QUERY2_FRANCESCO = ['Name','Time Played'];
+const TABLE_COLUMNS_NAME_QUERY2_FRANCESCO = ['Name','Time Played'];
 

@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_web_app/classes/string_integer_chart_data.dart';
 import 'package:flutter_web_app/constants/constants.dart' as constants;
+import 'package:flutter_web_app/page_blocks/histogram_string_integer_chart_block.dart';
 import 'package:flutter_web_app/page_blocks/query_code_block.dart';
-import 'package:flutter_web_app/paragraphs.dart';
-import 'package:flutter_web_app/top_played_arenas_chart.dart';
-import 'package:flutter_web_app/top_scorers_chart.dart';
-
+import 'package:flutter_web_app/page_blocks/paragraph_block.dart';
 
 class AndreaQueryPage extends StatefulWidget {
   final scrollCallback;
@@ -12,15 +11,15 @@ class AndreaQueryPage extends StatefulWidget {
   const AndreaQueryPage({Key? key,this.scrollCallback}) : super(key: key);
 
   @override
-  State<AndreaQueryPage> createState() => _QueryPage1();
+  State<AndreaQueryPage> createState() => _AndreaQueryPage();
 }
 
-class _QueryPage1 extends State<AndreaQueryPage> {
+class _AndreaQueryPage extends State<AndreaQueryPage> {
   //DATA MEMBERS
   final ScrollController _scrollController=ScrollController();
   late final _scrollCallback;
-  List<TopScorersChartData> dataTopScorers=[];
-  List<TopArenasChartData> dataTopArenas=[];
+  List<StringIntegerChartData> dataTopScorers=[];
+  List<StringIntegerChartData> dataTopArenas=[];
 
   //CALLED AT THE BEGINNING
   @override
@@ -53,23 +52,55 @@ class _QueryPage1 extends State<AndreaQueryPage> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             constants.SIZED_BOX_BLOCK,
-            QueryPage1FirstQueryParagraph(),
+            const ParagraphBlock(
+                title: "Top Scorers\n",
+                titleStyle: constants.BLOCK_PAGES_TITLE_STYLE_PARAGRAPH,
+                content: ["This query aims at finding the top 10 scorers in the NBA championship.\n",
+                  "The query result will consists in the name of the players and the corresponding amount of points scored sorted in descending order.\n"],
+                contentStyle: constants.BLOCK_PAGES_CONTENT_STYLE_PARAGRAPH
+            ),
             Padding(
               padding: constants.BLOCK_PAGES_PADDING_PADDING_PROPRIETY,
               child:QueryCodeBlock(callbackQueryResult:callbackQueryResultTopScorers,editable: false,startQuery: constants.ANDREA_QUERY_1)
             ),
             Padding(
               padding: constants.BLOCK_PAGES_PADDING_PADDING_PROPRIETY,
-              child:SizedBox(width: double.infinity,height: 400, child:TopScorersChart(data: dataTopScorers))
+              child:SizedBox(width: double.infinity,height: 400,
+                  child : HistogramStringIntegerChartBlock(
+                    chartData: dataTopScorers,
+                    nameTooltip: "Scored Points",
+                    intervalValueY: 5000,
+                    maxValueY: 45000,
+                    minValueY: 0,
+                    descriptionYAxis: "#Points",
+                    descriptionXAxis: "The Top 10 scorers with their corresponding number of scored points",
+                )
+              )
             ),
-            QueryPage1SecondQueryParagraph(),
+            const ParagraphBlock(
+                title: "Arenas with most played matches\n",
+                titleStyle: constants.BLOCK_PAGES_TITLE_STYLE_PARAGRAPH,
+                content: ["This query aims at retrieving in ascending order the Arenas with the highest numbers of played matches.\n",
+                  "The query result will consists in the name of the arenas and the corresponding amount of played matches. We also show their capacities.\n"],
+                contentStyle: constants.BLOCK_PAGES_CONTENT_STYLE_PARAGRAPH
+            ),
             Padding(
               padding: constants.BLOCK_PAGES_PADDING_PADDING_PROPRIETY,
               child:QueryCodeBlock(callbackQueryResult:callbackQueryResultTopArenas,editable: false,startQuery: constants.ANDREA_QUERY_2)
             ),
             Padding(
                 padding: constants.BLOCK_PAGES_PADDING_PADDING_PROPRIETY,
-                child:SizedBox(width: double.infinity,height: 400, child:TopArenasChart(data: dataTopArenas))
+                child:SizedBox(width: double.infinity,height: 400,
+                    child : HistogramStringIntegerChartBlock(
+                      chartData: dataTopArenas,
+                      nameTooltip: "Matches played",
+                      intervalValueY: 100,
+                      maxValueY: 1900,
+                      minValueY: 0,
+                      descriptionYAxis: "#Matches",
+                      descriptionXAxis: "The Arenas sorted by the number of matches played",
+                    )
+                )
             ),
           ],
         ),
@@ -78,53 +109,39 @@ class _QueryPage1 extends State<AndreaQueryPage> {
   }
 
   //CALLBACKS
-
   callbackQueryResultTopArenas(var res){
-    List<TopArenasChartData> temp=[];
+    List<StringIntegerChartData> temp=[];
 
-    int tot=0;
-    for (var r in res['results']['bindings']){
-      tot++;
-    }
-
-    int i=0;
+    //PARSING
     for (var result  in res['results']['bindings']){
       String name=result['name']['value'];
-      int capacity=double.parse(result['capacity']['value']) as int;
       int numberOfGames=double.parse(result['numberOfGames']['value']) as int;
-      Color? color=Color.lerp(constants.BLUE, constants.RED, i*1.0/tot);
-      //Color color=Color((Random().nextDouble() * 0xFFFFFF).toInt()).withOpacity(1.0);
-      temp.add(TopArenasChartData(name,numberOfGames, capacity, color!));
-      i++;
+      temp.add(StringIntegerChartData(name,numberOfGames));
     }
 
+    //REMOVE PREVIOUS DATA
     dataTopScorers.clear();
 
+    //SET NEW DATA
     setState(() {
       dataTopArenas.addAll(temp);
     });
   }
 
   callbackQueryResultTopScorers(var res){
-    List<TopScorersChartData> temp=[];
-    int tot=0;
+    List<StringIntegerChartData> temp = [];
 
-    for (var r in res['results']['bindings']){
-      tot++;
-    }
-
-    int i=0;
+    //PARSING
     for (var result  in res['results']['bindings']){
       String name=result['name']['value'];
       int pointsScored=int.parse(result['points']['value']);
-      //Color color=Color((Random().nextDouble() * 0xFFFFFF).toInt()).withOpacity(1.0);
-      Color? color=Color.lerp(constants.BLUE, constants.RED, i*1.0/tot);
-      temp.add(TopScorersChartData(name, pointsScored, color!));
-      i++;
+      temp.add(StringIntegerChartData(name,pointsScored));
     }
 
+    //REMOVE PREVIOUS DATA
     dataTopScorers.clear();
 
+    //SET NEW DATA
     setState(() {
       dataTopScorers.addAll(temp);
     });

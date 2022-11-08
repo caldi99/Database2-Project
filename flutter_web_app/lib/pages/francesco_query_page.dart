@@ -1,11 +1,11 @@
 import 'package:flutter/cupertino.dart';
-import 'package:flutter_web_app/classes/date_number_chart_data.dart';
+import 'package:flutter_web_app/classes/date_integer_chart_data.dart';
 import 'package:flutter_web_app/page_blocks/paragraph_block.dart';
 import 'package:flutter_web_app/constants/constants.dart' as constants;
 import 'package:flutter_web_app/page_blocks/table_block.dart';
 import 'package:format/format.dart';
 import '../page_blocks/query_code_block.dart';
-import '../page_blocks/histogram_date_number_chart_block.dart';
+import '../page_blocks/histogram_date_integer_chart_block.dart';
 
 class FrancescoQueryPage extends StatefulWidget{
   final scrollCallback;
@@ -20,7 +20,7 @@ class _FrancescoQueryPage extends State<FrancescoQueryPage> {
   //DATA MEMBERS
   final ScrollController _scrollController = ScrollController();
   late final _scrollCallback;
-  List<DateNumberChartData> _resultQueryData1 = [];
+  List<DateIntegerChartData> _resultQueryData1 = [];
   List<List<String>> _resultQueryData2 = [];
 
   //CALLED AT THE BEGINNING
@@ -66,7 +66,17 @@ class _FrancescoQueryPage extends State<FrancescoQueryPage> {
               ),
               Padding(
                 padding: constants.BLOCK_PAGES_PADDING_PADDING_PROPRIETY,
-                child:SizedBox(width: double.infinity,height: 400, child:HistogramDateNumberChartBlock(chartData: _resultQueryData1))
+                child:SizedBox(
+                    width: double.infinity,height: 400,
+                    child:HistogramDateIntegerChartBlock(
+                      chartData: _resultQueryData1,
+                      descriptionXAxis: "Dates of the games played",
+                      descriptionYAxis: "#Points",
+                      nameTooltip: "Points Scored",
+                      minValueY: 0,
+                      maxValueY: 80,
+                      intervalValueY: 1,
+                    ))
               ),
               const ParagraphBlock(
                 title: "Chicago Bulls team during the 2006-2007 season with the corresponding time played\n",
@@ -80,7 +90,7 @@ class _FrancescoQueryPage extends State<FrancescoQueryPage> {
               ),
               Padding(
                 padding: constants.BLOCK_PAGES_PADDING_PADDING_PROPRIETY,
-                child:SizedBox(width: double.infinity,height: 400, child:TableBlock(tableData: _resultQueryData2, tableCols: constants.TABLE_COLUMN_NAME_QUERY2_FRANCESCO))
+                child:SizedBox(width: double.infinity,height: 400, child:TableBlock(tableData: _resultQueryData2, tableCols: constants.TABLE_COLUMNS_NAME_QUERY2_FRANCESCO))
               )
             ],
           ),
@@ -89,7 +99,7 @@ class _FrancescoQueryPage extends State<FrancescoQueryPage> {
   }
   //CALLBACKS
   callbackQueryResult1(var response){
-    List<DateNumberChartData> list = [];
+    List<DateIntegerChartData> list = [];
 
     //Parse the response
     for(var data in response['results']['bindings']){
@@ -100,7 +110,7 @@ class _FrancescoQueryPage extends State<FrancescoQueryPage> {
 
       int points = int.parse(data['pts']['value']);
 
-      list.add(DateNumberChartData(date, points));
+      list.add(DateIntegerChartData(date, points));
     }
 
     //Remove Previous Content
