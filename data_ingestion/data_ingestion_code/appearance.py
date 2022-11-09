@@ -2,7 +2,7 @@
     Author : Andrea Pasin, Francesco Caldivezzi
 """
 
-from data_ingestion.utils.helper import Helper
+from data_ingestion_code.utils.helper import Helper
 from rdflib import Namespace
 from rdflib import Graph
 from rdflib import URIRef
@@ -72,7 +72,7 @@ graph.bind("base",BASE)
 # --------------------------------------------------------------------------
 BLOCK_SERIALIZATION_SIZE = 200000 
 index_file = 0
-base_serialization_path = str(Path(__file__).parent.resolve())+"/serialization"
+base_serialization_path=str(Path(__file__).resolve().parent.parent)+"/serialization"
 path_list_file_merge = []
 
 # --------------------------------------------------------------------------

@@ -39,10 +39,14 @@ class HTTPRequestHandler(server.SimpleHTTPRequestHandler):
 # Parse the CLI arguments and retrieve the port number
 # --------------------------------------------------------------------------
 parser=argparse.ArgumentParser(description="How to run the python backend server:",formatter_class=argparse.ArgumentDefaultsHelpFormatter,prog = "NBA-CPS server",epilog = "Restart and provide the correct parameters.")
-parser.add_argument('--port', help='The server Port', default=8000)
+parser.add_argument('--listen_port', help='The server Port', default=8000)
+parser.add_argument('--graphdb_port', help='The GraphDB Port', default=7200)
 args=parser.parse_args()
 config=vars(args)
-port=int(config['port'])
+port=int(config['listen_port'])
+
+# The url of the GraphDB repository
+url='http://localhost:'+str(config['graphdb_port'])+'/repositories/CPS-NBA'
 
 # --------------------------------------------------------------------------
 # Start the HTTP server and loop forever

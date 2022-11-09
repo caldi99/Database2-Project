@@ -2,14 +2,12 @@
     Author : Francesco Caldivezzi
 """
 
-from data_ingestion.utils.helper import Helper
+from data_ingestion_code.utils.helper import Helper
 from rdflib import Namespace
 from rdflib import Graph
 from rdflib import URIRef
-from rdflib import RDF
-from rdflib import Literal
-from rdflib.namespace import XSD
 from pathlib import Path
+import re
 
 # --------------------------------------------------------------------------
 # Create helper object
@@ -17,22 +15,22 @@ from pathlib import Path
 helper = Helper()
 
 # --------------------------------------------------------------------------
-# Read teams.csv file
+# Read games.csv file
 # --------------------------------------------------------------------------
 print("READING DATA FROM CSV FILE ..")
-club_csv_path = helper.get_csv_path("clubs")
-club_dataframe = helper.read_csv(club_csv_path, ",")
+club_arena_csv_path = helper.get_csv_path("clubs")
+club_arena_dataframe = helper.read_csv(club_arena_csv_path, ",")
 
 # --------------------------------------------------------------------------
-# Convert Cols to corret type
+# Print info of dataframe
 # --------------------------------------------------------------------------
-
-print(club_dataframe.info())
+print(club_arena_dataframe.info())
 
 # --------------------------------------------------------------------------
-# Construct Club Ontology Namespace
+# Construct Game Ontology Namespace
 # --------------------------------------------------------------------------
 print("CREATING NAMESPACES OF THE ONTOLOGY ..")
+ARENA = Namespace("https://www.dei.unipd.it/Database2/CPS-NBA/Arena#")
 CLUB = Namespace("https://www.dei.unipd.it/Database2/CPS-NBA/Club#")
 BASE = Namespace("https://www.dei.unipd.it/Database2/CPS-NBA/")
 
@@ -46,6 +44,7 @@ graph = Graph()
 # Bind namespaces to a prefix for a better output
 # --------------------------------------------------------------------------
 print("BINDING NAMASPACES TO PREFIXES ..")
+graph.bind("arena",ARENA)
 graph.bind("club",CLUB)
 graph.bind("base",BASE)
 
@@ -53,26 +52,22 @@ graph.bind("base",BASE)
 # Create triples and populate the graph
 # --------------------------------------------------------------------------
 print("POPULATING THE GRAPH ..")
-for index, row in club_dataframe.iterrows():
-
-    club_subject = URIRef(CLUB + str(row['TEAM_ID']))    
-    graph.add((club_subject, RDF.type, BASE.Club))
-            
-    #Nickname
-    graph.add((club_subject, BASE['nickname'], Literal(row['NICKNAME'], datatype = XSD.string)))
+for index, row in club_arena_dataframe.iterrows():
+    #Subject
+    club_arena_subject_uri = URIRef(CLUB + str(row['TEAM_ID']))
     
-    #Abbreviation
-    graph.add((club_subject, BASE['abbreviation'], Literal(row['ABBREVIATION'], datatype = XSD.string)))
-    
-    #Year
-    graph.add((club_subject, BASE['firstYear'], Literal(row['MIN_YEAR'], datatype = XSD.gYear)))
+    #Predicate
+    club_arena_predicate_uri = URIRef(BASE + "hasStadium")
 
-    #City
-    graph.add((club_subject, BASE['city'], Literal(row['CITY'], datatype = XSD.string)))
+    #Object
+    club_arena_object_uri = URIRef(ARENA + str(re.sub(r'\W+', '', row['ARENA'])))   
+
+    #Add Triples
+    graph.add((club_arena_subject_uri, club_arena_predicate_uri ,club_arena_object_uri))  
 
 # --------------------------------------------------------------------------
 # Serialize the graph
 # --------------------------------------------------------------------------
 print("SERIALIZING ..")
-serialization_path=str(Path(__file__).parent.resolve())+"/serialization/club.ttl"
+serialization_path=str(Path(__file__).resolve().parent.parent)+"/serialization/club_arena_join.ttl"
 helper.serialize(graph, serialization_path)

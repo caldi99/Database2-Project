@@ -1,7 +1,8 @@
-from data_ingestion.utils.helper import Helper
+from data_ingestion_code.utils.helper import Helper
 from rdflib import Namespace,Graph,URIRef,RDF,Literal
 from rdflib.namespace import XSD
-import math,pathlib
+import math
+from pathlib import Path
 
 
 # Defining constants to keep things organized
@@ -61,7 +62,7 @@ def process_players(players_path,players_details_path):
         graph.add((player_subj_uri, BASE[PLAYER_START_SEASON], Literal(start_year, datatype = XSD.gYear)))
         graph.add((player_subj_uri, BASE[PLAYER_END_SEASON], Literal(end_year, datatype = XSD.gYear)))
 
-    serialization_path=str(pathlib.Path(__file__).parent.resolve())+"/serialization/player.ttl"
+    serialization_path=str(Path(__file__).resolve().parent.parent)+"/serialization/player.ttl"
     print("serializing...")
 
     # Serializing the graph to a .ttl file

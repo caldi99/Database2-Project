@@ -1,6 +1,6 @@
-from data_ingestion.utils.helper import Helper
+from data_ingestion_code.utils.helper import Helper
 from rdflib import Namespace,Graph,URIRef,RDF,Literal
-import pathlib
+import pathlib as Path
 import re
 
 # Defining constants to keep things organized
@@ -39,7 +39,7 @@ def process_countries():
         graph.add((country_subj_uri, ONTOLOGY[COUNTRY_NAME], Literal(str(country),lang="en")))
         graph.add((country_subj_uri, RDF.type, URIRef(ONTOLOGY.Country)))
 
-    serialization_path=str(pathlib.Path(__file__).parent.resolve())+"/serialization/country.ttl"
+    serialization_path=str(Path(__file__).resolve().parent.parent)+"/serialization/country.ttl"
     print("serializing...")
 
     # Serializing the graph to a .ttl file

@@ -2,36 +2,40 @@
     Author : Francesco Caldivezzi
 """
 
-from data_ingestion.utils.helper import Helper
+from data_ingestion_code.utils.helper import Helper
 from rdflib import Namespace
 from rdflib import Graph
 from rdflib import URIRef
 from pathlib import Path
-import re
 
-# --------------------------------------------------------------------------
-# Create helper object
-# --------------------------------------------------------------------------
 helper = Helper()
 
+
 # --------------------------------------------------------------------------
-# Read games.csv file
+# Read games.csv and teams.csv file
 # --------------------------------------------------------------------------
 print("READING DATA FROM CSV FILE ..")
-club_arena_csv_path = helper.get_csv_path("clubs")
-club_arena_dataframe = helper.read_csv(club_arena_csv_path, ",")
+club_csv_path = helper.get_csv_path("clubs")
+club_dataframe = helper.read_csv(club_csv_path, ",")
+
+game_csv_path = helper.get_csv_path("games")
+game_dataframe = helper.read_csv(game_csv_path, ",")
 
 # --------------------------------------------------------------------------
-# Print info of dataframe
+# Drop NA values
 # --------------------------------------------------------------------------
-print(club_arena_dataframe.info())
+print("DROP NA VALUES ..")
+game_dataframe = game_dataframe.dropna()
+
+print(game_dataframe.info())
+print(club_dataframe.info())
 
 # --------------------------------------------------------------------------
-# Construct Game Ontology Namespace
+# Construct Club Ontology Namespace
 # --------------------------------------------------------------------------
 print("CREATING NAMESPACES OF THE ONTOLOGY ..")
-ARENA = Namespace("https://www.dei.unipd.it/Database2/CPS-NBA/Arena#")
 CLUB = Namespace("https://www.dei.unipd.it/Database2/CPS-NBA/Club#")
+GAME = Namespace("https://www.dei.unipd.it/Database2/CPS-NBA/Game#")
 BASE = Namespace("https://www.dei.unipd.it/Database2/CPS-NBA/")
 
 # --------------------------------------------------------------------------
@@ -44,30 +48,34 @@ graph = Graph()
 # Bind namespaces to a prefix for a better output
 # --------------------------------------------------------------------------
 print("BINDING NAMASPACES TO PREFIXES ..")
-graph.bind("arena",ARENA)
 graph.bind("club",CLUB)
+graph.bind("game",GAME)
 graph.bind("base",BASE)
 
 # --------------------------------------------------------------------------
 # Create triples and populate the graph
 # --------------------------------------------------------------------------
 print("POPULATING THE GRAPH ..")
-for index, row in club_arena_dataframe.iterrows():
+for index, row in game_dataframe.iterrows():
     #Subject
-    club_arena_subject_uri = URIRef(CLUB + str(row['TEAM_ID']))
-    
-    #Predicate
-    club_arena_predicate_uri = URIRef(BASE + "hasStadium")
+    game_club_subject = URIRef(GAME + str(row['GAME_ID']))
 
-    #Object
-    club_arena_object_uri = URIRef(ARENA + str(re.sub(r'\W+', '', row['ARENA'])))   
+    #Predicate and Object home
+    game_club_home_object = URIRef(CLUB + str(row['HOME_TEAM_ID']))
+    game_club_home_predicate = URIRef(BASE + "homeClub") 
+
+    #Predicate and Object away
+    game_club_away_object = URIRef(CLUB + str(row['VISITOR_TEAM_ID']))
+    game_club_away_predicate = URIRef(BASE + "awayClub") 
+
 
     #Add Triples
-    graph.add((club_arena_subject_uri, club_arena_predicate_uri ,club_arena_object_uri))  
+    graph.add((game_club_subject, game_club_away_predicate ,game_club_away_object))
+    graph.add((game_club_subject, game_club_home_predicate, game_club_home_object))        
 
 # --------------------------------------------------------------------------
 # Serialize the graph
 # --------------------------------------------------------------------------
 print("SERIALIZING ..")
-serialization_path=str(Path(__file__).parent.resolve())+"/serialization/club_arena_join.ttl"
+serialization_path=str(Path(__file__).resolve().parent.parent)+"/serialization/game_club_join.ttl"
 helper.serialize(graph, serialization_path)

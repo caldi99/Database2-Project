@@ -2,7 +2,7 @@
     Author : Francesco Caldivezzi
 """
 
-from data_ingestion.utils.helper import Helper
+from data_ingestion_code.utils.helper import Helper
 from rdflib import Namespace
 from rdflib import Graph
 from rdflib import URIRef
@@ -86,5 +86,5 @@ for index,row in merged_dataframe.iterrows():
 # Serialize the graph
 # --------------------------------------------------------------------------
 print("SERIALIZING ..")
-serialization_path=str(Path(__file__).parent.resolve())+"/serialization/appearance_game_join.ttl"
+serialization_path=str(Path(__file__).resolve().parent.parent)+"/serialization/appearance_game_join.ttl"
 helper.serialize(graph, serialization_path)

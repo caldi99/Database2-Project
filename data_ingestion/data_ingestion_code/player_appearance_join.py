@@ -1,6 +1,6 @@
-from data_ingestion.utils.helper import Helper
+from data_ingestion_code.utils.helper import Helper
 from rdflib import Namespace,Graph,URIRef
-import pathlib
+from pathlib import Path
 
 # Defining constants to keep things organized
 ONTOLOGY_URI="https://www.dei.unipd.it/Database2/CPS-NBA/"
@@ -55,7 +55,7 @@ def process_has_played_in_match(match_details_path,games_path):
         appearance_obj_uri= URIRef(APPEARANCE+ str(game_id)+"_"+str(player_id)+"_"+str(season)+"_"+str(season+1))
         graph.add((player_subj_uri, BASE[PLAYER_APPEARANCE], appearance_obj_uri))
 
-    serialization_path=str(pathlib.Path(__file__).parent.resolve())+"/serialization/player_appearance_join.ttl"
+    serialization_path=str(Path(__file__).resolve().parent.parent)+"/serialization/player_appearance_join.ttl"
     print("serializing...")
 
     # Serializing the graph to a .ttl file

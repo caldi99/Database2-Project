@@ -1,7 +1,7 @@
-from data_ingestion.utils.helper import Helper
+from data_ingestion_code.utils.helper import Helper
 from rdflib import Namespace,Graph,URIRef,Literal
 from rdflib.namespace import XSD
-import pathlib
+from pathlib import Path
 
 # Defining constants to keep things organized
 ONTOLOGY_URI="https://www.dei.unipd.it/Database2/CPS-NBA/"
@@ -39,7 +39,7 @@ def process_person(players_path):
         graph.add((player_subj_uri, BASE[PERSON_NAME], Literal(str(player_name),datatype=XSD.string)))
 
     
-    serialization_path=str(pathlib.Path(__file__).parent.resolve())+"/serialization/person.ttl"
+    serialization_path=str(Path(__file__).resolve().parent.parent)+"/serialization/person.ttl"
     print("serializing...")
 
     # Serializing the graph to a .ttl file
