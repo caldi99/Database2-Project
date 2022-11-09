@@ -3,6 +3,7 @@ version: "3.9"
 services:
   db:
     image: khaller/graphdb-free:10.0.0
+    container_name : graphdb-database
     command: ["--GDB_HEAP_SIZE", "4GB"]
     ports:
       - 7200:7200
