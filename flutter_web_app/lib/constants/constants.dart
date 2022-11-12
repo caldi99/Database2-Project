@@ -7,15 +7,15 @@ import 'package:highlight/highlight_core.dart';
 // This is the file where constants are placed to avoid having too many constants in different files
 
 //COLORS
-const Color RED=Color(0xFFFD1D1D);
-const Color BLUE=Color(0xFF405DE6);
-const Color LIGHT_BLUE=Color(0xFF558DCA);
-const Color PURPLE=Color(0xFF7F00FF);
-const Color CYAN=Color(0xFF16FFFF);
-const Color CYAN_GREY=Color(0xFFC8EFF9);
+const Color RED = Color(0xFFFD1D1D);
+const Color BLUE = Color(0xFF405DE6);
+const Color LIGHT_BLUE = Color(0xFF558DCA);
+const Color PURPLE = Color(0xFF7F00FF);
+const Color CYAN = Color(0xFF16FFFF);
+const Color CYAN_GREY = Color(0xFFC8EFF9);
 
 //SIZES
-const double SIZE_H1 =60.0;
+const double SIZE_H1 = 60.0;
 const double SIZE_H2 = 30.0;
 const double SIZE_TEXT = 20.0;
 const IFRAME_HEIGHT = "700";
@@ -24,8 +24,8 @@ const CONTAINER_IFRAME_HEIGHT = 720.0;
 const CONTAINER_IFRAME_WIDTH = 920.0;
 
 //URLS
-const GRAPHDB_SERVER_ADDRESS="http://localhost:8000/repositories/CPS-NBA";
-const GRAPH_HTML="http://localhost:8000/assets/assets/graph.html";
+const GRAPHDB_SERVER_ADDRESS = "http://localhost:8000/repositories/CPS-NBA";
+const GRAPH_HTML = "http://localhost:8000/assets/assets/graph.html";
 
 //PAGE INDEXES
 const HOME_PAGE_INDEX = 0;
@@ -53,11 +53,12 @@ final sparql = Mode(
           endsWithParent: true,
           //lexemes: "[\\w\\.]+",
           lexemes: "[:^A-Za-z]+",
-
           keywords: {
-            "keyword": "select prefix insert as order by group distinct where count from limit sum avg ask describe",
+            "keyword":
+                "select prefix insert as order by group distinct where count from limit sum avg ask describe",
             "literal": "true false null unknown",
-            "built_in":"^^xsd:string ^^xsd:integer ^^xsd:date ^^xsd:dateTime ^^xsd:boolean ^^xsd:integer ^^xsd:float ^^xsd:double ^^xsd:decimal"
+            "built_in":
+                "^^xsd:string ^^xsd:integer ^^xsd:date ^^xsd:dateTime ^^xsd:boolean ^^xsd:integer ^^xsd:float ^^xsd:double ^^xsd:decimal"
           },
           contains: [
             Mode(
@@ -81,32 +82,46 @@ final sparql = Mode(
       HASH_COMMENT_MODE
     ]);
 
-
 //OTHER CONSTANTS
 const TOP = "TOP";
 const BOTTOM = "BOTTOM";
 const SCROLLCONTROLLER_POSITION_PIXELS = 150;
 
 //STYLE QUERIES
-const BLOCK_PAGES_TITLE_STYLE_PARAGRAPH = TextStyle(fontWeight: FontWeight.bold, fontSize: SIZE_H2, height: 3);
-const BLOCK_PAGES_CONTENT_STYLE_PARAGRAPH = TextStyle(fontWeight: FontWeight.normal, fontSize: SIZE_TEXT, height: 1.2);
-const BLOCK_PAGES_PADDING_PADDING_PROPRIETY = EdgeInsets.only(left: 150,right: 150,top: 20,bottom: 20);
-const PAGE_PADDING_PADDING_PROPRIETY =  EdgeInsets.only(left: 20,right: 20);
+const BLOCK_PAGES_TITLE_STYLE_PARAGRAPH =
+    TextStyle(fontWeight: FontWeight.bold, fontSize: SIZE_H2, height: 3);
+const BLOCK_PAGES_CONTENT_STYLE_PARAGRAPH =
+    TextStyle(fontWeight: FontWeight.normal, fontSize: SIZE_TEXT, height: 1.2);
+const BLOCK_PAGES_PADDING_PADDING_PROPRIETY =
+    EdgeInsets.only(left: 150, right: 150, top: 20, bottom: 20);
+const PAGE_PADDING_PADDING_PROPRIETY = EdgeInsets.only(left: 20, right: 20);
 const SIZED_BOX_BLOCK = SizedBox(height: 150);
 const BLOCK_PAGES_CONTAINER_PADDING_PROPRIETY = EdgeInsets.all(20);
-var BLOCK_PAGES_CONTAINER_DECORATION_PROPRIETY = BoxDecoration(shape: BoxShape.rectangle,color: Colors.white,
+var BLOCK_PAGES_CONTAINER_DECORATION_PROPRIETY = BoxDecoration(
+    shape: BoxShape.rectangle,
+    color: Colors.white,
     borderRadius: BorderRadius.circular(30),
-    boxShadow:[BoxShadow(color: Colors.grey.withOpacity(0.8),spreadRadius: 1,blurRadius: 8,offset: Offset(0, 3))]);
-const BLOCK_PAGES_LINK_STYLE = TextStyle(color: RED,fontWeight: FontWeight.normal,fontSize: SIZE_TEXT,height: 2);
-const BLOCK_PAGES_HEADER_COLUMN_STYLE = TextStyle(fontWeight: FontWeight.bold, fontSize: SIZE_TEXT);
+    boxShadow: [
+      BoxShadow(
+          color: Colors.grey.withOpacity(0.8),
+          spreadRadius: 1,
+          blurRadius: 8,
+          offset: Offset(0, 3))
+    ]);
+const BLOCK_PAGES_LINK_STYLE = TextStyle(
+    color: RED, fontWeight: FontWeight.normal, fontSize: SIZE_TEXT, height: 2);
+const BLOCK_PAGES_HEADER_COLUMN_STYLE =
+    TextStyle(fontWeight: FontWeight.bold, fontSize: SIZE_TEXT);
 const BLOCK_PAGES_CONTENT_CELL_STYLE = TextStyle(fontSize: SIZE_TEXT);
-const BLOCK_PAGES_DESCRIPTION_AXIS_STYLE = TextStyle(fontSize: 13,fontWeight: FontWeight.w300);
-const BLOCK_PAGES_COLUMNSERIES_BORDERRADIUS_PROPRIETY = BorderRadius.only(topLeft: Radius.circular(5),topRight: Radius.circular(5));
+const BLOCK_PAGES_DESCRIPTION_AXIS_STYLE =
+    TextStyle(fontSize: 13, fontWeight: FontWeight.w300);
+const BLOCK_PAGES_COLUMNSERIES_BORDERRADIUS_PROPRIETY = BorderRadius.only(
+    topLeft: Radius.circular(5), topRight: Radius.circular(5));
 const IFRAME_STYLE_BORDER_PROPRIETY = "none";
 
-
 //QUERIES
-const FRANCESCO_QUERY_1 = """PREFIX base: <https://www.dei.unipd.it/Database2/CPS-NBA/>
+const FRANCESCO_QUERY_1 =
+    """PREFIX base: <https://www.dei.unipd.it/Database2/CPS-NBA/>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 SELECT ?matchDate ?pts WHERE {
         ?person base:wasPlayer ?player ;
@@ -117,7 +132,8 @@ SELECT ?matchDate ?pts WHERE {
         ?game base:matchDate ?matchDate .
         FILTER( ?matchDate >= "2017-10-01"^^xsd:date && ?matchDate <= "2018-07-31"^^xsd:date) .
 }""";
-const FRANCESCO_QUERY_2 = """PREFIX base: <https://www.dei.unipd.it/Database2/CPS-NBA/>
+const FRANCESCO_QUERY_2 =
+    """PREFIX base: <https://www.dei.unipd.it/Database2/CPS-NBA/>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 SELECT (SUM(?minutes) AS ?totalMinutesPlayer) (SUM(?seconds) AS ?totalSecondsPlayer) ?name WHERE {
         ?player base:playedFor ?club ;
@@ -130,7 +146,8 @@ SELECT (SUM(?minutes) AS ?totalMinutesPlayer) (SUM(?seconds) AS ?totalSecondsPla
         ?appearance base:minutes ?minutes ;
                 base:seconds ?seconds .	
 } GROUP BY (?name)""";
-const ANDREA_QUERY_1 = """PREFIX base: <https://www.dei.unipd.it/Database2/CPS-NBA/>
+const ANDREA_QUERY_1 =
+    """PREFIX base: <https://www.dei.unipd.it/Database2/CPS-NBA/>
 SELECT ?name ( SUM(?pts) AS ?points ) WHERE {
         ?person base:wasPlayer ?player ;
                 base:name ?name .
@@ -139,7 +156,8 @@ SELECT ?name ( SUM(?pts) AS ?points ) WHERE {
 } GROUP BY (?name)
 ORDER BY DESC (?points)
 LIMIT 10""";
-const ANDREA_QUERY_2 = """PREFIX base: <https://www.dei.unipd.it/Database2/CPS-NBA/>
+const ANDREA_QUERY_2 =
+    """PREFIX base: <https://www.dei.unipd.it/Database2/CPS-NBA/>
 SELECT ?name ?capacity ?numberOfGames WHERE{
         ?arena base:name ?name ;
                 base:capacity ?capacity .
@@ -204,28 +222,96 @@ LIMIT 100
 const HARJOT_QUERY_4 = """
 PREFIX base: <https://www.dei.unipd.it/Database2/CPS-NBA/>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-SELECT ?nickname (COUNT(?player) AS ?numberOfInterNationalPlayers)  WHERE
+PREFIX country: <https://www.dei.unipd.it/Database2/CPS-NBA/Country#>
+SELECT ?winnerTeam ?playerName ?country WHERE
 {
+    ?person base:wasPlayer ?player;
+            base:name ?playerName;
+            base:isFrom ?countryURI.
+    ?countryURI base:name ?country.
 	?player base:playedFor ?club .
-	?club base:nickname ?nickname .
+	?club base:nickname ?winnerTeam.
     {
         SELECT DISTINCT ?playerMinGrater0 WHERE 
         {
         	?playerMinGrater0 base:appearsIn ?appearance ;
-                           	  base:startYear "2016"^^xsd:gYear .
+                           	  base:startYear "2015"^^xsd:gYear .
             ?appearance base:minutes ?minutes ;
             			base:seconds ?seconds .
             ?person base:isFrom ?country ;
             		base:wasPlayer ?playerMinGrater0 .
 			?country base:name ?countryName .			
-            FILTER ((?minutes > 0 || ?seconds > 0) && ?countryName != "USA"^^xsd:string)           
+            FILTER ((?minutes > 0 || ?seconds > 0) && ?country != country:USA)           
         }
     }
 	FILTER(?player = ?playerMinGrater0)
-}GROUP BY(?nickname)
-ORDER BY DESC(?numberOfInterNationalPlayers)
+    FILTER(?winnerTeam = ?nickname)
+    {
+        SELECT ?nickname WHERE {
+        {
+            SELECT ?nickname (SUM(?wins) AS ?totalWins) WHERE{
+                {
+                    SELECT ?nickname (SUM(?winHome) AS ?wins) WHERE {
+                        ?game base:hasHomeClub ?homeClub ;
+                              base:matchDate ?matchDate ;
+                              base:winHome ?winHome .
+                        ?homeClub base:nickname ?nickname .
+                        FILTER(?matchDate >= "2015-10-27"^^xsd:date && ?matchDate <= "2016-06-12"^^xsd:date)
+                    }GROUP BY(?nickname)
+                }
+                UNION
+                {
+                    SELECT ?nickname (SUM(1 - ?winHome) AS ?wins) WHERE {
+                        ?game base:hasAwayClub ?awayClub ;
+                              base:matchDate ?matchDate ;
+                              base:winHome ?winHome .
+                        ?awayClub base:nickname ?nickname .
+                        FILTER(?matchDate >= "2015-10-27"^^xsd:date && ?matchDate <= "2016-06-12"^^xsd:date)
+                    }GROUP BY(?nickname)
+                }
+            }GROUP BY(?nickname)
+        }
+        FILTER (?totalWins = ?max)
+        {
+            SELECT (MAX(?totalWins) as ?max){
+                SELECT ?nickname (SUM(?wins) AS ?totalWins) WHERE{
+                    {
+                        SELECT ?nickname (SUM(?winHome) AS ?wins) WHERE {
+                            ?game base:hasHomeClub ?homeClub ;
+                                  base:matchDate ?matchDate ;
+                                  base:winHome ?winHome .
+                            ?homeClub base:nickname ?nickname .
+                            FILTER(?matchDate >= "2015-10-27"^^xsd:date && ?matchDate <= "2016-06-12"^^xsd:date)
+                        }GROUP BY(?nickname)
+                    }
+                    UNION
+                    {
+                        SELECT ?nickname (SUM(1 - ?winHome) AS ?wins) WHERE {
+                            ?game base:hasAwayClub ?awayClub ;
+                                  base:matchDate ?matchDate ;
+                                  base:winHome ?winHome .
+                            ?awayClub base:nickname ?nickname .
+                            FILTER(?matchDate >= "2015-10-27"^^xsd:date && ?matchDate <= "2016-06-12"^^xsd:date)
+                        }GROUP BY(?nickname)
+                    }
+                }GROUP BY(?nickname)
+            }
+        }	
+		}
+    }
+}
+
+LIMIT 100
 """;
 
 //TABLE COLUMN NAME
-const TABLE_COLUMNS_NAME_QUERY2_FRANCESCO = ['Name','Time Played'];
-const TABLE_COLUMNS_NAME_QUERY2_HARJOT = ['Club Name','# International Players'];
+const TABLE_COLUMNS_NAME_QUERY2_FRANCESCO = ['Name', 'Time Played'];
+const TABLE_COLUMNS_NAME_QUERY2_HARJOT = [
+  'Club Name',
+  '# International Players'
+];
+const TABLE_COLUMNS_NAME_QUERY4_HARJOT = [
+  'Club Name',
+  "International player Name",
+  'Country'
+];
