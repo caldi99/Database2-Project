@@ -306,12 +306,5 @@ LIMIT 100
 
 //TABLE COLUMN NAME
 const TABLE_COLUMNS_NAME_QUERY2_FRANCESCO = ['Name', 'Time Played'];
-const TABLE_COLUMNS_NAME_QUERY2_HARJOT = [
-  'Club Name',
-  '# International Players'
-];
-const TABLE_COLUMNS_NAME_QUERY4_HARJOT = [
-  'Club Name',
-  "International player Name",
-  'Country'
-];
+const TABLE_COLUMNS_NAME_QUERY2_HARJOT = ['Club Name', '# International Players'];
+const TABLE_COLUMNS_NAME_QUERY4_HARJOT = ['Club Name', "International player Name", 'Country'];

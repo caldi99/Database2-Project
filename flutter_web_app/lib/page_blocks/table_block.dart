@@ -41,7 +41,7 @@ class _TableBlockState extends State<TableBlock> {
                   DataRow(
                       cells: [
                         for(var cell in row) ... [
-                          DataCell(Text(cell,style: constants.BLOCK_PAGES_CONTENT_STYLE_PARAGRAPH,))
+                          DataCell(Text(cell,style: constants.BLOCK_PAGES_CONTENT_STYLE_PARAGRAPH))
                         ]
                       ]
                   )
