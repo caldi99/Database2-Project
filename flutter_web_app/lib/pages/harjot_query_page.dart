@@ -4,6 +4,8 @@ import 'package:flutter_web_app/page_blocks/paragraph_block.dart';
 import 'package:flutter_web_app/page_blocks/query_code_block.dart';
 import 'package:flutter_web_app/page_blocks/table_block.dart';
 import 'package:syncfusion_flutter_charts/charts.dart';
+import 'package:syncfusion_flutter_charts/sparkcharts.dart';
+import 'package:syncfusion_flutter_datagrid/datagrid.dart';
 
 class HarjotQueryPage extends StatefulWidget {
   final scrollCallback;
@@ -21,6 +23,10 @@ class _HarjotQueryPage extends State<HarjotQueryPage> {
 
   List<ChartData> _resultQueryData1 = [];
   List<List<String>> _resultQueryData2 = [];
+  Map _resultQueryData3 = {};
+
+  //query 7
+  late _ResultsDataGridSource _resultsDataGridSource;
 
   //CALLED AT THE BEGINNING
   @override
@@ -28,12 +34,16 @@ class _HarjotQueryPage extends State<HarjotQueryPage> {
     _scrollCallback = widget.scrollCallback;
     _scrollController.addListener(() {
       if (_scrollController.position.pixels <=
-          constants.SCROLLCONTROLLER_POSITION_PIXELS)
+          constants.SCROLLCONTROLLER_POSITION_PIXELS) {
         _scrollCallback(constants.TOP);
-      else if (_scrollController.position.pixels >
-          constants.SCROLLCONTROLLER_POSITION_PIXELS)
+      } else if (_scrollController.position.pixels >
+          constants.SCROLLCONTROLLER_POSITION_PIXELS) {
         _scrollCallback(constants.BOTTOM);
+      }
     });
+
+    _resultsDataGridSource = _ResultsDataGridSource([]);
+
     super.initState();
   }
 
@@ -42,6 +52,48 @@ class _HarjotQueryPage extends State<HarjotQueryPage> {
   void dispose() {
     _scrollController.dispose();
     super.dispose();
+  }
+
+  SfDataGrid _buildDataGrid() {
+    return SfDataGrid(
+        source: _resultsDataGridSource,
+        columnWidthMode: ColumnWidthMode.fill,
+        columns: <GridColumn>[
+          GridColumn(
+            columnName: 'season',
+            label: Container(
+                padding: const EdgeInsets.all(8.0),
+                alignment: Alignment.centerLeft,
+                child: const Text('SEASON')),
+            width: 120,
+          ),
+          GridColumn(
+            columnName: 'totalMatch',
+            label: Container(
+                padding: const EdgeInsets.all(8.0),
+                alignment: Alignment.center,
+                child: const Text('Total Matches')),
+            width: 120,
+          ),
+          GridColumn(
+            columnName: 'matchWonByTeamA',
+            label: Container(
+                padding: const EdgeInsets.all(8.0),
+                alignment: Alignment.center,
+                child: const Text('Bulls')),
+          ),
+          GridColumn(
+            columnName: 'matchWonByTeamB',
+            label: Container(
+                padding: const EdgeInsets.all(8.0),
+                alignment: Alignment.center,
+                child: const Text('Heat')),
+          ),
+          GridColumn(
+              columnName: 'winloss',
+              label: Container(
+                  alignment: Alignment.center, child: const Text('W/L'))),
+        ]);
   }
 
   //HERE YOU SPECIFY THE LAYOUT
@@ -108,7 +160,22 @@ class _HarjotQueryPage extends State<HarjotQueryPage> {
                       child: TableBlock(
                           tableData: _resultQueryData2,
                           tableCols:
-                              constants.TABLE_COLUMNS_NAME_QUERY2_HARJOT)))
+                              constants.TABLE_COLUMNS_NAME_QUERY2_HARJOT))),
+              const ParagraphBlock(
+                  title: "Maimi vs Chicago\n",
+                  titleStyle: constants.BLOCK_PAGES_TITLE_STYLE_PARAGRAPH,
+                  content: [
+                    "With this query you get the results of the matches Miami vs Chicago of every season.\n"
+                  ],
+                  contentStyle: constants.BLOCK_PAGES_CONTENT_STYLE_PARAGRAPH),
+              Padding(
+                padding: constants.BLOCK_PAGES_PADDING_PADDING_PROPRIETY,
+                child: QueryCodeBlock(
+                    callbackQueryResult: callbackQueryResult3,
+                    editable: false,
+                    startQuery: constants.HARJOT_QUERY_3),
+              ),
+              _buildDataGrid()
             ],
           ),
         ));
@@ -153,6 +220,63 @@ class _HarjotQueryPage extends State<HarjotQueryPage> {
       _resultQueryData2.addAll(temp);
     });
   }
+
+  callbackQueryResult3(var response) {
+    var tempMap = {};
+
+    //Parse the response
+    for (var data in response['results']['bindings']) {
+      int season = int.parse(data['season']['value']);
+      bool isTeam1 = (int.parse(data['winClub1']['value'])) == 1;
+      int wins = int.parse(data['totalWin']['value']);
+      if (tempMap[season] == null) {
+        tempMap[season] = {};
+      }
+      if (isTeam1) {
+        bool hasOldWin2 =
+            tempMap[season] != null && tempMap[season]["team2"] != null;
+        if (hasOldWin2) {
+          tempMap[season] = {"team1": wins, "team2": tempMap[season]["team2"]};
+        } else {
+          tempMap[season] = {"team1": wins};
+        }
+      } else {
+        bool hasOldWin1 =
+            tempMap[season] != null && tempMap[season]["team1"] != null;
+        if (hasOldWin1) {
+          tempMap[season] = {"team2": wins, "team1": tempMap[season]["team1"]};
+        } else {
+          tempMap[season] = {"team2": wins};
+        }
+      }
+    }
+    List<_SeasonalResultTeamAB> temp = [];
+    for (var season in tempMap.keys) {
+      int team1Wins = tempMap[season]["team1"] ?? 0;
+      int team2Wins = tempMap[season]["team2"] ?? 0;
+      _SeasonalResultTeamAB cur =
+          _generateRows(season, team1Wins + team2Wins, team1Wins, team2Wins);
+      temp.add(cur);
+    }
+    _resultsDataGridSource._seasonalResultsTeamAB = temp;
+    _resultsDataGridSource.updateDataGridRows();
+    _resultsDataGridSource.updateDataGridSource();
+  }
+
+  _SeasonalResultTeamAB _generateRows(
+      int season, int totalMatch, int matchWonByTeamA, int matchWonByTeamB) {
+    return _SeasonalResultTeamAB(
+        season,
+        totalMatch,
+        matchWonByTeamA,
+        matchWonByTeamB,
+        Padding(
+            padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
+            child: SfSparkBarChart(
+                data: [matchWonByTeamA, matchWonByTeamB],
+                axisLineWidth: 0,
+                trackball: const SparkChartTrackball())));
+  }
 }
 
 class ChartData {
@@ -161,8 +285,74 @@ class ChartData {
   final int y;
 }
 
-/*class TableData {
-  TableData(this.clubName, this.internationalPlayers);
-  final String clubName;
-  final int internationalPlayers;
-}*/
+class _SeasonalResultTeamAB {
+  _SeasonalResultTeamAB(this.season, this.totalMatch, this.matchWonByTeamA,
+      this.matchWonByTeamB, this.winloss);
+  final int season;
+  final int totalMatch;
+  final int matchWonByTeamA;
+  final int matchWonByTeamB;
+  final Widget winloss;
+}
+
+class _ResultsDataGridSource extends DataGridSource {
+  _ResultsDataGridSource(List<_SeasonalResultTeamAB> seasonalResultsTeamAB) {
+    _seasonalResultsTeamAB = seasonalResultsTeamAB;
+    updateDataGridRows();
+  }
+
+  List<_SeasonalResultTeamAB> _seasonalResultsTeamAB = [];
+  List<DataGridRow> _seasonalResultTeamABData = [];
+
+  void updateDataGridRows() {
+    _seasonalResultTeamABData = _seasonalResultsTeamAB
+        .map<DataGridRow>((_SeasonalResultTeamAB e) =>
+            DataGridRow(cells: <DataGridCell<dynamic>>[
+              DataGridCell<int>(columnName: 'season', value: e.season),
+              DataGridCell<int>(columnName: 'totalMatch', value: e.totalMatch),
+              DataGridCell<int>(
+                  columnName: 'matchWonByTeamA', value: e.matchWonByTeamA),
+              DataGridCell<int>(
+                  columnName: 'matchWonByTeamB', value: e.matchWonByTeamB),
+              DataGridCell<Widget>(columnName: 'winloss', value: e.winloss),
+            ]))
+        .toList();
+  }
+
+  @override
+  List<DataGridRow> get rows => _seasonalResultTeamABData;
+
+  @override
+  DataGridRowAdapter buildRow(DataGridRow row) {
+    return DataGridRowAdapter(cells: <Widget>[
+      Container(
+        alignment: Alignment.centerLeft,
+        padding: const EdgeInsets.all(8.0),
+        child: Text(row.getCells()[0].value.toString()),
+      ),
+      Container(
+        alignment: Alignment.center,
+        padding: const EdgeInsets.all(8.0),
+        child: Text(row.getCells()[1].value.toString()),
+      ),
+      Container(
+        alignment: Alignment.center,
+        padding: const EdgeInsets.all(8.0),
+        child: Text(row.getCells()[2].value.toString()),
+      ),
+      Container(
+        alignment: Alignment.center,
+        padding: const EdgeInsets.all(8.0),
+        child: Text(row.getCells()[3].value.toString()),
+      ),
+      Container(
+        padding: const EdgeInsets.all(3),
+        child: row.getCells()[4].value,
+      ),
+    ]);
+  }
+
+  void updateDataGridSource() {
+    notifyListeners();
+  }
+}
