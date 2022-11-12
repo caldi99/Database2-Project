@@ -49,11 +49,11 @@ class _FrancescoQueryPage extends State<FrancescoQueryPage> {
     return SingleChildScrollView(
       controller: _scrollController,
         child: Padding(
-          padding: constants.PAGE_PADDING_PADDING_PROPRIETY,
+          padding: constants.PAGE_PADDING_PADDING_STYLE,
           child:Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              constants.SIZED_BOX_BLOCK,
+              constants.SIZED_BOX_BLOCK_STYLE,
               const ParagraphBlock(
                 title: "LeBron James points during 2017-2018 season\n",
                 titleStyle: constants.BLOCK_PAGES_TITLE_STYLE_PARAGRAPH,
@@ -61,11 +61,11 @@ class _FrancescoQueryPage extends State<FrancescoQueryPage> {
                 contentStyle: constants.BLOCK_PAGES_CONTENT_STYLE_PARAGRAPH
               ),
               Padding(
-                padding: constants.BLOCK_PAGES_PADDING_PADDING_PROPRIETY,
+                padding: constants.BLOCK_PAGES_PADDING_PADDING_STYLE,
                 child: QueryCodeBlock(callbackQueryResult: callbackQueryResult1,editable: false,startQuery: constants.FRANCESCO_QUERY_1)
               ),
               Padding(
-                padding: constants.BLOCK_PAGES_PADDING_PADDING_PROPRIETY,
+                padding: constants.BLOCK_PAGES_PADDING_PADDING_STYLE,
                 child:SizedBox(
                     width: double.infinity,height: 400,
                     child:HistogramDateIntegerChartBlock(
@@ -85,11 +85,11 @@ class _FrancescoQueryPage extends State<FrancescoQueryPage> {
                 contentStyle: constants.BLOCK_PAGES_CONTENT_STYLE_PARAGRAPH
               ),
               Padding(
-                padding: constants.BLOCK_PAGES_PADDING_PADDING_PROPRIETY,
+                padding: constants.BLOCK_PAGES_PADDING_PADDING_STYLE,
                 child: QueryCodeBlock(callbackQueryResult: callbackQueryResult2,editable: false,startQuery: constants.FRANCESCO_QUERY_2),
               ),
               Padding(
-                padding: constants.BLOCK_PAGES_PADDING_PADDING_PROPRIETY,
+                padding: constants.BLOCK_PAGES_PADDING_PADDING_STYLE,
                 child:SizedBox(width: double.infinity,height: 400, child:TableBlock(tableData: _resultQueryData2, tableCols: constants.TABLE_COLUMNS_NAME_QUERY2_FRANCESCO))
               )
             ],

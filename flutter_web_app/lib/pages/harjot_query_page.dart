@@ -63,11 +63,11 @@ class _HarjotQueryPage extends State<HarjotQueryPage> {
     return SingleChildScrollView(
         controller: _scrollController,
         child: Padding(
-          padding: constants.PAGE_PADDING_PADDING_PROPRIETY,
+          padding: constants.PAGE_PADDING_PADDING_STYLE,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              constants.SIZED_BOX_BLOCK,
+              constants.SIZED_BOX_BLOCK_STYLE,
               //query 1
               const ParagraphBlock(
                   title: "HomeTeam vs AwayTeam wins \n",
@@ -76,11 +76,11 @@ class _HarjotQueryPage extends State<HarjotQueryPage> {
                   contentStyle: constants.BLOCK_PAGES_CONTENT_STYLE_PARAGRAPH
               ),
               Padding(
-                  padding: constants.BLOCK_PAGES_PADDING_PADDING_PROPRIETY,
+                  padding: constants.BLOCK_PAGES_PADDING_PADDING_STYLE,
                   child: QueryCodeBlock(callbackQueryResult: callbackQueryResult1, editable: false, startQuery: constants.HARJOT_QUERY_1)
               ),
               Padding(
-                padding: constants.BLOCK_PAGES_PADDING_PADDING_PROPRIETY,
+                padding: constants.BLOCK_PAGES_PADDING_PADDING_STYLE,
                 child: SizedBox(width: double.infinity,height: 400, child:PieChartBlock(title: "HomeTeam VS AwayTeam Wins",chartData: _resultQueryData1))
               ),
               //query 2
@@ -91,11 +91,11 @@ class _HarjotQueryPage extends State<HarjotQueryPage> {
                   contentStyle: constants.BLOCK_PAGES_CONTENT_STYLE_PARAGRAPH
               ),
               Padding(
-                padding: constants.BLOCK_PAGES_PADDING_PADDING_PROPRIETY,
+                padding: constants.BLOCK_PAGES_PADDING_PADDING_STYLE,
                 child: QueryCodeBlock(callbackQueryResult: callbackQueryResult2, editable: false, startQuery: constants.HARJOT_QUERY_2)
               ),
               Padding(
-                  padding: constants.BLOCK_PAGES_PADDING_PADDING_PROPRIETY,
+                  padding: constants.BLOCK_PAGES_PADDING_PADDING_STYLE,
                   child: SizedBox(width: double.infinity, height: 400, child: TableBlock(tableData: _resultQueryData2, tableCols: constants.TABLE_COLUMNS_NAME_QUERY2_HARJOT))
               ),
               //query 3
@@ -106,11 +106,11 @@ class _HarjotQueryPage extends State<HarjotQueryPage> {
                   contentStyle: constants.BLOCK_PAGES_CONTENT_STYLE_PARAGRAPH
               ),
               Padding(
-                padding: constants.BLOCK_PAGES_PADDING_PADDING_PROPRIETY,
+                padding: constants.BLOCK_PAGES_PADDING_PADDING_STYLE,
                 child: QueryCodeBlock(callbackQueryResult: callbackQueryResult3,editable: false, startQuery: constants.HARJOT_QUERY_3)
               ),
               Padding(
-                padding: constants.BLOCK_PAGES_PADDING_PADDING_PROPRIETY,
+                padding: constants.BLOCK_PAGES_PADDING_PADDING_STYLE,
                 child: SizedBox(width: double.infinity, height: 400, child: _buildDataGrid())
               ),
               //query 4 //SQUADRA CHE HA VINTO NELLA STAGIONE 2016 CON PIU’ GIOCATORI INTERNAZIONALI, che hanno giocato
@@ -120,11 +120,11 @@ class _HarjotQueryPage extends State<HarjotQueryPage> {
                   content: ["With this query you get all the list of international players who has played in the winning team of season 2015.\n"],
                   contentStyle: constants.BLOCK_PAGES_CONTENT_STYLE_PARAGRAPH),
               Padding(
-                padding: constants.BLOCK_PAGES_PADDING_PADDING_PROPRIETY,
+                padding: constants.BLOCK_PAGES_PADDING_PADDING_STYLE,
                 child: QueryCodeBlock(callbackQueryResult: callbackQueryResult4, editable: false, startQuery: constants.HARJOT_QUERY_4)
               ),
               Padding(
-                  padding: constants.BLOCK_PAGES_PADDING_PADDING_PROPRIETY,
+                  padding: constants.BLOCK_PAGES_PADDING_PADDING_STYLE,
                   child: SizedBox(width: double.infinity, height: 400, child: TableBlock(tableData: _resultQueryData4, tableCols: constants.TABLE_COLUMNS_NAME_QUERY4_HARJOT))
               ),
             ]
@@ -244,8 +244,8 @@ class _HarjotQueryPage extends State<HarjotQueryPage> {
   //query 3
   Widget _buildDataGrid() {
     return Container(
-        padding: constants.BLOCK_PAGES_CONTAINER_PADDING_PROPRIETY,
-        decoration: constants.BLOCK_PAGES_CONTAINER_DECORATION_PROPRIETY,
+        padding: constants.BLOCK_PAGES_CONTAINER_PADDING_STYLE,
+        decoration: constants.BLOCK_PAGES_CONTAINER_DECORATION_STYLE,
         child: SfDataGrid(
           source: _resultsDataGridSource,
           columnWidthMode: ColumnWidthMode.fill,
@@ -255,28 +255,28 @@ class _HarjotQueryPage extends State<HarjotQueryPage> {
             GridColumn(
               columnName: 'season',
               label: Container(
-                  padding: constants.GRIDCOLUMN_CONTAINER_PADDING_PROPERTY,
+                  padding: constants.GRIDCOLUMN_CONTAINER_PADDING_STYLE,
                   alignment: Alignment.center,
                   child: const Text('Season',style: constants.BLOCK_PAGES_HEADER_COLUMN_STYLE)),
             ),
             GridColumn(
               columnName: 'totalMatch',
               label: Container(
-                  padding: constants.GRIDCOLUMN_CONTAINER_PADDING_PROPERTY,
+                  padding: constants.GRIDCOLUMN_CONTAINER_PADDING_STYLE,
                   alignment: Alignment.center,
                   child: const Text('Total Matches', style: constants.BLOCK_PAGES_HEADER_COLUMN_STYLE)),
             ),
             GridColumn(
               columnName: 'matchWonByTeamA',
               label: Container(
-                  padding: constants.GRIDCOLUMN_CONTAINER_PADDING_PROPERTY,
+                  padding: constants.GRIDCOLUMN_CONTAINER_PADDING_STYLE,
                   alignment: Alignment.center,
                   child: const Text('Bulls', style: constants.BLOCK_PAGES_HEADER_COLUMN_STYLE)),
             ),
             GridColumn(
               columnName: 'matchWonByTeamB',
               label: Container(
-                  padding: constants.GRIDCOLUMN_CONTAINER_PADDING_PROPERTY,
+                  padding: constants.GRIDCOLUMN_CONTAINER_PADDING_STYLE,
                   alignment: Alignment.center,
                   child: const Text('Heat', style: constants.BLOCK_PAGES_HEADER_COLUMN_STYLE)),
             ),
@@ -347,22 +347,22 @@ class _ResultsDataGridSource extends DataGridSource {
     return DataGridRowAdapter(cells: <Widget>[
       Container(
         alignment: Alignment.center,
-        padding: constants.GRIDCOLUMN_CONTAINER_PADDING_PROPERTY,
+        padding: constants.GRIDCOLUMN_CONTAINER_PADDING_STYLE,
         child: Text(row.getCells()[0].value.toString(),style: constants.BLOCK_PAGES_CONTENT_STYLE_PARAGRAPH),
       ),
       Container(
         alignment: Alignment.center,
-        padding: constants.GRIDCOLUMN_CONTAINER_PADDING_PROPERTY,
+        padding: constants.GRIDCOLUMN_CONTAINER_PADDING_STYLE,
         child: Text(row.getCells()[1].value.toString(),style: constants.BLOCK_PAGES_CONTENT_STYLE_PARAGRAPH),
       ),
       Container(
         alignment: Alignment.center,
-        padding: constants.GRIDCOLUMN_CONTAINER_PADDING_PROPERTY,
+        padding: constants.GRIDCOLUMN_CONTAINER_PADDING_STYLE,
         child: Text(row.getCells()[2].value.toString(),style: constants.BLOCK_PAGES_CONTENT_STYLE_PARAGRAPH),
       ),
       Container(
         alignment: Alignment.center,
-        padding: constants.GRIDCOLUMN_CONTAINER_PADDING_PROPERTY,
+        padding: constants.GRIDCOLUMN_CONTAINER_PADDING_STYLE,
         child: Text(row.getCells()[3].value.toString(),style: constants.BLOCK_PAGES_CONTENT_STYLE_PARAGRAPH),
       ),
       Container(

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_web_app/pages/main_page.dart';
 import 'package:flutter_web_app/pages/andrea_query_page.dart';
 import 'package:flutter_web_app/pages/harjot_query_page.dart';
-import 'package:flutter_web_app/header_style.dart';
+import 'package:flutter_web_app/page_blocks/header_block.dart';
 import 'package:flutter_web_app/pages/francesco_query_page.dart';
 import 'package:url_strategy/url_strategy.dart';
 import 'package:flutter_web_app/constants/constants.dart' as constants;
@@ -118,7 +118,7 @@ class _MyHomePageState extends State<MyHomePage> with SingleTickerProviderStateM
             top:0,
             right: 0,
             left: 0,
-            child: CustomHeader( sizeAnimation: headerSize,
+            child: HeaderBlock( sizeAnimation: headerSize,
               goToPage: goToPage,
             ),
           ),

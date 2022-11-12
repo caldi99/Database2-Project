@@ -78,11 +78,11 @@ class _MainPage extends State<MainPage> {
     return SingleChildScrollView(
       controller: _scrollController,
         child: Padding(
-        padding: constants.PAGE_PADDING_PADDING_PROPRIETY,
+        padding: constants.PAGE_PADDING_PADDING_STYLE,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            constants.SIZED_BOX_BLOCK,
+            constants.SIZED_BOX_BLOCK_STYLE,
             ParagraphBlock(
                 title: 'NBA-CPS: Our Ontology\n',
                 content: ['This is a Web-App that can be used to make SPARQL queries to the NBA Ontology we created.\n',
@@ -109,10 +109,11 @@ class _MainPage extends State<MainPage> {
                   contentStyle: constants.BLOCK_PAGES_CONTENT_STYLE_PARAGRAPH
             ),
             const Padding(
-              padding: constants.BLOCK_PAGES_PADDING_PADDING_PROPRIETY,
+              padding: constants.BLOCK_PAGES_PADDING_PADDING_STYLE,
               child: GraphIFrameBlock(),
             ),
-            Padding(
+            //TODO : REMOVE THIS COMMENTED CODE BELOW
+            /*Padding(
               padding: EdgeInsets.all(20.0),
               child: Column(
                 children: [
@@ -146,7 +147,7 @@ class _MainPage extends State<MainPage> {
                   ),
                 ],
               ),
-            ),
+            ),*/
             ParagraphBlock(
                 title: "Queries\n",
                 content: ["We provide a set of default queries for which we extracted data in other pages that can be accessed from our Header. ",
@@ -155,15 +156,17 @@ class _MainPage extends State<MainPage> {
                 "We also provide an Input-Box where you can type your own queries. For these you will simply see a tabular-like result containing all the matches."],
                 titleStyle: constants.BLOCK_PAGES_TITLE_STYLE_PARAGRAPH,
                 contentStyle: constants.BLOCK_PAGES_CONTENT_STYLE_PARAGRAPH
-            ), //TODO : REFACTORING HERE
+            ),
             Padding(
-                padding: (columns.length>0)?EdgeInsets.only(top:20,bottom: 10,left: 100,right: 100):EdgeInsets.only(top:20,bottom: 50,left: 100,right: 100),
+                padding: (columns.length > 0) ?
+                          EdgeInsets.only(top:20,bottom: 10,left: 100,right: 100) : EdgeInsets.only(top:20,bottom: 50,left: 100,right: 100),
                 child:QueryCodeBlock(callbackQueryResult:callbackQueryResult,editable: true, startQuery: "# Add your query here :)",)
             ),
-            (columns.length>0)?Padding(
+            //TODO : THIS WAS LEFT HARDCODED NO CONSTANTS CREATED TOO MUCH CHANGES OK TO LEAVE IT LIKE IT IS
+            (columns.length > 0)? Padding(
               padding: EdgeInsets.only(left: 100,right: 100),
               child:Container(
-                  padding: EdgeInsets.only(left: 20,right: 20),
+                  padding: constants.PAGE_PADDING_PADDING_STYLE,
                   height: 80,
                   decoration: BoxDecoration(
                     color: constants.BLUE,
@@ -178,25 +181,22 @@ class _MainPage extends State<MainPage> {
                     ],
                   ),
                   child:Row(
-
                     children: List<Widget>.generate(columns.length, (i) {
-                      return Expanded(
-                        flex: 1,
-                        child:Text(columns[i],style: TextStyle(color: Colors.white,fontSize: 20, fontWeight: FontWeight.bold,),textAlign: TextAlign.center,),
-
-                      );
-                    }
+                        return Expanded(
+                          flex: 1,
+                          child:Text(columns[i],style: TextStyle(color: Colors.white,fontSize: 20, fontWeight: FontWeight.bold,),textAlign: TextAlign.center),
+                        );
+                      }
                     ),
                   )
               ),
-            ):SizedBox(),
-            (columns.length>0)?Padding(
-              padding: EdgeInsets.only(left: 100,right: 100,bottom: 50),
+            ) : SizedBox(),
+            (columns.length > 0) ? Padding(
+              padding: EdgeInsets.only(left: 100, right: 100, bottom: 50),
               child:
               Container(
                 height: 600,
-                padding: EdgeInsets.only(left: 20,right: 20),
-
+                padding: constants.PAGE_PADDING_PADDING_STYLE,
                 decoration: BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.only(bottomRight: Radius.circular(20),bottomLeft: Radius.circular(20),),
@@ -210,10 +210,8 @@ class _MainPage extends State<MainPage> {
                   ],
                 ),
                 child:ListView.separated(
-
                     separatorBuilder: (context, index) => const Divider(
                       color: Colors.grey,
-
                     ),
                     itemCount: elementsQueried.length,
                     itemBuilder: (BuildContext context, int index) {
@@ -225,7 +223,7 @@ class _MainPage extends State<MainPage> {
                               children: List<Widget>.generate(elementsQueried[0].length, (i) {
                                 return Expanded(
                                   flex: 1,
-                                  child:Text(elementsQueried[index][i],textAlign: TextAlign.center,),
+                                  child:Text(elementsQueried[index][i],textAlign: TextAlign.center),
                                 );
                               }),
                             )
@@ -237,14 +235,14 @@ class _MainPage extends State<MainPage> {
                             children: List<Widget>.generate(elementsQueried[0].length, (i) {
                               return Expanded(
                                 flex: 1,
-                                child:Text(elementsQueried[index][i],textAlign: TextAlign.center,),
+                                child:Text(elementsQueried[index][i],textAlign: TextAlign.center),
                               );
                             }),
                           )
                       );
                     }),
               ),
-            ):SizedBox(),
+            ) : SizedBox(),
           ],
         )
       )

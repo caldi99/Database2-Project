@@ -92,12 +92,12 @@ const BLOCK_PAGES_TITLE_STYLE_PARAGRAPH =
     TextStyle(fontWeight: FontWeight.bold, fontSize: SIZE_H2, height: 3);
 const BLOCK_PAGES_CONTENT_STYLE_PARAGRAPH =
     TextStyle(fontWeight: FontWeight.normal, fontSize: SIZE_TEXT, height: 1.2);
-const BLOCK_PAGES_PADDING_PADDING_PROPRIETY =
+const BLOCK_PAGES_PADDING_PADDING_STYLE =
     EdgeInsets.only(left: 150, right: 150, top: 20, bottom: 20);
-const PAGE_PADDING_PADDING_PROPRIETY = EdgeInsets.only(left: 20, right: 20);
-const SIZED_BOX_BLOCK = SizedBox(height: 150);
-const BLOCK_PAGES_CONTAINER_PADDING_PROPRIETY = EdgeInsets.all(20);
-var BLOCK_PAGES_CONTAINER_DECORATION_PROPRIETY = BoxDecoration(
+const PAGE_PADDING_PADDING_STYLE = EdgeInsets.only(left: 20, right: 20);
+const SIZED_BOX_BLOCK_STYLE = SizedBox(height: 150);
+const BLOCK_PAGES_CONTAINER_PADDING_STYLE = EdgeInsets.all(20);
+var BLOCK_PAGES_CONTAINER_DECORATION_STYLE = BoxDecoration(
     shape: BoxShape.rectangle,
     color: Colors.white,
     borderRadius: BorderRadius.circular(30),
@@ -115,12 +115,14 @@ const BLOCK_PAGES_HEADER_COLUMN_STYLE =
 const BLOCK_PAGES_CONTENT_CELL_STYLE = TextStyle(fontSize: SIZE_TEXT);
 const BLOCK_PAGES_DESCRIPTION_AXIS_STYLE =
     TextStyle(fontSize: 13, fontWeight: FontWeight.w300);
-const BLOCK_PAGES_COLUMNSERIES_BORDERRADIUS_PROPRIETY = BorderRadius.only(
+const BLOCK_PAGES_COLUMNSERIES_BORDERRADIUS_STYLE = BorderRadius.only(
     topLeft: Radius.circular(5), topRight: Radius.circular(5));
-const IFRAME_STYLE_BORDER_PROPRIETY = "none";
+const IFRAME_STYLE_BORDER_STYLE = "none";
+var BLOCK_PAGES_TEXTBUTTON_STYLE = ButtonStyle(overlayColor: MaterialStateProperty.all(Colors.transparent));
+const BLOCK_PAGES_TEXTBUTTON_TEXT_STYLE = TextStyle(fontSize: 20,color: Colors.white);
 
-//Harjot Page Specific constants
-const GRIDCOLUMN_CONTAINER_PADDING_PROPERTY = const EdgeInsets.all(8.0);
+//HARJOT PAGE SPECIFIC STYLE
+const GRIDCOLUMN_CONTAINER_PADDING_STYLE = const EdgeInsets.all(8.0);
 
 //QUERIES
 const FRANCESCO_QUERY_1 =

@@ -47,11 +47,11 @@ class _AndreaQueryPage extends State<AndreaQueryPage> {
     return SingleChildScrollView(
       controller: _scrollController,
       child: Padding(
-        padding: constants.PAGE_PADDING_PADDING_PROPRIETY,
+        padding: constants.PAGE_PADDING_PADDING_STYLE,
         child:Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            constants.SIZED_BOX_BLOCK,
+            constants.SIZED_BOX_BLOCK_STYLE,
             const ParagraphBlock(
                 title: "Top Scorers\n",
                 titleStyle: constants.BLOCK_PAGES_TITLE_STYLE_PARAGRAPH,
@@ -60,11 +60,11 @@ class _AndreaQueryPage extends State<AndreaQueryPage> {
                 contentStyle: constants.BLOCK_PAGES_CONTENT_STYLE_PARAGRAPH
             ),
             Padding(
-              padding: constants.BLOCK_PAGES_PADDING_PADDING_PROPRIETY,
+              padding: constants.BLOCK_PAGES_PADDING_PADDING_STYLE,
               child:QueryCodeBlock(callbackQueryResult:callbackQueryResultTopScorers,editable: false,startQuery: constants.ANDREA_QUERY_1)
             ),
             Padding(
-              padding: constants.BLOCK_PAGES_PADDING_PADDING_PROPRIETY,
+              padding: constants.BLOCK_PAGES_PADDING_PADDING_STYLE,
               child:SizedBox(width: double.infinity,height: 400,
                   child : HistogramStringIntegerChartBlock(
                     chartData: dataTopScorers,
@@ -85,11 +85,11 @@ class _AndreaQueryPage extends State<AndreaQueryPage> {
                 contentStyle: constants.BLOCK_PAGES_CONTENT_STYLE_PARAGRAPH
             ),
             Padding(
-              padding: constants.BLOCK_PAGES_PADDING_PADDING_PROPRIETY,
+              padding: constants.BLOCK_PAGES_PADDING_PADDING_STYLE,
               child:QueryCodeBlock(callbackQueryResult:callbackQueryResultTopArenas,editable: false,startQuery: constants.ANDREA_QUERY_2)
             ),
             Padding(
-                padding: constants.BLOCK_PAGES_PADDING_PADDING_PROPRIETY,
+                padding: constants.BLOCK_PAGES_PADDING_PADDING_STYLE,
                 child:SizedBox(width: double.infinity,height: 400,
                     child : HistogramStringIntegerChartBlock(
                       chartData: dataTopArenas,

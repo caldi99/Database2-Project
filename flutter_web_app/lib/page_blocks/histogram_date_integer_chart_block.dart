@@ -47,8 +47,8 @@ class _HistogramDateIntegerChartBlockState extends State<HistogramDateIntegerCha
   @override
   Widget build(BuildContext context) {
     return Container(
-        padding: constants.BLOCK_PAGES_CONTAINER_PADDING_PROPRIETY,
-        decoration: constants.BLOCK_PAGES_CONTAINER_DECORATION_PROPRIETY,
+        padding: constants.BLOCK_PAGES_CONTAINER_PADDING_STYLE,
+        decoration: constants.BLOCK_PAGES_CONTAINER_DECORATION_STYLE,
         child:Column(children: [
           Expanded(
                   child:SfCartesianChart(
@@ -69,7 +69,7 @@ class _HistogramDateIntegerChartBlockState extends State<HistogramDateIntegerCha
                       xValueMapper: (DateIntegerChartData data, _) => data.xValue,
                       yValueMapper: (DateIntegerChartData data, _) => data.yValue,
                       name: _nameTooltip,
-                      borderRadius: constants.BLOCK_PAGES_COLUMNSERIES_BORDERRADIUS_PROPRIETY
+                      borderRadius: constants.BLOCK_PAGES_COLUMNSERIES_BORDERRADIUS_STYLE
                   )
                  ]
               ),

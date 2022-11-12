@@ -17,8 +17,8 @@ class PieChartBlock extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-        padding: constants.BLOCK_PAGES_CONTAINER_PADDING_PROPRIETY,
-        decoration: constants.BLOCK_PAGES_CONTAINER_DECORATION_PROPRIETY,
+        padding: constants.BLOCK_PAGES_CONTAINER_PADDING_STYLE,
+        decoration: constants.BLOCK_PAGES_CONTAINER_DECORATION_STYLE,
         child:Column(
             children: [
               Expanded(

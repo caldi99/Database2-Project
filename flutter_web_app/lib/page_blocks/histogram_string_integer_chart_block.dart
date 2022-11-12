@@ -47,8 +47,8 @@ class _HistogramStringIntegerChartBlockState extends State<HistogramStringIntege
   @override
   Widget build(BuildContext context) {
     return Container(
-        padding: constants.BLOCK_PAGES_CONTAINER_PADDING_PROPRIETY,
-        decoration: constants.BLOCK_PAGES_CONTAINER_DECORATION_PROPRIETY,
+        padding: constants.BLOCK_PAGES_CONTAINER_PADDING_STYLE,
+        decoration: constants.BLOCK_PAGES_CONTAINER_DECORATION_STYLE,
         child:Column(
           children: [
             Expanded(
@@ -70,7 +70,7 @@ class _HistogramStringIntegerChartBlockState extends State<HistogramStringIntege
                         xValueMapper: (StringIntegerChartData data, _) => data.xValue,
                         yValueMapper: (StringIntegerChartData data, _) => data.yValue                                                                                ,
                         name: _nameToolTip,
-                        borderRadius: constants.BLOCK_PAGES_COLUMNSERIES_BORDERRADIUS_PROPRIETY
+                        borderRadius: constants.BLOCK_PAGES_COLUMNSERIES_BORDERRADIUS_STYLE
                     ),
                   ]
               ),
