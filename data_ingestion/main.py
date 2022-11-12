@@ -37,9 +37,3 @@ exec(open(code_dir+"/data_ingestion_code/player_club_join.py").read())
 exec(open(code_dir+"/data_ingestion_code/appearance_game_join.py").read())
 exec(open(code_dir+"/data_ingestion_code/person_country_join.py").read())
 exec(open(code_dir+"/data_ingestion_code/person_player_join.py").read())
-
-# -------------------------------------------------------
-# Zip files inside serialization folder
-# -------------------------------------------------------
-#helper.zip_files(code_dir + "/serialization/",code_dir + "/zip/serialization.zip")
-

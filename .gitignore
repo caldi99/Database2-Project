@@ -8,5 +8,10 @@ __pycache__
 #vscode
 .vscode/
 
+#serialization
+/serialization
+
 #docker
 config/toLoad/
+db/
+config/ini*

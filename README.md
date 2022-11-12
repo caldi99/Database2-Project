@@ -7,7 +7,9 @@ into **GraphDB** and some **SPARQL** queries will be run to obtain data.
 * [Group Members](#group-members)
 * [Datasets](#datasets)
 * [Data Ingestion](#data-ingestion)
-* []
+* [Web Application](#web-application)
+    * Preliminary Steps
+    * Run the Web Application
 * []
 
 ## Group members ##
@@ -27,18 +29,24 @@ Notice that, those two datasets are **open** datasets. Moreover, only part of th
 ## Data Ingestion ##
 The **Data Ingestion** code, that process the dataset can be found under the directory `data_ingestion`.  
 In order to execute the **Data Ingestion** code follow these steps :
-- Create a folder called `serialization` inside the `data_ingestion` folder : 
-    - `mkdir ./data_ingestion/serialization`.
-- Create a folder called `zip` inside the `data_ingestion` folder : 
-    - `mkdir ./data_ingestion/zip`.
+- Create a folder called `serialization` folder : 
+    - `mkdir ./serialization`.
 - Make sure that, **rdflib** and **pandas** libraries are installed, if not, execute the following commands to install them :
     - `cd data_ingestion`.
     - `pip install -r requirments.txt`.
 - Execute the `main.py` file : `python3 main.py`.
 
 The above steps can be skipped by downloading the `.ttl` files directly from this [link](https://mega.nz/file/pFdgxRCJ#uzAVPhZT2zl6_ToRT9f_lNLKRltx3C4-JcobGIK_u2E).
+Notice that, those files downloaded must be **placed** under the `serialization` folder created at the **beginning**.
 
-## Installation Istructions ##
+## Web Application ##
+This project contains a **Web Application** under the directory `flutter_web_app` developed with **Flutter** Open-Source Framework, **GraphDB** and the use of **Docker** and **Docker-Compose**.
+
+### Preliminary Steps ###
+
+TODO : FIX FROM HERE
+---------------
+
 We used Docker to run our GraphDB server and our Web-App backend by means of separated containers. This was done to have a common working environment avoiding incompatibilities that could rise up from our host machines.
 Also in a production environment, the various part would be effectively separated granting more flexibility.
 
