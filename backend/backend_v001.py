@@ -44,7 +44,7 @@ config=vars(args)
 port=int(config['listen_port'])
 
 # The url of the GraphDB repository
-url='http://db:'+str(config['graphdb_port'])+'7200/repositories/NBA-CPS'
+url='http://db:'+str(config['graphdb_port'])+'/repositories/NBA-CPS'
 
 # --------------------------------------------------------------------------
 # Start the HTTP server and loop forever
