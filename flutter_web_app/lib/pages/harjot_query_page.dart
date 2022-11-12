@@ -21,12 +21,16 @@ class _HarjotQueryPage extends State<HarjotQueryPage> {
   final ScrollController _scrollController = ScrollController();
   late final _scrollCallback;
 
+  //query 1 (3)
   List<ChartData> _resultQueryData1 = [];
+  //query 2 (4)
   List<List<String>> _resultQueryData2 = [];
-  Map _resultQueryData3 = {};
+  //query 3 (7)
+  late _ResultsDataGridSource _resultsDataGridSource =
+      _ResultsDataGridSource([]);
 
-  //query 7
-  late _ResultsDataGridSource _resultsDataGridSource;
+  //query 4 (10)
+  List<List<String>> _resultQueryData4 = [];
 
   //CALLED AT THE BEGINNING
   @override
@@ -42,8 +46,6 @@ class _HarjotQueryPage extends State<HarjotQueryPage> {
       }
     });
 
-    _resultsDataGridSource = _ResultsDataGridSource([]);
-
     super.initState();
   }
 
@@ -52,48 +54,6 @@ class _HarjotQueryPage extends State<HarjotQueryPage> {
   void dispose() {
     _scrollController.dispose();
     super.dispose();
-  }
-
-  SfDataGrid _buildDataGrid() {
-    return SfDataGrid(
-        source: _resultsDataGridSource,
-        columnWidthMode: ColumnWidthMode.fill,
-        columns: <GridColumn>[
-          GridColumn(
-            columnName: 'season',
-            label: Container(
-                padding: const EdgeInsets.all(8.0),
-                alignment: Alignment.centerLeft,
-                child: const Text('SEASON')),
-            width: 120,
-          ),
-          GridColumn(
-            columnName: 'totalMatch',
-            label: Container(
-                padding: const EdgeInsets.all(8.0),
-                alignment: Alignment.center,
-                child: const Text('Total Matches')),
-            width: 120,
-          ),
-          GridColumn(
-            columnName: 'matchWonByTeamA',
-            label: Container(
-                padding: const EdgeInsets.all(8.0),
-                alignment: Alignment.center,
-                child: const Text('Bulls')),
-          ),
-          GridColumn(
-            columnName: 'matchWonByTeamB',
-            label: Container(
-                padding: const EdgeInsets.all(8.0),
-                alignment: Alignment.center,
-                child: const Text('Heat')),
-          ),
-          GridColumn(
-              columnName: 'winloss',
-              label: Container(
-                  alignment: Alignment.center, child: const Text('W/L'))),
-        ]);
   }
 
   //HERE YOU SPECIFY THE LAYOUT
@@ -107,6 +67,7 @@ class _HarjotQueryPage extends State<HarjotQueryPage> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               constants.SIZED_BOX_BLOCK,
+              //query 1
               const ParagraphBlock(
                   title: "HomeTeam vs AwayTeam wins \n",
                   titleStyle: constants.BLOCK_PAGES_TITLE_STYLE_PARAGRAPH,
@@ -137,6 +98,7 @@ class _HarjotQueryPage extends State<HarjotQueryPage> {
                   ],
                 ),
               ),
+              //query 2
               const ParagraphBlock(
                   title:
                       "Teams with most international NBA Players (excluding USA)\n",
@@ -161,6 +123,7 @@ class _HarjotQueryPage extends State<HarjotQueryPage> {
                           tableData: _resultQueryData2,
                           tableCols:
                               constants.TABLE_COLUMNS_NAME_QUERY2_HARJOT))),
+              //query 3
               const ParagraphBlock(
                   title: "Maimi vs Chicago\n",
                   titleStyle: constants.BLOCK_PAGES_TITLE_STYLE_PARAGRAPH,
@@ -175,7 +138,32 @@ class _HarjotQueryPage extends State<HarjotQueryPage> {
                     editable: false,
                     startQuery: constants.HARJOT_QUERY_3),
               ),
-              _buildDataGrid()
+              _buildDataGrid(),
+              //query 4 //SQUADRA CHE HA VINTO NELLA STAGIONE 2016 CON PIU’ GIOCATORI INTERNAZIONALI, che hanno giocato
+              const ParagraphBlock(
+                  title:
+                      "International Players of the winning team of NBA season 2015\n",
+                  titleStyle: constants.BLOCK_PAGES_TITLE_STYLE_PARAGRAPH,
+                  content: [
+                    "With this query you get all the list of international players who has played in the winning team of season 2015.\n"
+                  ],
+                  contentStyle: constants.BLOCK_PAGES_CONTENT_STYLE_PARAGRAPH),
+              Padding(
+                padding: constants.BLOCK_PAGES_PADDING_PADDING_PROPRIETY,
+                child: QueryCodeBlock(
+                    callbackQueryResult: callbackQueryResult4,
+                    editable: false,
+                    startQuery: constants.HARJOT_QUERY_4),
+              ),
+              Padding(
+                  padding: constants.BLOCK_PAGES_PADDING_PADDING_PROPRIETY,
+                  child: SizedBox(
+                      width: double.infinity,
+                      height: 400,
+                      child: TableBlock(
+                          tableData: _resultQueryData4,
+                          tableCols:
+                              constants.TABLE_COLUMNS_NAME_QUERY4_HARJOT))),
             ],
           ),
         ));
@@ -261,6 +249,71 @@ class _HarjotQueryPage extends State<HarjotQueryPage> {
     _resultsDataGridSource._seasonalResultsTeamAB = temp;
     _resultsDataGridSource.updateDataGridRows();
     _resultsDataGridSource.updateDataGridSource();
+  }
+
+  callbackQueryResult4(var response) {
+    List<List<String>> temp = [];
+
+    //Parse the response
+    for (var data in response['results']['bindings']) {
+      String winnerTeam = data['winnerTeam']['value'];
+      String playerName = data['playerName']['value'];
+      String country = data['country']['value'];
+      temp.add([winnerTeam, playerName, country]);
+    }
+
+    //Remove Previous Content
+    _resultQueryData4.clear();
+
+    //Add new content
+    setState(() {
+      _resultQueryData4.addAll(temp);
+    });
+  }
+
+  //other methods
+
+  //query 3
+  SfDataGrid _buildDataGrid() {
+    return SfDataGrid(
+        source: _resultsDataGridSource,
+        columnWidthMode: ColumnWidthMode.fill,
+        columns: <GridColumn>[
+          GridColumn(
+            columnName: 'season',
+            label: Container(
+                padding: const EdgeInsets.all(8.0),
+                alignment: Alignment.centerLeft,
+                child: const Text('SEASON')),
+            width: 120,
+          ),
+          GridColumn(
+            columnName: 'totalMatch',
+            label: Container(
+                padding: const EdgeInsets.all(8.0),
+                alignment: Alignment.center,
+                child: const Text('Total Matches')),
+            width: 120,
+          ),
+          GridColumn(
+            columnName: 'matchWonByTeamA',
+            label: Container(
+                padding: const EdgeInsets.all(8.0),
+                alignment: Alignment.center,
+                child: const Text('Bulls')),
+          ),
+          GridColumn(
+            columnName: 'matchWonByTeamB',
+            label: Container(
+                padding: const EdgeInsets.all(8.0),
+                alignment: Alignment.center,
+                child: const Text('Heat')),
+          ),
+          GridColumn(
+              columnName: 'winloss',
+              label: Container(
+                  alignment: Alignment.center, child: const Text('W/L'))),
+        ]);
   }
 
   _SeasonalResultTeamAB _generateRows(
