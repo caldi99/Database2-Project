@@ -31,3 +31,13 @@ services:
       - "./db/data:/opt/graphdb/data:rw"
       - "./db/logs:/opt/graphdb/logs:rw"
       - "./db/work:/opt/graphdb/work:rw"
+
+
+
+  backend:
+    ports:
+      - 8000:8000
+    build:
+      context: .
+      dockerfile: Dockerfile_Backend
+      
