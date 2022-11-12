@@ -36,7 +36,7 @@ const HARJOT_QUERY_PAGE_INDEX = 3;
 final sparql = Mode(
     refs: {
       '~contains~0~contains~5':
-      Mode(className: "comment", begin: "#", end: "\$", contains: [
+          Mode(className: "comment", begin: "#", end: "\$", contains: [
         PHRASAL_WORDS_MODE,
         Mode(
             className: "doctag",
@@ -150,7 +150,7 @@ SELECT ?name ?capacity ?numberOfGames WHERE{
                 } GROUP BY ?arena
         }
 } ORDER BY DESC (?numberOfGames)""";
-// Harjot 
+// Harjot
 const HARJOT_QUERY_1 = """
 PREFIX base: <https://www.dei.unipd.it/Database2/CPS-NBA/>
 SELECT ?winHome ( COUNT(?winHome) AS ?numberOfGames ) WHERE { 
@@ -170,6 +170,37 @@ SELECT ?clubName ( COUNT(?person) AS ?internationalPlayers ) WHERE {
     BIND(concat(?nickname, ", ",?city) as ?clubName)
 } GROUP BY ?clubName
 ORDER BY DESC(?internationalPlayers)""";
+const HARJOT_QUERY_3 = """
+PREFIX base: <https://www.dei.unipd.it/Database2/CPS-NBA/>
+SELECT ?season ?winClub1 (COUNT(?winClub1) AS ?totalWin) WHERE{
+    {
+    ?club1 base:nickname ?clubname1.
+    ?club2 base:nickname ?clubname2.
+    ?game 
+        base:hasHomeClub ?club1;
+		base:hasAwayClub ?club2;
+  		base:winHome ?winClub1;
+    	base:matchDate ?matchDate.
+    FILTER REGEX(?clubname1,"Bulls")
+    FILTER REGEX(?clubname2, "Heat")
+    }UNION{
+    ?club1 base:nickname ?clubname1.
+    ?club2 base:nickname ?clubname2.
+    ?game 
+		base:hasHomeClub ?club1;
+		base:hasAwayClub ?club2;
+  		base:winHome ?winHome;
+    	base:matchDate ?matchDate.
+    BIND(IF(?winHome <= 0,1,0) as ?winClub1).
+    FILTER REGEX(?clubname1,"Heat")
+    FILTER REGEX(?clubname2, "Bulls")
+    }
+    BIND(IF(month(?matchDate)<8,year(?matchDate)-1,year(?matchDate)) as ?season)
+}
+GROUP BY ?season ?winClub1
+ORDER BY ASC (?season)
+LIMIT 100
+""";
 
 //TABLE COLUMN NAME
 const TABLE_COLUMNS_NAME_QUERY2_FRANCESCO = ['Name','Time Played'];

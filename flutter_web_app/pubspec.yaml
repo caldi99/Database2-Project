@@ -50,6 +50,7 @@ dependencies:
   url_strategy: ^0.2.0
   #rich_text_controller: ^1.4.0
   format: ^1.2.0
+  syncfusion_flutter_datagrid: ^20.3.56
 
 
 
