@@ -201,6 +201,30 @@ GROUP BY ?season ?winClub1
 ORDER BY ASC (?season)
 LIMIT 100
 """;
+const HARJOT_QUERY_4 = """
+PREFIX base: <https://www.dei.unipd.it/Database2/CPS-NBA/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+SELECT ?nickname (COUNT(?player) AS ?numberOfInterNationalPlayers)  WHERE
+{
+	?player base:playedFor ?club .
+	?club base:nickname ?nickname .
+    {
+        SELECT DISTINCT ?playerMinGrater0 WHERE 
+        {
+        	?playerMinGrater0 base:appearsIn ?appearance ;
+                           	  base:startYear "2016"^^xsd:gYear .
+            ?appearance base:minutes ?minutes ;
+            			base:seconds ?seconds .
+            ?person base:isFrom ?country ;
+            		base:wasPlayer ?playerMinGrater0 .
+			?country base:name ?countryName .			
+            FILTER ((?minutes > 0 || ?seconds > 0) && ?countryName != "USA"^^xsd:string)           
+        }
+    }
+	FILTER(?player = ?playerMinGrater0)
+}GROUP BY(?nickname)
+ORDER BY DESC(?numberOfInterNationalPlayers)
+""";
 
 //TABLE COLUMN NAME
 const TABLE_COLUMNS_NAME_QUERY2_FRANCESCO = ['Name','Time Played'];
