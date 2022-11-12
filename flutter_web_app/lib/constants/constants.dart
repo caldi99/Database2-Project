@@ -119,6 +119,9 @@ const BLOCK_PAGES_COLUMNSERIES_BORDERRADIUS_PROPRIETY = BorderRadius.only(
     topLeft: Radius.circular(5), topRight: Radius.circular(5));
 const IFRAME_STYLE_BORDER_PROPRIETY = "none";
 
+//Harjot Page Specific constants
+const GRIDCOLUMN_CONTAINER_PADDING_PROPERTY = const EdgeInsets.all(8.0);
+
 //QUERIES
 const FRANCESCO_QUERY_1 =
     """PREFIX base: <https://www.dei.unipd.it/Database2/CPS-NBA/>

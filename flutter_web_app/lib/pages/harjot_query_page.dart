@@ -255,28 +255,28 @@ class _HarjotQueryPage extends State<HarjotQueryPage> {
             GridColumn(
               columnName: 'season',
               label: Container(
-                  padding: const EdgeInsets.all(8.0),
+                  padding: constants.GRIDCOLUMN_CONTAINER_PADDING_PROPERTY,
                   alignment: Alignment.center,
                   child: const Text('Season',style: constants.BLOCK_PAGES_HEADER_COLUMN_STYLE)),
             ),
             GridColumn(
               columnName: 'totalMatch',
               label: Container(
-                  padding: const EdgeInsets.all(8.0),
+                  padding: constants.GRIDCOLUMN_CONTAINER_PADDING_PROPERTY,
                   alignment: Alignment.center,
                   child: const Text('Total Matches', style: constants.BLOCK_PAGES_HEADER_COLUMN_STYLE)),
             ),
             GridColumn(
               columnName: 'matchWonByTeamA',
               label: Container(
-                  padding: const EdgeInsets.all(8.0),
+                  padding: constants.GRIDCOLUMN_CONTAINER_PADDING_PROPERTY,
                   alignment: Alignment.center,
                   child: const Text('Bulls', style: constants.BLOCK_PAGES_HEADER_COLUMN_STYLE)),
             ),
             GridColumn(
               columnName: 'matchWonByTeamB',
               label: Container(
-                  padding: const EdgeInsets.all(8.0),
+                  padding: constants.GRIDCOLUMN_CONTAINER_PADDING_PROPERTY,
                   alignment: Alignment.center,
                   child: const Text('Heat', style: constants.BLOCK_PAGES_HEADER_COLUMN_STYLE)),
             ),
@@ -347,22 +347,22 @@ class _ResultsDataGridSource extends DataGridSource {
     return DataGridRowAdapter(cells: <Widget>[
       Container(
         alignment: Alignment.center,
-        padding: const EdgeInsets.all(8.0),
+        padding: constants.GRIDCOLUMN_CONTAINER_PADDING_PROPERTY,
         child: Text(row.getCells()[0].value.toString(),style: constants.BLOCK_PAGES_CONTENT_STYLE_PARAGRAPH),
       ),
       Container(
         alignment: Alignment.center,
-        padding: const EdgeInsets.all(8.0),
+        padding: constants.GRIDCOLUMN_CONTAINER_PADDING_PROPERTY,
         child: Text(row.getCells()[1].value.toString(),style: constants.BLOCK_PAGES_CONTENT_STYLE_PARAGRAPH),
       ),
       Container(
         alignment: Alignment.center,
-        padding: const EdgeInsets.all(8.0),
+        padding: constants.GRIDCOLUMN_CONTAINER_PADDING_PROPERTY,
         child: Text(row.getCells()[2].value.toString(),style: constants.BLOCK_PAGES_CONTENT_STYLE_PARAGRAPH),
       ),
       Container(
         alignment: Alignment.center,
-        padding: const EdgeInsets.all(8.0),
+        padding: constants.GRIDCOLUMN_CONTAINER_PADDING_PROPERTY,
         child: Text(row.getCells()[3].value.toString(),style: constants.BLOCK_PAGES_CONTENT_STYLE_PARAGRAPH),
       ),
       Container(
