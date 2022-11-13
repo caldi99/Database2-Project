@@ -198,6 +198,112 @@ SELECT ?name ?capacity ?numberOfGames WHERE{
                 } GROUP BY ?arena
         }
 } ORDER BY DESC (?numberOfGames)""";
+
+const ANDREA_QUERY_3="""
+PREFIX base: <https://www.dei.unipd.it/Database2/CPS-NBA/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+SELECT ?nickname (SUM(?wins) AS ?totalWins) WHERE
+    {
+        {
+            SELECT ?nickname (SUM(?winHome) AS ?wins) WHERE {
+
+            ?game base:hasHomeClub ?homeClub ;
+                  base:matchDate ?matchDate ;
+                  base:winHome ?winHome .
+            ?homeClub base:nickname ?nickname .
+            FILTER(?matchDate >= "2010-10-27"^^xsd:date && ?matchDate <= "2011-06-12"^^xsd:date)       
+            }GROUP BY(?nickname)
+        }
+    UNION
+        {
+            SELECT ?nickname (SUM(1 - ?winHome) AS ?wins) WHERE {
+
+                ?game base:hasAwayClub ?awayClub ;
+                      base:matchDate ?matchDate ;
+                      base:winHome ?winHome .
+                ?awayClub base:nickname ?nickname .
+                FILTER(?matchDate >= "2010-10-27"^^xsd:date && ?matchDate <= "2011-06-12"^^xsd:date)       
+            }GROUP BY(?nickname)
+        }
+}GROUP BY(?nickname)
+ORDER BY DESC(?totalWins)
+""";
+const ANDREA_QUERY_4="""
+PREFIX base: <https://www.dei.unipd.it/Database2/CPS-NBA/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT ?nicknameTeam ?totalWins (AVG(?height) AS ?heightAvg) (AVG(?weight) AS ?weightAvg) WHERE
+{
+    ?player base:playedFor ?team ;
+            base:startYear "2010"^^xsd:gYear ;
+            base:height ?height ;
+    		base:weight ?weight .
+    ?team base:nickname ?nicknameTeam .
+    {
+        SELECT ?nickname ?totalWins WHERE
+        {
+            {
+                SELECT ?nickname (SUM(?wins) AS ?totalWins) WHERE
+                {
+                    {
+                        SELECT ?nickname (SUM(?winHome) AS ?wins) WHERE {
+
+                        ?game base:hasHomeClub ?homeClub ;
+                              base:matchDate ?matchDate ;
+                              base:winHome ?winHome .
+                        ?homeClub base:nickname ?nickname .
+                        FILTER(?matchDate >= "2010-10-27"^^xsd:date && ?matchDate <= "2011-06-12"^^xsd:date)       
+                        }GROUP BY(?nickname)
+                    }
+                UNION
+                    {
+                        SELECT ?nickname (SUM(1 - ?winHome) AS ?wins) WHERE {
+
+                            ?game base:hasAwayClub ?awayClub ;
+                                  base:matchDate ?matchDate ;
+                                  base:winHome ?winHome .
+                            ?awayClub base:nickname ?nickname .
+                            FILTER(?matchDate >= "2010-10-27"^^xsd:date && ?matchDate <= "2011-06-12"^^xsd:date)       
+                        }GROUP BY(?nickname)
+                    }
+                }GROUP BY ?nickname 
+            }
+            {
+                SELECT (MAX(?totalWins)  AS ?winner) (MIN(?totalWins)  AS ?looser)
+                {
+                    SELECT ?nickname (SUM(?wins) AS ?totalWins) WHERE
+                    {
+                        {
+                            SELECT ?nickname (SUM(?winHome) AS ?wins) WHERE {
+
+                            ?game base:hasHomeClub ?homeClub ;
+                                  base:matchDate ?matchDate ;
+                                  base:winHome ?winHome .
+                            ?homeClub base:nickname ?nickname .
+                            FILTER(?matchDate >= "2010-10-27"^^xsd:date && ?matchDate <= "2011-06-12"^^xsd:date)       
+                            }GROUP BY(?nickname)
+                        }
+                    UNION
+                        {
+                            SELECT ?nickname (SUM(1 - ?winHome) AS ?wins) WHERE {
+
+                                ?game base:hasAwayClub ?awayClub ;
+                                      base:matchDate ?matchDate ;
+                                      base:winHome ?winHome .
+                                ?awayClub base:nickname ?nickname .
+                                FILTER(?matchDate >= "2010-10-27"^^xsd:date && ?matchDate <= "2011-06-12"^^xsd:date)       
+                            }GROUP BY(?nickname)
+                        }
+                    }GROUP BY ?nickname 
+                }        
+            }
+            FILTER (?totalWins IN (?winner , ?looser))    
+        }
+    }    
+    FILTER (?nickname = ?nicknameTeam)
+}GROUP BY ?nicknameTeam ?totalWins
+""";
+
 // Harjot
 const HARJOT_QUERY_1 = """
 PREFIX base: <https://www.dei.unipd.it/Database2/CPS-NBA/>
@@ -336,5 +442,7 @@ LIMIT 100
 
 //TABLE COLUMN NAME
 const TABLE_COLUMNS_NAME_QUERY2_FRANCESCO = ['Name', 'Time Played'];
+const TABLE_COLUMNS_NAME_QUERY3_ANDREA = ['Team', 'Wins'];
+const TABLE_COLUMNS_NAME_QUERY4_ANDREA = ['Team', 'Wins','Weight','Height'];
 const TABLE_COLUMNS_NAME_QUERY2_HARJOT = ['Club Name', '# International Players'];
 const TABLE_COLUMNS_NAME_QUERY4_HARJOT = ['Club Name', "International player Name", 'Country'];

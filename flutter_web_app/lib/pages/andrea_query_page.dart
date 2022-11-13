@@ -4,6 +4,7 @@ import 'package:flutter_web_app/constants/constants.dart' as constants;
 import 'package:flutter_web_app/page_blocks/histogram_string_integer_chart_block.dart';
 import 'package:flutter_web_app/page_blocks/query_code_block.dart';
 import 'package:flutter_web_app/page_blocks/paragraph_block.dart';
+import 'package:flutter_web_app/page_blocks/table_block.dart';
 
 class AndreaQueryPage extends StatefulWidget {
   final scrollCallback;
@@ -20,6 +21,10 @@ class _AndreaQueryPage extends State<AndreaQueryPage> {
   late final _scrollCallback;
   List<StringIntegerChartData> dataTopScorers=[];
   List<StringIntegerChartData> dataTopArenas=[];
+  List<StringIntegerChartData> dataStandings=[];
+
+  //TODO: create class with 2 fields for weight and height and map to 2 columns
+  List<List<String>> dataHeightWeight=[];
 
   //CALLED AT THE BEGINNING
   @override
@@ -102,6 +107,51 @@ class _AndreaQueryPage extends State<AndreaQueryPage> {
                     )
                 )
             ),
+            const ParagraphBlock(
+                title: "NBA rankings for the 2010-11 season\n",
+                titleStyle: constants.BLOCK_PAGES_TITLE_STYLE_PARAGRAPH,
+                content: ["This query aims at retrieving in ascending order the NBA clubs based on their number of won matches in the season of 2010-2011.\n"],
+                contentStyle: constants.BLOCK_PAGES_CONTENT_STYLE_PARAGRAPH
+            ),
+            Padding(
+                padding: constants.BLOCK_PAGES_PADDING_PADDING_STYLE,
+                child:QueryCodeBlock(callbackQueryResult:callbackQueryResultStandings,editable: false,startQuery: constants.ANDREA_QUERY_3)
+            ),
+            Padding(
+                padding: constants.BLOCK_PAGES_PADDING_PADDING_STYLE,
+                child:SizedBox(width: double.infinity,height: 400,
+                    child : HistogramStringIntegerChartBlock(
+                      chartData: dataStandings,
+                      nameTooltip: "Matches won",
+                      intervalValueY: 5,
+                      maxValueY: 100,
+                      minValueY: 0,
+                      descriptionYAxis: "#Matches",
+                      descriptionXAxis: "The NBA rankings in the 2010-11 season",
+                    )
+                )
+            ),
+            const ParagraphBlock(
+                title: "Average weight/height of the winner/loser team in the 2010-11 season\n",
+                titleStyle: constants.BLOCK_PAGES_TITLE_STYLE_PARAGRAPH,
+                content: ["This query aims at retrieving in the average height and weight of the players of the club with the highest number of won matches and the club with the lowest number of won matches.\n",
+                "In particular, we would like to see if height and weight may influence the performance of a team.\n"],
+                contentStyle: constants.BLOCK_PAGES_CONTENT_STYLE_PARAGRAPH
+            ),
+            Padding(
+                padding: constants.BLOCK_PAGES_PADDING_PADDING_STYLE,
+                child:QueryCodeBlock(callbackQueryResult:callbackQueryResultHeightWeight,editable: false,startQuery: constants.ANDREA_QUERY_4)
+            ),
+            Padding(
+                padding: constants.BLOCK_PAGES_PADDING_PADDING_STYLE,
+                child:SizedBox(
+                    width: double.infinity,height: 400,
+                    child:TableBlock(
+                        tableData: dataHeightWeight,
+                        tableCols: constants.TABLE_COLUMNS_NAME_QUERY4_ANDREA
+                    )
+                )
+            ),
           ],
         ),
       )
@@ -144,6 +194,49 @@ class _AndreaQueryPage extends State<AndreaQueryPage> {
     //SET NEW DATA
     setState(() {
       dataTopScorers.addAll(temp);
+    });
+
+  }
+
+  callbackQueryResultStandings(var res){
+    List<StringIntegerChartData> temp = [];
+    print(res);
+
+    //PARSING
+    for (var result  in res['results']['bindings']){
+      String name=result['nickname']['value'];
+      int totalWins=int.parse(result['totalWins']['value']);
+      temp.add(StringIntegerChartData(name,totalWins));
+    }
+
+    //REMOVE PREVIOUS DATA
+    dataStandings.clear();
+
+    //SET NEW DATA
+    setState(() {
+      dataStandings.addAll(temp);
+    });
+
+  }
+
+  callbackQueryResultHeightWeight(var res){
+    List<List<String>> temp = [];
+
+    //PARSING
+    for (var result  in res['results']['bindings']){
+      String name=result['nicknameTeam']['value'];
+      int totalWins=int.parse(result['totalWins']['value']);
+      double avgWeight=double.parse(result['weightAvg']['value']);
+      double avgHeight=double.parse(result['heightAvg']['value']);
+      temp.add([name,totalWins.toString(),avgWeight.toString(),avgHeight.toString()]);
+    }
+
+    //REMOVE PREVIOUS DATA
+    dataHeightWeight.clear();
+
+    //SET NEW DATA
+    setState(() {
+      dataHeightWeight.addAll(temp);
     });
 
   }
