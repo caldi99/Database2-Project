@@ -27,6 +27,7 @@ class _FrancescoQueryPage extends State<FrancescoQueryPage> {
   List<DateIntegerChartData> _resultQueryData1 = [];
   List<List<String>> _resultQueryData2 = [];
   List<List<StringIntegerChartData>> _resultQueryData3 = [];
+  String _resultQueryData4 = "";
 
   //CALLED AT THE BEGINNING
   @override
@@ -124,8 +125,26 @@ class _FrancescoQueryPage extends State<FrancescoQueryPage> {
                         intervalValueY: 5000,
                       ))
               ),
-            ],
-          ),
+              //QUERY 4
+              const ParagraphBlock(
+                  title: "Games with the same score\n",
+                  titleStyle: constants.BLOCK_PAGES_TITLE_STYLE_PARAGRAPH,
+                  content: ["Are there any games that has the same exact score?\n"],
+                  contentStyle: constants.BLOCK_PAGES_CONTENT_STYLE_PARAGRAPH
+              ),
+              Padding(
+                padding: constants.BLOCK_PAGES_PADDING_PADDING_STYLE,
+                child: QueryCodeBlock(callbackQueryResult: callbackQueryResult4,editable: false,startQuery: constants.FRANCESCO_QUERY_4),
+              ),
+              Container(
+                alignment: Alignment.center,
+                child: Padding(
+                    padding: constants.BLOCK_PAGES_PADDING_PADDING_STYLE,
+                    child: Text(_resultQueryData4,  style: constants.BLOCK_PAGES_TITLE_STYLE_PARAGRAPH),
+                  )
+              )
+            ]
+          )
         )
     );
   }
@@ -180,7 +199,6 @@ class _FrancescoQueryPage extends State<FrancescoQueryPage> {
     });
   }
 
-
   callbackQueryResult3(var response){
     List<List<StringIntegerChartData>> list = [];
 
@@ -209,4 +227,12 @@ class _FrancescoQueryPage extends State<FrancescoQueryPage> {
       _resultQueryData3.addAll(list);
     });
   }
+
+  callbackQueryResult4(var response){
+    //Parse response and substitute with new content
+    setState(() {
+      _resultQueryData4 = response['boolean'].toString().toUpperCase();
+    });
+  }
+
 }

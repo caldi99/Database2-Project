@@ -164,6 +164,18 @@ SELECT ?season  (SUM(?fg3m) AS ?number3PointsMade) (SUM(?pts2) AS ?number2Points
 }GROUP BY (?season)
 ORDER BY ASC(?season)
 """;
+const FRANCESCO_QUERY_4 = """
+PREFIX base: <https://www.dei.unipd.it/Database2/CPS-NBA/>
+ASK WHERE {
+    ?game1 base:ptsHome ?ptsHome1 ;
+           base:ptsAway ?ptsAway1 .
+    
+    ?game2 base:ptsHome ?ptsHome2 ;
+           base:ptsAway ?ptsAway2 .
+    FILTER(?game1 != ?game2) .
+    FILTER((?ptsHome1 = ?ptsHome2 && ?ptsAway1 = ?ptsAway2 ) || (?ptsHome1 = ?ptsAway2 && ?ptsAway1 = ?ptsHome2 )).
+}
+""";
 const ANDREA_QUERY_1 =
     """PREFIX base: <https://www.dei.unipd.it/Database2/CPS-NBA/>
 SELECT ?name ( SUM(?pts) AS ?points ) WHERE {
