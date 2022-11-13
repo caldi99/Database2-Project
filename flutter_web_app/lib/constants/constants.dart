@@ -24,8 +24,8 @@ const CONTAINER_IFRAME_HEIGHT = 720.0;
 const CONTAINER_IFRAME_WIDTH = 920.0;
 
 //URLS
-const GRAPHDB_SERVER_ADDRESS = "http://localhost:8000/repositories/CPS-NBA";
-const GRAPH_HTML = "http://localhost:8000/assets/assets/graph.html";
+const GRAPHDB_SERVER_ADDRESS = "http://localhost:8080/repositories/CPS-NBA";
+const GRAPH_HTML = "http://localhost:8080/assets/assets/graph.html";
 
 //PAGE INDEXES
 const HOME_PAGE_INDEX = 0;

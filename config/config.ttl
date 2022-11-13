@@ -1,3 +1,17 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:96452c11d18131e0a42659e868936cdfe5a49d5030f0610e10fc114280503d44
-size 637
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix rep: <http://www.openrdf.org/config/repository#>.
+@prefix sr: <http://www.openrdf.org/config/repository/sail#>.
+@prefix sail: <http://www.openrdf.org/config/sail#>.
+@prefix owlim: <http://www.ontotext.com/trree/owlim#>.
+
+[] a rep:Repository ;
+    rep:repositoryID "CPS-NBA" ;
+    rdfs:label "CPS-NBA" ;
+    rep:repositoryImpl [
+        rep:repositoryType "graphdb:SailRepository" ;
+        sr:sailImpl [
+            sail:sailType "graphdb:Sail" ;
+            owlim:entity-index-size "10000000" ;
+            owlim:imports "file:///ontology/ontology.owl;" ;
+        ]
+    ].
