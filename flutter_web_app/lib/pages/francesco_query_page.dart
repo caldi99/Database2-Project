@@ -1,5 +1,9 @@
+import 'dart:isolate';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_web_app/classes/date_integer_chart_data.dart';
+import 'package:flutter_web_app/classes/string_integer_chart_data.dart';
+import 'package:flutter_web_app/page_blocks/cartesian_integer_integer_chart_block.dart';
 import 'package:flutter_web_app/page_blocks/paragraph_block.dart';
 import 'package:flutter_web_app/constants/constants.dart' as constants;
 import 'package:flutter_web_app/page_blocks/table_block.dart';
@@ -22,6 +26,7 @@ class _FrancescoQueryPage extends State<FrancescoQueryPage> {
   late final _scrollCallback;
   List<DateIntegerChartData> _resultQueryData1 = [];
   List<List<String>> _resultQueryData2 = [];
+  List<List<StringIntegerChartData>> _resultQueryData3 = [];
 
   //CALLED AT THE BEGINNING
   @override
@@ -54,6 +59,7 @@ class _FrancescoQueryPage extends State<FrancescoQueryPage> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               constants.SIZED_BOX_BLOCK_STYLE,
+              //QUERY 1
               const ParagraphBlock(
                 title: "LeBron James points during 2017-2018 season\n",
                 titleStyle: constants.BLOCK_PAGES_TITLE_STYLE_PARAGRAPH,
@@ -78,6 +84,7 @@ class _FrancescoQueryPage extends State<FrancescoQueryPage> {
                       intervalValueY: 1,
                     ))
               ),
+              //QUERY 2
               const ParagraphBlock(
                 title: "Chicago Bulls team during the 2006-2007 season with the corresponding time played\n",
                 titleStyle: constants.BLOCK_PAGES_TITLE_STYLE_PARAGRAPH,
@@ -91,7 +98,32 @@ class _FrancescoQueryPage extends State<FrancescoQueryPage> {
               Padding(
                 padding: constants.BLOCK_PAGES_PADDING_PADDING_STYLE,
                 child:SizedBox(width: double.infinity,height: 400, child:TableBlock(tableData: _resultQueryData2, tableCols: constants.TABLE_COLUMNS_NAME_QUERY2_FRANCESCO))
-              )
+              ),
+              //QUERY 3
+              const ParagraphBlock(
+                  title: "3 Points Attempts VS 2 Points Attempts Scored During Seasons\n",
+                  titleStyle: constants.BLOCK_PAGES_TITLE_STYLE_PARAGRAPH,
+                  content: ["This query finds how many 3 points attempts and how many 2 points attempts where scored during all the seasons.\n"],
+                  contentStyle: constants.BLOCK_PAGES_CONTENT_STYLE_PARAGRAPH
+              ),
+              Padding(
+                padding: constants.BLOCK_PAGES_PADDING_PADDING_STYLE,
+                child: QueryCodeBlock(callbackQueryResult: callbackQueryResult3,editable: false,startQuery: constants.FRANCESCO_QUERY_3),
+              ),
+              Padding(
+                  padding: constants.BLOCK_PAGES_PADDING_PADDING_STYLE,
+                  child:SizedBox(
+                      width: double.infinity,height: 400,
+                      child:CartesianIntegerIntegerChartBlock(
+                        chartData: _resultQueryData3,
+                        descriptionXAxis: "Seasons",
+                        descriptionYAxis: "#Attempts",
+                        nameTooltips: ["#Attempts 2 Points",'#Attempts 3 Points'],
+                        minValueY: 0,
+                        maxValueY: 100000,
+                        intervalValueY: 5000,
+                      ))
+              ),
             ],
           ),
         )
@@ -145,6 +177,36 @@ class _FrancescoQueryPage extends State<FrancescoQueryPage> {
     //Add new content
     setState(() {
       _resultQueryData2.addAll(list);
+    });
+  }
+
+
+  callbackQueryResult3(var response){
+    List<List<StringIntegerChartData>> list = [];
+
+    List<StringIntegerChartData> twoPointsAttemptsList = [];
+    List<StringIntegerChartData> threePointsAttemptsList = [];
+
+    //Parse the response
+    for(var data in response['results']['bindings']){
+
+      String season = data['season']['value'];
+      int twoPointsAttempts = int.parse(data['number2PointsMade']['value']);
+      int threePointsAttempts = int.parse(data['number3PointsMade']['value']);
+
+      twoPointsAttemptsList.add(StringIntegerChartData(season, twoPointsAttempts));
+      threePointsAttemptsList.add(StringIntegerChartData(season, threePointsAttempts));
+    }
+    list.add(twoPointsAttemptsList);
+    list.add(threePointsAttemptsList);
+
+
+    //Remove Previous Content
+    _resultQueryData3.clear();
+
+    //Add new content
+    setState(() {
+      _resultQueryData3.addAll(list);
     });
   }
 }

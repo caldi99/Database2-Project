@@ -151,6 +151,19 @@ SELECT (SUM(?minutes) AS ?totalMinutesPlayer) (SUM(?seconds) AS ?totalSecondsPla
         ?appearance base:minutes ?minutes ;
                 base:seconds ?seconds .	
 } GROUP BY (?name)""";
+const FRANCESCO_QUERY_3 = """
+PREFIX base: <https://www.dei.unipd.it/Database2/CPS-NBA/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+SELECT ?season  (SUM(?fg3m) AS ?number3PointsMade) (SUM(?pts2) AS ?number2PointsMade) WHERE {
+    ?player base:appearsIn ?appearance ;
+            base:startYear ?season .
+    ?appearance base:pts ?pts ;
+                base:fg3m ?fg3m ;    
+    			base:ftm ?ftm .
+    BIND( xsd:integer(((?pts - (?fg3m * 3) - ?ftm) / 2 )) AS ?pts2)   
+}GROUP BY (?season)
+ORDER BY ASC(?season)
+""";
 const ANDREA_QUERY_1 =
     """PREFIX base: <https://www.dei.unipd.it/Database2/CPS-NBA/>
 SELECT ?name ( SUM(?pts) AS ?points ) WHERE {
