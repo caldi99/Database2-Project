@@ -8,9 +8,8 @@ into **GraphDB** and some **SPARQL** queries will be run to obtain data.
 * [Datasets](#datasets)
 * [Data Ingestion](#data-ingestion)
 * [Web Application](#web-application)
-    * Preliminary Steps
-    * Run the Web Application
-* []
+    * [Preliminary Steps](#preliminary-steps)
+    * [Web Application Execution](#web-application-execution)
 
 ## Group members ##
 | Surname       | Name          | ID            |
@@ -43,6 +42,15 @@ Notice that, those files downloaded must be **placed** under the `serialization`
 This project contains a **Web Application** under the directory `flutter_web_app` developed with **Flutter** Open-Source Framework, **GraphDB** and the use of **Docker** and **Docker-Compose**.
 
 ### Preliminary Steps ###
+**Before** executing the Web Application make sure that :
+- there **exists** a folder called `config` in the root of the project with inside a file `config.ttl`, if the directory is not present create it i.e. `mkdir config` ,and, if the file is not present download it from this [link](https://mega.nz/file/kZcHyaQR#gBiyU2oQpGW2MjP9YRv3Tqg0GT2-QqosEzf1iXtqJ-c) and place it inside the folder.
+- the previous steps for **Data Ingestion** where executed.
+ 
+
+## Web Application Execution ##
+
+
+
 
 TODO : FIX FROM HERE
 ---------------
