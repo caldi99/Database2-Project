@@ -62,11 +62,11 @@ for index, row in game_dataframe.iterrows():
 
     #Predicate and Object home
     game_club_home_object = URIRef(CLUB + str(row['HOME_TEAM_ID']))
-    game_club_home_predicate = URIRef(BASE + "homeClub") 
+    game_club_home_predicate = URIRef(BASE + "hasHomeClub") 
 
     #Predicate and Object away
     game_club_away_object = URIRef(CLUB + str(row['VISITOR_TEAM_ID']))
-    game_club_away_predicate = URIRef(BASE + "awayClub") 
+    game_club_away_predicate = URIRef(BASE + "hasAwayClub") 
 
 
     #Add Triples
