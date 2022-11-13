@@ -8,8 +8,10 @@ into **GraphDB** and some **SPARQL** queries will be run to obtain data.
 * [Datasets](#datasets)
 * [Data Ingestion](#data-ingestion)
 * [Web Application](#web-application)
+    * [Web Application Description](#web-application-description)
     * [Preliminary Steps](#preliminary-steps)
     * [Web Application Execution](#web-application-execution)
+    
 
 ## Group members ##
 | Surname       | Name          | ID            |
@@ -40,56 +42,32 @@ Notice that, those files downloaded must be **placed** under the `serialization`
 
 ## Web Application ##
 This project contains a **Web Application** under the directory `flutter_web_app` developed with **Flutter** Open-Source Framework, **GraphDB** and the use of **Docker** and **Docker-Compose**.
+Notice that, in a production environment, it is better to use the State-Of-The-Art orchestrator that is, [Kubernetes](https://kubernetes.io/) provided by Google.
+
+### Web Application Description ###
+This project uses **Docker** and **Docker Compose** to run **GraphDB** server and the Web-App **backend** by means of separated containers. This was done to have a common working environment avoiding incompatibilities that could rise up from our host machines and, also, in a production environment, the various part would be effectively separated granting more flexibility.
+The `docker-compose.ylm` can be found in the root of the project and orchestrate the two **containers** : 
+- **GraphDB** container that represents the database.
+- **backend** container that manages the **requests** coming from the Web Application and forwards them to the GraphDB container.
+In particular, the GraphDB container uses a the **khaller/graphdb-free** docker image while, the backend container uses an **Ubuntu 20.04** docker image.
 
 ### Preliminary Steps ###
 **Before** executing the Web Application make sure that :
 - there **exists** a folder called `config` in the root of the project with inside a file `config.ttl`, if the directory is not present create it i.e. `mkdir config` ,and, if the file is not present download it from this [link](https://mega.nz/file/kZcHyaQR#gBiyU2oQpGW2MjP9YRv3Tqg0GT2-QqosEzf1iXtqJ-c) and place it inside the folder.
+- there **exists** a folder called `ontology` in the root of the project with inside a file `ontology.owl`, if the directory is not present create it i.e. `mkdir ontology` ,and, if the file is not present download it from this [link]() and place it inside the folder.
 - the previous steps for **Data Ingestion** where executed.
- 
-
-## Web Application Execution ##
-
-
-
-
-TODO : FIX FROM HERE
----------------
-
-We used Docker to run our GraphDB server and our Web-App backend by means of separated containers. This was done to have a common working environment avoiding incompatibilities that could rise up from our host machines.
-Also in a production environment, the various part would be effectively separated granting more flexibility.
-
-### Web-App backend ###
-The Docker container used can be found ...
-It's necessary to copy the 'build/web' folder inside of it. Once done, just run the backend script with the following command to startup a basic http server:
-```
-python3 scriptname.py
-```
-
-### GraphDB ###
-The GraphDB docker container used can be found [here](https://hub.docker.com/r/khaller/graphdb-free) . 
-To download the image just type the following command:
-```
-sudo docker pull khaller/graphdb-free
-```
-
-It's necessary to create a GraphDB repository inside of it to make it work. To create it...
-
-### Container orchestrator ###
-We used [Docker Compose](https://github.com/docker/compose) as orchestrator. Docker Compose is suited for testing purposes. In a production environment the State-Of-The-Art orchestrator is Kubernetes provided by Google.
-To install Docker Compose on Ubuntu you just have to open the terminal and type the following commands:
-
-```
-sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
-sudo chmod +x /usr/local/bin/docker-compose
-```
-
-Now you can verify if the installation went correctly by typing in the terminal the following command:
-```
-docker-compose --version
-```
-This should show the Docker Compose version installed.
-
-Once both Docker and Docker Compose have been installed, just run the 'docker-compose.yml' file by opening the terminal to the file location and typing the following command:
-```
-docker compose up
-```
+- [Docker](https://www.docker.com/) is installed in the machine from which you are trying to execute the code.
+- the Web Application has been **built** if not :
+    - check if [Flutter](https://flutter.dev/) is installed in the machine from which you are trying to execute the code.
+    - go inside the `flutter_web_app` folder i.e. `cd flutter_web_app`.
+    - **build** the web application :
+        ```
+        flutter build web
+        ```
+### Web Application Execution ###
+In order to execute the Web Application follow these steps :
+- In the **root** of the project **execute** : 
+    ```
+    sudo docker compose up
+    ```
+- Open a new tab on a browser and go to http://localhost:8080
