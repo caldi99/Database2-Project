@@ -54,7 +54,7 @@ In particular, the GraphDB container uses a the **khaller/graphdb-free** docker 
 ### Preliminary Steps ###
 **Before** executing the Web Application make sure that :
 - there **exists** a folder called `config` in the root of the project with inside a file `config.ttl`, if the directory is not present create it i.e. `mkdir config` ,and, if the file is not present download it from this [link](https://mega.nz/file/kZcHyaQR#gBiyU2oQpGW2MjP9YRv3Tqg0GT2-QqosEzf1iXtqJ-c) and place it inside the folder.
-- there **exists** a folder called `ontology` in the root of the project with inside a file `ontology.owl`, if the directory is not present create it i.e. `mkdir ontology` ,and, if the file is not present download it from this [link]() and place it inside the folder.
+- there **exists** a folder called `ontology` in the root of the project with inside a file `ontology.owl`, if the directory is not present create it i.e. `mkdir ontology` ,and, if the file is not present download it from this [link](https://mega.nz/file/hZUCzarB#Ig2C30tArp5OKSoRYcmHzdH3rLK742F2UMAiHvTk_bI) and place it inside the folder.
 - the previous steps for **Data Ingestion** where executed.
 - [Docker](https://www.docker.com/) is installed in the machine from which you are trying to execute the code.
 - the Web Application has been **built** if not :
