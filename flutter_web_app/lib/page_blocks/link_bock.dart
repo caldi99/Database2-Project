@@ -17,7 +17,7 @@ class LinkBlock extends StatelessWidget {
   Widget build(BuildContext context) {
     return RichText(
       text: TextSpan(
-        text: value + "\n",
+        text: value,
         style: style,
         recognizer: TapGestureRecognizer()..onTap = () {launchUrl(Uri.parse(url));}
       )

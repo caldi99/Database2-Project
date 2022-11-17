@@ -75,6 +75,7 @@ class _CartesianIntegerIntegerChartBlockState extends State<CartesianIntegerInte
                               dataSource: data,
                               xValueMapper: (StringIntegerChartData data, _) => data.xValue,
                               yValueMapper: (StringIntegerChartData data, _) => data.yValue,
+                              pointColorMapper: (StringIntegerChartData data, _) => data.color,
                               name: _nameToolTips[i++],
                           )
                         ]

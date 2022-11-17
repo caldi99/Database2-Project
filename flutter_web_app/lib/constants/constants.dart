@@ -55,10 +55,10 @@ final sparql = Mode(
           lexemes: "[:^A-Za-z]+",
           keywords: {
             "keyword":
-                "select prefix insert as order by group distinct where count from limit sum avg ask describe",
+                "select prefix insert as order by group distinct where count from limit sum avg ask describe union bind filter concat regex if",
             "literal": "true false null unknown",
             "built_in":
-                "^^xsd:string ^^xsd:integer ^^xsd:date ^^xsd:dateTime ^^xsd:boolean ^^xsd:integer ^^xsd:float ^^xsd:double ^^xsd:decimal"
+                "^^xsd:string ^^xsd:integer xsd:integer ^^xsd:gYear ^^xsd:date ^^xsd:dateTime ^^xsd:boolean ^^xsd:integer ^^xsd:float ^^xsd:double ^^xsd:decimal"
           },
           contains: [
             Mode(
@@ -94,7 +94,7 @@ const BLOCK_PAGES_CONTENT_STYLE_PARAGRAPH =
     TextStyle(fontWeight: FontWeight.normal, fontSize: SIZE_TEXT, height: 1.2);
 const BLOCK_PAGES_PADDING_PADDING_STYLE =
     EdgeInsets.only(left: 150, right: 150, top: 20, bottom: 20);
-const PAGE_PADDING_PADDING_STYLE = EdgeInsets.only(left: 20, right: 20);
+const PAGE_PADDING_PADDING_STYLE = EdgeInsets.only(left: 50, right: 50);
 const SIZED_BOX_BLOCK_STYLE = SizedBox(height: 150);
 const BLOCK_PAGES_CONTAINER_PADDING_STYLE = EdgeInsets.all(20);
 var BLOCK_PAGES_CONTAINER_DECORATION_STYLE = BoxDecoration(
@@ -308,17 +308,17 @@ SELECT ?nicknameTeam ?totalWins (AVG(?height) AS ?heightAvg) (AVG(?weight) AS ?w
 const HARJOT_QUERY_1 = """
 PREFIX base: <https://www.dei.unipd.it/Database2/CPS-NBA/>
 SELECT ?winHome ( COUNT(?winHome) AS ?numberOfGames ) WHERE { 
-	?game base:winHome ?winHome .
+    ?game base:winHome ?winHome .
 } GROUP BY (?winHome)
 """;
 const HARJOT_QUERY_2 = """
 PREFIX base: <https://www.dei.unipd.it/Database2/CPS-NBA/>
 PREFIX country: <https://www.dei.unipd.it/Database2/CPS-NBA/Country#>
 SELECT ?clubName ( COUNT(?person) AS ?internationalPlayers ) WHERE {
-  ?person base:isFrom ?country ;
+    ?person base:isFrom ?country ;
 	      base:wasPlayer ?player .
-	?player base:playedFor ?club .
-	?club base:city ?city ;
+	  ?player base:playedFor ?club .
+	  ?club base:city ?city ;
 	      base:nickname ?nickname .
     FILTER (?country != country:USA)
     BIND(concat(?nickname, ", ",?city) as ?clubName)
@@ -328,28 +328,28 @@ const HARJOT_QUERY_3 = """
 PREFIX base: <https://www.dei.unipd.it/Database2/CPS-NBA/>
 SELECT ?season ?winClub1 (COUNT(?winClub1) AS ?totalWin) WHERE{
     {
-    ?club1 base:nickname ?clubname1.
-    ?club2 base:nickname ?clubname2.
-    ?game 
-        base:hasHomeClub ?club1;
-		base:hasAwayClub ?club2;
-  		base:winHome ?winClub1;
-    	base:matchDate ?matchDate.
-    FILTER REGEX(?clubname1,"Bulls")
-    FILTER REGEX(?clubname2, "Heat")
-    }UNION{
-    ?club1 base:nickname ?clubname1.
-    ?club2 base:nickname ?clubname2.
-    ?game 
-		base:hasHomeClub ?club1;
-		base:hasAwayClub ?club2;
-  		base:winHome ?winHome;
-    	base:matchDate ?matchDate.
-    BIND(IF(?winHome <= 0,1,0) as ?winClub1).
-    FILTER REGEX(?clubname1,"Heat")
-    FILTER REGEX(?clubname2, "Bulls")
+        ?club1 base:nickname ?clubname1.
+        ?club2 base:nickname ?clubname2.
+        ?game base:hasHomeClub ?club1;
+            base:hasAwayClub ?club2;
+            base:winHome ?winClub1;
+            base:matchDate ?matchDate.
+        FILTER REGEX(?clubname1,"Bulls")
+        FILTER REGEX(?clubname2, "Heat")
+    } 
+    UNION 
+    {
+        ?club1 base:nickname ?clubname1.
+        ?club2 base:nickname ?clubname2.
+        ?game base:hasHomeClub ?club1;
+        base:hasAwayClub ?club2;
+            base:winHome ?winHome;
+            base:matchDate ?matchDate.
+        BIND(IF(?winHome <= 0,1,0) as ?winClub1).
+        FILTER REGEX(?clubname1,"Heat")
+        FILTER REGEX(?clubname2, "Bulls")
     }
-    BIND(IF(month(?matchDate)<8,year(?matchDate)-1,year(?matchDate)) as ?season)
+    BIND(IF(month(?matchDate)<8,year(?matchDate)-1,year(?matchDate)) AS ?season)
 }
 GROUP BY ?season ?winClub1
 ORDER BY ASC (?season)
@@ -365,22 +365,22 @@ SELECT ?winnerTeam ?playerName ?country WHERE
             base:name ?playerName;
             base:isFrom ?countryURI.
     ?countryURI base:name ?country.
-	?player base:playedFor ?club .
-	?club base:nickname ?winnerTeam.
+	  ?player base:playedFor ?club .
+	  ?club base:nickname ?winnerTeam.
     {
         SELECT DISTINCT ?playerMinGrater0 WHERE 
         {
-        	?playerMinGrater0 base:appearsIn ?appearance ;
-                           	  base:startYear "2015"^^xsd:gYear .
+        	  ?playerMinGrater0 base:appearsIn ?appearance ;
+                base:startYear "2015"^^xsd:gYear .
             ?appearance base:minutes ?minutes ;
-            			base:seconds ?seconds .
+            		base:seconds ?seconds .
             ?person base:isFrom ?country ;
-            		base:wasPlayer ?playerMinGrater0 .
-			?country base:name ?countryName .			
+                base:wasPlayer ?playerMinGrater0 .
+			      ?country base:name ?countryName .			
             FILTER ((?minutes > 0 || ?seconds > 0) && ?country != country:USA)           
         }
     }
-	FILTER(?player = ?playerMinGrater0)
+	  FILTER(?player = ?playerMinGrater0)
     FILTER(?winnerTeam = ?nickname)
     {
         SELECT ?nickname WHERE {
@@ -409,7 +409,7 @@ SELECT ?winnerTeam ?playerName ?country WHERE
         }
         FILTER (?totalWins = ?max)
         {
-            SELECT (MAX(?totalWins) as ?max){
+            SELECT (MAX(?totalWins) AS ?max){
                 SELECT ?nickname (SUM(?wins) AS ?totalWins) WHERE{
                     {
                         SELECT ?nickname (SUM(?winHome) AS ?wins) WHERE {

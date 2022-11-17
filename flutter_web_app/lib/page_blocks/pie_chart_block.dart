@@ -31,6 +31,7 @@ class PieChartBlock extends StatelessWidget {
                         dataSource: chartData,
                         xValueMapper: (StringIntegerChartData data, _) => data.xValue,
                         yValueMapper: (StringIntegerChartData data, _) => data.yValue,
+                          pointColorMapper: (StringIntegerChartData data, _) => data.color,
                         dataLabelSettings: DataLabelSettings(isVisible: true),
                         enableTooltip: true
                       )

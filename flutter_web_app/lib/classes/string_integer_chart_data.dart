@@ -1,5 +1,8 @@
+import 'dart:ui';
+
 class StringIntegerChartData{
   String xValue;
   int yValue;
-  StringIntegerChartData(this.xValue,this.yValue);
+  Color color;
+  StringIntegerChartData(this.xValue,this.yValue,this.color);
 }

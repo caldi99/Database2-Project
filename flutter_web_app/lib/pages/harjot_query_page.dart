@@ -72,7 +72,7 @@ class _HarjotQueryPage extends State<HarjotQueryPage> {
               const ParagraphBlock(
                   title: "HomeTeam vs AwayTeam wins \n",
                   titleStyle: constants.BLOCK_PAGES_TITLE_STYLE_PARAGRAPH,
-                  content: ["This query allows us to find how much the home ground affects the teams.\n"],
+                  content: ["This query allows you to find how much the home ground affects the teams.\n"],
                   contentStyle: constants.BLOCK_PAGES_CONTENT_STYLE_PARAGRAPH
               ),
               Padding(
@@ -87,7 +87,7 @@ class _HarjotQueryPage extends State<HarjotQueryPage> {
               const ParagraphBlock(
                   title:"Teams with most international NBA Players (excluding USA)\n",
                   titleStyle: constants.BLOCK_PAGES_TITLE_STYLE_PARAGRAPH,
-                  content: ["With this query you get the top team with in which most international players has played.\n"],
+                  content: ["With this query you get the list of teams sorted by their number of international players.\n"],
                   contentStyle: constants.BLOCK_PAGES_CONTENT_STYLE_PARAGRAPH
               ),
               Padding(
@@ -100,7 +100,7 @@ class _HarjotQueryPage extends State<HarjotQueryPage> {
               ),
               //query 3
               const ParagraphBlock(
-                  title: "Maimi vs Chicago\n",
+                  title: "Miami vs Chicago\n",
                   titleStyle: constants.BLOCK_PAGES_TITLE_STYLE_PARAGRAPH,
                   content: ["With this query you get the results of the matches Miami vs Chicago of every season.\n"],
                   contentStyle: constants.BLOCK_PAGES_CONTENT_STYLE_PARAGRAPH
@@ -117,7 +117,7 @@ class _HarjotQueryPage extends State<HarjotQueryPage> {
               const ParagraphBlock(
                   title: "International Players of the winning team of NBA season 2015\n",
                   titleStyle: constants.BLOCK_PAGES_TITLE_STYLE_PARAGRAPH,
-                  content: ["With this query you get all the list of international players who has played in the winning team of season 2015.\n"],
+                  content: ["With this query you get the list of all the international players who have played in the winning team of season 2015.\n"],
                   contentStyle: constants.BLOCK_PAGES_CONTENT_STYLE_PARAGRAPH),
               Padding(
                 padding: constants.BLOCK_PAGES_PADDING_PADDING_STYLE,
@@ -137,12 +137,18 @@ class _HarjotQueryPage extends State<HarjotQueryPage> {
   callbackQueryResult1(var response) {
     List<StringIntegerChartData> list = [];
 
+    int i=0;
     //Parse the response
     for (var data in response['results']['bindings']) {
       String winHome =
           data['winHome']['value'] == "0" ? "AwayWins" : "HomeWins";
       int numberOfGames = int.parse(data['numberOfGames']['value']);
-      list.add(StringIntegerChartData(winHome, numberOfGames));
+      if(i%2==0){
+        list.add(StringIntegerChartData(winHome,numberOfGames,constants.BLUE));
+      }else{
+        list.add(StringIntegerChartData(winHome,numberOfGames,constants.RED));
+      }
+      i++;
     }
 
     //Remove Previous Content
@@ -301,6 +307,8 @@ class _HarjotQueryPage extends State<HarjotQueryPage> {
             child: SfSparkBarChart(
                 data: [matchWonByTeamA, matchWonByTeamB],
                 axisLineWidth: 0,
+
+                color: constants.BLUE,
                 trackball: const SparkChartTrackball())));
   }
 }

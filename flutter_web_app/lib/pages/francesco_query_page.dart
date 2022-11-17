@@ -89,7 +89,7 @@ class _FrancescoQueryPage extends State<FrancescoQueryPage> {
               const ParagraphBlock(
                 title: "Chicago Bulls team during the 2006-2007 season with the corresponding time played\n",
                 titleStyle: constants.BLOCK_PAGES_TITLE_STYLE_PARAGRAPH,
-                content: ["This query finds who played for the Chicago Bulls team during the 2006-2007 season and how much time was played for each player.\n"],
+                content: ["This query finds who played for the Chicago Bulls team during the 2006-2007 season and how much time each player played.\n"],
                 contentStyle: constants.BLOCK_PAGES_CONTENT_STYLE_PARAGRAPH
               ),
               Padding(
@@ -102,9 +102,9 @@ class _FrancescoQueryPage extends State<FrancescoQueryPage> {
               ),
               //QUERY 3
               const ParagraphBlock(
-                  title: "3 Points Attempts VS 2 Points Attempts Scored During Seasons\n",
+                  title: "3 Points Attempts VS 2 Points Attempts scored during seasons\n",
                   titleStyle: constants.BLOCK_PAGES_TITLE_STYLE_PARAGRAPH,
-                  content: ["This query finds how many 3 points attempts and how many 2 points attempts where scored during all the seasons.\n"],
+                  content: ["This query finds how many 3 points attempts and how many 2 points attempts were scored during all the seasons.\n"],
                   contentStyle: constants.BLOCK_PAGES_CONTENT_STYLE_PARAGRAPH
               ),
               Padding(
@@ -129,7 +129,7 @@ class _FrancescoQueryPage extends State<FrancescoQueryPage> {
               const ParagraphBlock(
                   title: "Games with the same score\n",
                   titleStyle: constants.BLOCK_PAGES_TITLE_STYLE_PARAGRAPH,
-                  content: ["Are there any games that has the same exact score?\n"],
+                  content: ["Are there any games that have the same exact score?\n"],
                   contentStyle: constants.BLOCK_PAGES_CONTENT_STYLE_PARAGRAPH
               ),
               Padding(
@@ -152,6 +152,7 @@ class _FrancescoQueryPage extends State<FrancescoQueryPage> {
   callbackQueryResult1(var response){
     List<DateIntegerChartData> list = [];
 
+    int i=0;
     //Parse the response
     for(var data in response['results']['bindings']){
       List<String> datePieces = data['matchDate']['value'].split('-');
@@ -160,8 +161,12 @@ class _FrancescoQueryPage extends State<FrancescoQueryPage> {
           int.parse(datePieces.elementAt(2)));
 
       int points = int.parse(data['pts']['value']);
-
-      list.add(DateIntegerChartData(date, points));
+      if(i%2==0){
+        list.add(DateIntegerChartData(date,points,constants.BLUE));
+      }else{
+        list.add(DateIntegerChartData(date,points,constants.RED));
+      }
+      i++;
     }
 
     //Remove Previous Content
@@ -212,8 +217,10 @@ class _FrancescoQueryPage extends State<FrancescoQueryPage> {
       int twoPointsAttempts = int.parse(data['number2PointsMade']['value']);
       int threePointsAttempts = int.parse(data['number3PointsMade']['value']);
 
-      twoPointsAttemptsList.add(StringIntegerChartData(season, twoPointsAttempts));
-      threePointsAttemptsList.add(StringIntegerChartData(season, threePointsAttempts));
+
+
+      twoPointsAttemptsList.add(StringIntegerChartData(season, twoPointsAttempts,constants.BLUE));
+      threePointsAttemptsList.add(StringIntegerChartData(season, threePointsAttempts,constants.RED));
     }
     list.add(twoPointsAttemptsList);
     list.add(threePointsAttemptsList);

@@ -61,7 +61,7 @@ class _AndreaQueryPage extends State<AndreaQueryPage> {
                 title: "Top Scorers\n",
                 titleStyle: constants.BLOCK_PAGES_TITLE_STYLE_PARAGRAPH,
                 content: ["This query aims at finding the top 10 scorers in the NBA championship.\n",
-                  "The query result will consists in the name of the players and the corresponding amount of points scored sorted in descending order.\n"],
+                  "The query result will consist in the name of the players and the corresponding amount of points scored sorted by descending order.\n"],
                 contentStyle: constants.BLOCK_PAGES_CONTENT_STYLE_PARAGRAPH
             ),
             Padding(
@@ -85,7 +85,7 @@ class _AndreaQueryPage extends State<AndreaQueryPage> {
             const ParagraphBlock(
                 title: "Arenas with most played matches\n",
                 titleStyle: constants.BLOCK_PAGES_TITLE_STYLE_PARAGRAPH,
-                content: ["This query aims at retrieving in ascending order the Arenas with the highest numbers of played matches.\n",
+                content: ["This query aims at retrieving in descending order the Arenas with the highest numbers of played matches.\n",
                   "The query result will consists in the name of the arenas and the corresponding amount of played matches. We also show their capacities.\n"],
                 contentStyle: constants.BLOCK_PAGES_CONTENT_STYLE_PARAGRAPH
             ),
@@ -110,7 +110,7 @@ class _AndreaQueryPage extends State<AndreaQueryPage> {
             const ParagraphBlock(
                 title: "NBA rankings for the 2010-11 season\n",
                 titleStyle: constants.BLOCK_PAGES_TITLE_STYLE_PARAGRAPH,
-                content: ["This query aims at retrieving in ascending order the NBA clubs based on their number of won matches in the season of 2010-2011.\n"],
+                content: ["This query aims at retrieving in descending order the NBA clubs based on their number of won matches in the season of 2010-2011.\n"],
                 contentStyle: constants.BLOCK_PAGES_CONTENT_STYLE_PARAGRAPH
             ),
             Padding(
@@ -134,7 +134,7 @@ class _AndreaQueryPage extends State<AndreaQueryPage> {
             const ParagraphBlock(
                 title: "Average weight/height of the winner/loser team in the 2010-11 season\n",
                 titleStyle: constants.BLOCK_PAGES_TITLE_STYLE_PARAGRAPH,
-                content: ["This query aims at retrieving in the average height and weight of the players of the club with the highest number of won matches and the club with the lowest number of won matches.\n",
+                content: ["This query aims at retrieving the average height and weight of the players of the club with the highest number of won matches and the club with the lowest number of won matches.\n",
                 "In particular, we would like to see if height and weight may influence the performance of a team.\n"],
                 contentStyle: constants.BLOCK_PAGES_CONTENT_STYLE_PARAGRAPH
             ),
@@ -163,10 +163,17 @@ class _AndreaQueryPage extends State<AndreaQueryPage> {
     List<StringIntegerChartData> temp=[];
 
     //PARSING
+    int i=0;
     for (var result  in res['results']['bindings']){
       String name=result['name']['value'];
       int numberOfGames=double.parse(result['numberOfGames']['value']) as int;
-      temp.add(StringIntegerChartData(name,numberOfGames));
+      if(i%2==0){
+        temp.add(StringIntegerChartData(name,numberOfGames,constants.BLUE));
+      }else{
+        temp.add(StringIntegerChartData(name,numberOfGames,constants.RED));
+      }
+      i++;
+
     }
 
     //REMOVE PREVIOUS DATA
@@ -182,10 +189,16 @@ class _AndreaQueryPage extends State<AndreaQueryPage> {
     List<StringIntegerChartData> temp = [];
 
     //PARSING
+    int i=0;
     for (var result  in res['results']['bindings']){
       String name=result['name']['value'];
       int pointsScored=int.parse(result['points']['value']);
-      temp.add(StringIntegerChartData(name,pointsScored));
+      if(i%2==0){
+        temp.add(StringIntegerChartData(name,pointsScored,constants.BLUE));
+      }else{
+        temp.add(StringIntegerChartData(name,pointsScored,constants.RED));
+      }
+      i++;
     }
 
     //REMOVE PREVIOUS DATA
@@ -202,11 +215,17 @@ class _AndreaQueryPage extends State<AndreaQueryPage> {
     List<StringIntegerChartData> temp = [];
     print(res);
 
+    int i=0;
     //PARSING
     for (var result  in res['results']['bindings']){
       String name=result['nickname']['value'];
       int totalWins=int.parse(result['totalWins']['value']);
-      temp.add(StringIntegerChartData(name,totalWins));
+      if(i%2==0){
+        temp.add(StringIntegerChartData(name,totalWins,constants.BLUE));
+      }else{
+        temp.add(StringIntegerChartData(name,totalWins,constants.RED));
+      }
+      i++;
     }
 
     //REMOVE PREVIOUS DATA

@@ -1,5 +1,8 @@
+import 'dart:ui';
+
 class DateIntegerChartData{
   DateTime xValue;
   int yValue;
-  DateIntegerChartData(this.xValue,this.yValue);
+  Color color;
+  DateIntegerChartData(this.xValue,this.yValue,this.color);
 }

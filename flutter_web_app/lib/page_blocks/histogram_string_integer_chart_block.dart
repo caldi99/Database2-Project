@@ -68,7 +68,8 @@ class _HistogramStringIntegerChartBlockState extends State<HistogramStringIntege
                     ColumnSeries<StringIntegerChartData, String>(
                         dataSource: _chartData,
                         xValueMapper: (StringIntegerChartData data, _) => data.xValue,
-                        yValueMapper: (StringIntegerChartData data, _) => data.yValue                                                                                ,
+                        yValueMapper: (StringIntegerChartData data, _) => data.yValue,
+                        pointColorMapper: (StringIntegerChartData data, _) => data.color,
                         name: _nameToolTip,
                         borderRadius: constants.BLOCK_PAGES_COLUMNSERIES_BORDERRADIUS_STYLE
                     ),

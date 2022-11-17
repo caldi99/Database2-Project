@@ -68,6 +68,7 @@ class _HistogramDateIntegerChartBlockState extends State<HistogramDateIntegerCha
                       dataSource: _chartData,
                       xValueMapper: (DateIntegerChartData data, _) => data.xValue,
                       yValueMapper: (DateIntegerChartData data, _) => data.yValue,
+                        pointColorMapper: (DateIntegerChartData data, _) => data.color,
                       name: _nameTooltip,
                       borderRadius: constants.BLOCK_PAGES_COLUMNSERIES_BORDERRADIUS_STYLE
                   )
