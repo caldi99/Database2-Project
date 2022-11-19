@@ -11,6 +11,7 @@ into **GraphDB** and some **SPARQL** queries will be run to obtain data.
     * [Web Application Description](#web-application-description)
     * [Preliminary Steps](#preliminary-steps)
     * [Web Application Execution](#web-application-execution)
+* [Queries](#queries)
     
 
 ## Group members ##
@@ -73,5 +74,5 @@ In order to execute the Web Application follow these steps :
     ```
 - Open a new tab on a browser and go to http://localhost:8080
 
-### Queries ###
+## Queries ##
 You can see the performed queries both in our Web-Application and in the file `queries.txt` . In both cases, we provide a brief explanation of the aim of each query.
