@@ -72,3 +72,6 @@ In order to execute the Web Application follow these steps :
     sudo docker compose up
     ```
 - Open a new tab on a browser and go to http://localhost:8080
+
+### Queries ###
+You can see the performed queries both in our Web-Application and in the file `queries.txt` . In both cases, we provide a brief explanation of the aim of each query.
