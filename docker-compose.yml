@@ -1,0 +1,41 @@
+version: "3.9"
+
+services:
+  db:
+    image: khaller/graphdb-free:10.0.0
+    container_name : graphdb-database
+    command: ["--GDB_HEAP_SIZE", "4GB"]
+    ports:
+      - 7200:7200
+      - 7300:7300
+    volumes:
+      - "./config:/repository.init/CPS-NBA:rw"
+      - "./serialization/appearance_game_join.ttl:/repository.init/CPS-NBA/toLoad/appearance_game_join.ttl:ro"
+      - "./serialization/appearance0.ttl:/repository.init/CPS-NBA/toLoad/appearance0.ttl:ro"
+      - "./serialization/appearance1.ttl:/repository.init/CPS-NBA/toLoad/appearance1.ttl:ro"
+      - "./serialization/appearance2.ttl:/repository.init/CPS-NBA/toLoad/appearance2.ttl:ro"
+      - "./serialization/appearance3.ttl:/repository.init/CPS-NBA/toLoad/appearance3.ttl:ro"
+      - "./serialization/arena.ttl:/repository.init/CPS-NBA/toLoad/arena.ttl:ro"
+      - "./serialization/club_arena_join.ttl:/repository.init/CPS-NBA/toLoad/club_arena_join.ttl:ro"
+      - "./serialization/club.ttl:/repository.init/CPS-NBA/toLoad/club.ttl:ro"
+      - "./serialization/country.ttl:/repository.init/CPS-NBA/toLoad/country.ttl:ro"
+      - "./serialization/game_club_join.ttl:/repository.init/CPS-NBA/toLoad/game_club_join.ttl:ro"
+      - "./serialization/game.ttl:/repository.init/CPS-NBA/toLoad/game.ttl:ro"
+      - "./serialization/person_country_join.ttl:/repository.init/CPS-NBA/toLoad/person_country_join.ttl:ro"
+      - "./serialization/person_player_join.ttl:/repository.init/CPS-NBA/toLoad/person_player_join.ttl:ro"
+      - "./serialization/person.ttl:/repository.init/CPS-NBA/toLoad/person.ttl:ro"
+      - "./serialization/player_appearance_join.ttl:/repository.init/CPS-NBA/toLoad/player_appearance_join.ttl:ro"
+      - "./serialization/player_club_join.ttl:/repository.init/CPS-NBA/toLoad/player_club_join.ttl:ro"
+      - "./serialization/player.ttl:/repository.init/CPS-NBA/toLoad/player.ttl:ro"     
+      - "./ontology/ontology.owl:/ontology/ontology.owl:ro"
+      - "./db/data:/opt/graphdb/data:rw"
+      - "./db/logs:/opt/graphdb/logs:rw"
+      - "./db/work:/opt/graphdb/work:rw"
+
+  backend:
+    ports:
+      - 8080:8080
+    build:
+      context: .
+      dockerfile: Dockerfile_Backend
+      

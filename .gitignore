@@ -1,0 +1,17 @@
+#Directories
+/datasets
+
+#Python
+.ipynb_checkpoints/
+__pycache__
+
+#vscode
+.vscode/
+
+#serialization
+/serialization
+
+#docker
+config/toLoad/
+db/
+config/ini*

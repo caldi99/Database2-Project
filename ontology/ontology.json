@@ -1,0 +1,281 @@
+{
+  "style": {
+    "font-family": "Nunito Sans",
+    "background-color": "#F2F2F2",
+    "background-image": "",
+    "background-size": "100%",
+    "node-color": "#4C8EDA",
+    "border-width": 0,
+    "border-color": "#000000",
+    "radius": 75,
+    "node-padding": 5,
+    "node-margin": 2,
+    "outside-position": "auto",
+    "node-icon-image": "",
+    "node-background-image": "",
+    "icon-position": "inside",
+    "icon-size": 64,
+    "caption-position": "inside",
+    "caption-max-width": 200,
+    "caption-color": "#ffffff",
+    "caption-font-size": 20,
+    "caption-font-weight": "normal",
+    "label-position": "inside",
+    "label-display": "bare",
+    "label-color": "#ffffff",
+    "label-background-color": "#848484",
+    "label-border-color": "#848484",
+    "label-border-width": 3,
+    "label-font-size": 20,
+    "label-padding": 5,
+    "label-margin": 4,
+    "directionality": "directed",
+    "detail-position": "above",
+    "detail-orientation": "parallel",
+    "arrow-width": 3,
+    "arrow-color": "#848484",
+    "margin-start": 5,
+    "margin-end": 5,
+    "margin-peer": 20,
+    "attachment-start": "normal",
+    "attachment-end": "normal",
+    "relationship-icon-image": "",
+    "type-color": "#848484",
+    "type-background-color": "#F2F2F2",
+    "type-border-color": "#848484",
+    "type-border-width": 0,
+    "type-font-size": 21,
+    "type-padding": 5,
+    "property-position": "outside",
+    "property-alignment": "colon",
+    "property-color": "#848484",
+    "property-font-size": 20,
+    "property-font-weight": "normal"
+  },
+  "nodes": [
+    {
+      "id": "n0",
+      "position": {
+        "x": 1803,
+        "y": 303
+      },
+      "caption": "Country",
+      "labels": [],
+      "properties": {
+        "name": ""
+      },
+      "style": {
+        "node-color": "#f44e3b"
+      }
+    },
+    {
+      "id": "n1",
+      "position": {
+        "x": 144,
+        "y": 303
+      },
+      "caption": "Club",
+      "labels": [],
+      "properties": {
+        "nickname": "",
+        "abbreviation": "",
+        "firstYear": "",
+        "city": ""
+      },
+      "style": {
+        "node-color": "#68bc00"
+      }
+    },
+    {
+      "id": "n2",
+      "position": {
+        "x": 697,
+        "y": 303
+      },
+      "caption": "Arena",
+      "labels": [],
+      "properties": {
+        "name": "",
+        "capacity": ""
+      },
+      "style": {
+        "node-color": "#ab149e"
+      }
+    },
+    {
+      "id": "n4",
+      "position": {
+        "x": 144,
+        "y": -20
+      },
+      "caption": "Game",
+      "labels": [],
+      "properties": {
+        "matchDate": "",
+        "ptsHome": "",
+        "fgpctHome": "",
+        "ftpctHome": "",
+        "fg3pctHome": "",
+        "astHome": "",
+        "rebHome": "",
+        "ptsAway": "",
+        "fgpctAway": "",
+        "ftpctAway": "",
+        "fg3pctAway": "",
+        "astAway": "",
+        "rebAway": "",
+        "winHome": ""
+      },
+      "style": {
+        "node-color": "#fcc400"
+      }
+    },
+    {
+      "id": "n5",
+      "position": {
+        "x": 697,
+        "y": -20.000000000000135
+      },
+      "caption": "Appearance",
+      "labels": [],
+      "properties": {
+        "role": "",
+        "minutes": "",
+        "seconds": "",
+        "fgm": "",
+        "fga": "",
+        "fgpct": "",
+        "fg3m": "",
+        "fg3a": "",
+        "fg3pct": "",
+        "ftm": "",
+        "fta": "",
+        "ftpct": "",
+        "oReb": "",
+        "dReb": "",
+        "reb": "",
+        "ast": "",
+        "stl": "",
+        "blk": "",
+        "tO": "",
+        "pF": "",
+        "pts": "",
+        "comment": ""
+      },
+      "style": {
+        "node-color": "#e27300"
+      }
+    },
+    {
+      "id": "n6",
+      "position": {
+        "x": 1250,
+        "y": -20.000000000000135
+      },
+      "caption": "Player",
+      "labels": [],
+      "properties": {
+        "startYear": "",
+        "endYear": "",
+        "height": "",
+        "weight": ""
+      },
+      "style": {
+        "node-color": "#0c797d"
+      }
+    },
+    {
+      "id": "n7",
+      "position": {
+        "x": 1803,
+        "y": -20
+      },
+      "caption": "Person",
+      "labels": [],
+      "properties": {
+        "name": ""
+      },
+      "style": {
+        "node-color": "#68ccca"
+      }
+    }
+  ],
+  "relationships": [
+    {
+      "id": "n0",
+      "fromId": "n1",
+      "toId": "n2",
+      "type": "hasStadium",
+      "properties": {},
+      "style": {}
+    },
+    {
+      "id": "n1",
+      "fromId": "n4",
+      "toId": "n1",
+      "type": "hasAwayClub",
+      "properties": {},
+      "style": {
+        "detail-position": "below"
+      }
+    },
+    {
+      "id": "n2",
+      "fromId": "n4",
+      "toId": "n1",
+      "type": "hasHomeClub",
+      "properties": {},
+      "style": {}
+    },
+    {
+      "id": "n3",
+      "fromId": "n5",
+      "toId": "n4",
+      "type": "refersTo",
+      "properties": {},
+      "style": {}
+    },
+    {
+      "id": "n4",
+      "fromId": "n6",
+      "toId": "n5",
+      "type": "appearsIn",
+      "properties": {},
+      "style": {}
+    },
+    {
+      "id": "n5",
+      "fromId": "n7",
+      "toId": "n6",
+      "type": "wasPlayer",
+      "properties": {},
+      "style": {
+        "detail-position": "below"
+      }
+    },
+    {
+      "id": "n6",
+      "fromId": "n7",
+      "toId": "n0",
+      "type": "isFrom",
+      "properties": {},
+      "style": {}
+    },
+    {
+      "id": "n7",
+      "fromId": "n6",
+      "toId": "n7",
+      "type": "represents",
+      "properties": {},
+      "style": {}
+    },
+    {
+      "id": "n8",
+      "fromId": "n6",
+      "toId": "n1",
+      "type": "playedFor",
+      "properties": {},
+      "style": {}
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- This xml file is used to configure the various paths to the datasets to be used for data ingestion purposes.
+     If the specified paths are relative (e.g. './dataset/games.csv') then they are considered to be relative
+     to the root project folder 'Database2-Project'.
+ -->
+<configuration>
+
+    <!-- The path to the games dataset -->
+    <path name="games" value="./dataset/games.csv"/>
+
+    <!-- The path to the teams dataset -->
+    <path name="clubs" value="./dataset/teams.csv"/>
+
+    <!-- The path to the detailed games dataset -->
+    <path name="games_details" value="./dataset/games_details.csv"/>
+
+    <!-- The path to the players dataset containing only their names -->
+    <path name="players" value="./dataset/players.csv"/>
+
+    <!-- The path to the players dataset containing other info over the years -->
+    <path name="players_details" value="./dataset/all_seasons.csv"/>
+
+    
+
+</configuration>

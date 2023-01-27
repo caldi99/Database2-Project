@@ -1,0 +1,36 @@
+MAIN IDEAS :
+- F1/MOTOGP
+https://www.kaggle.com/datasets/rohanrao/formula-1-world-championship-1950-2020
+
+- OLIMPIADI:
+https://www.kaggle.com/datasets/heesoo37/120-years-of-olympic-history-athletes-and-results?select=athlete_events.csv
+
+- GAMES : FIFA, FORTNITE, LEAGUE OF LEGENDS, CLASH OF CLANS, CLASH ROYALE, ETC..
+
+https://www.kaggle.com/datasets/stefanoleone992/fifa-22-complete-player-dataset
+(idea figa : webapp per creare il team stile video fabio caressa)
+
+//insieme e capire chi vince di più con una carta, combo vincente con una carta
+https://www.kaggle.com/datasets/bwandowando/clash-royale-season-18-dec-0320-dataset
+https://www.kaggle.com/datasets/s1m0n38/clash-royale-matches-dataset
+
+- BASKETBALL : NBA
+https://www.kaggle.com/datasets/nathanlauga/nba-games
+(idea figa: capire la squadra che vince di più fuori casa, di quant'è lo scarto di punti per cui vince etc..)
+
+- FOOTBALL : NOT FOUND ANYTHING WORTH
+
+//DIFFICULT TO FIND EVEN THOUGH INTERESTING TOPICS ESPECIALLY ENERGY SINCE THE CURRENT SITUATIONS REGARDING BILLS
+- MOBILITY
+- SOLAR ENERGY
+- ENERGY
+
+//if combined those two we can make estimates of which type of energy is more requested,
+//also if using only renewable energies can sustain the entire netherlands
+https://www.kaggle.com/datasets/lucabasa/dutch-energy
+https://www.kaggle.com/datasets/maxscheijen/dutch-energy-generation
+
+//same can be done for the usa with this dataset
+https://www.kaggle.com/datasets/lislejoem/us_energy_census_gdp_10-14
+//also this can be used to have data about estimates of energy consumption per hour in the usa
+https://www.kaggle.com/datasets/robikscube/hourly-energy-consumption

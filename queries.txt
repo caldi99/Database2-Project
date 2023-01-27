@@ -1,0 +1,386 @@
+------------------------------------------------------------------------------------------------------
+QUERY 1
+
+aim: find the points scored by LeBron James during the 2017-2018 season.
+
+QUERY_1 =
+    """PREFIX base: <https://www.dei.unipd.it/Database2/CPS-NBA/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+SELECT ?matchDate ?pts WHERE {
+        ?person base:wasPlayer ?player ;
+        base:name "LeBron James"^^xsd:string .
+        ?player base:appearsIn ?appearance .
+        ?appearance base:pts ?pts ;
+                base:refersTo ?game .
+        ?game base:matchDate ?matchDate .
+        FILTER( ?matchDate >= "2017-10-01"^^xsd:date && ?matchDate <= "2018-07-31"^^xsd:date) .
+}""";
+
+------------------------------------------------------------------------------------------------------
+QUERY 2
+
+aim: find who played for the Chicago Bulls team during the 2006-2007 season and how much time each player played.
+
+QUERY_2 =
+    """PREFIX base: <https://www.dei.unipd.it/Database2/CPS-NBA/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+SELECT (SUM(?minutes) AS ?totalMinutesPlayer) (SUM(?seconds) AS ?totalSecondsPlayer) ?name WHERE {
+        ?player base:playedFor ?club ;
+                base:appearsIn ?appearance ;
+                base:startYear "2006"^^xsd:gYear ;
+                base:endYear "2007"^^xsd:gYear ;
+                base:represents ?person .
+        ?person base:name ?name .
+        ?club base:nickname "Bulls"^^xsd:string .
+        ?appearance base:minutes ?minutes ;
+                base:seconds ?seconds .	
+} GROUP BY (?name)""";
+
+------------------------------------------------------------------------------------------------------
+QUERY 3
+
+aim: find how many 3 points attempts and how many 2 points attempts were scored during all the seasons.
+
+QUERY_3 = """
+PREFIX base: <https://www.dei.unipd.it/Database2/CPS-NBA/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+SELECT ?season  (SUM(?fg3m) AS ?number3PointsMade) (SUM(?pts2) AS ?number2PointsMade) WHERE {
+    ?player base:appearsIn ?appearance ;
+            base:startYear ?season .
+    ?appearance base:pts ?pts ;
+                base:fg3m ?fg3m ;    
+    			base:ftm ?ftm .
+    BIND( xsd:integer(((?pts - (?fg3m * 3) - ?ftm) / 2 )) AS ?pts2)   
+}GROUP BY (?season)
+ORDER BY ASC(?season)
+""";
+
+------------------------------------------------------------------------------------------------------
+QUERY 4
+
+aim: are there any games that have the same exact score?
+
+QUERY_4 = """
+PREFIX base: <https://www.dei.unipd.it/Database2/CPS-NBA/>
+ASK WHERE {
+    ?game1 base:ptsHome ?ptsHome1 ;
+           base:ptsAway ?ptsAway1 .
+    
+    ?game2 base:ptsHome ?ptsHome2 ;
+           base:ptsAway ?ptsAway2 .
+    FILTER(?game1 != ?game2) .
+    FILTER((?ptsHome1 = ?ptsHome2 && ?ptsAway1 = ?ptsAway2 ) || (?ptsHome1 = ?ptsAway2 && ?ptsAway1 = ?ptsHome2 )).
+}
+""";
+
+------------------------------------------------------------------------------------------------------
+QUERY 5
+
+aim: find the top 10 scorers in the NBA championship.
+
+
+QUERY_5 =
+    """PREFIX base: <https://www.dei.unipd.it/Database2/CPS-NBA/>
+SELECT ?name ( SUM(?pts) AS ?points ) WHERE {
+        ?person base:wasPlayer ?player ;
+                base:name ?name .
+        ?player base:appearsIn ?appearance .
+        ?appearance base:pts ?pts .
+} GROUP BY (?name)
+ORDER BY DESC (?points)
+LIMIT 10""";
+
+------------------------------------------------------------------------------------------------------
+QUERY 6
+
+aim: retrieve in descending order the Arenas with their capacities with the highest numbers of played matches.
+
+QUERY_6 =
+    """PREFIX base: <https://www.dei.unipd.it/Database2/CPS-NBA/>
+SELECT ?name ?capacity ?numberOfGames WHERE{
+        ?arena base:name ?name ;
+                base:capacity ?capacity .
+        {
+                SELECT ?arena ( COUNT(?game) AS ?numberOfGames ) WHERE {
+                          ?game base:hasHomeClub ?club .
+                          ?club base:hasStadium ?arena .   
+                } GROUP BY ?arena
+        }
+} ORDER BY DESC (?numberOfGames)""";
+
+------------------------------------------------------------------------------------------------------
+QUERY 7
+
+aim: retrieve in descending order the NBA clubs based on their number of won matches in the season of 2010-2011.
+
+QUERY_7="""
+PREFIX base: <https://www.dei.unipd.it/Database2/CPS-NBA/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+SELECT ?nickname (SUM(?wins) AS ?totalWins) WHERE
+    {
+        {
+            SELECT ?nickname (SUM(?winHome) AS ?wins) WHERE {
+
+            ?game base:hasHomeClub ?homeClub ;
+                  base:matchDate ?matchDate ;
+                  base:winHome ?winHome .
+            ?homeClub base:nickname ?nickname .
+            FILTER(?matchDate >= "2010-10-27"^^xsd:date && ?matchDate <= "2011-06-12"^^xsd:date)       
+            }GROUP BY(?nickname)
+        }
+    UNION
+        {
+            SELECT ?nickname (SUM(1 - ?winHome) AS ?wins) WHERE {
+
+                ?game base:hasAwayClub ?awayClub ;
+                      base:matchDate ?matchDate ;
+                      base:winHome ?winHome .
+                ?awayClub base:nickname ?nickname .
+                FILTER(?matchDate >= "2010-10-27"^^xsd:date && ?matchDate <= "2011-06-12"^^xsd:date)       
+            }GROUP BY(?nickname)
+        }
+}GROUP BY(?nickname)
+ORDER BY DESC(?totalWins)
+""";
+
+------------------------------------------------------------------------------------------------------
+QUERY 8
+
+aim: retrieve the average height and weight of the players of the club with the highest number of won matches and the club with the lowest number of won matches.
+     This is done to check if height and weight may influence the performance of a team.
+
+QUERY_8="""
+PREFIX base: <https://www.dei.unipd.it/Database2/CPS-NBA/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT ?nicknameTeam ?totalWins (AVG(?height) AS ?heightAvg) (AVG(?weight) AS ?weightAvg) WHERE
+{
+    ?player base:playedFor ?team ;
+            base:startYear "2010"^^xsd:gYear ;
+            base:height ?height ;
+    		base:weight ?weight .
+    ?team base:nickname ?nicknameTeam .
+    {
+        SELECT ?nickname ?totalWins WHERE
+        {
+            {
+                SELECT ?nickname (SUM(?wins) AS ?totalWins) WHERE
+                {
+                    {
+                        SELECT ?nickname (SUM(?winHome) AS ?wins) WHERE {
+
+                        ?game base:hasHomeClub ?homeClub ;
+                              base:matchDate ?matchDate ;
+                              base:winHome ?winHome .
+                        ?homeClub base:nickname ?nickname .
+                        FILTER(?matchDate >= "2010-10-27"^^xsd:date && ?matchDate <= "2011-06-12"^^xsd:date)       
+                        }GROUP BY(?nickname)
+                    }
+                UNION
+                    {
+                        SELECT ?nickname (SUM(1 - ?winHome) AS ?wins) WHERE {
+
+                            ?game base:hasAwayClub ?awayClub ;
+                                  base:matchDate ?matchDate ;
+                                  base:winHome ?winHome .
+                            ?awayClub base:nickname ?nickname .
+                            FILTER(?matchDate >= "2010-10-27"^^xsd:date && ?matchDate <= "2011-06-12"^^xsd:date)       
+                        }GROUP BY(?nickname)
+                    }
+                }GROUP BY ?nickname 
+            }
+            {
+                SELECT (MAX(?totalWins)  AS ?winner) (MIN(?totalWins)  AS ?looser)
+                {
+                    SELECT ?nickname (SUM(?wins) AS ?totalWins) WHERE
+                    {
+                        {
+                            SELECT ?nickname (SUM(?winHome) AS ?wins) WHERE {
+
+                            ?game base:hasHomeClub ?homeClub ;
+                                  base:matchDate ?matchDate ;
+                                  base:winHome ?winHome .
+                            ?homeClub base:nickname ?nickname .
+                            FILTER(?matchDate >= "2010-10-27"^^xsd:date && ?matchDate <= "2011-06-12"^^xsd:date)       
+                            }GROUP BY(?nickname)
+                        }
+                    UNION
+                        {
+                            SELECT ?nickname (SUM(1 - ?winHome) AS ?wins) WHERE {
+
+                                ?game base:hasAwayClub ?awayClub ;
+                                      base:matchDate ?matchDate ;
+                                      base:winHome ?winHome .
+                                ?awayClub base:nickname ?nickname .
+                                FILTER(?matchDate >= "2010-10-27"^^xsd:date && ?matchDate <= "2011-06-12"^^xsd:date)       
+                            }GROUP BY(?nickname)
+                        }
+                    }GROUP BY ?nickname 
+                }        
+            }
+            FILTER (?totalWins IN (?winner , ?looser))    
+        }
+    }    
+    FILTER (?nickname = ?nicknameTeam)
+}GROUP BY ?nicknameTeam ?totalWins
+""";
+
+------------------------------------------------------------------------------------------------------
+QUERY 9
+
+aim: find how much the home ground affects the teams.
+
+QUERY_9 = """
+PREFIX base: <https://www.dei.unipd.it/Database2/CPS-NBA/>
+SELECT ?winHome ( COUNT(?winHome) AS ?numberOfGames ) WHERE { 
+    ?game base:winHome ?winHome .
+} GROUP BY (?winHome)
+""";
+
+------------------------------------------------------------------------------------------------------
+QUERY 10
+
+aim: get the list of teams sorted by their number of international players.
+
+QUERY_10 = """
+PREFIX base: <https://www.dei.unipd.it/Database2/CPS-NBA/>
+PREFIX country: <https://www.dei.unipd.it/Database2/CPS-NBA/Country#>
+SELECT ?clubName ( COUNT(?person) AS ?internationalPlayers ) WHERE {
+    ?person base:isFrom ?country ;
+	      base:wasPlayer ?player .
+	  ?player base:playedFor ?club .
+	  ?club base:city ?city ;
+	      base:nickname ?nickname .
+    FILTER (?country != country:USA)
+    BIND(concat(?nickname, ", ",?city) as ?clubName)
+} GROUP BY ?clubName
+ORDER BY DESC(?internationalPlayers)""";
+
+------------------------------------------------------------------------------------------------------
+QUERY 11
+
+aim: get the results of the matches between Miami and Chicago of every season.
+
+QUERY_11 = """
+PREFIX base: <https://www.dei.unipd.it/Database2/CPS-NBA/>
+SELECT ?season ?winClub1 (COUNT(?winClub1) AS ?totalWin) WHERE{
+    {
+        ?club1 base:nickname ?clubname1.
+        ?club2 base:nickname ?clubname2.
+        ?game base:hasHomeClub ?club1;
+            base:hasAwayClub ?club2;
+            base:winHome ?winClub1;
+            base:matchDate ?matchDate.
+        FILTER REGEX(?clubname1,"Bulls")
+        FILTER REGEX(?clubname2, "Heat")
+    } 
+    UNION 
+    {
+        ?club1 base:nickname ?clubname1.
+        ?club2 base:nickname ?clubname2.
+        ?game base:hasHomeClub ?club1;
+        base:hasAwayClub ?club2;
+            base:winHome ?winHome;
+            base:matchDate ?matchDate.
+        BIND(IF(?winHome <= 0,1,0) as ?winClub1).
+        FILTER REGEX(?clubname1,"Heat")
+        FILTER REGEX(?clubname2, "Bulls")
+    }
+    BIND(IF(month(?matchDate)<8,year(?matchDate)-1,year(?matchDate)) AS ?season)
+}
+GROUP BY ?season ?winClub1
+ORDER BY ASC (?season)
+LIMIT 100
+""";
+
+------------------------------------------------------------------------------------------------------
+QUERY 12
+
+aim: get the list of all the international players who have played in the winning team of season 2015.
+
+QUERY_12 = """
+PREFIX base: <https://www.dei.unipd.it/Database2/CPS-NBA/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX country: <https://www.dei.unipd.it/Database2/CPS-NBA/Country#>
+SELECT ?winnerTeam ?playerName ?country WHERE
+{
+    ?person base:wasPlayer ?player;
+            base:name ?playerName;
+            base:isFrom ?countryURI.
+    ?countryURI base:name ?country.
+    ?player base:playedFor ?club .
+    ?club base:nickname ?winnerTeam.
+    {
+        SELECT DISTINCT ?playerMinGrater0 WHERE 
+        {
+            ?playerMinGrater0 base:appearsIn ?appearance ;
+                  base:startYear "2015"^^xsd:gYear .
+            ?appearance base:minutes ?minutes ;
+            	  base:seconds ?seconds .
+            ?person base:isFrom ?country ;
+                  base:wasPlayer ?playerMinGrater0 .
+	    ?country base:name ?countryName .			
+            FILTER ((?minutes > 0 || ?seconds > 0) && ?country != country:USA)           
+        }
+    }
+    FILTER(?player = ?playerMinGrater0)
+    FILTER(?winnerTeam = ?nickname)
+    {
+        SELECT ?nickname WHERE {
+            {
+                SELECT ?nickname (SUM(?wins) AS ?totalWins) WHERE{
+                    {
+                        SELECT ?nickname (SUM(?winHome) AS ?wins) WHERE {
+                            ?game base:hasHomeClub ?homeClub ;
+                                  base:matchDate ?matchDate ;
+                                  base:winHome ?winHome .
+                            ?homeClub base:nickname ?nickname .
+                            FILTER(?matchDate >= "2015-10-27"^^xsd:date && ?matchDate <= "2016-06-12"^^xsd:date)
+                        }GROUP BY(?nickname)
+                    }
+                    UNION
+                    {
+                        SELECT ?nickname (SUM(1 - ?winHome) AS ?wins) WHERE {
+                            ?game base:hasAwayClub ?awayClub ;
+                                  base:matchDate ?matchDate ;
+                                  base:winHome ?winHome .
+                            ?awayClub base:nickname ?nickname .
+                            FILTER(?matchDate >= "2015-10-27"^^xsd:date && ?matchDate <= "2016-06-12"^^xsd:date)
+                        }GROUP BY(?nickname)
+                    }
+                }GROUP BY(?nickname)
+            }
+            FILTER (?totalWins = ?max)
+            {
+                SELECT (MAX(?totalWins) AS ?max){
+                    SELECT ?nickname (SUM(?wins) AS ?totalWins) WHERE{
+                        {
+                            SELECT ?nickname (SUM(?winHome) AS ?wins) WHERE {
+                                ?game base:hasHomeClub ?homeClub ;
+                                      base:matchDate ?matchDate ;
+                                      base:winHome ?winHome .
+                                ?homeClub base:nickname ?nickname .
+                                FILTER(?matchDate >= "2015-10-27"^^xsd:date && ?matchDate <= "2016-06-12"^^xsd:date)
+                            }GROUP BY(?nickname)
+                        }
+                        UNION
+                        {
+                            SELECT ?nickname (SUM(1 - ?winHome) AS ?wins) WHERE {
+                                ?game base:hasAwayClub ?awayClub ;
+                                      base:matchDate ?matchDate ;
+                                      base:winHome ?winHome .
+                                ?awayClub base:nickname ?nickname .
+                                FILTER(?matchDate >= "2015-10-27"^^xsd:date && ?matchDate <= "2016-06-12"^^xsd:date)
+                            }GROUP BY(?nickname)
+                        }
+                    }GROUP BY(?nickname)
+                }
+            }	
+	}
+    }
+}
+
+LIMIT 100
+""";
+
+------------------------------------------------------------------------------------------------------
